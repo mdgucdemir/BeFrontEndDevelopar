@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Grid System Container Responsive Flexbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Bootstrap ozelliklerini kullanmak istiyor isek ilk once bootstrap linklerini cop-paste yaparak etkinlestirme yapabiliriz -->
+    <!-- bize simdilik lazim olan Css kismi, bunun icin getbootstrap.com adresinde documantain bolumunde quicstart taki css linkini cop-paste yaomaliyiz -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- bootstrap css geldi-->
+    <style>
+        h1,h2 {
+            text-transform: capitalize;
+            color: red;
+            text-align: center;
+        }
+
+        .box {
+            height: 200px;
+        }
+        div span{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<div>
+    <h1 class="bg-success">Bootstrap grid container responsive flexbox</h1>
+    <p>
+    <ul>
+        <li>Container in class bootstrap boyut ozellikleri icin <a
+                href="https://getbootstrap.com/docs/5.2/layout/containers/" target="_blank">ziyaret</a> ediniz</li>
+        <li>Bootstrap grid icin <a href="https://getbootstrap.com/docs/5.2/layout/grid/" target="_blank">dokumanina</a>
+            gidebilirsin</li>
+        <li>Button veya renk classlari icin <a href="https://getbootstrap.com/docs/5.2/components/buttons/"
+                target="_blank">dokumanina</a> gidebilirsin</li>
+        <li>flex icin <a href="https://getbootstrap.com/docs/5.2/utilities/flex/" target="_blank">dokumanina</a> gidiniz
+        </li>
+    </ul>
+    </p>
+</div>
+
+<body>
+    <!-- CONTAINER -->
+
+    <div class="container-md bg-dark">
+        <!-- container-sm demek 576 px lin altina dustugunde ekranin tamamini kaplayacak demektir. -->
+        <!-- container-md demek 768 px lin altina dustugunde ekranin tamamini kaplayacak demektir. -->
+        <!-- container-lg demek 992 px lin altina dustugunde ekranin tamamini kaplayacak demektir. -->
+        <!-- container-xl demek 1200 px lin altina dustugunde ekranin tamamini kaplayacak demektir. -->
+        <!-- container-fluid demek ise her kosulda ekrani tamamen kaplayacak demektir. -->
+        <!-- en cok kullanilan ( container yani bir anlamda container-sm ) dir. -->
+
+        <h1>container</h1>
+
+    </div>
+
+    <!-- GRID -->
+
+    <div class="container">
+        <h1>grid</h1>
+
+
+        <!-- grid i belli parcalara bolmek icin class="row" kullanicaz  -->
+        <div class="row">
+            <!--Bu satirimiz simdi 12 esit parcaya bolunucek-->
+            <!--bu 12 oarcayi box larda belirli biyutlar vermek istiyor istiyor isek ( col ) class ini kullaniriz -->
+            <!--bu arada col classini yazmaz isek row olarak degilde column olarak siraliyor.( denendi ve tecrube edildi :) )  -->
+            <div class="box bg-danger col">4 parca</div>
+            <div class="box bg-primary col">4 parca</div>
+            <div class="box bg-success col">4 parca</div>
+            <!-- burada 12 parcalik olan bolum herbiri 12/3 yani her biri esit 4 parcalik bolume ulasti -->
+        </div>
+        <br>
+        <div class="row">
+            <div class="box bg-danger col-2">2 parca</div>
+            <div class="box bg-primary col-4">4 parca</div>
+            <div class="box bg-success col-6">6 parca</div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="box bg-danger col-2">2 parca</div>
+            <div class="box bg-primary col-2">2 parca</div>
+            <div class="box bg-success col-2">2 parca</div>
+            <!-- hepsine col-2 diyerek 2 ser den 6 parca alan kapladi, geri kalan alani bos birakti ve sola yasladi -->
+        </div>
+        <br>
+        <div class="row">
+            <div class="box bg-danger col-md">4 parca</div>
+            <div class="box bg-primary col-md">4 parca</div>
+            <div class="box bg-success col-md">4 parca</div>
+            <!-- container larda gordugumuz (sm, md, lg, xl ,xxl ve fluid) leri burada da kullaniriz-->
+            <!--(sm, md, lg, xl ,xxl ve fluid) aslinda ekran boyutlaridir-->
+            <!--( col-md ) classi ekran 768 px ve altini olunca her bir kutu ekrani kaplar-->
+            <!-- yani alt alta siralar-->
+        </div>
+        <br>
+        <div class="row">
+            <!--bu ornekte ise ilk box ta 2 adet col ozelligi verilmistir-->
+            <!--col-md oldugu icin 768 px den buyuk durumlarda ilk box 4 parca digei 8 parcadir -->
+            <!--768 px den sonra ise ilk box icin konusuyorum; ( col-md-4 ) ozelligi kaybolur ve col-6 parca ozelligi aktif olur ve 6 parcalik bolum kaplar -->
+            <div class="box bg-danger col-6 col-md-4">4 parca</div>
+            <div class="box bg-primary col-md-8">4 parca</div>
+
+        </div>
+
+        <!--ALIGNMENT-->
+        <div class="content">
+
+            <h1>alignment</h1>
+            <!--flexbox oldugu icin default olarak yukari sol ve  yatay da hizaladi-->
+            <!--burda da justify-content align-items ozelliklerimizi CLASS olarak kullanacagiz -->
+            <!--ornekte goruldugu gibi flexbox ozelliklerinden bir suru durum yapilabilir-->
+
+
+
+            <div class="row bg-dark justify-content-around align-items-center" style="height: 600px;">
+                <div class="box bg-danger col-2">2 parca</div>
+                <div class="box bg-primary col-2">2 parca</div>
+                <div class="box bg-success col-2">2 parca</div>
+            </div>
+            <br>
+            <h1>align-self ozelligi</h1>
+            <div class="row bg-light justify-content-around" style="height: 600px;">
+                <div class="box bg-danger col-2 align-self-start">2 parca</div>
+                <div class="box bg-primary col-2 align-self-center">2 parca</div>
+                <div class="box bg-success col-2 align-self-end">2 parca</div>
+            </div>
+
+        </div>
+        <br>
+        <!--FLEXBOX-->
+        <h1>flexbox</h1>
+        <!--biz flexbox olusturmak icin display: flex yapiyorduk-->
+        <!--burada ise ( d-flex ) yazmamiz yeterli olucak-->
+
+        <div class="d-flex bg-dark justify-content-around align-items-center" style="height: 600px; width: 600px;">
+
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <br>
+
+        <h2>column halinde yazim</h2>
+        <!--flex-column yazmamiz yeterli olucak-->
+        <!--column halinde justify content ve align-items yer degistiriceklerdir, hatirlatayim dedim :)-->
+
+        <div class="d-flex flex-column bg-dark justify-content-around align-items-end" style="height: 600px; width: 600px;">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <!--bu ornekte span lere align-self ozelligini verebilecegini sakin unutma-->
+            <!--gerci flex de her turlu align-self ozelligini verebiliyorsun-->
+        </div>
+
+</body>
+
+</html>

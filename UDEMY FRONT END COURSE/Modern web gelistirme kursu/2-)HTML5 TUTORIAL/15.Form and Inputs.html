@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form&Input</title>
+  </head>
+  <body>
+    <!-- tum form ve input lar icin w3schools.com adresinden bakabilirsin -->
+    <!-- ilk once <form> etiketi olustur -->
+    <!-- <form action=""> action form uzerinde olusturulan bilgileri nereye ve hangi formatta gondermek istiyorsaok onu yazmak icin  -->
+    <!-- ornegin <form action="process.php"> yazarsak formda olusturdugumuz tum bilgiler (process) isminde bir (php) formatinda bir dosyamiza gondermis olucak  -->
+    <!-- <form method="get,post,dialog"> formumuza (method) yazarak html imizin (html get request) mi (html post request) mi yada (dialog) mu olacagina kara vere biliriz -->
+    <form>
+      <!-- HTML5 Input -->
+      <!-- (input) ta ki (name) kismi sayet bir php yada herhangi bir back and gondermek istersek ona grup ismi vermek icin. bize kolaylik sagliyor yani  -->
+      <!-- (placeholder) text alanlarinda kullanilir. genelde kullaniciyi bilgilendirme amaclidir. kullanioci text alanina basinca yada yazi yazmaya baslayinca bizim bilgilendirme yazimiz kaybolur. yani gecicidir -->
+      Name
+      <input type="text" id="namee" name="namee" /> <br />
+      <!-- yada soylede yazabiliriz -->
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" placeholder="Your Name" /><br />
+      <!-- label da yazilan (Name) kismi bastigimizda alttaki text kutusunu aktif ediyor -->
+      <!-- bunu da id ve name ozelliklerini name verdik. <label for="name"> ve label daki id="name" eslesti. artik label ve input text atilesime girmis oldu -->
+      <!-- #region -->
+      <label for="email">Email</label><br />
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email"
+      /><br />
+      <!-- (type="email") htl5 in getirdigi guzellik eger bir mail adresi degilde farkli birsey yazarsak bizi otomatik uyariyor. guzel:) -->
+      <label for="password">Password</label><br />
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Your password"
+      /><br />
+      <!-- <input type="password"> yaptigimizda yazdigimiz password u noktali olarak gizliyor -->
+      <label for="date">Date</label><br />
+      <input type="date" id="date" name="date" /><br />
+      <!-- tarih secme -->
+      <br />
+      <label for="gender">Gender</label><br />
+      Male
+      <input type="radio" name="gender" value="Male" />
+      Female
+      <input type="radio" name="gender" value="Female" />
+      <!-- radio butonlari; sadece bir kez secim yaptirmak istedigimizde kullaniriz. tipki bu ornekte oldugu gibi -->
+      <!-- radio butonda tek bir secim yaptirmak istiyorsan (name="") kisminda yazili olanlara dikkat et, hepsinde ayni olmali yoksa birden fazla secim yaptira bilirsin -->
+      Other
+      <input type="radio" name="gender" value="Other" checked /><br /><br />
+      <!-- Checkbox -->
+      <!-- Checkbox da birden vazla yada hepsi secim yapilablir-->
+      <!-- radio button ve checkbox larda ortak olarak eger bir secimi kendiliginden yapilmasini istiyorsak (checked) yazmamiz yeteli (ornek olarak)-->
+
+      Hobies
+      <br />
+      Technology
+      <input type="checkbox" name="tech" id="tech" checked />
+      Music
+      <input type="checkbox" name+="music" id="music" />
+      Art
+      <input type="checkbox" name="art" id="art" /><br /><br />
+      <!-- Select Lists -->
+      <!-- Select lists olustururken mutlaka <option> lari yazman gerekir. Because optionlari yazmansan select list olmaz :)) (ornek asagidadir efem) -->
+      Degree <br />
+      <select name="degree" id="degree">
+        <option value="bachelor">Lisans</option>
+        <option value="msc">Yuksek Lisans</option>
+        <option value="phd" selected>Doktora</option>
+        <!-- selected yazdigim icin ilk sirada doktora gozukuyeehh;) --></select
+      ><br />
+      <!-- Text Area -->
+      <br />
+      Message <br />
+      <textarea
+        name="message"
+        id="message"
+        cols="30"
+        rows="10"
+        placeholder="Your message"
+      ></textarea>
+
+      <!-- #region -->
+      <br />
+      <br />
+      <button type="reset">Reset</button>
+      <input type="submit" value="sabmit" /><br />
+      <!-- 2 turlu buton yapabiliriz -->
+      <!-- 1.si <button> ile 2.si <input type="submit"> ile. 2.sinde input un type ini submit yani sabmit buton yapip value (deger) ini de submit vererek  -->
+      <!-- bir submit birde reset butonu yaptik -->
+    </form>
+  </body>
+</html>

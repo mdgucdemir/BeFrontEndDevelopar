@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css - Position</title>
+    <style>
+      .fixed {
+        /* position: fixed denildigi icin scroll bar i assagi-yukari oynattigimizda element sabit kalicak */
+        width: 50%;
+        padding: 20px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        position: fixed;
+        /* kordinat sistemi gibi dusun */
+        /* default olarak left-top ta deger verilmis eger right 10 px verirsen right ile arasin 10 px mesafe olur ve saga yaslar*/
+        right: 10px;
+        /* ornekler ile cogaltilabilir */
+      }
+
+      /* relative */
+
+      /* relative ozelligi herhangi bir element in bulundugu yerden bizim position vermemimizi sagliyoruz  */
+      /* assagida bulunan red & blue box icin konusacaksak red veya blue ya bulunduklari yerden itibaren position verebiliriz relative ile */
+      .red {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        /* red box once yazildigi icin blue box red box in uzerini cikti */
+        /* bunun tam tersini istiyor isek " z-index " ozelligini kullanmaliyiz */
+        z-index: 1;
+      }
+
+      .blue {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        position: relative;
+        top: 5px;
+        left: 5px;
+      }
+
+      /* absolute */
+      /* absolute ile relative arasindaki fark  */
+      /* relative de elementin bulundugu yerden itibaren position yapilir iken; absolute ise cizilen sinirlarin sifir noktasina gore position verebiliyoruz */
+      /* absolute ozelligini kullanmak istiyorsan parent elementin position ozelligi asla " static " olmamali */
+
+      .outher-box {
+        width: 500px;
+        height: 500px;
+        background-color: gray;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+      }
+
+      .inner-box {
+        width: 75px;
+        height: 75px;
+        background-color: red;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        /* goruldugu uzere inner-box outher-box in child elementi oldugu icin verdigimiz position degerleri sadece parent elementin sinirlari icerisinde oluyor */
+      }
+    </style>
+  </head>
+
+  <body style="height: 1000px">
+    <!-- position lar default olarak " static " tir. nerde bulunmasi gerekiyorsa orada konumlarnir default olarak -->
+    <!-- ilk ornegimiz fixed ozelligi. eger bir navigation bari sayfayi assagi indirdigimizde fix kalmasini istiyor isek fixed ozelligini kullanmaliyiz -->
+    <div class="fixed">Udemy</div>
+
+    <!-- relative -->
+    <div class="red"></div>
+    <div class="blue"></div>
+
+    <!-- absolute -->
+    <div class="outher-box">
+      <!-- absoltenin saglikli calismasi icin parent in position ozelliginin verilmesi gerekir. Verilmez ise bir ust parent a gider, ondada yok ise bir uste,
+             en son BODY gider ve tum referansini BODY uzerinden yapar -->
+      <div class="inner-box"></div>
+    </div>
+  </body>
+</html>

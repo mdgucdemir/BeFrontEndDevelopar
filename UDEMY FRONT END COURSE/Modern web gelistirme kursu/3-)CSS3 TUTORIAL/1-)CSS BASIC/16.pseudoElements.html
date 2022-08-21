@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Pseudo Elements</title>
+    <style>
+      /* normal design */
+      p {
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        line-height: 1.5em;
+      }
+      a {
+        text-decoration: none;
+        color: red;
+      }
+
+      /* pseudo class */
+      /* pseudo class i yazarken " : " koymaniz gerekli (birtane iki nokta ust uste) */
+      a:hover {
+        color: orange;
+        text-transform: uppercase;
+      }
+
+      /* PSEUDO ELEMENTS */
+      /* pseudo elementleri yazarken " :: " koymaniz gerekli (iki tane iki nokta ust uste) */
+
+      .p1::first-line {
+        color: orange;
+      }
+      .p1::first-letter {
+        color: blue;
+        font-size: 50px;
+      }
+      .p2::first-line {
+        color: navy;
+      }
+      .p2::first-letter {
+        color: blueviolet;
+        font-size: 2em;
+      }
+      .p3::after {
+        content: url(./images/corsair-logo.png);
+      }
+      .p3::before {
+        content: url(./images/corsair-logo.png);
+      }
+      .p3::first-line {
+        color: cornflowerblue;
+      }
+      .p3::first-letter {
+        color: aqua;
+        font-size: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Pseudo Element ler elementlerimiz icinde, ilk elementi secmek, ilk harfi, ilk satiri secmek gibi secimler yapmamiza yarar  -->
+    <!-- For Example :} -->
+
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam odit
+      sint nulla. Similique sint minima ad enim incidunt aut est veritatis
+      explicabo, facilis, voluptas doloremque exercitationem. Aliquid earum ipsa
+      similique temporibus dignissimos ad, corrupti, praesentium, cumque et quos
+      dicta itaque inventore minus! Ut et vero esse maxime in? Placeat dolorum
+      harum incidunt. Tempora corrupti qui doloremque harum repellendus. Porro
+      magni, vel esse error ipsam incidunt unde, saepe corporis necessitatibus
+      explicabo cumque dolore inventore nesciunt ducimus. Modi nulla architecto
+      natus! Debitis quia a autem at! Eum eos dicta commodi hic ducimus unde
+      vel, magni tempora, perferendis ad blanditiis! Alias, quos veniam!
+    </p>
+    <p class="p2">
+      Ayrica CSS Pseudo Elementler icin
+      <a
+        href="https://www.w3schools.com/css/css_pseudo_elements.asp"
+        title="Pseudo Elements"
+        target="_blank"
+        >w3schools</a
+      >'a bakabilirsiniz
+    </p>
+    <p class="p3">Name of the Corsair's power :}</p>
+  </body>
+</html>

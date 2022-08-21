@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class(State)</title>
+    <style>
+      /* CSS DESIGN */
+
+      a.pc2 {
+        font-size: 1.2em;
+        text-decoration: none;
+        color: blue;
+      }
+      a.pc1 {
+        font-size: 24px;
+        cursor: cell;
+        color: blue;
+      }
+      a.pc3 {
+        font-size: 2em;
+        text-decoration: double;
+        color: white;
+        display: inline-block;
+        padding: 10px;
+        background: blue;
+        border-radius: 8px;
+      }
+      input {
+        font-size: 1.5em;
+        border-radius: 0.25em;
+        border: 1px solid purple;
+        padding: 8px;
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      p {
+        font-size: large;
+        font-family: sans-serif;
+        margin: 2em 0;
+      }
+
+      /* CSS DESIGN END */
+
+      /*
+        selector:pseude class {
+
+        }
+        */
+
+      /* Pseudo class */
+
+      a.pc1:hover {
+        color: red;
+        font-size: 2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        /* hover ustunde gezinmek yani imlecin ustunde gezinmesi */
+      }
+      a.pc1:visited {
+        color: yellowgreen;
+      }
+      a.pc1:active {
+        color: pink;
+        font-size: 2em;
+      }
+
+      a.pc2:hover {
+        font-size: 1.5em;
+        color: purple;
+        text-transform: uppercase;
+      }
+      a.pc2:active {
+        color: orangered;
+        font-size: 4em;
+        text-transform: uppercase;
+      }
+
+      a.pc3:hover {
+        color: blue;
+        background-color: white;
+        border: 1px solid blue;
+      }
+
+      input:hover {
+        font-size: 2em;
+      }
+      input:focus {
+        outline: 0;
+        border: 2px solid blue;
+      }
+      input:active {
+        border: 2px solid pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a class="pc1" href="#">This is the link</a>
+      <input type="text" placeholder="NAME" />
+    </div>
+    <div>
+      <p>
+        Pseudo Class lar icin bilgi edinmek istersen
+        <a
+          class="pc2"
+          href="https://www.w3schools.com/css/css_pseudo_classes.asp"
+          target="_blank"
+          >w3schools</a
+        >'a bakabilirsin
+      </p>
+      <div>
+        <a class="pc3" href="#">Facebook</a>
+      </div>
+    </div>
+  </body>
+</html>

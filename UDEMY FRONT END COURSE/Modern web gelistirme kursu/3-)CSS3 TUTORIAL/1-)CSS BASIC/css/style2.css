@@ -1,0 +1,15 @@
+h1 {
+  color: yellowgreen;
+}
+
+#logo {
+  color: purple;
+}
+
+a {
+  color: blue;
+}
+
+ul li a {
+  color: orangered;
+}

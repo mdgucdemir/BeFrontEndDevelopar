@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css - Float</title>
+    <style>
+      h1 {
+        text-transform: uppercase;
+        text-align: center;
+      }
+      h3 {
+        text-transform: uppercase;
+        text-align: center;
+        color: blue;
+      }
+      span {
+        color: red;
+      }
+      .box {
+        box-sizing: border-box;
+        border: 1px solid black;
+        padding: 1px 7px;
+        overflow: auto;
+        position: absolute;
+      }
+      .orange {
+        color: orange;
+      }
+
+      /* Example-1 begening */
+
+      div.example-1 {
+        width: 700px;
+        height: 500px;
+        left: 10px;
+      }
+      .example-1 .image-1 {
+        float: left;
+        margin-right: 5px;
+      }
+      /* example 1 end */
+
+      /* Example-2 */
+      div.example-2 {
+        width: 900px;
+        height: 500px;
+        left: 740px;
+      }
+      .left {
+        float: left;
+        margin-right: 10px;
+      }
+
+      .right {
+        float: right;
+        margin-left: 10px;
+      }
+
+      /* Example 2 end */
+
+      /* Example 3 */
+      .example-3 {
+        width: 700px;
+        height: 500px;
+        left: 10px;
+        top: 550px;
+      }
+      .box1 {
+        width: 33%;
+        height: 50px;
+        background-color: red;
+        float: left;
+      }
+      .box2 {
+        width: 33%;
+        height: 50px;
+        background-color: blue;
+        float: left;
+      }
+      .box3 {
+        width: 33%;
+        height: 50px;
+        background-color: orange;
+        float: left;
+      }
+
+      /* example 3 end */
+
+      /* example 4 */
+
+      .example-4 {
+        width: 900px;
+        height: 500px;
+        left: 740px;
+        top: 550px;
+      }
+      .boxx1 {
+        width: 400px;
+        height: 100px;
+        background-color: red;
+        float: left;
+      }
+      .boxx2 {
+        width: 400px;
+        height: 100px;
+        background-color: green;
+        float: left;
+      }
+      .boxx3 {
+        width: 400px;
+        height: 100px;
+        background-color: orange;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- float  flexbox cikmadan once eskiden kullanilan bir ozellik, gunumuzde nadiren kullanilir -->
+    <!-- ornekler ile gosterelim -->
+    <div class="example-1 box">
+      <h1>example-1</h1>
+      <img src="./images/corsair-logo.png" alt="corsairLogo" class="image-1" />
+
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum neque
+        illo dicta doloremque modi reprehenderit dignissimos, optio atque dolore
+        expedita? Tempore saepe perferendis ad, quia atque impedit doloribus
+        excepturi asperiores, totam earum dicta in inventore facere hic sed
+        maiores. Cum sed sequi magnam molestias, vel quae numquam voluptate.
+        Incidunt tempora, commodi amet soluta ipsa, in sed reiciendis
+        exercitationem ut nulla nisi blanditiis repellat hic. Ad quisquam
+        necessitatibus earum illo vero sunt maiores quod consequatur? Delectus
+        non voluptatum ipsa cumque voluptatem veritatis iure eligendi deleniti
+        quam, expedita omnis qui ducimus. Quisquam, architecto quia aspernatur
+        rem repellat aliquam dolore illum iusto sint eos consequatur aut ipsam
+        delectus mollitia, accusantium doloribus magni perspiciatis incidunt
+        quod reprehenderit in ex? Animi quo magnam reiciendis vitae quisquam
+        fuga quidem facilis quod illo soluta, neque eos voluptatem? Expedita
+        ipsum provident, minima corrupti culpa odit consequuntur quod vel dolore
+        est doloribus! Dignissimos libero neque hic sed non ratione.
+      </p>
+
+      <h3>Aciklama</h3>
+      <p>
+        Goruldugu uzere -- <span>float: left;</span> -- denildigi icin resimi
+        sola yasladik ve paragrafimizin yazi baslangici sagdan itibaren basladi
+      </p>
+    </div>
+
+    <div class="example-2 box">
+      <h1>example-2</h1>
+      <img src="./images/corsair-logo.png" alt="corsairlogo" class="left" />
+      <img src="./images/corsair-logo.png" alt="corsairLogo" class="right" />
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate
+        dolore vel vitae! Fuga pariatur accusantium reiciendis dicta neque
+        cumque quidem reprehenderit asperiores at dolore, maiores exercitationem
+        ducimus, qui a harum enim esse cum dolores perspiciatis placeat debitis
+        quaerat repudiandae eveniet? Velit unde voluptatum, maxime eligendi
+        blanditiis nostrum ut similique nam laborum sit reiciendis atque eius
+        dolorum minus nobis perferendis consequuntur fugit exercitationem.
+        Molestiae, possimus dolorem deleniti accusamus beatae blanditiis aut
+        quos dolorum quod officiis optio nemo, autem mollitia qui error quasi
+        totam delectus facere voluptatibus rerum odio a! Nostrum atque eaque
+        quibusdam qui itaque distinctio? Veritatis minima provident esse
+        molestias recusandae vero atque, repellat est blanditiis dolorum
+        officiis modi enim accusamus quaerat ad dolores maxime totam
+        necessitatibus distinctio sequi adipisci corporis sapiente! Natus
+        aperiam ducimus iste ea earum, temporibus aut placeat nihil numquam,
+        reprehenderit quisquam consequuntur sunt culpa nesciunt incidunt. Dolore
+        porro veritatis temporibus consequatur eum laborum placeat at provident!
+        Ipsum repellat dolorem laboriosam perferendis autem. Iure, voluptatibus
+        maiores asperiores aut dolores inventore corrupti quis nam repudiandae
+        nostrum natus autem voluptates voluptas cumque! Quia a maxime rem
+        exercitationem, pariatur recusandae est, atque eos, id temporibus modi
+        quo! Necessitatibus omnis modi distinctio? Assumenda aliquid in itaque
+        provident natus aspernatur veritatis incidunt?
+      </p>
+      <h3>Aciklama</h3>
+      <p>
+        Goruldugu uzere <span>float; left ve flaot; right</span> yazildigi icin
+        yazilar iki resim arasi yazilmaya baslandi
+      </p>
+    </div>
+
+    <!-- Example 3 -->
+
+    <div class="example-3 box">
+      <h1>example-3</h1>
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+      <h3>aciklama</h3>
+      <p>
+        Goruldugu uzere tum kulularda <span>flaot: left;</span> yapildigi icin
+        hepsi soldan dizilim oldu. weight ozellikleri <span>33%</span> verildugu
+        icin sayfayi kapladilar. disari tasma olmadi
+      </p>
+    </div>
+
+    <!-- example 4 -->
+    <div class="example-4 box">
+      <h1>example -4</h1>
+      <div class="boxx1"></div>
+      <div class="boxx2"></div>
+      <div class="boxx3"></div>
+      <div style="clear: both"></div>
+      <h3>aciklama</h3>
+      <p>
+        Goruldugu uzere tum kutular icin <span>Float: left;</span> denildi ve
+        kutular sola dizildi. Kutu boyutlari buyuk oldugu icin
+        <span class="orange">turuncu</span> kutu tasti ve assagi indi.
+        <span>Float</span> ozelligini kullandigimiz icin haliyle tum yazilar
+        soldan itibaren yazilmaya baslandi. Bunu engellemek icin
+        <span>< div ></span>
+        <span>style="clear: both"</span><span>< div ></span> diye bos bir
+        <span>div</span> actik ve de icine <span>stlye</span> etiketi acarak
+        <span>clear: both</span> yani her tarafi <span>temizle</span> dedik.
+      </p>
+    </div>
+  </body>
+</html>

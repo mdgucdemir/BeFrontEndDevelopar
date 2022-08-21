@@ -1,0 +1,81 @@
+/* h1 {
+  color: red;
+} */
+/* tested & work */
+/* her tarafta kullanacaginiz classlariniz varsa bunlari buraya ekleyebilirsiniz */
+/* ornegin bunlar bir cok kullanilan h1 etike h2 etiketi olabilir  */
+/* ornegin bir h1 e veya bir elemana text center ozelligi vermek isteye bilirsin */
+.text-center {
+  text-align: center;
+  /* center olmasini istedigine yanina bu class i yazman yeterli olucak */
+}
+
+.up {
+  text-transform: uppercase;
+}
+
+.heading-small {
+  font-size: 1.25rem;
+}
+.heading-medium {
+  font-size: 1.5rem;
+}
+.heading-big {
+  font-size: 1.75rem;
+}
+
+/* color larimiz olabilir mesala  */
+
+/* Colors */
+.bg-dark-blue {
+  background: navy;
+}
+.bg-light-blue {
+  background: #336ea2;
+  /* hover ozelliginde kullanabiliriz */
+}
+
+/* link ve basligin ortalanmasi icin container olmasi gerekir */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* button class */
+
+.btn {
+  margin-top: 1.25rem;
+  padding: 0.8rem 3rem;
+  border-radius: 7px;
+  letter-spacing: 0.5px;
+}
+.btn-blue {
+  background-color: #336ea2;
+}
+.btn-block {
+  width: 100%;
+}
+.btn:hover {
+  color: #336ea2;
+  background: white;
+  border: 0.5px solid #336ea2;
+}
+
+/* forms */
+
+.form-group {
+  padding: 0.25rem 0;
+}
+
+.form-group label {
+  display: block;
+}
+.form-control {
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  /* text area miz default olarak boyutlari kullanici tarafinda oynanim sundurulebiliyor. bunu olmamasini,
+   bizim ayarladigimiz gibi sabit kalmasini istiyor isek; < resize > ozelligini kullanmaliyiz */
+  resize: none;
+}

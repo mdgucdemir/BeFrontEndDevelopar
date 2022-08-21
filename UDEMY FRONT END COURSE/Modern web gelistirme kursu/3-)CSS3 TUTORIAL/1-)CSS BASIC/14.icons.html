@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Icons</title>
+    <!-- iconlari dahil edebilmek icin cdnjs.com daki fontawesome yazarak css i secerek ilk adim atilir -->
+    <!-- sonra bir link olusturulur ve uzantisina csdnjs.com daki url copy-paste yapilir -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- simdi fontawesome daki iconlari kullanmaya haziriz -->
+    <style>
+      #navbar {
+        border: none;
+        padding: 1px 5px;
+      }
+
+      .fontawesome {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: blue;
+        cursor: crosshair;
+      }
+
+      .cdnjs {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: red;
+        cursor: cell;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <!-- disaridan icon veya font kullanabiliriz -->
+      <!-- bunun icin bircok websitesi mevcut  -->
+      <!-- biz burda fontawesome sitesini kullanacagiz -->
+      <!-- iconu sectikten sonra bunu css dosyasina dahil etmemiz gerek -->
+      <!-- bunun icin cdnjs sitesini kullana biliriz -->
+
+      <!-- <i> icon demek -->
+      <i class="fa-solid fa-magnifying-glass" title="Search"></i>
+      <!-- bir tane menu ekleyelim -->
+      <i class="fa-solid fa-bars" title="menu bar"></i>
+    </div>
+    <div>
+      <p>
+        Icon ve daha vazlasi icin
+        <a
+          class="fontawesome"
+          href="https://fontawesome.com/icons"
+          title="FONTAWESOME.COM"
+          target="_blank"
+          >fontawesome</a
+        >
+        sitesini ziyaret edin
+      </p>
+    </div>
+    <div>
+      <p>
+        Fontawesome sitesinden alinan icon ve daha fazlasini sitenize dahil
+        etmek icin
+        <a
+          class="cdnjs"
+          href="https://cdnjs.com/libraries/font-awesome"
+          title="CDNJS.COM"
+          target="_blank"
+          >cdnjs</a
+        >
+        sitesinden faydalanabilirsiniz
+      </p>
+    </div>
+  </body>
+</html>

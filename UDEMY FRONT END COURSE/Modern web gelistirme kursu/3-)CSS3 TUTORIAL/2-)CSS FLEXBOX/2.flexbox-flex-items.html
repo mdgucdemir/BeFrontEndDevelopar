@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Flexbox Filex Items</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: navy;
+        margin: 20px 0;
+      }
+      .container-1 {
+        width: 75%;
+        min-height: 600px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        justify-content: space-around;
+      }
+      /* flex-grow ozelligi icindir container-2 */
+      .container-2 {
+        width: 75%;
+        min-height: 300px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        margin: 50px auto;
+        justify-content: flex-start;
+        position: relative;
+      }
+      .container-3 {
+        width: 75%;
+        min-height: 300px;
+        background-color: black;
+        display: flex;
+        flex-direction: row;
+        margin: 50px auto;
+        justify-content: flex-start;
+        position: relative;
+      }
+
+      .box {
+        text-align: center;
+        background-color: white;
+        width: 200px;
+        height: 100px;
+        border: 1px soldi white;
+        margin: 10px;
+      }
+      /* genel kavramda box larimizi beyaz olarak atadik ama buna bagli kalmayarak yeni acilan classlar ile ozellestrebiliriz */
+
+      /* biz justify-content ile itemlarimiz duzenledik container da ama itemlarda istedigimiz degsimi yapabiliriz */
+      /* ihtiyacimiz olan [ aling-self ] ozelligidir */
+      /* normalde ilk box-1 yazildigi icin div de siralama ilk yazilandan son yazilana dogru default ozellik olarak gider */
+      /* biz istersek bunu istedigimiz siralama olcusune degistire biliriz */
+      /* bunu da  [ order ] ozelligi ile yapariz  */
+      .box-1 {
+        background-color: red;
+        order: 2;
+        align-self: center;
+      }
+      .box-2 {
+        background-color: green;
+        order: 3;
+        align-self: flex-start;
+      }
+      .box-3 {
+        background-color: blue;
+        order: 1;
+        align-self: flex-end;
+      }
+
+      /* Flex-grow ozelligi ornegidir alttakiler */
+      /* flex-grow: 1; demek 1/6 si demektir. */
+      /* flex-grow: 1; yerine sadece flex: 1; de diyebiliriz */
+      .box-4 {
+        background-color: red;
+        flex-grow: 1;
+      }
+      .box-5 {
+        background-color: green;
+        flex-grow: 2;
+      }
+      .box-6 {
+        background-color: blue;
+        flex-grow: 3;
+      }
+      .box-7 {
+        background-color: red;
+      }
+      .box-8 {
+        background-color: navy;
+        /* flex: 1; */
+        /* yada */
+        flex-grow: 1;
+      }
+      .box-9 {
+        background-color: aqua;
+        /* flex-grow: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-1">
+      <div class="box box-1"></div>
+      <div class="box box-2"></div>
+      <div class="box box-3"></div>
+    </div>
+    <h1>example 2</h1>
+    <div class="container-2">
+      <div class="box box-4"></div>
+      <div class="box box-5"></div>
+      <div class="box box-6"></div>
+    </div>
+    <h1>example 3</h1>
+    <div class="container-3">
+      <div class="box box-7"></div>
+      <div class="box box-8"></div>
+      <div class="box box-9"></div>
+    </div>
+  </body>
+</html>

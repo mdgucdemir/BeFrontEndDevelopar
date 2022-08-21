@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Texts</title>
+    <style>
+      /* text-align ozelligi  ile metinleri basliklari yazilari saga, sola, ortaya dizilim yapabilme imkani saglar. */
+      /* h1 {
+        background: yellowgreen;
+      }
+      .header1 {
+        text-align: center;
+      }
+
+      .header2 {
+        text-align: left;
+      }
+      .header3 {
+        text-align: right;
+      } */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        width: 500px;
+        height: 500px;
+        border: 3px solid yellowgreen;
+        text-align: center;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* letter-spacing ozelligi harfler arasindaki boslugu ayarlamamiza yarar*/
+
+      p {
+        letter-spacing: 5px;
+      }
+
+      /* text-decoration textlerdeki alt cizgileri ayarlar */
+      span {
+        text-decoration: line-through blue;
+        color: red;
+      }
+
+      a {
+        text-decoration: none red;
+        cursor: cell;
+        color: pink;
+      }
+
+      /* text-transform ozelligi hepsini buyuk, kucuk yada ilk bas harfi buyuk gibi ayarlamalari yapmamiz yarar */
+      h1 {
+        /* text-transform: capitalize; */
+        text-transform: uppercase;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 class="header1">Baslik1</h1>
+    <h1 class="header2">Baslik2</h1>
+    <h1 class="header3">Baslik3</h1> -->
+
+    <div>
+      <h1>article-1</h1>
+      <p>
+        Lorem <span>ipsum</span> <a href="#">dolor</a> sit, amet consectetur
+        adipisicing elit. Dicta, explicabo!
+      </p>
+    </div>
+  </body>
+</html>

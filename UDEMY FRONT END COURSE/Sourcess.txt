@@ -1,0 +1,5 @@
+-- w3schools.com 
+-- css icin (css-tricks.com)
+-- codepen.io
+-- font awesome icon ve fontlar icin
+-- cdnjs font awesome dan icon ve fontlarin wisula code uyarlanmasi icin

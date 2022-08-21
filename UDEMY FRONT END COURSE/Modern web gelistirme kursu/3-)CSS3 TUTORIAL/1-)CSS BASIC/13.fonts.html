@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Fonts</title>
+    <!-- Google fonts dan secilen font un linki -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google fonts tan alinan link burada son buluyor -->
+    <style>
+      /* font-family ile yazilarimizin font seklini belirleye biliriz */
+      /* baslica kullanilan 3 font ailesi var */
+      /* serif ( suslu, sekilli yazi ) */
+      /* san-serif ( susuz normal yazi fontu ) */
+      /* monospace */
+      /* daha fazla icerik ici9n w3schools adresine bak */
+      /* disardan da font ihrac edebiliriz */
+      /* yaygin olarak kullanilan Google Fonts yur */
+
+      h1 {
+        /* font familiy kullanarak yazi fontunu dehistir */
+        /* arial, helvetica, sans-serif verilmesinin amaci su */
+        /* tarayicilar bagzi yazi tiplerini desteklemeye bilir */
+        /* bu yuzden ilk once ( arial ) yoksa ( helvetica )  oda yoksa ( sans-serif ) i kullansinlar diye */
+
+        /*font-family:Arial,Helvetica,sans-serif*/
+
+        font-family: "Open Sans", sans-serif;
+        text-transform: uppercase;
+      }
+
+      /* font-size ozelligi icin */
+
+      p {
+        font-family: "open sans", sans-serif;
+        font-weight: bold;
+        /* yazilara line-height verebiliriz */
+        /* yani SATIR BOSLUGU */
+
+        font-size: 1.5rem;
+
+        /* line-height:5px verirsen yazilar ic-ice gecer */
+        /* olculeri px cinsinde vermek, */
+        /* sonrasinda duzelmek istedigimizde px leri tek tek elle duzelmek gerekecek */
+        /* onun yerine ana bir px atamasi yapip digerlerini ( em, rem, %, vw, vh, etc. ) gibi relative olcu birimleri ile tanimlayarak daha rahat kullanim ve revize yapma olanagi saglaya bilir */
+        /* em ornegin p elementi icin p elemtine 16 px atatiylsan margin e 2em dediysen bu ( 16px * 2= 32px dir ) bunun yerine margin: 2em; yazman yeterli olucak  */
+        /* rem ise root element yani html in ne ise ona gore hesap yapar */
+        /* ornegin sen html 32px p ye ise 16 px verdiysen bir yere ( 2rem ) yazman demek ( 32px*2 ) dem ektir. ( 16px*2 ) degil   */
+        /* vw = 1% viewport width ( sayfanin gorunen yatay uzunlu kadar 1% verebilmektir  ) */
+        /* vh = 1% viewport height ( sayfanin gorunen yuksekligi kadar 1% vermektir ) */
+
+        line-height: 1.5em;
+      }
+      p#p1 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>baslik1</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero quis
+      fugiat ex ipsam sed earum vero, consequuntur hic neque iste inventore
+      iusto? Facilis eius pariatur neque autem, illum deleniti veniam sequi
+      optio necessitatibus beatae velit eaque, at sit. Ab saepe laudantium
+      repellendus provident aliquam pariatur laboriosam est magnam dolor
+      reiciendis?
+    </p>
+    <p id="p1">
+      Css Unitler icin
+      <a
+        href="https://www.w3schools.com/css/css_units.asp"
+        target="_blank"
+        title="w3schools CSS-Units"
+        >Buraya gidiniz</a
+      >
+    </p>
+    <p id="p1">
+      Css fontlar icin
+      <a
+        href="https://www.w3schools.com/css/css_font.asp"
+        target="_blank"
+        title="w3schools CSS Fonts"
+        >buraya tikla</a
+      >
+    </p>
+  </body>
+</html>

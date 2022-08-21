@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Padding</title>
+    <style>
+      /* universal selector kullanip default ozellikleri sifirladik */
+      /* padding verirken margin de oldugu gibi -- top right bottom left -- seklinde tek bir satirda yazabiliriz */
+      /*
+        paddin-top:
+        padding-right:
+        padding-bottom:
+        padding-left:
+        olarak ayri ayri verebiliriz */
+      /* (top-bottom) (right-left) ayni ise ikili yazim ile verbiliriz */
+      /* yada hepsi ayni ise tek padding degeri yazmamiz yeterli */
+      /* box-sizing ozelligini universal selector icindede yazabiliriz */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .box-1 {
+        /* width & height sadece content alani icin gecerlidir */
+        /* width & height verdigimizde content alaninin olcutlerini vermis oluruz */
+        /* verdigimiz margin ve padding degerleri, werdigimiz width & height degerlerinin uzerine eklenir */
+        /* width: 500px padding: 100px ise box genisligimiz: 500 + 100(left)+100(rigth)=700px olucak */
+        /* margine ve padding degeri verip bir yandanda width ve height dgerlerine sadik kalip oyle box olusturmak istiyor isek
+           box-sizing : border-box demeliyiz*/
+        /* box-sizing ozelligi cok yaygin kullanilir */
+
+        width: 500px;
+        height: 200px;
+        border: 5px solid yellowgreen;
+        padding: 20px 50px;
+        margin-bottom: 2px;
+        margin-top: 2px;
+        margin-left: 5px;
+        /* box-sizing: border-box; */
+      }
+      .box-2 {
+        width: 500px;
+        height: 200px;
+        border: 5px solid yellowgreen;
+        padding: 10px 100px;
+        margin-bottom: 2px;
+        margin-left: 5px;
+        /* box-sizing: border-box; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+      repellat?
+    </div>
+    <div class="box-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, tempore!
+    </div>
+  </body>
+</html>

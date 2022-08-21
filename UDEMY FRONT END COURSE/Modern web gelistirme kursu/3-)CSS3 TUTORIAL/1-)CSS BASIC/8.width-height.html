@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width,Height,Max-Width</title>
+    <style>
+      /* 50% genislik verdigimiz icin sayfayi kucultup buyutsek bile sayfa genisliginin her zaman 50% sinde olucak */
+      /* sayfanin  disina cikmayacak her zaman gorunur olucak  */
+      /* kenar uzunluklari artip azalicak */
+
+      /* div.box1 {
+        width: 50%;
+        height: 100px;
+        background: purple;
+      }
+      div#box2 {
+        width: 50%;
+        height: 50px;
+        background: rgb(0, 255, 55);
+      } */
+
+      /* 700px genislik atadik */
+      /* sayfayi kucultup buyultsek bile her zaman 700px olucak */
+      /* sayfa boyutu yeterli gelmeyince scroll bar cikacak */
+
+      /* div.box1 {
+        width: 700px;
+        height: 100px;
+        background: purple;
+      }
+      div#box2 {
+        width: 350px;
+        height: 50px;
+        background-color: aqua;
+      } */
+
+      /* max-width 700px verdik */
+      /* sayfanin boyutuyla oynasak bile degismeyecek */
+      /* sayfanin disina ciksa dahi scroll bar CIKMAYACAK ( max-width deki onemli nokta burasi ) */
+
+      div.box1 {
+        max-width: 700px;
+        height: 100px;
+        background: purple;
+      }
+      div#box2 {
+        max-width: 350px;
+        height: 50px;
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      <div id="box2"></div>
+    </div>
+  </body>
+</html>

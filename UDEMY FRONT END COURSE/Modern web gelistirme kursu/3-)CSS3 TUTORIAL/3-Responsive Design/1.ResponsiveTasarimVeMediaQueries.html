@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Design ve Media Queries</title>
+    <style>
+      /* responsive design lar Pc ye tablet e ve mobile phone lar ve onlarin cesitlerine tonelik frontend tasarimlar yapmamiza yara  */
+      /* ornegin yaptigimiz bir website nin navbarini pc de tablette yada Iphone X de ne tarafta gorunmesini ayarlamimizla ilgili  */
+      /* farkli ekranlara gore farkli tasarimlar gerceklestiriyoruz */
+      /* en basit olarak, ihtiyacimiz olan; istenilen cihazin kaca-kac olcude oldugu ( px ) ozellikleridir */
+      /* incelenmek istenirse Google-F12-sol uste bak-Dimensions:Responsive-ve sonra ekran ozellikleri */
+      /* Iphone SE icin 375x667 dir. */
+      /* biz bu tasarimlari ( media query ) ler ile gerceklestirebiliyoruz */
+
+      /* body {
+        background-color: grey;
+      } */
+
+      /* @media only screen and() gibi bir ifade ile karsilasablirsin. Bu sadece pc,tablet,ve mobilephone larda calissin demek. */
+      /* @media() ibaresi ise tum media larda calissin demek */
+
+      /* @media (max-width: 768px) {
+        body {
+          background-color: yellowgreen;
+        }
+        h1 {
+          color: red;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+        a {
+          text-decoration: none;
+          color: pink;
+        }
+      }
+      @media (max-width: 500px) {
+        body {
+          background-color: pink;
+        }
+        h1 {
+          color: purple;
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+        a {
+          color: red;
+        }
+      } */
+
+      /* p {
+        display: none;
+      }
+      @media (min-width: 768px) {
+        p {
+          display: block;
+        }
+      } */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        /* flex-wrap: wrap || yazmazsan olmuyor. assagi satira inmiyor kutular */
+        flex-wrap: wrap;
+      }
+      .box {
+        border: 1px solid red;
+        background-color: pink;
+        padding: 10px;
+        width: 25%;
+      }
+
+      /* tablet */
+      @media (max-width: 768px) {
+        .box {
+          width: 50%;
+        }
+      }
+      /*mobile*/
+      @media (max-width: 500px) {
+        .box {
+          width: 100%;
+        }
+      }
+      /* responsive tasarimlarda width lerimizi ( px ) olarak vermememiz gerekiyor, ( % ) ile vermemiz gerekiyor. Ki ekran kuculdugunde o % hep sabit kalsin. */
+    </style>
+  </head>
+  <body>
+    <h1>
+      Css responsive icin
+      <a
+        href="https://www.w3schools.com/css/css_rwd_intro.asp"
+        target="_blank"
+        title="Css Responsive"
+        >w3schools</a
+      >
+    </h1>
+    <!-- <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus,
+        perferendis.
+      </p> -->
+    <div class="container">
+      <div class="box">
+        <h1>Article-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          placeat?
+        </p>
+      </div>
+      <div class="box">
+        <h1>Article-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          placeat?
+        </p>
+      </div>
+      <div class="box">
+        <h1>Article-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          placeat?
+        </p>
+      </div>
+      <div class="box">
+        <h1>Article-1</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam,
+          placeat?
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

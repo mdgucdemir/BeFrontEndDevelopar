@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page Practice & Project</title>
+    <meta name="keywords" content="Html,Html5,Css,Java,JavaScript,React " />
+    <meta name="description" content="Html,Html5,Css,Java,JavaScript,React" />
+    <!-- css dosyalarinin baglantisi -->
+    <!-- !! burada yazim sirasi onemli !! -->
+    <!-- 1-) global.css
+        2-) main.css
+        3-) tablet yada mobile css dosyasi -->
+
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- Tablet-->
+    <link rel="stylesheet" media="(max-width:768px)" href="./css/tablet.css" />
+    <!-- burada digerlerinden farkli olarak ( media ) etiketi bulunmakta ve media etiketinin calisma sarti belirtilmistir -->
+    <!-- 768px oldugunda bu etiketi git ve icinde ki kodlari calistir -->
+
+    <!-- mobile -->
+    <link rel="stylesheet" media="(max-width:500px)" href="./css/mobile.css" />
+    <!-- ayni sekilde burada da media etiketi ve calisma sarti verilmistir -->
+    <!-- bunun anlami sudur; eger ekran max 500px olarusa bu css etiketine gider ve oradaki kodlar gecerli olur -->
+    <!-- bu css dosyasinin icine yazim yaparken extra dan bir media etiketi acmana gerek yok guzel olan yani da bu :}} -->
+
+    <!-- ufak bir text yapalim -->
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- cdnjs Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- <h1>testing</h1> -->
+    <!-- calisiyeee -->
+
+    <!-- <i class="fa fa-pencil-alt"></i> -->
+    <!-- icon larda calisiyor cdnjs Font awesome sayesinde -->
+
+    <!-- ilk basta html iskeletini olustur -->
+
+    <header class="bg-dark-blue">
+      <div class="container">
+        <nav id="navbar">
+          <h1 class="heading-medium">Landing Page Project</h1>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#training">Training</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Home Section -->
+
+    <section id="home">
+      <img src="./image/Ludwig_Erhard.jpg" alt="Ludwig Erhard" />
+      <div class="name text-center">
+        <h2 class="heading-big">Landing Page Practice</h2>
+        <!-- h1, h2, h3, gibi basliklar sadece basliklarin buyuklukleri ile ilgi degildir -->
+        <!-- hiyerarsik bir oneme sahiptir. biz ister isek h3 u h1 den buyuk yapabiliriz css ile -->
+        <!-- burada ki amac onem sirasidir. cunku google botlari bnulari vurgulanan onem sirasina gore algilarlar -->
+        <p class="text-center">Html5 || Css || JavaScript</p>
+      </div>
+      <a href="#courses">Go to Courses</a>
+      <!-- asagidaki button onceden olusturulan button class lar yardimi ile yapildi -->
+      <a href="#training" class="btn btn-blue">Go to Training</a>
+    </section>
+    <!-- Training section -->
+    <section id="training" class="bg-dark-blue">
+      <h3 class="heading-medium text-center up">Training</h3>
+      <div class="items">
+        <!-- 1 -->
+        <article class="item">
+          <i class="fa-solid fa-book-skull"></i>
+          <h3>Sinif Ici Egitimler</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            consequatur.
+          </p>
+        </article>
+        <!-- 2 -->
+        <article class="item">
+          <i class="fa-solid fa-book-skull"></i>
+          <h3>Online Icerikler</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            consequatur.
+          </p>
+        </article>
+        <!-- 3 -->
+        <article class="item">
+          <i class="fa-solid fa-book-skull"></i>
+          <h3>Konferanslar</h3>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
+            consequatur.
+          </p>
+        </article>
+      </div>
+    </section>
+    <!-- Courses Section -->
+    <section id="courses">
+      <h3 class="text-center heading-medium up">Courses</h3>
+
+      <div class="container">
+        <!-- genis ekranda yayilamsinlar, ortalansinlar diye bir container olusturduk -->
+        <div class="courses">
+          <!-- Course 1 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="./image/python.jpg" alt="Python" />
+
+              <span>90% Indirim</span>
+            </div>
+            <div class="course-info">
+              <div class="title">Python | 0 dan 1 e Python</div>
+              <div class="description">
+                O dan baslayip 1 e ucuran yilan gibi bir kurs
+              </div>
+              <div class="instructor">Ludwig Erhard</div>
+              <div class="rating">4.9 | (19888 Oylama)</div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="./image/java.jpg" alt="Java" />
+
+              <span>90% Indirim</span>
+            </div>
+            <div class="course-info">
+              <div class="title">java | 0 dan 1 e Java</div>
+              <div class="description">
+                O dan baslayip 1 e ucuran yilan gibi bir kurs
+              </div>
+              <div class="instructor">Ludwig Erhard</div>
+              <div class="rating">4.9 | (19888 Oylama)</div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="course">
+            <div class="course-image">
+              <img src="./image/javascript.jpg" alt="JavaScript" />
+
+              <span>90% Indirim</span>
+            </div>
+            <div class="course-info">
+              <div class="title">JavaScript | 0 dan 1 e JavaScript</div>
+              <div class="description">
+                O dan baslayip 1 e ucuran yilan gibi bir kurs
+              </div>
+              <div class="instructor">Ludwig Erhard</div>
+              <div class="rating">4.9 | (19888 Oylama)</div>
+            </div>
+          </div>
+
+          <!-- Course 3 end -->
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact" class="bg-dark-blue">
+      <div class="contact-form">
+        <form>
+          <!-- form da ki action i sildik cunku back end ile bir isimiz yok sadece tasrim yapicaz -->
+          <h4 class="text-center heading-medium up">contact us</h4>
+          <!-- form-group olusturalim ve her bir input ve label larimizi bu grubun icine alalim   -->
+
+          <!-- name form group -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              class="form-control"
+              id="name"
+              placeholder="Your Name"
+            />
+          </div>
+          <!-- e- mail form group -->
+          <div class="form-group">
+            <label for="e-mail">E-mail</label>
+            <input
+              type="text"
+              name="e-mail"
+              class="form-control"
+              id="e-mail"
+              placeholder="Your E-mail"
+            />
+          </div>
+          <!-- message form group -->
+          <div class="form-group">
+            <label for="name">Message</label>
+            <!-- #Textarea da < cols > u yazmadik cunki width ini kendimiz ayarlidik -->
+            <textarea
+              name="message"
+              id="message"
+              class="form-control"
+              rows="5"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+          <!-- submit button -->
+          <button type="submit" class="btn btn-block">Submit</button>
+        </form>
+        <!-- social media icon larimizi koyucaz -->
+        <!-- form ve iconlarimikz olusturan ul kardes olacaklar -->
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

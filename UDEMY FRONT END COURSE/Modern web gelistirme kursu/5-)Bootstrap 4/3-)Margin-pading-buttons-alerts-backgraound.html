@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <title>Margine,Padding,Buttons,Alerts,Backgrounds</title>
+</head>
+
+<body>
+
+    <!--Backgrounds-->
+
+    <!--bootstrap de background colorunu ( bg-dark ) gibi class yazarak verebiliriz-->
+    <!--yazi rengini ise ( text-light ) gibi class yazarak verebiliriz-->
+
+    <div>
+
+        <h1 class="text-danger text-center">background</h1>
+        <div class="bg-dark text-light">content</div>
+        <div class="bg-danger text-primary">content</div>
+        <div class="bg-primary text-info">content</div>
+        <div class="bg-warning text-secondary">content</div>
+        <div class="bg-secondary text-danger">content</div>
+        <div class="bg-success text-warning">content</div>
+        <div class="bg-info text-success">content</div>
+
+    </div>
+
+    <!--padding-->
+     
+    <!--padding class ini ( p ) ile yazariz -->
+    <!--padding in degerini ise yanina sayilar vererek belirleriz-->
+    <!--her taraftan pading vermek istiyor isek (p-1) yazariz burada 1 ise ( 0.25rem ) anlamina gelir-->
+    <!--sayiyi her arttirdigimizda 0.25 rem lik bir artis yapariz ornegin (p-1, p-4, p-2 gib)-->
+    <!--sadece sol dan padding birakmak istiyor isek (pl-2) gibi yazariz burada ( pl ) [padiing left] anlamina gelir. sayilari arttir azalt o sana kalmis-->
+    <!--sadece sagdan paddin ise (pr-1) [padding right] anlamina gelir-->
+    <!--sadece soldan-sagdan bir padding birakmak istiyor isek ( px-3 ) yazariz, buradaki [ x ] yatayda x ekseni anlamina gelir-->
+    <!--sadece yukaridan ve assagidan paddin birakmak istiyor isek ( py-4 ) yazariz, buradaki [ y ] duseyde y ekseni anlamina gelir-->
+
+
+    <div>
+        <h1 class="text-danger p-2 text-center">padding</h1>
+        <div class="bg-dark pl-1 text-light">content</div>
+        <div class="bg-danger text-primary pr-2">content</div>
+        <div class="bg-primary px-3 text-info">content</div>
+        <div class="bg-warning text-secondary py-4">content</div>
+        <div class="bg-secondary text-danger">content</div>
+        <div class="bg-success text-warning">content</div>
+        <div class="bg-info text-success">content</div>
+    </div>
+
+    <!--margin-->
+
+    <!--padding de oldugu gibi marginde de ayni ozellikleri kullaniyoruz-->
+    <!--margin class ini ( m ) ile yaziyoruz ve degerlerini sayilar ile belirliyoruz (0.25rem kurali burada da gecerli)-->
+    <!-- her tarafa margin vermek istersek ( m-1 ) yazmamiz yereli-->
+    <!--sadece sol tarafa margin ( ml-2 ) gibi verilir-->
+    <!--sadece sag tarafa margin ( mr-3 ) gibi verilir-->
+    <!--sag ve sola margin vermek istersek ( mx-1 ) seklinde-->
+    <!--sag ve sola auto margin vermek istersek ( mx-auto ) seklinde-->
+    <!--yukari ve asagi margin verilmek istenirse ( my-1 ) seklinde-->
+    <!--margin ler verilir-->
+
+    <div>
+        <h1 class="text-danger text-center">margin</h1>
+        <div class="bg-dark ml-1 text-light">content</div>
+        <div class="bg-danger text-primary mr-2">content</div>
+        <div class="bg-primary mx-3 text-info">content</div>
+        <div class="bg-warning text-secondary my-4">content</div>
+        <div class="bg-secondary text-danger mx-auto " style="width: 500px;">content</div>
+        <div class="bg-success text-warning m-1">content</div>
+        <div class="bg-info text-success">content</div>
+    </div>
+
+    <!--Alert-->
+    <!--Alert ozelliklerini biz eger birisinin siteye giris izni yoksa yada yanlis islem yapildih=ginda vs insanlari bilgilendirmek icin kullaniriz-->
+
+    <div>
+        <h1 class="text-danger text-center">alert</h1>
+
+        <div class="alert alert-success">you are done</div>
+        <div class="alert alert-danger">not good</div>
+        <div class="alert alert-success">ok</div>
+        <div class="alert alert-warning">warning</div>
+        <div class="alert alert-dark">dark</div>
+        <div class="alert alert-secondary">secondary</div>
+        <div class="alert alert-dismissible">dismissible</div>
+        <div class="alert alert-info">info</div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css - flexbox flex-direction</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 75%;
+        min-height: 600px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        /* flex-directon column oldugu icin dusey hizzalamk istiyor isek justify-contenti yatay da ise align-items i kullanacagiz */
+        /* main axis ve cross axis tam tersi oldu anliyacagin */
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .box {
+        text-align: center;
+        background-color: bisque;
+        width: 200px;
+        height: 65px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flexbox-Direction -->
+    <!-- flexbox direction: row=satir  column=sutun -->
+    <!-- flex-direction i yazmaz isek default olarak row olarak alir -->
+    <!-- row oldugunda yada default oldugunda; [ justify-content ]= stiri, [ align-items ]=sutun lari yonetmemizi saglar -->
+    <!-- AMMMAAA -->
+    <!-- flex-direction: column; oldugunda ise durum tam tersine doner -->
+    <!-- justify-content i sutunlar icin, align-items i satirlari dizayn etmek icin kullanitiriz -->
+
+    <div class="container">
+      <div class="box">
+        <h1>Article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>Article 2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>Article 3</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>

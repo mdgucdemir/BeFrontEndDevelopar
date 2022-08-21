@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Selector</title>
+    <style>
+      /* tum h1 leri sec */
+      /* h1{
+            color: red;
+            background: blue;
+            
+        } */
+      /*tum p leri sec*/
+      /* p{
+            color: aqua;
+            background: yellow;
+        } */
+      /*h1 ve p leri sec*/
+      /* h1,
+      p {
+        color: aquamarine;
+        background: purple;
+      } */
+      /* birlikte secim yaparken (h1 ve p gibi) araya (ve) anlamina gelen virgul ( , ) konulur  */
+
+      /*id secimi*/
+      /* #logo {
+        color: yellowgreen;
+        background: yellow;
+      } */
+
+      /*class secimi*/
+      /* .info{
+          color: yellow;
+      } */
+
+      /*id ve class secimi*/
+      /* #logo,
+      .lead {
+        color: yellowgreen;
+      } */
+
+      /*id ve class birlikte olan tek bir elemani sec. yazarken bitisik yaz bosluk birakma*/
+      /* #para1.lead {
+        color: aqua;
+      } */
+
+      /*linkler deki alt cizgileri kaldirma*/
+      /* a {
+        text-decoration: none;
+      } */
+
+      /* (ul) nin altindaki (li) nin altindaki (a) lari sec */
+      /* (ul)-(li) nin parent elementi (li)-(a) nin parent elementi */
+      /* (a)-(li) nin child yada children elementi (li)-(ul) nin children elementi */
+      /* yukarida anlatilanlari anlamak icin asagida liste yazim ornegine bakarsan anlarsin ;)  */
+      /* ul li a {
+        text-decoration: none;
+        color: yellowgreen;
+      } */
+
+      /* class i info olan span leri sec */
+      /* .info span {
+        color: yellowgreen;
+        background: yellow;
+      } */
+
+      /* #para1 .primary {
+        color: yellowgreen;
+        background: yellow;
+      } */
+
+      /* sayfadki tum ogeleri secmek icin (*) "yildiz" yazmamiz yeterli */
+      /* * {
+        color: yellowgreen;
+        font-size: 30px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      } */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Header 1</h1>
+      <h1 id="logo">Logo</h1>
+      <ul>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Services</a></li>
+      </ul>
+    </header>
+    <h1>Header 2</h1>
+    <p id="para1" class="lead info">
+      Lorem ipsum <span class="primary">dolor</span> sit amet consectetur
+      adipisicing elit. Nostrum, nisi.
+    </p>
+    <p class="info">
+      Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit.
+      Esse, hic?
+    </p>
+    <p class="info">
+      Lorem ipsum <span>dolor</span> sit amet consectetur adipisicing elit.
+      Quisquam, sed.
+    </p>
+    <p>Test Paragraph</p>
+    <a href="#">Home</a>
+  </body>
+</html>

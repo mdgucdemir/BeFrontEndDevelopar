@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Link & Bookmark</title>
+    <!-- Kendi sayfamizda linkler verebilir -->
+    <!-- bu linkler sayesinde sitede istedigimiz yere yonlendire biliriz -->
+    <!-- ornegin alisveris sitesindeki bir kullaniciyi urun altindaki yorum satirina gonderebiliriz mesela -->
+    <!-- etc. bu ornekler cogalabilir -->
+    <style>
+      .box {
+        width: 200px;
+        height: 200px;
+        text-align: center;
+        padding: 50px;
+      }
+      #box1 {
+        background: red;
+      }
+      #box2 {
+        background: orange;
+      }
+      #box3 {
+        background: yellow;
+      }
+      #box4 {
+        background: green;
+      }
+      #box5 {
+        background: purple;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <!-- bir liste olusturarak alt alta linler verdik -->
+      <!-- kullanici linklerden birine bastiginda, bastigi linkin kutusuna gidecek -->
+      <li><a href="#box1">box 1</a></li>
+      <li><a href="#box2">box 2</a></li>
+      <li><a href="#box3">box 3</a></li>
+      <li><a href="#box4">box 4</a></li>
+      <li><a href="#box5">box 5</a></li>
+    </ul>
+    <!-- div ile block olusturup -->
+    <!-- sonra o blocklara id ve class atadik -->
+    <!-- ve css ile id ve class lari sekillendirdik -->
+    <div id="box1" class="box">box 1</div>
+    <div id="box2" class="box">box 2</div>
+    <div id="box3" class="box">box 3</div>
+    <div id="box4" class="box">box 4</div>
+    <div id="box5" class="box">box 5</div>
+  </body>
+</html>

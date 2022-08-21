@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - flexbox flex-wrap</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      h1 {
+        text-transform: uppercase;
+      }
+
+      .container {
+        width: 75%;
+        min-height: 600px;
+        background-color: black;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start; /* yatayda siralama [ align-items duseyde siralama ] */
+        flex-wrap: wrap;
+        /* goruldugu uzere 600px icine 200px lik hayvan gibi bir ton kutu yerlestirdik ve kacinilmaz olarak tasma oldu */
+        /* bu tasmayi onlemek icin flex container olan elementimizin height uzunlugu min-height olarak vermemiz gerek NEDEN ? */
+        /* hemen anlatalim sam seytani; egere height minimum 600px olsun demekle height 600px olsun demek arasinda ki anlam farki  */
+        /* min-height: 600px demek minimum 600 olsun, fazlasi olursa hic agzimi acmak allah bereket versin deyip cebe atmak gibi   */
+      }
+
+      .box {
+        text-align: center;
+        background-color: bisque;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 2</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 3</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div class="box">
+        <h1>article 1</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive - Css Units</title>
+    <!--
+
+        Responsive Units
+        em, rem, %, vw, vh
+    
+    -->
+
+    <!-- Yazilimlar surekli degisen yapilardir. Surekli ek ozellikler, ek degisikler gelmesi gerekir  -->
+    <!-- bizim yazilimlarimizi hizli birsekilde guncellemek, yeni ozellikleri surekli entegre etmemiz gerekiyor  -->
+    <!-- Projelerinizde belli best practicelere yani en iyi tasarim yontemlerine basvurmazsaniz, bir sure sonra projeniz buyudukce yeni bir ek ozelligi projeye 
+        dahil etmek istediginizde, bu sizin zamaninizi alacaktir -->
+    <!-- projeye ilk basladiginda hizli ve efektif bir sekilde baslarsin. Uretkenlik hat saffaha dadir. 
+        Ama bir guncelleme ve bir yenilik yada degisiklik oldugunda bun projeye hizli ve sorunsuz bir bicimde
+         entegre etmelisin -->
+    <!-- Ki durum " Spaghetti code " durumuna dusmeyesein -->
+    <!-- ornegin margin, padding, font-size lara ( px ) verirseniz, yarin bir gun bir degisiklik geldiginde, tum ( px )leri tek tek degistirmeniz gerekecek -->
+    <!-- bunun icin Css - Units leri daha fazla kullanmaya calisacagiz.( em, rem, %, vw, vh ) -->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .background {
+        background: url(./corsair.jpg) center center no-repeat;
+        /* resmin ortalanmasini istiyor isen ( center center ) yaz. Resmin tekrarlanmamasini istiyor isen ( no-repeat ) yaz. */
+        background-size: cover;
+        /* resmin alanin her tarafini kaplamasini istiyor isen ( background-size: cover ) yazman yeterli. */
+        height: 100vh;
+        /* viewport un hepsini kaplamasini istiyor isen resmin, ( height: 100vh ) yaz */
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        width: auto;
+        height: 30vh;
+        flex-wrap: wrap;
+        position: relative;
+      }
+      div.em {
+        margin-top: 0.47em;
+        width: 20vw;
+        height: 20vh;
+        border: 1px solid white;
+        overflow: auto;
+        padding: 0.67em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      div.rem {
+        margin-top: 0.47rem;
+        width: 20vw;
+        height: 20vh;
+        border: 1px solid white;
+        overflow: auto;
+        padding: 0.67rem;
+        display: flex;
+        flex-direction: column;
+      }
+
+      div.vwvh {
+        margin-top: 0.47em;
+        width: 20vw;
+        height: 20vh;
+        border: 1px solid white;
+        overflow: auto;
+        padding: 0.67em;
+        display: flex;
+        flex-direction: column;
+      }
+
+      h1 {
+        text-align: center;
+        text-transform: uppercase;
+        color: white;
+        font-size: 1.5em;
+      }
+      p {
+        color: white;
+      }
+      p#em {
+        padding: 0.57em;
+        font-size: 1.2em;
+        letter-spacing: 2px;
+        /* letter-spacing ozelligini px cinsinde verebilirsin */
+      }
+      p#rem {
+        padding: 0.57rem;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        /* letter-spacing ozelligini px cinsinde verebilirsin */
+      }
+      @media (max-width: 500px) {
+        .box {
+          width: 100%;
+        }
+
+        p {
+          font-size: 0.15em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <div class="main box">
+        <div class="em">
+          <h1>em units</h1>
+          <p id="em">
+            em= bizim _parent_ imizin _font-size_ ina gore orantisal bir unit
+            imizdir. parent olan div iniz 16px ise siz child elemana 1.5em
+            verirseniz, chlid in font-size i 24px olacaktir.
+          </p>
+        </div>
+
+        <div class="rem box">
+          <h1>rem units</h1>
+          <p id="rem">
+            rem units sadece htlm etiketinin _font-size_ina gore orantisal bir
+            unit tir. Ana parent olan htm default olarak 16px dir. biz bir p
+            elementine 1.5rem verir isek bu p elementi 24px olacaktir. bir
+            ustteki parent elementi farkli deger alsa bile
+          </p>
+        </div>
+
+        <div class="vwvh box">
+          <h1>vw & vh units</h1>
+          <p id="em">
+            vw= view width <br />
+            vh= view height <br />
+            Anlamina gelir. bir elemente 10vw vermek demek. gorunen ekranin
+            genisliginin 10% vermek demektir. Bir elemente 20vh vermek demek
+            ekranin yuksekliginin 20% sini vermek demektir.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

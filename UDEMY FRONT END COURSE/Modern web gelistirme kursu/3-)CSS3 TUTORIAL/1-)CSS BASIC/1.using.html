@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using CSS</title>
+    <!-- link yardimi ile css imizi disardan iceri cagiriyoruz. href e bakiniz, nereden baglanti kurulmus... -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      /*       
+        css de comment olayi boyle yapilir) 
+        */
+      /*
+        css de style icin biz;
+
+        selector
+        {
+            css-ozelligi : value
+        }
+
+        seklinde yapicaz ornegin
+        */
+      h1 {
+        color: red;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 style="color:red">baslik-1</h1> -->
+    <!-- bu yaptigim inline css dir -->
+    <!-- comment shotcut ctrl+K+C dir -->
+    <h1>baslik-2</h1>
+    <h1>baslik-3</h1>
+    <!-- h1 ler yukaridaki style de tanimlanan ozelligi kullandi -->
+    <h2>baslik-4</h2>
+    <!-- h2 style de tanimlanmadigi icin bir cacik olmadi :) -->
+    <!-- css si bir boyle kullanana biliriz  -->
+    <!-- diger bir kullanimi da disarida bir css sayfasi acar,orada gerekli tanimlamalari yapar, sonra o css dosya sinin uzantisini html ekleriz. -->
+    <h3>babbow</h3>
+    <h3>babboww</h3>
+    <h3>zabboww</h3>
+    <!-- h3 ler disaridan bir css olusturup ice aktarilarak yapilmistir. -->
+  </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Css Tables</title>
+    <style>
+      table,
+      tr,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      table {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.5em;
+        font-family: serif;
+      }
+
+      thead tr {
+        background-color: red;
+        color: gold;
+      }
+      tbody tr {
+        text-align: center;
+        color: black;
+      }
+      tbody tr:nth-child(odd) {
+        background-color: gray;
+      }
+      tbody tr:nth-child(even) {
+        background-color: aqua;
+      }
+      tbody tr:hover {
+        background-color: gold;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Department</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Marcus</td>
+          <td>IT</td>
+          <td>3500</td>
+        </tr>
+        <tr>
+          <td>Alen</td>
+          <td>Security</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>Totti</td>
+          <td>Legend</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Frank</td>
+          <td>CEO</td>
+          <td>14000</td>
+        </tr>
+        <tr>
+          <td>Joe</td>
+          <td>President</td>
+          <td>15449</td>
+        </tr>
+        <tr>
+          <td>Donald</td>
+          <td>Unknown</td>
+          <td>Unknown</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

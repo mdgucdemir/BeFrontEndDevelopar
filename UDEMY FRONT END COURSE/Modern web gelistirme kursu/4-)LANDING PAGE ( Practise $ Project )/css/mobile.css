@@ -1,0 +1,21 @@
+/* h1 {
+  color: purple;
+} */
+
+#navbar {
+  flex-direction: column;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  overflow: hidden;
+  height: 80px;
+}
+
+#training .items {
+  flex-direction: column;
+}
+#training .items .item {
+  width: 100%;
+}
+.course {
+  flex-direction: column;
+}

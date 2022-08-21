@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS - Margin</title>
+
+    <style>
+      /* tarayicilarin otomatik margin ataya bilirler */
+      /* bunlari resetleyebilmek icin universal selecter i kullandik  */
+      /* amaci auto atamalari resetleyip kendi dizaynimizi yapmak */
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div.box1 {
+        background: yellowgreen;
+        /* width: 700px; */
+        /* tasarimlarimizin herzaman orta da kalmasini istiyor isek */
+        /* sayfayi kucultup-buyuttugumuzde her zaman ortada kalmasini istiyor isek width: 50%; yazmamiz yeterli */
+        width: 50%;
+
+        /* margin ler boyle tek tek verilebilir */
+
+        /* margin-top: 50px;
+        margin-right: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px; */
+
+        /* yada saat yonunde olmak sureti ile */
+        /* margine: top, right, bottom, left olarakta tek seferde yazabiliriz */
+
+        /* margin: 50px 20px 50px 20px; */
+
+        /* margin grublari ayni ise */
+        /* yani top-bottom, right-left gibi */
+        /* tek seferde yazabiliriz */
+
+        /* margin: 50px 20px; */
+
+        /* eger elementimizi tam ortaya gelmesini istiyor isek */
+        /* yani ortalamak istiyor isek */
+        /* margin left ve right a ( auto ) ozelligi vermemiz yeterli */
+
+        /* margin-right: auto;
+        margin-left: auto; */
+
+        /* egera top-bottom:0 ve right&left: auto olsun istiyor ve tek seferde yazmak istiyor isek */
+
+        margin: 0 auto;
+
+        /* yazmamiz yetelidir */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis,
+      fuga?
+    </div>
+  </body>
+</html>

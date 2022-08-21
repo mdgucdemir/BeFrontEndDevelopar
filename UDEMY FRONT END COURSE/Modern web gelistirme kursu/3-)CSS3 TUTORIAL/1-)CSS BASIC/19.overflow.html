@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css - Overflow</title>
+    <style>
+        h1 {
+            text-transform: uppercase;
+        }
+
+        div {
+            margin: 0 auto;
+        }
+
+        div.example-1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+
+        }
+
+        div.example-2 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: hidden;
+            /* overfow: hiden ||| dedigimiz icin tasan yerler gizlendi */
+        }
+
+        div.example-3 {
+            /* overflow: auto ||| dedeigimiz icin scroll bar auto olarak ayarlandi */
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+        div.example-4 {
+            /* overflow: scroll ||| da kelimeler tasmasada direk scroll bari koyar */
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+
+        div.example-5{
+            /* overflow: scroll ||| lorem150 icin */
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            overflow: scroll;
+        }
+    </style>
+</head>
+
+<!-- overflow yani tasma -->
+<!-- overflow un birden fazla kullanimi var, hadi ornekler ile gorelim -->
+<div class="example-1">
+    <h1 class=>example-1( tasma oldu )</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At eum similique tempore maiores earum sapiente,
+        pariatur eius ex ratione. Numquam, quibusdam libero provident iusto quasi accusamus sint doloremque, omnis ea
+        pariatur quam vero accusantium, est possimus quod harum nam quisquam aliquam error animi! Dolores, consectetur.
+        Quas ad recusandae, exercitationem expedita quibusdam nisi quia doloremque eos nam! Maiores, pariatur excepturi
+        eaque vero perspiciatis praesentium facere earum dolorem repellat nisi vel incidunt voluptatibus, fugiat labore
+        illum atque tempora, nemo doloribus. Magnam repellendus corporis, placeat consequuntur consectetur a qui dolorem
+        pariatur ad, reprehenderit eligendi fuga saepe vel, ratione impedit vitae libero! Nulla quo unde, nisi dicta
+        quibusdam, incidunt nobis dolor provident minima commodi, fugit dolorum. Perspiciatis consectetur quaerat
+        temporibus ab magni expedita cum adipisci quisquam beatae, sapiente suscipit ea, deleniti, rerum deserunt et
+        unde sunt. In odit repellat nostrum id, facere mollitia error optio dicta enim fuga sapiente modi ab quas vitae
+        quos.</p>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="example-2">
+    <h1>example-2( overflow: hiden )</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde sunt, magni qui repellendus ratione quia
+        reiciendis, similique dolor ut, tempore suscipit. Maxime excepturi harum tempore dolore! A enim mollitia sunt
+        deleniti veniam hic iste maxime illo. Unde porro, nihil qui laborum facere similique, veniam ab deserunt est,
+        aperiam nisi voluptates. Non nostrum voluptatem est minus, quisquam odio nesciunt ratione ipsum adipisci debitis
+        tempora perspiciatis inventore dolor officiis saepe ducimus illum maxime dignissimos temporibus? Eaque veniam
+        modi, cupiditate ipsa perferendis dolore nihil voluptatem beatae? Laborum, eius odit voluptas esse voluptate
+        nemo numquam assumenda mollitia consectetur cumque, quam obcaecati ducimus. Et, incidunt fuga. Perferendis
+        veniam cumque, dolorem exercitationem obcaecati, id ipsam, ut quasi atque quis deserunt dolore sit reprehenderit
+        iusto non ea aliquid. Qui, natus maiores. Iure officiis dolor consequatur reprehenderit maiores fugit. Illo
+        consequuntur illum, inventore culpa provident amet consectetur nesciunt. Itaque numquam dolore natus quas nam
+        nostrum consectetur adipisci laudantium.</p>
+</div>
+<br><br>
+<div class="example-3">
+    <h1>example-3 ( overflow: auto )</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore accusamus laboriosam dicta ad, officia
+        reiciendis rerum minima obcaecati, ducimus molestiae sit voluptates suscipit fuga numquam sint a! Voluptatum,
+        quas, quia odit, quaerat quo nulla sapiente vel accusamus blanditiis repellat voluptatem totam odio tempora
+        ratione atque saepe iste voluptatibus dolores. Facere vero, expedita exercitationem natus quod soluta cum amet
+        aut ut at iure repellendus deserunt vitae accusamus voluptatum voluptas qui possimus cupiditate? Voluptas
+        quibusdam quaerat non pariatur id atque, velit, quam placeat architecto soluta et excepturi. Perferendis ut
+        minima obcaecati voluptatem necessitatibus eveniet dolor ipsa voluptatibus soluta quos, officiis ipsam a non
+        voluptate, totam corrupti quia quas voluptates pariatur eum. Laudantium, nobis? Expedita amet assumenda ab
+        excepturi ipsa repellendus sequi veritatis quibusdam soluta error aliquam adipisci quam repudiandae numquam
+        sapiente similique rerum ducimus eligendi, cumque natus! Quisquam illum consequuntur aspernatur, voluptas modi
+        eos voluptates maiores autem! Rem, expedita. Delectus, incidunt vel?</p>
+</div>
+<br><br>
+<div class="example-4">
+    <h1>example-4 ( overflow: scroll )</h1>
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<br><br>
+<div class="example-5">
+    <h1>example-5 ( overflow: scroll (full lorem150) )</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi, molestiae nihil recusandae doloribus veniam
+        corporis quibusdam a temporibus cumque saepe deleniti quisquam magni? Odit nesciunt, fugiat ab non commodi
+        asperiores reiciendis ea obcaecati beatae natus eum ratione. Corrupti, veritatis obcaecati? Quis placeat non ut
+        corrupti adipisci pariatur numquam, est iure. Illum quisquam tempora deleniti reiciendis eius illo neque et.
+        Minima, in dolor libero iste voluptate illum officia excepturi perferendis explicabo, laborum natus ab nihil
+        labore praesentium, quas recusandae cumque deleniti temporibus omnis? Perferendis quod quia temporibus ratione
+        odio facere animi voluptatum fugit autem eum aliquam blanditiis in dicta tenetur placeat, harum incidunt
+        molestias atque distinctio facilis est rem obcaecati quisquam assumenda! Obcaecati alias in voluptatum
+        voluptates! Suscipit, saepe quos. Quia placeat, praesentium alias qui voluptate dolorem fugit corrupti nam.
+        Laborum beatae totam vero quia natus ducimus tempora perspiciatis, commodi nam numquam fuga dolorem aliquam
+        officia culpa optio, nihil quos. Modi.</p>
+</div>
+</body>
+
+</html>

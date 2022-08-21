@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nth-Child Selector</title>
+    <style>
+      ol {
+        list-style: none;
+      }
+      p {
+        font-size: 1.5em;
+      }
+      /* nth-child */
+
+      .p1:nth-child(2) {
+        color: red;
+      }
+
+      .p1:nth-child(3) {
+        color: yellowgreen;
+      }
+      .p1:first-child {
+        color: aqua;
+        background: yellow;
+      }
+      .p1:last-child {
+        background-color: yellowgreen;
+      }
+
+      ul li:nth-child(even) {
+        /* even number = cift sayi */
+        color: red;
+      }
+      ul li:nth-child(odd) {
+        /* odd number = tek sayi */
+        color: blue;
+      }
+
+      /* formullu secimde yapabiliriz  ( an + b ) seklinde */
+
+      ol li:nth-child(2n) {
+        /* 2n n sifirdan baslar bir bir artarak devam eder ( an + b ) formulu uygulandi b degeri sifir oldugu icin yazmadik direk ( 2n ) yazmamiz yeterli */
+        color: blue;
+      }
+
+      ol li:nth-child(2n + 1) {
+        /* n 0 dan baslar  bir bir artarak devam eder ( an + b ) formulu */
+        color: deeppink;
+      }
+
+      ol li:nth-child(n + 5) {
+        background-color: orange;
+      }
+      /* yada ( n + 5 ) deyip 5. elementten itibaren baslata biliriz */
+    </style>
+  </head>
+  <body>
+    <!-- nth-child ile parent-child iliskisi icinde olan elementleri secebilir ve stilleyebiliriz -->
+    <!-- ilk child i sec, son child i sec, 3.child sec, cift olanlari sec, tek olanlari sec, vb. secimler yapabiliriz -->
+    <!-- ( a.n + b ) secklinde formuller yazabiliriz -->
+    <!-- ( an + b formulunde n imiz 0 dan baslar ) -->
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      quaerat.
+    </p>
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      quaerat.
+    </p>
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      quaerat.
+    </p>
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      quaerat.
+    </p>
+    <p class="p1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
+      quaerat.
+    </p>
+    <br />
+    <br />
+
+    <ul>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+    </ul>
+    <br />
+    <br />
+
+    <ol>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+      <li>bla bla bla</li>
+    </ol>
+  </body>
+</html>
