@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <!--bootstrap css-->
+    <!--bootstap js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!--bootstrap js-->
+</head>
+<style>
+    a {
+        text-transform: capitalize;
+    }
+</style>
+<title>Navigation & Dropdown</title>
+
+
+<body>
+    <div class="nav nav-tabs bg-light d-flex justify-content-end">
+        <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link">technology</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">art</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">culture</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">books</a></li>
+
+            <li class="nav-item dropdown">
+                <!--[dropdown-menu] ve [dropdown-item] lari dropdown listesinin icine yazmayi unutma. ayri bir yere yazarsan yazdiklarin gozukmez-->
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">basket</a>
+
+
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">1 x cpu</a>
+                    <a href="#" class="dropdown-item">1 x gpu</a>
+                    <a href="#" class="dropdown-item">3 x books</a>
+                    <div class="dropdown-divider"><!--adindan anlasilacagi gibi divider bolucu,bolen dir--></div>
+                    <a href="#" class="dropdown-item d-flex justify-content-between align-items-center">pay items <span class="badge bg-success">5</span></a>
+                </div>
+            </li>
+
+            
+        </ul>
+    </div>
+</body>
+
+    
+</html>

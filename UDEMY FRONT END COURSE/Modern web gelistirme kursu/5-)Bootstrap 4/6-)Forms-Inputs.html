@@ -1,16 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!---->
+    <style>
+        .btn-block {
+            display: block;
+        }
+
+        
+        #message {
+            resize: none;
+        }
+        .form-group{
+            margin-top: 1rem;
+            text-transform: capitalize;
+        }
+    </style>
     <title>Forms And Inputs</title>
+    <!-- biz daha once css ile [form-conrol] ve [form--group] olusturmustuk -->
+    <!-- bootstrap ile [form] olusturmak ve akabinde [form-group] ve [form-conrol] yapmak icin [form-group ve form-control] bootsrap hazir class larini kullanmaliyiz-->
 </head>
+
 <body>
-    
+
+    <div class="container ">
+        <form style="width: 50rem;" class="mx-auto pt-4">
+
+            <h3 class="text-danger text-center text-capitalize">information area</h3>
+            <hr>
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">email</label>
+                <input type="text" id="email" class="form-control">
+                <small class="form-text text-danger">*email please</small>
+            </div>
+
+            <div class="form-group">
+                <label for="language">language</label>
+                <select class="form-control" id="language">
+                    <option selected>none</option>
+                    <option>english</option>
+                    <option>french</option>
+                    <option>japanese</option>
+                    <option>german</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">your message</label>
+                <textarea name="message" id="message" rows="10" class="form-control" placeholder="please write your message"></textarea>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" name="accept" id="accept" class="form-check-input">
+                <label for="accept" class="form-check-text text-success">I accept</label>
+            </div>
+
+            <div class="form-group">
+                <a href="#" class="btn btn-primary btn-block">confirm</a>
+            </div>
+        </form>
+    </div>
+
 </body>
+
 </html>
