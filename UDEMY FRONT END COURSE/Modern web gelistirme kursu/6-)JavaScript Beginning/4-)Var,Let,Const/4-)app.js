@@ -78,3 +78,5 @@ i.push(6);
 console.log(i);
 
 // biz burada [i] nin referans ettigi yeri degistirmiyoruz, sadece [i] nin referans ettigi yerin degerini degistiriyoruz.
+
+// javascript gelistiricileri artik [var] kullanmiyorlar [let] ve [const] kullaniyorlar.
