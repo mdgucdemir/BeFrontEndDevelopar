@@ -34,7 +34,9 @@ row
 
 
 // JAVASCRIPT VERI TIPLERI
-// Javascripte iki turlu veri tipi vardir. Bunlar [ Primitive ] ve [ Reference ] veri tipleridir.
+
+
+// Javascripte iki turlu veri tipi vardir. Bunlar [ Primitive (ilkel) ] ve [ Reference ] veri tipleridir.
 
 //1-) PRIMITIVE VERI TIPLERI
 
@@ -44,7 +46,7 @@ row
 . [string] (yazi) olabilir
 . [undefined] (tanimsiz) olabilir 
 . [boolean] olabilir
-. [null] (bos,gecersiz,hukumsuz) olabilir
+. [null] (bos) olabilir
 
 */
 
@@ -52,14 +54,14 @@ row
 
 var a = 10;  //dedigimizde javascript bize dinamik bir tipleme yapiyor. Yani otamatik olarak [a] ya sayi olan [10] atiyor ve artik [a] degiskeninin type i [number] oluyor
 
-// Number v;eri type i ilkel bir veri type mizdir.
+// Number veri type i ilkel (primitive) bir veri type mizdir.
 
 
 //gorelim
 console.log(typeof a);
 console.log(a);
 
-var b = 3.14; // ondalikli sayi versek dahi bunu bir nuber olarak kabul edecektir
+var b = 3.14; // ondalikli sayi versek dahi bunu bir number olarak kabul edecektir
 console.log(b);
 console.log(typeof b);
 
@@ -95,7 +97,7 @@ console.log(typeof q); // type [object] olarak gozukuyor ama aslinda object degi
 // tanimsiz anlamina gelir, null ile cok karistirilir. 
 // Null ile arasindaki fark; biz [null] e bos deger atadadik ama [undefined] a ise hic bir deger atamadik 
 
-var w;          // goruldugu uzere gicbir deger atanmamistir.
+var w;          // goruldugu uzere gibi bir deger atanmamistir.
 console.log(w);
 
 
@@ -114,7 +116,7 @@ console.log(w);
 
 /* ARRAY */
 
-var numbers = [1,2,3,4,5]  //biz buradaki degerlere bir reference uzerinde ulasiyoruz, oreference ise bu oernekte [number] tir
+var numbers = [1,2,3,4,5]  //biz buradaki degerlere bir reference uzerinde ulasiyoruz, o reference ise bu ornekte [number] tir
 console.log(numbers);
 console.log(typeof numbers); //type i object olarak gorunuyor
 
