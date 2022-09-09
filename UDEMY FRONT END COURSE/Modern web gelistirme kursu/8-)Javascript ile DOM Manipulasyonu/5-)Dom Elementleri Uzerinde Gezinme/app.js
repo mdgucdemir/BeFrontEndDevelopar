@@ -44,6 +44,45 @@ value = todoList.children[2].textContent = "Changed";
 
 value = cardrow;
 value = cardrow.children;
+value = cardrow.children[2].children[1].textContent = "Burasida degisti";
+
+value = todoList;
+value = todoList.children;
+value = todoList.children[0];
+// yada
+
+value = todoList.firstElementChild;
+value = todoList.lastElementChild;
+
+value = todoList.children.length; // kac elemani var
+
+// yada
+
+value = todoList.childElementCount; // kac tane elemani var
+
+
+// parent element bulma
+
+value = cardrow;
+value = cardrow.parentElement;  // parent element bulundu
+value = cardrow.parentElement.parentElement; // parent elementin parent i bulundu
+
+
+// element [ siblings ] kardesleri
+
+value = todo;
+
+value = todo.previousElementSibling;  // bir onceki sibling
+value = todo.nextElementSibling;  // bir sonraki sibling
+value = todo.nextElementSibling.nextElementSibling;  // bir sonra ki sibling in bir sonraki sibling i :))
+
+value = todo.previousElementSibling.previousElementSibling; 
+
+/* todo bizim 2. elementimiz cunku biz oyle atadik,
+            bir onceki elementi [todo 1]. 
+                      Onunda bir onceki elementini almaya calisir isek,
+                             [todo 1 ] in bir onceki kardes elemani olmadigi icin [null] degeri vercektir. */
+
 
 
  console.log(value);
