@@ -1,3 +1,4 @@
+
 // belir bir islem yapacak kodumuz var ise bunu bir [fonction] catisi altinda yazariz 
 // ihtiyacimiz oldukca o function i cagiririz
 // boylece durmadan ayni kodu durmadan yazma yada copy-paste yaparak [spacetti code] durumundan kurtaririz.
@@ -9,7 +10,7 @@
 //     console.log("hello world");
 // }
 
-// funcion i csgirmak istiypr isek
+// funcion i csgirmak istiyor isek
 
 // hello(); // this is function call
 
@@ -93,7 +94,10 @@
 
 
 // Immediatly Invoked Function Expression (IIFE)
+
+
 // turkce meali [tanimlandigi yerde calisan fonksiyonlar]
+
 
 // (function(name){
 //     console.log("hello world " + name );

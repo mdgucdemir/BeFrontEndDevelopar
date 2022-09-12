@@ -48,25 +48,41 @@
 // console.log(4 <= 4);
 
 
+
 /* Mantiksal Baglaclar */
+
+
 
 // mantiksal baglaclar birden cok kosulu kontrol ettigimiz zaman kullanilan baglaclar
 
+
+
 // Not operatoru [!]
+
 
 // bir degeri [true] ise [false] a - [false] ise [true] cevirir
 
 // console.log(!(2 == 2));
 // console.log(!(2 != 2));
 
+
+
+
 // And Operatoru [ && ]
+
+
 
 // And operatoru ile [true] cikmasini istiyorsan,karsilastirilan her kosulun kendi icerisinde [true] olmak zorunda
 // en az 1 kosulun [false] olmasi durumunda sonuc [false] cikar.
 
 // console.log((2 == 2) && ("ahmet" == "ahmet"));
 
+
+
+
 // Or operatoru [ || ]
+
+
 
 // Or da [true] sonucunu istiyor isen, en az bir kosulun [true] olmasi lazim
 // or da [false] sonu istiyorsan, butun kosullarin [false] olmasi lazim.
@@ -74,9 +90,15 @@
 // console.log((4 == 2) || ("ahmet" == "ahmet"));
 
 
+
+
 /* KOSULLU DURUMLAR [if], [else if], [else] */
 
+
+
 // if kosulu
+
+
 
 // [if] kendi icerisinde ki kosullu durumlar [true] ise kendi blokunu calistirir, degilse calistirmaz 
 
@@ -111,9 +133,14 @@
 
 // console.log("if calisti ve asagidaki kod da calisti. Ben asagidaki kodum ;)")
 
-// else block 
+
+
+
+// [else] block 
+
 
 // else block if block calismaz ise calisir
+
 
 // const error = true;
 
@@ -134,7 +161,11 @@
 //     console.log("else block calisti")
 // }
 
-// else if 
+
+
+
+// [else if]
+
 
 // birden cok kosul yazmak ister isek [else if] kosulunu kullaniriz.
 
@@ -166,7 +197,13 @@
 //     console.log("sayi 100 degil")
 // }
 
+
+
+
 // Ternary Operator [ ise(?) degilse(:)]
+
+
+
 
 // eger biz if kosullarinda de tek bir islem yaptiriyor isek (console.log) gibi bunu [Ternary operotoru] ile yapabiliriz
 

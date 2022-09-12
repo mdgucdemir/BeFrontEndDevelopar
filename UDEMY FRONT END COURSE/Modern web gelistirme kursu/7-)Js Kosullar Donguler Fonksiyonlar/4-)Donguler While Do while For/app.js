@@ -12,7 +12,7 @@
 //     // biz burada [i] degiskenini artirmaz isek dongu sonsuza kadar calisacak
 //     //biz buna [sonsuz dongu] diyoruz.
 
-//     i++;  //[ i = i = 1; yada i += 1; ]
+//     i++;  //[ i = i + 1; yada i += 1; ]
 // }
 
 // let i = 10;
@@ -24,11 +24,17 @@
 //     i-=2;
 // }
 
+
+
+
 // dongulerde [break] ve [continue]
+
+
 
 // [break]
 
-// break ddongulerde yazildigi yerde kosul dogru olsa bile donguyu bitiriyor, kiriyor.
+
+// break dongulerde yazildigi yerde kosul dogru olsa bile donguyu bitiriyor, kiriyor.
 
 // let i = 0;
 
@@ -42,7 +48,10 @@
 //     i++;
 // }
 
+
+
 // [continue]
+
 
 // biz dongumuzun herhangi bir yerinde continue yazarsak ve continue calisirsa, dongunun geri kalani calistirilmadan dongunun en basina doner ve tekrardan kosumuzu kontrol etmeye baslar
 

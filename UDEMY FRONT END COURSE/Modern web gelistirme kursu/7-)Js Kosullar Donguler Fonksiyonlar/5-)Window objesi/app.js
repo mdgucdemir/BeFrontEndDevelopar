@@ -1,7 +1,7 @@
 
 //                                                 Window objesi
 
-// window objesi javascrip te engenek objedir
+// window objesi javascrip te en genel objedir
 
 // console.log(window);
 

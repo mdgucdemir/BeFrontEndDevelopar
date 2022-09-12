@@ -1,6 +1,7 @@
 
 //          [scope (kapsam)] kavrami
-// scope kavrami birdegiskenin nerelerde var olabildigini bize soyler
+
+// scope kavrami bir degiskenin nerelerde var olabildigini bize soyler
 
 // bir degisken fonction icinde tanimlanmis ise disarida var olur mu? 
 // veya bir block icinde ornegin {if} blogu icinde tanimlanmis ise disarida var olur mu?
