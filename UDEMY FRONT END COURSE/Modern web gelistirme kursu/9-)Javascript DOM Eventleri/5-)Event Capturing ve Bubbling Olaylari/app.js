@@ -1,7 +1,7 @@
 
 // DOM projelerinde cok kullanilan [Event Capturing] ve [Event Bubbling] ozellikleri
 
-// [Event Capturing] ve [Even Bubbling] Javascript e ozgu bir ozellik degil Document e ozgu bir Ozelliktir 
+// [Event Capturing] ve [Even Bubbling] Javascript e ozgu bir ozellik degil HTML Document e ozgu bir Ozelliktir 
 
 
 
@@ -36,5 +36,20 @@ cardbody.addEventListener("click",run);
 // Bubbling in aksine sadece tanimlandigi bolgede calisiyor
 
 function run(e){
-    console.log("hello");
+
+    // console.log("hello");
+
+    if (e.target.className === "fa fa-remove"){
+        console.log("silme islemi");
+    }
+
+    if (e.target.id === "filter"){
+        console.log("filter islemi");
+    }
+
+    if (e.target.id === "clear-todos") {
+        console.log("tum tasklari silme islemi");
+    }
 }
+
+// [ target ] imlec ile nereye bastigimizi yakalamamizi sagliyor
