@@ -21,6 +21,7 @@ function eventListeners(){
   document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
 }
 
+
 function loadAllTodosToUI(){
 
   let todos = getTodosFromStorage();
@@ -30,6 +31,8 @@ function loadAllTodosToUI(){
     addTodoToUI(todo); // local storage da ki todo lari UI a cekme
   })
 }
+
+
 function addTodo(e){
     const newTodo = todoInput.value.trim();
     // [.trim()] fonction i stringlerin basindaki ve sonundaki gereksiz bosluklari onlemek icindir
@@ -55,6 +58,8 @@ function addTodo(e){
        // sayfayi default olarak yenilememesi icin [e.preventDefault();]
     e.preventDefault();
 }
+
+
 function getTodosFromStorage(){ // todo lari local storage dan alma
   let todos;
 
@@ -62,6 +67,7 @@ function getTodosFromStorage(){ // todo lari local storage dan alma
     todos = [];
   }
   else{
+    // array e cevirme
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   return todos;
@@ -123,4 +129,8 @@ function addTodoToUI(newTodo){
      
      // todoList (ul) e listItem(li) i ekleme
      todoList.appendChild(listItem);
+
+     // input eklemeden sonra kalan yaziyi silme
+     todoInput.value = "";
 }
+
