@@ -19,7 +19,78 @@ eventListeners();
 function eventListeners(){
   form.addEventListener("submit",addTodo);
   document.addEventListener("DOMContentLoaded",loadAllTodosToUI);
+  secondCardBody.addEventListener("click",deleteTodo);
+  filter.addEventListener("keyup",filterTodos);
+  clearButton.addEventListener("click",clearAllTodos);
 }
+
+function clearAllTodos(e){
+  if (confirm("Do you want to delete all ?")){
+    
+    // tum todolari UI dan silme
+    
+    while(todoList.firstElementChild != null) { // todo list in firstElementChild i null olana kadar dongu devam eder
+
+      todoList.removeChild(todoList.firstElementChild);
+
+    }
+    
+    // local storage dan silme
+    // local storage dan silmek cok kolay. Sadece [key] i siler isek tumunu sileriz
+
+    localStorage.removeItem("todos");
+  }
+}
+
+function filterTodos(e){
+  const filterValue = e.target.value.toLowerCase(); // buyuk-kucuk harf duyarliligi olmasin diye hepsini kucuk harf e cevirdik
+  const listItem = document.querySelectorAll(".list-group-item"); // tum li leri sectik
+
+  listItem.forEach(function(listItem) {
+
+    const text = listItem.textContent.toLowerCase();
+
+    if (text.indexOf(filterValue) === -1){
+      // bulamadi
+
+      listItem.setAttribute("style","display: none !important");
+    }
+    else {
+      listItem.setAttribute("style","display: block");
+    }
+
+  }); // tum li lerin uzerinde tek tek geziniyoruz
+}
+
+// todo UI dan silme --------------------------------------
+
+function deleteTodo(e){
+ 
+  if(e.target.className === "fa fa-remove"){
+    e.target.parentElement.parentElement.remove();
+    deleteTodoFromStorage(e.target.parentElement.parentElement.textContent)
+    showAlert("success","You deleted succussfully todo");
+  }
+}
+//----------------------------------------------------------
+
+// todo storage dan silme ----------------------------------
+
+function deleteTodoFromStorage (deleteTodo){
+
+  let todos = getTodosFromStorage();
+
+  todos.forEach(function(todo,index){
+    if (todo === deleteTodo){
+      // artik array dan silecegimiz icin [splice] i kullanacagiz
+      // ilk once index i bul sonra kacinci index ten itibaren kac tane eleman silecegimizi yaz(1,2,3 gibi) 
+      todos.splice(index,1);
+    }
+  });
+  // tekrardan local storage a todos array ini yazmamiz gerekiyor
+  localStorage.setItem("todos",JSON.stringify(todos));
+}
+//----------------------------------------------------------
 
 
 function loadAllTodosToUI(){
