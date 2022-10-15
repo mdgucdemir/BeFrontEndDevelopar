@@ -40,12 +40,12 @@
 // console.log(myMap.size);
 
 
-const cities = new Map();
+// const cities = new Map();
 
-cities.set("Austin",3);
-cities.set("Boston",2);
-cities.set("New York",8);
-cities.set("San Francisco",4);
+// cities.set("Austin",3);
+// cities.set("Boston",2);
+// cities.set("New York",8);
+// cities.set("San Francisco",4);
 
 // ForEach dongusu ile map te gezinme
 
@@ -75,6 +75,37 @@ cities.set("San Francisco",4);
 
 // Only map keys :)
 
-for (let key of cities.keys()){
-    console.log(key);
-}
+// for (let key of cities.keys()){
+//     console.log(key);
+// }
+
+// Only Map Value 
+
+// for (let value of cities.values()){
+//     console.log(value);
+// }
+
+
+
+// Array lerden Map Olusturma
+
+// const array = [["key1","value1"],["key2","value2"]];
+
+// const lastmap = new Map(array);
+
+// console.log(lastmap);
+
+
+
+// Map ten Array Olusturma
+
+const cities = new Map();
+
+cities.set("Austin",3);
+cities.set("Boston",2);
+cities.set("New York",8);
+cities.set("San Francisco",4);
+
+const array = Array.from(cities);
+
+console.log(array);
