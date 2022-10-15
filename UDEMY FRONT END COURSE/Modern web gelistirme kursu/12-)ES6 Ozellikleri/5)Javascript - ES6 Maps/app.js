@@ -107,5 +107,6 @@ cities.set("New York",8);
 cities.set("San Francisco",4);
 
 const array = Array.from(cities);
+// biz bunu yazdiktan sonra [["Austin",3],["Boston",2],["New York",8],["San Francisco",4]] boyle bir yapi olusuyor
 
 console.log(array);
