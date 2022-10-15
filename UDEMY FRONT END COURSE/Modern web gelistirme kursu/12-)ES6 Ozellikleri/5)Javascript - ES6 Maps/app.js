@@ -65,8 +65,16 @@ cities.set("San Francisco",4);
 
 // tek tek gezinmek icin key of metodunda
 
-for (let[key,value] of cities){
-    console.log(key,value);
+// for (let[key,value] of cities){
+//     console.log(key,value);
 
-    // aslinda burada Destructing yapisi var
+//     // aslinda burada Destructing yapisi var
+// }
+
+// peki sadece keys leri alip onlarin uzerinde gezinmek istersek
+
+// Only map keys :)
+
+for (let key of cities.keys()){
+    console.log(key);
 }
