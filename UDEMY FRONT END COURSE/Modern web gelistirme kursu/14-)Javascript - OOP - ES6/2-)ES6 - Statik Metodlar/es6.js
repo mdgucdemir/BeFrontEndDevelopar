@@ -29,11 +29,13 @@ class Matematik {
 
 Matematik.cube(4);  // ObjeIsmi.method()
 
-// Static method lari kullanirken object olusturmuyoruz, Olusturarak method u calistirmaya kalkarsak sayet "TypeError" aliriz.
+// Static method lari kullanirken object olusturmuyoruz, 
+
+// const math = new Matematik ();   ////Olusturarak method u calistirmaya kalkarsak sayet "TypeError" aliriz.
 
 
 //------ Statik Method olarak daha onceden kullandiklarimiz
-// Object.create()
+// Object.create()  //// Object icerisinde create, satatic yazilmis diyebiliriz
 // Math.sqrt()
 // console.log(Math.pow(5,3));
 

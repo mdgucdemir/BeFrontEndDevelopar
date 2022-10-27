@@ -16,7 +16,7 @@ const obj2 = {
 // function addNumbers (number3,number4){
 //     console.log(this.number1 + this.number2 + number3 + number4);
 //     // Dikkat edersek yukarida (this) dedik ancak biz buraya herhangi bir objemizi gondermedik, (this.number1 ve this.number2) objesi belli degil
-//     // abaca burada ki (this) hangi objemizi gosteriyor
+//     // acaba burada ki (this) hangi objemizi gosteriyor
     
 //     // peki this.number1 i yadiralim ne olacak
 //     console.log(this.number1); 
