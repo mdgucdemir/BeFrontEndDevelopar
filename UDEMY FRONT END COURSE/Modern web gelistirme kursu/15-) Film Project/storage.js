@@ -1,1 +1,0 @@
-// Local Storage ile ilgili islemlerimiz burada gerceklestirecegiz
