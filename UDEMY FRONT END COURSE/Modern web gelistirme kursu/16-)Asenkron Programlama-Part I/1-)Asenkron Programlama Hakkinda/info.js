@@ -54,4 +54,4 @@ JSON & XML
 
 */
 
-// XHR javascript ile sunulmus bir API dir. Web sitesinin es zamanli olarak arka planda calisan olaylari takip eder, islemlci tarafindan calistirilir.
+// XHR javascript ile sunulmus bir API (Application Programming Interface) dir. Web sitesinin es zamanli olarak arka planda calisan olaylari takip eder, islemlci tarafindan calistirilir.

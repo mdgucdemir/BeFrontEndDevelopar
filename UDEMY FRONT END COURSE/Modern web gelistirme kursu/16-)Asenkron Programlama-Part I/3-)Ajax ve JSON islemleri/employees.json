@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Mehmet Deniz",
+        "department" : "IT",
+        "salary": "12345"
+
+    },
+    {
+        "name":"Edward Gucdemir",
+        "department":"IT",
+        "salary":"12345"
+    },
+    {
+        "name":"Edward Deniz",
+        "department":"Marketing",
+        "salary":"12345"
+    }
+]
