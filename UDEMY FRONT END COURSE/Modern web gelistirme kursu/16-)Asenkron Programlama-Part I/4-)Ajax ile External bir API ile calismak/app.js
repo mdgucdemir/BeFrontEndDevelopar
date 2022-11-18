@@ -16,8 +16,9 @@ function change(){
             // console.log(response.rates.TRY);
 
             const rate = response.rates.TRY;
-            // console.log(typeof response.rates.TRY); // number
-            // console.log(typeof document.getElementById("amount").value);  // string
+            // console.log(typeof response.rates.TRY); // number bir ifade
+
+            // console.log(typeof document.getElementById("amount").value);  // string string bir ifade
 
             const amount = Number(document.getElementById("amount").value); // String olan ifadeyi Number a cevirdik
 
