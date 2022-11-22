@@ -99,7 +99,7 @@ class Request{
             }
         }
 
-        this.xhr.send(); // Post request yapildi
+        this.xhr.send(); // GET request yapildi
     }
 
 }
