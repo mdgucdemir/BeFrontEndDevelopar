@@ -10,6 +10,8 @@ class Request{
     }
 
     get(url,callback){ // Get Function
+        // this.xhr.open("GET",url,[true or false])  || true = asenkron || false = senkron ||
+        // this.xhr.open("GET",url); default true used
         this.xhr.open("GET",url); // connection done
         this.xhr.onload = () => { // onload and arrow function done
 
@@ -29,10 +31,27 @@ class Request{
 
     post(url,data,callback){ // Post Request
         // Ilk once baglantimizi acmamiz gerekiyor
-        this.xhr.open("POST",url);
+        this.xhr.open("POST",url,true); // true = asenkron || false = senkron ||
         
+        /*
+         
+        Biz API larimiza;
+        bir tane "JSON" verisi gonderebiliriz,
+        veya "Form" verisi gonderebiliriz,
+
+        Ancak bunu burada belirtmemiz gerekiyor, bunuda ( Header ) olarak belirtmemiz gerekiyor
+        
+        [ JSON version ]
+        this.xhr.setRequestHeader("Content-type","application/json"); 
+
+        [ Form version ]
+        this.xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+        */
+
         // hangi veri gonderecegimizi [setRequestHeader] yardimi ile belirmemiz gerekiyor. Biz (json) verisi gonderecegiz
         this.xhr.setRequestHeader("Content-type","application/json"); // GET Request ten tek farki bir header gondermek
+
 
         this.xhr.onload = () => {
 
