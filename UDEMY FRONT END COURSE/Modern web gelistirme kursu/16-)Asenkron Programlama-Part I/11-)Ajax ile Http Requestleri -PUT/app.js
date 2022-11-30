@@ -47,7 +47,7 @@ class Request{
     // goruldugu uzere [ put request ] [ post request ] ile neredeyse ayni
     // bu sekilde diledigimiz veriyi guncelleyebiliriz (update)
     put(url,data,callback){
-        this.xhr.open("PUT",url);
+        this.xhr.open("PUT",url,true);
         this.xhr.setRequestHeader("content-type","application/json");
         this.xhr.onload = () =>{
             if(this.xhr.status === 200){// 200 OK status code
@@ -72,7 +72,7 @@ POST REQUEST
 https://jsonplaceholder.typicode.com/albums
 
 */
-request.put("https://jsonplaceholder.typicode.com/albums/10",{userid:2,title:"Eminem Encore"},function(err,response){
+request.put("https://jsonplaceholder.typicode.com/albums/10",{userid:212,title:"Eminem Encore"},function(err,response){
     if(err === null){
         console.log(response);
     }
