@@ -25,6 +25,8 @@ a(function(resultFromA){
 
 /*
 
+(Pending) bekleme,askida olma durumu. 
+
 (Resolve) ile olumlu durumlari
 (Reject) ile hata durumlari
 

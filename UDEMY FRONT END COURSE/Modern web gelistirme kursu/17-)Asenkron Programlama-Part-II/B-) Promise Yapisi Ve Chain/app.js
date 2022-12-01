@@ -9,7 +9,7 @@
 //         // Olumsuz donusumuzu (reject) ile donduruyoruz
 //         setTimeout(() => {
             
-//             // resolve("olumlu sonuc");
+//             resolve("olumlu sonuc");
 //             // reject("olumsuz sonuc");
             
 //         }, 5000);
@@ -21,20 +21,20 @@
 
 // // getData("hello there"); // functon i cagiran code
 
-// // // then
+// // then
 
-// // getData("hello there").then(function(response){
-// //     // function daki (response), (resolve) ile dondugumuz olumlu sonuc oldugu icin, bu olumlu sonuc functon daki (response) a esit olacak
-// //     console.log(response);
+// getData("hello there").then(function(response){
+//     // function daki (response), (resolve) ile dondugumuz olumlu sonuc oldugu icin, bu olumlu sonuc functon daki (response) a esit olacak
+//     console.log(response);
 
-// // });
+// });
 
-// // // catch
+// catch
 
-// // getData("hello there").catch(function(err){
-// //     // burada da ayni durum soz konusu, (reject) teki olumsuz sonuc dondugunde, function da yazdigimiz (err) e esit olucak
-// //     console.log(err);
-// // });
+// getData("hello there").catch(function(err){
+//     // burada da ayni durum soz konusu, (reject) teki olumsuz sonuc dondugunde, function da yazdigimiz (err) e esit olucak
+//     console.log(err);
+// });
 
 // // --------------------------------------------------------------------- //
 
