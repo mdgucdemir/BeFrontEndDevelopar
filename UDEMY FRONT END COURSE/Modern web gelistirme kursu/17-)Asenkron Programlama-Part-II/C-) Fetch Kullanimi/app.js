@@ -9,7 +9,7 @@
 // fetch de olumlu islemleri (resolve) ile dondurup (then) ile yakaliyoruz yani (promise) yapisi kullaniliyor
 // fetch olumsuz sonucu (reject) ile donduruyor biz bunu da (catch) ile yakaliyoruz
 
-// bu orneklemelerde [text dosyasindan, js dosyasindan & uzaktaki bir rest api dan] json verilerimiz ve text verilerimizi almacagiz
+// bu orneklemelerde [text dosyasindan, json dosyasindan & uzaktaki bir rest api dan] json verilerimiz ve text verilerimizi almacagiz
 
 //-------------------------------------------------------------------//
 
