@@ -29,9 +29,9 @@ class Request {
         return new Promise(function(resolve,reject)  {
 
           fetch(url)
-          .then(response => response.json())
-          .then(data => resolve(data))
-          .catch(err => reject(err));
+          .then(response => response.json())  // json a cevirme, ve json degeri dondurme. return olmamasi seni yaniltmasin arrow function ile kisa bir yazim var
+          .then(data => resolve(data)) // donen json degerini yakalama
+          .catch(err => reject(err)); // hata yakalama
            
         })
     }
