@@ -5,5 +5,6 @@ class Github{
 
     async getGithubData(username){
         const responseUser = await fetch(this.url + username);
+        //
     }
 }
