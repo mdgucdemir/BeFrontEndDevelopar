@@ -7,6 +7,7 @@ const githubForm = document.getElementById("github-form"); // form alani
 const nameImput = document.getElementById("githubname"); // input alani
 const clearLastUsers = document.getElementById("clear-last-users"); // temizleme butonu
 const lastUsers = document.getElementById("last-users"); // <ul> alani 
+const github = new Github();
 
 // Event Listeners
 eventListeners();
@@ -20,6 +21,24 @@ function eventListeners(){
 
 function getData(e){
 
+    let username = nameImput.value.trim();
+
+    if (username === ""){
+        alert("Lutfen gecerli bir kullanici adi giriniz.")
+    }
+    else{
+
+        github.getGithubData(username)
+        .then(response => {
+            if(response.user.message === "Not Found"){
+                console.error("hata yaptin babbow");
+            }
+            else{
+                console.log(response);
+            }
+        })
+        .catch(err => console.log(err));
+    }
 
     e.preventDefault();
 }
