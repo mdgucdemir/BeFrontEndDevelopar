@@ -7,7 +7,11 @@ const githubForm = document.getElementById("github-form"); // form alani
 const nameImput = document.getElementById("githubname"); // input alani
 const clearLastUsers = document.getElementById("clear-last-users"); // temizleme butonu
 const lastUsers = document.getElementById("last-users"); // <ul> alani 
+
+// Object creat
+
 const github = new Github();
+const ui = new UI();
 
 // Event Listeners
 eventListeners();
@@ -31,15 +35,19 @@ function getData(e){
         github.getGithubData(username)
         .then(response => {
             if(response.user.message === "Not Found"){
-                console.error("hata yaptin babbow");
+                ui.showError("Kullanici bulunamadi");
             }
             else{
-                console.log(response);
+                // console.log(response);
+
+                // buradaki response iki tane anahtar kelime tutuyor [user, repo]
+                ui.showUserInfo(response.user);
             }
         })
-        .catch(err => console.log(err));
+        .catch(err => ui.showError(err));
     }
 
+    ui.clearInput(); // input field temizleme function
     e.preventDefault();
 }
 
