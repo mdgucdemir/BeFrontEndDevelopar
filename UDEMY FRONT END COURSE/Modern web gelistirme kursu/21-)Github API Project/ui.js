@@ -1,6 +1,6 @@
-class UI{
+class UI {
 
-    constructor(){
+    constructor() {
         // burada html de ki <div> leri <ul> etiketlerini olusturacagiz
 
         this.profileDiv = document.getElementById("profile"); // profile ul secimi
@@ -10,11 +10,11 @@ class UI{
         this.cardbody = document.querySelector(".card-body");
     }
 
-    clearInput(){ // her arama yaptiktan sonra input field in icini temizlemek icin
-        this.inputField.value = ""; 
+    clearInput() { // her arama yaptiktan sonra input field in icini temizlemek icin
+        this.inputField.value = "";
     }
 
-    showUserInfo(user){
+    showUserInfo(user) {
         this.profileDiv.innerHTML = `
         
         <div class="card card-body mb-3">
@@ -62,7 +62,7 @@ class UI{
 
     }
 
-    showError(message){
+    showError(message) {
         const div = document.createElement("div");
         div.className = "alert alert-danger";
         div.textContent = message;
@@ -72,5 +72,57 @@ class UI{
         setTimeout(() => {
             div.remove;
         }, 2000);
+    }
+    showRepoInfo(repos) {
+
+        // ilk basta daha once repo bilgileri sorgulanan kullanicilarin repo bilgilerini temizlemeliyiz
+        this.repoDiv.innerHTML = "";
+
+        repos.forEach(repo => {
+
+            // her repo bilgilerinin her seferinde innerHTML ine ekleme yaparak alicaz oyuzden += diyoruz
+            this.repoDiv.innerHTML += ` 
+            
+            <div class="mb-2 card-body">
+                    <div class="row">
+                        <div class="col-md-2">
+                         
+                         <a href="${repo.html_url}" target = "_blank" id = "repoName">${repo.name}</a>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-secondary">
+                                Starlar  <span class="badge badge-light" id="repoStar">${repo.stargazers_count}</span>
+                            </button>
+
+                            <button class="btn btn-info">
+                                Forklar  <span class="badge badge-light" id ="repoFork">${repo.forks_count}</span>
+                            </button>
+                    
+                        </div>
+                    </div>
+
+            </div>
+            
+            `
+        });
+    }
+
+    addSearchedUserToUI(username){
+        let users = Storage.getSearhedUsersFromStorage();
+
+        if(users.indexOf(username) === -1){
+            // <li class="list-group-item">asdaskdjkasjkşdjşasjd</li>
+            const li = document.createElement("li");
+            li.className = "list-group-item";
+            li.textContent = username;
+            this.lastUsers.appendChild(li);
+        }
+
+    }
+
+    clearALLSearchedFromUI(){
+        while(this.lastUsers.firstElementChild !== null){
+            this.lastUsers.removeChild(this.lastUsers.firstElementChild);
+        }
     }
 }
