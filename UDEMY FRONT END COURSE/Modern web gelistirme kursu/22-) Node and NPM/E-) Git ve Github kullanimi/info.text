@@ -1,0 +1,152 @@
+Bu bolumde;
+
+a-)" Package.json" dosyasini
+b-) ( dependencies ) (bagimliliklar)imiz ve script lerimizi 
+c-) devDependencies
+
+a-) [ npm init ]
+b-) [ npm install (package name) ]
+c-) [ npm install (package name) --save-dev ]
+
+ogrenmaye calisicagiz.
+
+
+[ --------------------------------------------
+
+a-) "Package.json" dosyasi:
+
+Bizim javascript project lerimizin manifesto dosyasi olarak dusunuleblir.
+Olusturdugumuz herbir uygulama kendi icerisinde paket(package) tir. BU paketinde birden cok paket e ihtiyaci olabilir.
+Biz bir uygulama gelistirdigimiz zaman, aslinda bir tane modul(module), yani bir tane package(paket) gelistirmis oluyoruz.
+"Package.json" dosyasida, gelistirdigimiz uygulamanin ne gibi bir extra paketlere ihtiyac duyacagini veya bu uygulamanin ne gibi ozelliklere-
+sahip olacagini tutan bir tane json dosyasidir
+
+
+
+//--------------------
+
+biz bir tane uygulama gelistirmek istiyoruz, bu uygulama birden cok package e bagimli olabilir
+uygulamamizin ne gibi package lere bagimli oldugunu ve diger extra ozelliklerini biz [package.json] icinde tutabiliriz
+
+[ npm init ] diyerek [package.json] i npm in olusturmasini saglayabiliriz
+
+//--------------------
+
+//-----------
+
+new terminal deyip yeni bir terinal actiktan ve terminale [npm init] yazdiktan sonra
+bize bazi sorular sorulacak 
+
+package i npmjs.com uzerinde yayinlayacaksak package in ismi benzersiz olmali aksi halde kabul gormez
+
+//-----------
+
+//-----
+
+----------------------------------------------
+{
+  "name": "mdgucdemir-testing1",
+  "version": "1.0.0",
+  "description": "This is a testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "testing",
+    "package"
+  ],
+  "author": "Mehmet Deniz Gucdemir",
+  "license": "ISC"
+}
+
+--manifesto dosyasi olan [package.json] olustu eger istersek [ "main": "index.js" ] yi [ "main": "app.js" ] seklinde yazarakta edit leyebiliriz
+-----------------------------------------------
+
+-----------------------------------------------
+--"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+}
+
+icerisine yeni bir eklenti yapalim bunun icin terminale:
+[ echo "benim adim deniz" ]
+yaziyoruz ve
+
+
+"scripts": {
+"test": "echo \"Error: no test specified\" && exit 1",
+"fosik":"echo 'benim adim deniz'"
+}
+
+fosik isminde tanimladim degeri, bunu da calistirmak icin
+[ npm run fosik ] yaziyoruz.
+--------------------------------------
+
+--------------------------------------
+"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fosik":"echo 'benim adim deniz'",
+    "losik":"node index.js"
+
+}
+
+bir index.js olusturduk bunuda scripts in icerisinde losik olarak tanimladik
+bunu da [ npm run losik ] diyerek calistirabiliriz
+--------------------------------------
+
+//-----
+
+-------------------------------------------- ]
+
+[ ------------------
+
+    b-) Dependencies:
+
+    [simple-is] i install ettikten sonra [index.json] da yeni birsey goruyoruz 
+
+     "dependencies": {
+    "simple-is": "^0.2.0"
+    }
+
+    [npm install simple-is] install yapmak icin yazmamiz gereken
+    install yaptigimiz [simple-is] bagimlilik (dependencies) olarak buraya yani kendi [ package.json ] file imiza eklendi
+
+    projemizde hangi module leri kullaniyor isek buraya - dependencies - in icerisinde yer aliyor
+
+     "dependencies": {
+    "mongoose": "^6.8.0",
+    "simple-is": "^0.2.0"
+    }
+
+    [npm install mongoose] install yapmak icin
+    [mongoose] i da indirdik ve [dependencies] de goruyoruz
+    [package-lock.json] na baktigimizda, yenilendigini goruyoruz
+
+    projemizde (node_modules) un dosya buyuklugune baktigimizda 7-8 mb buyuklugu var
+    bunu server a atmak biraz zaman alabilir yada daha buyuk projelerde
+    onun yerine (node_modules) ve (package-lock.json) i dosyadan silebiliriz ama (dependencies) den silmek yok cunku onemli kismi orasi 
+    sonra (npm install) deyip (package.json) in dependencies bolumunde tanimlanan package lari indire biliriz
+    bu bize eger yanlislik ile (node_modules) yada (package-lock.json) dosyalarini silersek kaygilanmamamiz gerektigini anlatan bir guzellik
+
+
+
+
+------------------- ]
+
+[
+    c-) devDependencies
+
+    devDependencies (development dependencies) sadece gelistirici ortaminda kullanmak icin kullaniriz
+    bunu yuklemek icin:
+    terminale [ npm install (package name) --save-dev ] seklinde yazariz
+
+    [package.json] a,
+
+    "devDependencies": {
+    "webpack-cli": "^5.0.1"
+    }
+
+    (devDependencies) isminde bir metot geldi icerisinde ornek olarak (webpack-cli) isminde bir package yukledim
+    
+    sadece gelistirme ortaminda ihtiyaciniz olan package lari [devDependencies] in altina ekleyebilirsiniz
+]

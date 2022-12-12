@@ -1,0 +1,25 @@
+{
+  "name": "mdgucdemir-testing1",
+  "version": "1.0.0",
+  "description": "This is a testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fosik": "echo 'benim adim deniz'",
+    "losik": "node index.js"
+  },
+  "keywords": [
+    "testing",
+    "package"
+  ],
+  "author": "Mehmet Deniz Gucdemir",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.8.0",
+    "nodemailer": "^6.8.0",
+    "simple-is": "^0.2.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
