@@ -1,0 +1,28 @@
+-----------------------------------------------------------=
+
+1-) Paketimizi [ npmjs.com ] uzerinden publis etmek icin adimlar: {
+
+    a-) [ Terminal => new terminal ] 
+    b-) [ npm login ] yaz
+    c-) [ Username ] kullanici adini yaz
+    d-) [ Password ] sifreni yaz
+    e-) [ Email ] Email adresini yaz
+    f-) [ npm publish ] yaz
+
+    sadece bu kadar
+    sonra kendi package imizi kullanmak icin 
+    terminale [ npm install (paketimizin ismi) ] yaz
+}
+
+2-) Paketimizi [ npmjs.com ] den kaldirma: {
+
+    a-) terminal de kal
+    b-) [ npm login ] yaz
+    c-) [ Username ] kullanici adini yaz
+    d-) [ Password ] sifreni yaz
+    e-) [ Email ] Email adresini yaz
+    f-) [ npm unpublish (paketimizin ismi) --force ] yaz
+
+    hepsi bu kadar :)
+    
+}
