@@ -2,14 +2,14 @@
 BABEL KULLANMAK ICIN 4 TANE MODULE
 
 
-babel- cli        =  [  npm install --save-dev @babel/cli                     ]
-babel core        =  [  npm install --save-dev @babel/core                    ]
-babel polyfill    =  [  npm install --save-dev babel-plugin-polyfill-corejs3  ]
-babel preset-env  =  [  npm install --save-dev @babel/preset-env              ]
+babel- cli        =  [  npm install @babel/cli --save-dev                      ]  
+babel core        =  [  npm install @babel/core --save-dev                     ]  
+babel polyfill    =  [  npm install babel-polyfill --save-dev                  ]  
+babel preset-env  =  [  npm install @babel/preset-env --save-dev               ]  
 
 kullanimi gormek icin [ link = https://babeljs.io/setup#installation ] adresine git
 
 babel imizi terminalde kullanmak istiyor isek [ .\node_modules\.bin\babel ] seklinde yazmamiz gerek
 
 scr folder olusturduktan sonra, test dosyalari olusturduk bunlarda ES6 code lari var 
-bu code lari donusturmek icin [ ./node_modules/.bin/babel src -d lib ] yazimini yapiyoruz
+bu code lari donusturmek icin [ .\node_modules\.bin\babel src -d lib ] yazimini yapiyoruz
