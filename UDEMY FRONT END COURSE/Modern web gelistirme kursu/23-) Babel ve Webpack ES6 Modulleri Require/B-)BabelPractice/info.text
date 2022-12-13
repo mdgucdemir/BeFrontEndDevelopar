@@ -6,3 +6,10 @@ babel- cli        =  [  npm install --save-dev @babel/cli                     ]
 babel core        =  [  npm install --save-dev @babel/core                    ]
 babel polyfill    =  [  npm install --save-dev babel-plugin-polyfill-corejs3  ]
 babel preset-env  =  [  npm install --save-dev @babel/preset-env              ]
+
+kullanimi gormek icin [ link = https://babeljs.io/setup#installation ] adresine git
+
+babel imizi terminalde kullanmak istiyor isek [ .\node_modules\.bin\babel ] seklinde yazmamiz gerek
+
+scr folder olusturduktan sonra, test dosyalari olusturduk bunlarda ES6 code lari var 
+bu code lari donusturmek icin [ ./node_modules/.bin/babel src -d lib ] yazimini yapiyoruz

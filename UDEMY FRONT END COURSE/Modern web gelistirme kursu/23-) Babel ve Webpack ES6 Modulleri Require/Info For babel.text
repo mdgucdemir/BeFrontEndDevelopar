@@ -1,0 +1,26 @@
+ES5 tum browser larda sorunsuz bir sekilde kullaniliyor ama ES6 ve ES7 tum browser larda sorunsuz bir sekilde calismayabilir
+ES6 ve ES7 kullanarak yazdigimiz kodlari sorunsuz bir sekilde tum browser larda kullanmak icin [ babel ] i kullanmamiz gerekir
+Babal bir [node package] dir. Node module dir.
+
+[ babeljs.io ] web adress ine gidebilirsiniz
+
+
+
+Babal i projelerimizde kullanmak istiyor isek terminal den indirip o zaman asagidaki islemleri takip edelim 
+
+{
+    npmjs.com adresinden
+
+    {
+        [ @babel/cli (hzoo)] package install edilecek.
+    }
+    {
+        [ @balbel/core (hzoo)] package install edilecek. (donusturme islemlerini yapiyor)
+    }
+    {
+        [ @balbel/polyfill (hzoo)] package install edilecek. (async ve await leri browserlarda tam olarak kullanmamizi sagliyor)
+    }
+    {
+        [ @babel/preset-env (hzoo)] package install edilecek. (Es6 ve sonrasi icin yazdigimiz kodlari otomatik olarak cevirecek)
+    }
+}
