@@ -1,0 +1,5 @@
+Webpack, moduler yapida olan dosyalarimizi derleyip duzenli bir hale getirmeye yarar
+Daha oncesinde yapmis oldugumuz [ app.js ve ona bagli olan moduler js dosyalari vardi, bu dosyalar kendi icerisinde bile moduler js dosyalari olusturabilirler
+ama bunlarin bir araya gelip (index.js) calistirmaliri biraz zaman alabilir. Illa js dosyasi olmasina da gerek yok bir css dosyasi da olabilir 
+bu dosyalarin index.js yi calistirirken zaman almamasi icin (Webpack) i kullaniriz. (Webpack) e bu dosyalari atariz, o bizim icin derler. Boylece 
+zaman keybetmis olmayiz ]
