@@ -1,0 +1,55 @@
+--- WEBPACK KULLANIMINA HOSGELDINIZ ---
+
+[
+    - npm init
+    - npm install --save-dev {
+
+    - @babel/core
+    - @babel/polyfill
+    - @babel/preset-env
+    - babel-loader
+    - webpack-cli
+    - webpack
+    
+    }
+    - create (src) file
+    - create (webpack.config.js) file
+    - imports and exports
+    - write ("build": "webpack --watch") in (package.json) under the (scripts)
+    - npm run build
+]
+
+. Bu folder da ilk once [ package.json ] i olusturmamiz gerekiyor
+. Projemizde ilk basta [ babel ] i eklememiz gerekiyor. Cunku webpack ile babel arasindaki iliskiyi kurmaya calisicagiz;
+Bunun icin daha onceden yaptigimiz gibi {
+
+    npm install --save-dev {
+        . babel in calismasi icin                               =  @babel/core
+        . async ve await in calismaisi icin                     =  @babel/polyfill
+        . ES6 dan sonra gelen standarlari yuklemek icin         =  @babel/preset-env
+        . webpack ile babel arasindaki iliskiyi saglamak icin   =  babel-loader
+    }
+    
+}
+
+. webpack i indirmek icin {
+    npm install --save-dev {
+        webpack i comment line dan kullanmak icin = webpack-cli
+        webpack in kendisini indirmek icin        = webpack
+    }
+}
+
+Simdi yaptigimiz ornekli calismada;{
+    . [app1.js] ve [app2.js] de (export) islemi yaptik
+    . [index.js] de ise bu iki file i (import) islemi yaptik
+    . Si e mdi ise [webpack](configuration file) olusturarak diyecegiz ki; sen [index.js] dosyasina bak (export) edilen dosyalari tek bir dosya halinde ortaya cikart
+    . webpack configuration file olusturmak icin [ webpack.config.js ] isimli (new file) acicaz
+}
+
+.( webpack ) i calistirmak icin [package.js] in (scripts) kismina [ "build": "webpack --watch" ] yazmamiz gerekiyor.{
+    webpack = webpack in claismasi icin
+    --watch = (app1.js) degisebilir (app2.js) degisebilir (webpack) in bunlari her seferinde bir (bundle) haline getirmesi gerekiyor. Bu code bunun icin
+}
+
+. (npm run build) dedikten sonra (config) de belirttigimiz gibi (bundle) folder in icine [app1,app2,index] dosyalarini birlestirerek tek bir (bundle.js) file olusturdu
+. biz simdi Projemizde sadece (bundle.js) i kullanabiliriz
