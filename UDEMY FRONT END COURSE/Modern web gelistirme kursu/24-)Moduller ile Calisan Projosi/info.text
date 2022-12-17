@@ -1,0 +1,2 @@
+- Yapiyi hazir sekilde disardan aldik. (package.json) da tum modullerimiz eklenmis bunlari yuklemek istiyor isek [npm install] dersek (package.json) daki tum eklentileri
+projeye dahil ederiz. 
