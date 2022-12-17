@@ -1,2 +1,48 @@
 - Yapiyi hazir sekilde disardan aldik. (package.json) da tum modullerimiz eklenmis bunlari yuklemek istiyor isek [npm install] dersek (package.json) daki tum eklentileri
 projeye dahil ederiz. 
+
+- Ama bizim porje biraz eski oldugundan (devDependencies) biraz sorun cikart ti ama neyseki yenileri ile yer degistirdik 
+
+[
+    npm install --save-dev
+    
+    - @babel/core
+    - @babel/polyfill
+    - @babel/preset-env
+    - babel-loader
+    - webpack
+    - webpack-cli
+    - webpack-dev-server
+
+]
+
+- Ilk yapmamiz gereken [ "build": "webpack --progress" ] calistirmaliyiz ve sadece bir dafa calistiricaz 
+- Daha sonra [ "start": "webpack-dev-server" ]
+[
+   - npm run build
+   - npm run start
+]
+
+
+- (webpack-dev-server) i farkli bir terminalde calistirman gerekiyor. O farkli terminal sanki bir server mis gibi davranmasi gerekiyor
+
+- Aga su server (localhost) olayinic cozmek baya zaman aldi
+
+- Olay su bro = {
+
+devServer: {
+    static: {
+      directory: path.resolve(__dirname,'dist')
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
+
+  - bunlari yazican birde
+
+  - (index.html) i (dist) diye bir dosya acip onun icine yapistirican
+
+}

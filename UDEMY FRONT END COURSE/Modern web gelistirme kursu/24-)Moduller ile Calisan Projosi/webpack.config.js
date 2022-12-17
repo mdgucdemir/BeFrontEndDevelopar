@@ -22,7 +22,13 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 3200,
-    index: 'index.html'
-  }
+    static: {
+      directory: path.resolve(__dirname,'dist')
+    },
+    port: 3000,
+    open: true,
+    hot: true,
+    compress: true,
+    historyApiFallback: true,
+  },
 };
