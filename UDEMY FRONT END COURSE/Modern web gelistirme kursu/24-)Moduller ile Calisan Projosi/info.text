@@ -17,7 +17,9 @@ projeye dahil ederiz.
 ]
 
 - Ilk yapmamiz gereken [ "build": "webpack --progress" ] calistirmaliyiz ve sadece bir dafa calistiricaz 
-- Daha sonra [ "start": "webpack-dev-server" ]
+- Daha sonra [ "start": "webpack-dev-server --output-public-path=/bundles/ --mode development" ]
+- [ --output-public-path=/bundles/ ] burasi cokomelli cunki (bundles) folderindaki (bundel.js) yi almamizi soyluyoruz 
+aksi halde (index.js) yazilan code lari gormez
 [
    - npm run build
    - npm run start
