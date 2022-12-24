@@ -1,3 +1,5 @@
+-----------------------------------( ortamin kurulmasi )------------------------------------------------
+
 - Yapiyi hazir sekilde disardan aldik. (package.json) da tum modullerimiz eklenmis bunlari yuklemek istiyor isek [npm install] dersek (package.json) daki tum eklentileri
 projeye dahil ederiz. 
 
@@ -6,23 +8,23 @@ projeye dahil ederiz.
 [
     npm install --save-dev
     
-    - @babel/core
-    - @babel/polyfill
-    - @babel/preset-env
-    - babel-loader
-    - webpack
-    - webpack-cli
-    - webpack-dev-server
+    - @babel/core          = [webpack]
+    - @babel/polyfill      = [async & await]
+    - @babel/preset-env    = [ES6 sonrasi]
+    - babel-loader         = [webpack ile babel arasindaki iliski]
+    - webpack              = [webpack]
+    - webpack-cli          = [webpack i comment line dan kullanma]
+    - webpack-dev-server   = [webpack server olusturma]
 
 ]
 
-- Ilk yapmamiz gereken [ "build": "webpack --progress" ] calistirmaliyiz ve sadece bir dafa calistiricaz 
+- Ilk yapmamiz gereken [ "build": "webpack --progress" ] calistirmaliyiz ve sadece bir dafa calistiricaz burada [bundles folder] olusacak
 - Daha sonra [ "start": "webpack-dev-server --output-public-path=/bundles/ --mode development" ]
 - [ --output-public-path=/bundles/ ] burasi cokomelli cunki (bundles) folderindaki (bundel.js) yi almamizi soyluyoruz 
 aksi halde (index.js) yazilan code lari gormez
 [
-   - npm run build
-   - npm run start
+   - npm run build  =  [ ( bundles folder ) olusturur ]
+   - npm run start  =  [ webpack server i calistiracak ] (ikinci bir terminal den calistirmalisin)
 ]
 
 
@@ -46,5 +48,42 @@ devServer: {
   - bunlari yazican birde
 
   - (index.html) i (dist) diye bir dosya acip onun icine yapistirican
+  - server terminali kapamak icin [ ctrl + c ] yapip gelen (yes/no) sorusuna ( y ) yazip enter lamamiz yeterli  
 
 }
+
+----------------------------------------(ortamin kurulmasi sonu)------------------------------------------------------
+
+
+----------------------------------------(JSON Server kullanimi)------------------------------------------------------
+
+[
+  - localhost host tumuza bir tane (rest API) kurucaz
+  - bunu bir (npm package) ile yapicaz
+  - [jsonplaceholder.typicode.com] i testing ve prototyping icin kullaniyor idik (get,put,delete requestleri icin)
+  - [jsonplaceholder.typicode.com] ancak github sayfasinda kendi localhost umuzu olustumak, gercek bir (rest API) icin (npm package) lari var
+  - bu gercek (rest API) gene bir (fake API) olucak
+  - bu project te (localStorage) yerine kendi (rest API) imizi kullanicaz
+  - bu (npm package) i kullanmak icin [ npm install --save-dev json-server ] (1.terminal {server icin kullanilan terminal degil}) e yazarak (global) e yukleyebiliriz 
+  - [json-server] i kullanmak icin [ json-server --watch (folder ve onun icindeki istenilen file) ] 
+  - bu code u kullanmadan once (fake-api) isminde bir folder olusturduk ve projede kullanacagimiz (employee.json) file ini burada olusturduk
+
+  - biz (json-server) active etmek icin (json-server --watch (folder ve onun icindeki istenilen file) ) bu code u kullanicaz ve surekli calismasini isteyecegiz.
+  - bunun icinde farkli bir (terminal) kullanmaliyiz
+  - [ json-server --watch fake-api/employee.json ] server icin kullanmamiz gereken code
+  - bunu (package.json) da (scripts) kisminin icine [ "json-server": "json-server --watch fake-api/employee.json" ] olarak tanimladik
+  - calistirmak icin kendi terminalinde ( npm run json-server ) yazmamiz yeterli
+
+  - [
+    - (json-server) terminal inde yazan 
+
+        Home
+        http://localhost:3000
+        
+    ]
+  - yukaridaki verilen adres e gider isek json-server ini goruruz
+
+  
+]
+
+----------------------------------------(JSON Server kullanimi sonu)-------------------------------------------------
