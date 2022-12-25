@@ -79,7 +79,7 @@ devServer: {
 
         Home
         http://localhost:3000
-        
+
     ]
   - yukaridaki verilen adres e gider isek json-server ini goruruz
 
@@ -87,3 +87,5 @@ devServer: {
 ]
 
 ----------------------------------------(JSON Server kullanimi sonu)-------------------------------------------------
+
+-
