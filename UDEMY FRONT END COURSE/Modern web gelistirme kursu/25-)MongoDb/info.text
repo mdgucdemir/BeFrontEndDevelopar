@@ -1,0 +1,13 @@
+cmd komutlarindan biraz estantaneler :))
+
+[
+    -show dbs
+    -show collections ==> [collection lari gosterir]
+    -db ==> [nerde oldugunu gosterir]
+    -db.createCollection("(cift tirnak arasi bir isim ver)")
+    -db.(collection name).drop() ==> [collection i siler]
+    -db.(collection name).insertOne() ==> [json objecsi tarzinda bir tane collection olusturur -(bende olmadi)- ]
+    -db.(collection name).insertMany() ===> [birden fazla json verisi olusturmana yarar -(bende olmadi)-]
+    -db.(collection name).find()  ===> [collection icerini gosterir -(bende bir tuhaf oldu)- ]
+    -db.(collection name).find().pretty() ===> [collection icerini gosterir ama daha guzel gosterir -(bende olmadi)-]
+]
