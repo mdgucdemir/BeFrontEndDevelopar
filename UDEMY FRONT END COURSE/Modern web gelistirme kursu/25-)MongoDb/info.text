@@ -1,6 +1,16 @@
 cmd komutlarindan biraz estantaneler :))
 
 [
+    -mongodb atlas cloud bir server olusturma
+    -mongodb atlas cloud da mongodb shell ile terminalden baglanmak icin [
+        -[mongodb atlas] a gir
+        -[database] kismina gir
+        -[connect] e tikla
+        -[connect with the Mongodb shell] e gir
+        -[Run your connection string in your command line] kisminda yazan (mongosh) ile baslayan yaziyi kopyala
+        -Pc de [cmd] ye gir
+        -copyaladigin ni [cmd] ye yapistir 
+    ] 
     -show dbs
     -show collections ==> [collection lari gosterir]
     -db ==> [nerde oldugunu gosterir]
