@@ -1,9 +1,31 @@
-{
-    "name":"Mehmet Deniz Gucdemir",
-    "age":32,
-    "department": "IT",
-    "salary":25400,
-    "hobbies":["Codding","Learning","watching","trying"],
-    "status": "A"
-    
-}
+
+[
+    {
+        "name":"Mehmet Deniz Gucdemir",
+        "age":32,
+        "department": "IT",
+        "salary":25400,
+        "hobbies":["Codding","Learning","watching","trying"],
+        "status": "A"
+        
+    },
+    {
+        "name":"Mehmet Deniz Gucdemir",
+        "age":32,
+        "department": "IT",
+        "salary":25400,
+        "hobbies":["Codding","Learning","watching","trying"],
+        "status": "A"
+        
+    },
+    {
+        "name":"Mehmet Deniz Gucdemir",
+        "age":32,
+        "department": "IT",
+        "salary":25400,
+        "hobbies":["Codding","Learning","watching","trying"],
+        "status": "A"
+        
+    }
+]
+
