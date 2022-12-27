@@ -10,6 +10,7 @@ cmd komutlarindan biraz estantaneler :))
         -[Run your connection string in your command line] kisminda yazan (mongosh) ile baslayan yaziyi kopyala
         -Pc de [cmd] ye gir
         -copyaladigin ni [cmd] ye yapistir 
+        -password unu girmeni isteyecek
     ] 
     -show dbs
     -show collections ==> [collection lari gosterir]
@@ -20,4 +21,295 @@ cmd komutlarindan biraz estantaneler :))
     -db.(collection name).insertMany() ===> [birden fazla json verisi olusturmana yarar -(bende olmadi)-]
     -db.(collection name).find()  ===> [collection icerini gosterir -(bende bir tuhaf oldu)- ]
     -db.(collection name).find().pretty() ===> [collection icerini gosterir ama daha guzel gosterir -(bende olmadi)-]
+    -db.(collection name).find().count()   ===> [bize gelen kayitlarin kac tane oldugunu gormek icin]
+    -db.(collection name).findOne()  ===> [sadece bir tane veri gelicek karsimiza]
+    -db.(collection name).find({},{name:1,salary:1}).pretty() ===> [(name) ve (salary) tanimladiklarimizla birlikte (id) de gelecek]
+    -db.(collection name).find({},{salary:0}).pretty() ===> [tum alanlari getir ama (salary) yi getirme demek bu code da]
+    -db.(collection name).find({status : 'A'}).pretty() ===> [sadece (status:A) olanlari getir, gibi belirli bir sorgulama (status:A burada farazi bir ornektir)]
+    -db.(collection name).find({status : 'A'}).pretty().count() ===> [sadece (status:A) olanlarin kac tane oldugu gosterir (status:A burada farazi bir ornektir)]
+    -db.(collection name).find({status : 'A',courses : 'javascript,}).pretty() ===> [ (status:A) ve(courses: javascript) olanlari gosterir (status:A ve javascript burada bir ornektir)]
+
+    -MONGODB DE [GREATER THAN] OPERATORU
+    -{$gt} seklinde yazilir 
+
+    -db.(collection name).find({rating : {$gt 4.5}}) ===> [rating i 4.5 den yukari olanlari alir (rating:4.5 sadece bir ornektir)]
+
+    -MONGODB [GREATER THAN OR EQUAL]
+    -{$gte} seklinde yazilir
+
+    -db.(collection name).find({rating : {$gte 4.5}}) ===> [rating i 4.5 esit ve buyuk olanlari getirir (rating burada sadece bir ornektir)]
+
+    -MONGODB DE UPDATE METODU
+    -{$set:{}} operatoru
+    -updateOne({})
+    -updateMany({})
+
+    -db.(collection name).updateOne({name:"memo"},{$set : {salary: 123456}}) ===> [name:memo olanin salary sini 123456 olarak guncelledik ([name ve salary] sadece bir ornektir)]
+    -db.(collection name).updateMany({},{$set : {salary : 23456}}) ===> [butun (salary) guncelledik. Tum verileri guncellemek istersek {} icerisine bir sey yazmamiz gerekmez]
+    -db.(collection name).updateMany({department: 'IT'},{$set: {salary: 55999}}) ===> [tum IT calisanlarin maasini 55999 yaptik :) ]
+
+    -MONGODB DE DELETE METODU
+    -deleteOne({})
+    -deleteMany
+
+    -db.(collection name).deleteOne({name: 'memo'}) ===> [sadece (memo) ismindeki data yi sildik]
+    -db.(collection name).deleteMany({department: 'IT'})  ===> [department i (IT) olan data lari sildik]
+    -db.(collection name).deleteMany({})  ===> [simdi ise tum kayitlarimizi sildi]
+
+    -MONGODB SKIP METODU
+    -skip()
+
+    -db.(collection name).find().skip(1).pretty()  ===> [skip(1) demek, 1.kayitimizi atla digerlerini getir demek]
+
+    -MONGODB LIMIT METODU
+    -limit()
+
+    -db.(collection name).find().limit(2).pretty() ===> [limit(2) demek, en bastan basla ve ilk 2 sini getir demek]
+    -db.(collection name).find().skip(1).pretty()  ===> [(skip) ve (limit) birlikte kullanilmistir. (1 veri) atlanmis (2 ve 3) getirilmistir]
+
+    -MONGODB SORT METODU
+    -sort({__: 1}) buyukten kucuge siralar
+    -sort({__: -1}) kucukten buyuge siralar
+
+    -db.(collection name).find({},{salary: 1}>sort({salary: 1})) ===> [sadece (salary) nin gelmesini sitedik ve (salary) leri buyukten kucuge siraladik]
+    -db.(collection name).find({},{salary: 1}>sort({salary: -1})) ===> [sadece (salary) nin gelmesini sitedik ve (salary) leri kucukten buyuge siraladik]
+    -db.(collection name).find({},{name: 1}>sort({name: 1})) ===> [sadece (name) nin gelmesini sitedik ve (name) leri alfabetik siraladik]
+    -db.(collection name).find({},{name: 1}>sort({name: -1})) ===> [sadece (name) nin gelmesini sitedik ve (name) leri ters alfabetik siraladik]
+
+    -Mongodb AGGREGATION METODU
+    -gruplama
+
+    -{$sum} operatoru
+    -{$avg} operatoru
+    -{$max} operatoru
+    -{$min} operatoru
+
+    -aggregate([{$group : {_id: "$__",__ :{$sum : 1 veye 2}}}])
+    -{$sum: 1} her birini sayarak gitmek
+    -{$sum: 2} toplaya-toplaya gitmek
+
+    -aggregate([{$group : {_id: "$__",__ :{$avg : "__"}}]) (average metodu)
+    -aggregate([{$group : {_id: "$__",__ :{$max : "__"}}]) (max metodu)
+    -aggregate([{$group : {_id: "$__",__ :{$min : "__"}}]) (min metodu)
+
+    -db.(collection name).aggregate([{@group : {_id : "$category",num_products : {$sum : 1}}}])
+
+    ===> [_id: "$category" , category ye gore gruplayacagimiz soyluyor ]
+    ===> [num_products ise bir category de kac tane urun var onu ogrenmek icin kendi objemizi olusturduk ismi fosik de olabilirdi, orasi keyfi]
+    ===> [{$sum: 1} [$sum operatoru] tek tek sayarak mi yoksa toplayarak mi olacagina karak vermek icin kullandik]
+    ===> [category ye gore gruplayacagiz]
+
+    ===> ornek bir cikti olarak 
+        [
+           "_id" : "book", "num_products" : 2
+           "_id" : "PC", "num_products" : 4
+           "_id" : "Laptop", "num_products" : 3
+        ]
+
+    -db.(collection name).aggregate([{@group : {_id : "$category",average_price : {$avg : "price"}}}])
+
+    ===> ornek bir cikti olarak 
+        [
+           "_id" : "book", "average_price" : 2500
+           "_id" : "PC", "average_price" : 4500
+           "_id" : "Laptop", average_price" : 3500
+        ]    
+
+    -db.(collection name).aggregate([{@group : {_id : "$category",max_price : {$max : "price"}}}])
+
+    ===> ornek bir cikti olarak 
+        [
+           "_id" : "book", "average_price" : 3000
+           "_id" : "PC", "average_price" : 5000
+           "_id" : "Laptop", average_price" : 4000
+        ]  
+
+    -db.(collection name).aggregate([{@group : {_id : "$category",min_price : {$min : "price"}}}])
+
+    ===> ornek bir cikti olarak 
+        [
+           "_id" : "book", "average_price" : 100
+           "_id" : "PC", "average_price" : 300
+           "_id" : "Laptop", average_price" : 200
+        ]      
+
+
+
+    -MONGODB RELATIONSHIPS
+    
+    -ONE TO ONE RELATIONSHIP
+
+    -Address-User 
+
+    --bir Address tek bir User a ait oldugu ve ayni sekilde bir User tek bir Address e sahip oldugu durumlar 
+
+    ---Referencing yontemi
+    ----Bu yontemde iki tane collection vardir biri (User Document) digeri (Address Document) [User in tum verilerini Address verilerini hepsini almak isterseniz bu yontem verimsiz]
+    ----Sebebi ise bu iki collection surekli sorgu atmamiz gerekiyor
+
+    ornek bir gosterim olarak
+
+    // User Document
+    {
+        -id: "1",
+        name: "Barzo nazim"
+    }
+    // Address Document
+    {
+        user_id:"1",
+        street: "123 fake street",
+        city: "fake city"
+        state: "fake state"
+        zip: "12345"
+    }
+
+    ---Embeding Documents yontemi
+    ----Address lerimiz tek bir User a ait oldugu icin biz bu Address alanlarini [Address collection] yerine direk olarak, Address imizi (User Document) in icinde tanimliyoruz 
+
+    ornek bir gosterim olarak
+
+    {
+        _id: "1",
+        name: "Barzo nazim"
+        address: {
+                    street: "123 fake street",
+                    city: "fake city"
+                    state: "fake state"
+                    zip: "12345"
+                 }
+    }
+
+    ---- Eger projenizde bellirli ozellikleri cok kullaniyor iseniz (Embeding Document) yontemini kullanmak sizin icin pek kazancli degil ve database sorgulariniz yavaslayacak
+         cunku gereginden fazla kullanmadiginiz veriyi cekiyorsunuz
+    
+    ---- Bu gibi durumlarda iki tane collection olusturabiliriz. (SIK kullanilanlar ve AZ kullanilanlar gibi)
+
+
+    ONE TO MANY RELATIONSHIP
+
+    -Address - User
+
+    -- BIr User birden cok address e sahip. Ancak bir address sadece bir User a ait olan durumlar
+
+    Ornek bir gosterim olarak
+    
+    // User Document
+    {
+        -id: "1",
+        name: "Barzo nazim"
+    }
+    // Address Document
+    {
+        patron_id:"1",
+        street: "123 fake street",
+        city: "fake city"
+        state: "fake state"
+        zip: "12345"
+    }
+    
+    {
+        patron_id:"1",
+        street: "somewhere street",
+        city: "somewhere city"
+        state: "somewhere state"
+        zip: "12345"
+    }
+
+    -- Embeding Document seklinde olusturacaksak sayet address kismi (array) olmali
+
+    Ornek bir ggosterim olarak
+
+    _id: "1",
+        name: "Barzo nazim"
+        address: [
+                {
+                    street: "123 fake street",
+                    city: "fake city"
+                    state: "fake state"
+                    zip: "12345"
+                },
+                {
+                    street: "somewhere street",
+                    city: "somewhere city"
+                    state: "somewhere state"
+                    zip: "12345"
+                }
+                 
+                ]
+    
+    -- sekilde gosterilir            
+    --- Embeding Document yonteminin dezavantajlari(disadvantage):
+    --- ornegin hepsiburada.com da bir urun var ve o urun hakkinda bircok yorum var, bu yontemi kullanirsak eger cok fazla ve gereksiz veri gonderecek 
+    --- Ayrica Mongodb (boyle bir Document in {16mb} olmasina izin veriyor). Aksi bir durumda mongodb buna izin vermiyor
+    - Peki nasil yapiliyor. Ikiye bolunuyor. En son 20 yorumu Embeding Document olarak yapcagiz. Zira hocanin dedigine gore hepsiburada.com boyle yapiyor imis
+    - Eger kullanici 20 den fazla yorum okumak isterse 2. Embeding Document a istek atiliyor.
+    - Sayet daha fazlasini okumak isterse 3. Embeding Document var ise ona da istek atilir, artik ne kadar bolunmus ises
+
+
+    - PUBLISHER - BOOK RELATIONSHIP ORNEGI
+    - Bir yayin evinin birden cok kitap i olabilir ancak bir kitap tek bir yayin evine aittir
+    - Boyle bir seyi nasil modelleyebilecegimize advantage ve disadvantage larina bakalim
+
+    - ornek ile gostemek gerekirse
+
+    - Embeding Publisher
+
+    {
+        title: "fosik fosik fosik",
+        author: ["fosik necati","losik feridun"],
+        published_date: ISODate("2010-09-24"),
+        pages: 216,
+        language: "english",
+        publisher: {
+            name: "barzo mike",
+            founded: 1980,
+            location: "TX"
+        }
+    }
+
+    {
+        title: "bir fosikin 50 tonu",
+        author: ["fosik necati","losik feridun","ben zera"],
+        published_date: ISODate("2011-09-24"),
+        pages: 256,
+        language: "english",
+        publisher: {
+            name: "barzo mike",
+            founded: 1980,
+            location: "TX"
+        }
+    }
+
+    - burada soyle bir sikinti var. Biz publisher i durmadan tekrarliyoruz. Iki kitabinda publisher i ayni, yani ayni veriyi tekrarliyoruz ve gereksiz veri depoluyoruz
+    - bir baska husus ise ornegin (barzo mike) yayin evi location inini degistirirse, ne kadar kitabi var ise hepsine tek tek girip guncelleme yapmaiz gerekiyor
+    - bunlar tamamen application a bagli, bu tarz islemleri desing yaparken dikkate almalisin
+    - peki bunlari nasil depolayabiliriz
+
+    - tabiki 2 farkli collection yaparak
+    - 1.si (publisher collection) digeri ise (book collection)
+    - publisher in icersinde kitaplarin id lerini bir (array) in icerisinde depolayabiliriz 
+
+        // Publisher collection
+        {
+            name: "barzo mike",
+            founded: 1980,
+            location: "TX",
+            books: [1234,2345,3456,5678]
+        }
+
+        // book collection
+        {
+            id: 1234
+            title: "fosik fosik fosik",
+            author: ["fosik necati","losik feridun"],
+            published_date: ISODate("2010-09-24"),
+            pages: 216,
+            language: "english",
+            publisher_id: "barzo mike"        
+        }
+
+
+    
+
+
 ]
