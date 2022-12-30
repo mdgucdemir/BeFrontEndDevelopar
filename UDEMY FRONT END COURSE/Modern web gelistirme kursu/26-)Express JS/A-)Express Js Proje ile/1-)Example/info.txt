@@ -1,0 +1,4 @@
+[
+    1-[nmp init] ile (package.json)
+    2-[npm install express] or [npm i express] ile (express.js download) 
+]
