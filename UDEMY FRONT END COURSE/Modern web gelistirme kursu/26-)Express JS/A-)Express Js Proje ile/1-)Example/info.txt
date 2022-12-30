@@ -1,4 +1,19 @@
 [
-    1-[nmp init] ile (package.json)
-    2-[npm install express] or [npm i express] ile (express.js download) 
+    1- [nmp init] ile (package.json)
+    2- [npm install express] or [npm i express] ile (express.js download)
+    3- [npm i nodemon] (server.js) de Herhangi bir degisiklik yaptigimizda surekli (kapa-ac) yapmamak icin (her yaptigimiz degisiklikte auto olarak ac-kapa yapmasi icin)
+      [npm install -D nodemon] sadece gelistirme ortaminda ihtiyacimiz oldugu icin 
+      [npm i --save-dev (package name)] ile [npm i -D (package name)] ayni islemi gorur. Ikiside (devDependencies) olarak yapar package i
+    4-
+    [
+        "scripts":{
+            "dev": "nodemon server.js"
+        }
+    ] kismini ekle
+    5- (server.js) olustur (Burada basit bir server olusturduk)
+    6- (server.js) ini {4 te tanimlanan (dev) ile} [npm run dev] ile calistir 
+    7- get request olusturacaz
+    8- request leri (postman) ile yollayacagiz
+    9- ( Postman ) bir front-end tarafinda bizim request lerimizi atmak icin kullandigimiz bir uygulama. Bu hem chrome eklentisi olarak hemde pc nize indirip kullanabilirsiniz
+    10- ( middleware ) (ara katman) user (login) olma durumlarini kontrol etmek icin cok guzel bir olay 
 ]
