@@ -1,0 +1,33 @@
+[
+    - server i kapatmak icin [ ctrl + c ] yapiniz
+    - herbir degisiklik yaptiktan sonra server i kapat-ac yapmamak icin [ nodemon ] u indir
+    - config folder --> env folder --> config.env files [
+        - config folder da projemizinin her taradinda erisilebilecek degiskenler alacak
+        - (Port umuzu buradan alicaz)
+        - json web token ve onun expile suresi gibi degiskenler environment dosyasinin (config.env) icerisinde olacak ve biz buna her taraftan erismeye calisacaz
+        - bunlara ulasabilmek adina disaridan bir package ihtiyacimiz olacak 
+        - bu package [ dotenv ] package i 
+
+        - projemiz 5 katmandan olusacak = [
+            1 - Helpers
+            2 - Middlewares
+            3 - Routes
+            4 - Controllers
+            5 - Models
+
+            - ROUTES = herhangi bir url adresi girildiginde yani bir rout girildinginde projemiz ilk rout katmanina bakicak
+              ornegin biz questions lar ile bir rout girdiysek mesela api/questions bu (ROUTES) rout islemini ilgili (CONTROLLER) a gondericek
+
+            - CONTROLLERS = ornegin siz bir soru sormak istediniz, yani soru olusturmak istediniz, 
+              buda (MODELS) icerisinde tanimladigimiz MondoDB ye gore bizim ( MODEL (MODELS)) imizi olusturucak ve database imize kayit edecek 
+
+            - HELPERS =   yardimci function larimiz barin katmanimiz olucak. Ornegin biz disaridan baska Library (kutuphane) ler kullanmaya calisacaz
+              ve bu Library lerin kullanimini daha kolaylastirmak icin bizim degisik function larimiz olabilir, bizde bunlara (HELPER FUNCTION) diyecegiz
+
+            - MIDDLEWARES =   ara katmanlarimiz. Ornek verelim hemen; siz bir rout a ulsmak istiyorsunuz, bir baskasinin sorusunu guncellemek istiyorsunuz bu munkun degil
+              bunu sadece kendi sahibi guncelleyebilir. Bunu engelleyebilmek icin (rout) (Controller) i calistirmadan hemen once ilgili (Middleware) function i calistirmaya caliscak
+              porjemizde belirli kontrolleri yaptigimiz function lari barindiracak
+        ]
+
+        ]
+]
