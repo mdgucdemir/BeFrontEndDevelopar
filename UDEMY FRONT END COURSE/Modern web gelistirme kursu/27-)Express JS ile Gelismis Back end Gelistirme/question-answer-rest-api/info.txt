@@ -29,5 +29,11 @@
               porjemizde belirli kontrolleri yaptigimiz function lari barindiracak
         ]
 
-        ]
+      ]
+
+    express (rout) larini ayarlama
+    [
+      - localhost:5000/api/questions || yazdigimizda sadece questions lar ile ilgili islemlerin yapilmasini sitiyoruz
+      - localhost:5000/api/auth      || yazdigimizda sadece user kayit islemleri ve user in password unutma islemleri gibi islemlerini yapmasini istiyoruz      
+    ]
 ]
