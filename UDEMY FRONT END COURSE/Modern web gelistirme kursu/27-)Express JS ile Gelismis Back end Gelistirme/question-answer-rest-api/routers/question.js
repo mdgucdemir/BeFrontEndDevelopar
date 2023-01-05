@@ -3,7 +3,10 @@ const express = require('express');
 const router = express.Router();
 
 router.get("/", (req,res) =>{
-    res.send("Question Home Page");
+    // res.send("<h1>Question Home Page</h1>");
+    res.status(404).json({
+        success : false
+    })
 });
 
 router.get("/delete", (req,res) =>{

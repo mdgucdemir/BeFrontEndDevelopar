@@ -1,7 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const question = require("./routers/question");
-const auth = require("./routers/auth");
+const routers = require("./routers/index");
+
+// const question = require("./routers/question");
+// const auth = require("./routers/auth");
 
 // Environment Variables
 dotenv.config({
@@ -13,8 +15,10 @@ const PORT = process.env.PORT;
 
 //--- ROUTERS MIDDLEWARE BURANIN ALTINDA KULLANILACAK ----
 
-app.use("/api/questions",question); // [app/questions] oldugunda yukarida tanimladigimiz (question) i dahil et demek
-app.use("/api/auth",auth);
+app.use("/api",routers);
+
+// app.use("/api/questions",question); // [app/questions] oldugunda yukarida tanimladigimiz (question) i dahil et demek
+// app.use("/api/auth",auth);
 
 //-----------------------------------------------
 
