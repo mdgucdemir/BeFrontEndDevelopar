@@ -36,4 +36,18 @@
       - localhost:5000/api/questions || yazdigimizda sadece questions lar ile ilgili islemlerin yapilmasini sitiyoruz
       - localhost:5000/api/auth      || yazdigimizda sadece user kayit islemleri ve user in password unutma islemleri gibi islemlerini yapmasini istiyoruz      
     ]
-]
+    
+    - [ ( ../ ) bir ust folder demek ]
+    - mongodb atlas da olusturdugumuz server a [ connect your application ] secenegi (visual studio code ile) yaptigimiz proje ile girmek istiyor isek [
+      
+      -mongodb de verilen giris kodu (config) configuration dosyamizda yazicaz ki buna her taraftan erisebilelim.
+    ]
+
+    - mongodb+srv://MDeniz:<password>@cluster0.umnec7w.mongodb.net/?retryWrites=true&w=majority
+    - mongodb+srv://MDeniz:<password>@cluster0.umnec7w.mongodb.net/question-answer?retryWrites=true&w=majority (question-answer) isimli bir database olusturduk 
+
+    - [ npm install mongoose ] isimli bir package yukledik. Bu mongodb ye Conncetion icin gerekli olan bir package 
+
+    - disaridan ekledigimiz package leri daha kolay kullanabilmek icin [ helper function ] lar yazicak
+    - bu ( helper function ) lari depolamak icin ( helpers ) isimli bir folder olusturucaz
+    - database islemleri icin helper folder in icerisine (database) isim li bir folder daha olusturucaz

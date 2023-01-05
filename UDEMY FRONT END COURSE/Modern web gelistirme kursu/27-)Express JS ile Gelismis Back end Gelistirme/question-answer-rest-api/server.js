@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const connectDatabase = require("./helpers/database/connecDatabase");
 const routers = require("./routers/index");
 
 // const question = require("./routers/question");
@@ -9,6 +10,9 @@ const routers = require("./routers/index");
 dotenv.config({
     path: "./config/env/config.env"
 });
+
+// MongoDb connection
+connectDatabase();
 
 const app = express();
 const PORT = process.env.PORT;
