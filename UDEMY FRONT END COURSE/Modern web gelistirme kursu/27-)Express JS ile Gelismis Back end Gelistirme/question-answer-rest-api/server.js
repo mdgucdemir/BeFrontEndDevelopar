@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDatabase = require("./helpers/database/connecDatabase");
+const customErrorHandler = require("./middlewares/errors/customErrorHandler");
 const routers = require("./routers/index");
 
 // const question = require("./routers/question");
@@ -26,6 +27,13 @@ app.use("/api",routers);
 
 //-----------------------------------------------
 
+// Error Handler
+app.use(customErrorHandler);
+
+app.listen(PORT,() => {
+    console.log(`App Started on ${PORT}: ${process.env.NODE_ENV}`);
+}); // app i calistirma
+
 
 
 // app.get("/api/questions", (req,res) => {
@@ -43,7 +51,3 @@ app.use("/api",routers);
 // app.get("/api/auth/register", (req,res) => {
 //     res.send("Auth Register Page");
 // });
-
-app.listen(PORT,() => {
-    console.log(`App Started on ${PORT}: ${process.env.NODE_ENV}`);
-}); // app i calistirma
