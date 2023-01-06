@@ -51,3 +51,18 @@
     - disaridan ekledigimiz package leri daha kolay kullanabilmek icin [ helper function ] lar yazicak
     - bu ( helper function ) lari depolamak icin ( helpers ) isimli bir folder olusturucaz
     - database islemleri icin helper folder in icerisine (database) isim li bir folder daha olusturucaz
+
+    - (Models) isminde bir folder olustur. Bu klasor de (object) lerimiz ve onlarin tanimlari(definition) yer alicak
+    - user lari mongoose schema larindan olusturucaz. Ornek olarak bakmak istersek mongoosejs.com adresine basvura biliriz
+
+    - ornek reg ex email icin = [
+
+        UserSchema.path('email').validate(function (email) {
+        var emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        return emailRegex.test(email.text); // Assuming email has a text attribute
+        }, 'The e-mail field cannot be empty.')
+    ]
+    - uygulamamizda sifre ye en az alti karakter dedik ama biz 5 karakter verdik ve uygulamamiz (application) patladi
+    - hata olsa dahi (application crashed) olmasini istemiyor, ve kullanici hata yaptiginda sadece user bilgilensin istiyor isek [expressjs error-handiling] de bulusalim :) 
+    - ( error-handiling ) konusunda daha kapsamli bir bilgi edinmek icin [ https://expressjs.com/en/guide/error-handling.html ] adresine bakabilirsiniz
+]
