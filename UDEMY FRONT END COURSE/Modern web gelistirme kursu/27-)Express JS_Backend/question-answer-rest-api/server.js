@@ -27,8 +27,21 @@ app.use("/api",routers);
 
 //-----------------------------------------------
 
-// Error Handler
+// ------- Error Handler ---------
+
+/* [
+    ugulamamiz icindeki herhangi bir code dan hatayi tek bir merkezi yerden yakalaya biliriz 
+    bunun icin kendi custom error handler imizi yazabiliriz 
+    bunu ayri bir middleware olarak yazmak cok guzel olur
+    ornegin bir yere request yaptik bu ilk basta custom yazdigimiz error handling e gelmesi gerekiyor eger bir hata var ise bunu geri gondermeliyiz
+    (err,req,res,next) "err" custom error handling yazdigimiz icin geliyor
+] */
+
 app.use(customErrorHandler);
+
+
+
+// ------- Error Handler End---------
 
 app.listen(PORT,() => {
     console.log(`App Started on ${PORT}: ${process.env.NODE_ENV}`);

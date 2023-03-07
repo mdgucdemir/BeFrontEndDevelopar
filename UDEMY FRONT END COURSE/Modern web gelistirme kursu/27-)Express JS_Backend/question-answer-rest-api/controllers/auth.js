@@ -1,14 +1,15 @@
 
 const User = require("../models/user");
+const CustomError = require("../helpers/error/CustomError");
 
 const register = async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
+    
     const name = "fosik lord";
     const email = "fosik@gmail.com";
     const password = "12345";
 
-    // try - catch 
-
+          
     try { // asenkron islemlerde error yakalama
         const user = await User.create({
         
@@ -27,21 +28,24 @@ const register = async (req,res,next) => {
             success: true,
             data: user
         });
-    }
-    catch {
+    } catch (err) {
         return next(err); 
         // asenkron islemlerde herhangi bir sikinti olmamasi icin bunu (next) ile dondurmeliyiz
-
-    }   
-
-    // async, await yap
-   
+    }
+   // async, await yap
 }
 const errorTest = (req,res,next) => {
     // some code
-    throw new Error("bir hata olustu"); // express bunu kendi icerisinde ki error-handling mekanizmasi sayesinde yakaliycak ve bize response umuzu donucek
+
+    // Question Does not Exist
+    // return next(new TypeError("TypeError"));
+    return next(new SyntaxError("Syntaxt Error"));
+
+    // senkron bir code oldugu icin express bunu kendi icerisinde ki error-handling mekanizmasi sayesinde yakaliycak ve bize response umuzu donucek
+    
     // some code
-}
+    
+};
 
 
 module.exports = {
