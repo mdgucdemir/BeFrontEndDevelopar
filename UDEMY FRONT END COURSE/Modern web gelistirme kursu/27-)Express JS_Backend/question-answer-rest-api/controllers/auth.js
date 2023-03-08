@@ -1,16 +1,13 @@
 
 const User = require("../models/user");
 const CustomError = require("../helpers/error/CustomError");
+const asyncErrorWrapper = require("express-async-handler");
 
-const register = async (req,res,next) => {
+const register = asyncErrorWrapper(async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
     
-    const name = "fosik lord";
-    const email = "fosik@gmail.com";
-    const password = "12345";
-
-          
-    try { // asenkron islemlerde error yakalama
+             
+     
         const user = await User.create({
         
             // name: name,
@@ -28,12 +25,9 @@ const register = async (req,res,next) => {
             success: true,
             data: user
         });
-    } catch (err) {
-        return next(err); 
-        // asenkron islemlerde herhangi bir sikinti olmamasi icin bunu (next) ile dondurmeliyiz
-    }
-   // async, await yap
-}
+    
+        
+});
 const errorTest = (req,res,next) => {
     // some code
 
