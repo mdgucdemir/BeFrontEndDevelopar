@@ -1,5 +1,6 @@
 
 const mongoose = require("mongoose");
+const bcrypt = require('bcryptjs');
 
 const Schema = mongoose.Schema;
 
@@ -56,6 +57,22 @@ const UserSchema = new Schema({
         type: Boolean,
         default: false
     }
+});
+
+UserSchema.pre("save",function(next){
+    // Password Degismemis ise
+    if (!this.isModified("password")) { // ( isModified ) Mongoose un kendi function i dir parantez icerisine modified edilip edilmedigini ogrenmek istedigimiz veriyi yaziyoruz
+        next();
+    }
+
+    bcrypt.genSalt(10, (err, salt) => {
+        if (err) next(err); // eger hata var ise customErrorHandler.js e gidicek
+        bcrypt.hash(this.password, salt, (err, hash) => {
+            if (err) next(err);
+            this.password = hash;
+            next();
+        });
+    });
 });
 
 /*

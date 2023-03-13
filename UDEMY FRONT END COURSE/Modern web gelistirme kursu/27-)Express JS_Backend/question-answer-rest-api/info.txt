@@ -65,4 +65,5 @@
     - uygulamamizda sifre ye en az alti karakter dedik ama biz 5 karakter verdik ve uygulamamiz (application) patladi
     - hata olsa dahi (application crashed) olmasini istemiyor, ve kullanici hata yaptiginda sadece user bilgilensin istiyor isek [expressjs error-handling] de bulusalim :) 
     - ( error-handiling ) konusunda daha kapsamli bir bilgi edinmek icin [ https://expressjs.com/en/guide/error-handling.html ] adresine bakabilirsiniz
+    - password hash lemek icin (bcryptjs) package ini kullan
 ]

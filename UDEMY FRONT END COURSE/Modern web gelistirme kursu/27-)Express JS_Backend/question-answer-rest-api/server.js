@@ -16,6 +16,11 @@ dotenv.config({
 connectDatabase();
 
 const app = express();
+
+// Express - Body Middleware [console.log(req.body) nin undefined olmamasi, gonderdigimiz verileri (req.body) nin icerisinde yer alacak]
+app.use(express.json());
+
+
 const PORT = process.env.PORT;
 
 //--- ROUTERS MIDDLEWARE BURANIN ALTINDA KULLANILACAK ----

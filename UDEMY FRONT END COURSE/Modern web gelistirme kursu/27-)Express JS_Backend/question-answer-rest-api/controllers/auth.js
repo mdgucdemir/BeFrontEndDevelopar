@@ -7,6 +7,7 @@ const register = asyncErrorWrapper(async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
     
              
+    const {name,email,password,role} = req.body;
      
         const user = await User.create({
         
@@ -17,7 +18,8 @@ const register = asyncErrorWrapper(async (req,res,next) => {
             // // ES6 ile gelen yenilikler sayesinde yukarida yazilani daha kisa bir sekilde yazmak su sekilde olucak
             name,
             email,
-            password
+            password,
+            role
     
             // ilk yazimda ayni sekilde olan yazimlarda bu sekilde code yazilabilir
         });
