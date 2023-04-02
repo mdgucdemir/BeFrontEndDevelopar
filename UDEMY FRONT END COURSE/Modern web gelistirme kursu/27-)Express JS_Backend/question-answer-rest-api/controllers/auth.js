@@ -23,6 +23,10 @@ const register = asyncErrorWrapper(async (req,res,next) => {
     
             // ilk yazimda ayni sekilde olan yazimlarda bu sekilde code yazilabilir
         });
+
+        const token = user.generateJwtFromUser();
+        console.log(token);
+
         res.status(200).json({
             success: true,
             data: user

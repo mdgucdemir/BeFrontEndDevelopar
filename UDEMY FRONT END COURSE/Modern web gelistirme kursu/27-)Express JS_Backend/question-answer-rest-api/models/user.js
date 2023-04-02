@@ -1,8 +1,9 @@
 
 const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
-
 const Schema = mongoose.Schema;
+const jwt = require("jsonwebtoken");
+
 
 const UserSchema = new Schema({
     name: {
@@ -12,7 +13,7 @@ const UserSchema = new Schema({
     email:{
         type: String,
         required: [true,"Please give me a email"],
-        uniqe: [true,"Please try different email"], // Sadece bir tane email olucak, birden fazla email ile kayit islemi gerceklestirilmemesini istiyoruz.
+        unique: true, // Sadece bir tane email olucak, birden fazla email ile kayit islemi gerceklestirilmemesini istiyoruz.
         match: [
             //@gucdemir.com seklinde degilde bir email adresi seklinde olanlari kabul edicaz
             // bunun icin [mongoose email reg ex validation] seklinde internet ten arastir, hazir code kullan
@@ -58,7 +59,30 @@ const UserSchema = new Schema({
         default: false
     }
 });
+// UserSchema Methods
+UserSchema.methods.generateJwtFromUser= function(){
 
+    /* 
+    bize bir tane jwt [ secret_key ] ve [ expireIn (jwt nin ne zaman bitecegi time bilgisi gerekli) ] 
+    bu bilgileri bir cok defa kullanicagimiz icin  bunu [ config.evn ] in icinde olusturacagiz 
+    */
+    const {JWT_SECRET_KEY,JWT_EXPIRE} = process.env;
+
+    // JWT olusturmak icin ilk once Payload object olusturacagiz
+    const payload = {
+        id : this._id,
+        name : this.name
+    };
+    // Token olusturma
+    const token =jwt.sign(payload,JWT_SECRET_KEY,{
+        //option 
+        expiresIn : JWT_EXPIRE
+        // and callback function
+    });
+    return token;
+}
+
+// Pre hooks
 UserSchema.pre("save",function(next){
     // Password Degismemis ise
     if (!this.isModified("password")) { // ( isModified ) Mongoose un kendi function i dir parantez icerisine modified edilip edilmedigini ogrenmek istedigimiz veriyi yaziyoruz
