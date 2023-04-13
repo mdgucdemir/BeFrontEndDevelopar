@@ -68,6 +68,41 @@
     - password hash lemek icin (bcryptjs) package ini kullan
 
     [
-      - JWT (json web token) = jwt.sing(payload,secretOrPrivaviteKey,[options,callback])    
+      ---- ENCODED ----
+
+      jwt.sing function
+      -json web token olusturmak icin kullanmamiz gereken function dur.
+      
+      - JWT (json web token) = jwt.sing(payload,secretOrPrivateKey,[options,callback]) 
+
+      # PAYLOAD              = vermek istedigimiz data yer lar
+      # secretOrPrivaviteKey = bizim belirledigimiz bir (secret yada private) key vardir
+      # options              = algirithm (Default HS256) ve expiresIn (gecerli olducagi sureyi belirledigimiz yer 2d, 1h, 2m, 5s, 123ms, ect. gibi 
+         eger 12 yazar isek bunu 12ms olarak alir. eger ["2 days"] yazarsak bunu ms (milisaniye cinsinde yazar. gerci tum yazdiklarimiz milisaniye cinsine gore calistiriyor))  
+
+      - oturum kontrolleri yapmamiza yarar (ornegin bu kullanici oturum acmis mi? gibi)
+      - authorizaton control
+      - json web token i genelde browser in [ cookie ] lerinde depolayacagiz
+      - ve bilirli bir sure icerisinde calisir ve o sureyi belirleyebiliriz
+
+      - JWT nin ic yapisi ( HEADER, PAYLOAD, VERIFY SIGNATURE ) dan olusur      
+      - HEADER da [ alg (algoritma) ve typ (type) ] vardir. algoritma sifreleme algoritmasidir. default olarak [ hs256 ] verilir. type ise [JWT] dir. 
+      - PAYLOAD da ise DATA yani kullanmak istedigimiz bilgiler vardir. Bir Object tir. Ornegin name, id, etc.
+      - VERIFY SIGNATURE da encoded ve decoded etmek icin bizim verdigimiz [ secret key ] i miz var.
+
+
+      ---- DECODED ----
+
+      jwt.verify function
+      json web token decoded edmek icin gereken function dur
+      
+      -jwt.verify(token,secretOrPrivateKey,[options,callback])
+
+      -jwt.verify(token, secretKey, function (err, decoded) {
+
+        console.log(decoded.foo)
+      });
+
+      bir ornek olabilir
     ]
 ]
