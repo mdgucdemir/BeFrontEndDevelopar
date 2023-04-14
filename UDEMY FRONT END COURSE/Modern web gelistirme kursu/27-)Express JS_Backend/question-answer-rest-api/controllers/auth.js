@@ -2,6 +2,7 @@
 const User = require("../models/user");
 const CustomError = require("../helpers/error/CustomError");
 const asyncErrorWrapper = require("express-async-handler");
+const sendJwtToClient = require("../helpers/authorization/sendJwtToClient");
 
 const register = asyncErrorWrapper(async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
@@ -24,14 +25,9 @@ const register = asyncErrorWrapper(async (req,res,next) => {
             // ilk yazimda ayni sekilde olan yazimlarda bu sekilde code yazilabilir
         });
 
-        const token = user.generateJwtFromUser();
-        console.log(token);
-
-        res.status(200).json({
-            success: true,
-            data: user
-        });
-    
+        // kayit islemi bittikten sonra buradaki (user ve res(response)) [sendJwtToClient] a gondermemiz gerekiyor
+        sendJwtToClient(user,res);
+        
         
 });
 const errorTest = (req,res,next) => {
