@@ -24,10 +24,25 @@ const sendJwtToClient = (user,res) => {
             name : user.name,
             email : user.email
         }
-    })
+    });
 
     // Response
     // Bu kisimda bir tane (response) dondurucez
 }
 
-module.exports = sendJwtToClient;
+const isTokenIncluded = (req) => {
+    return (req.headers.authorization && req.headers.authorization.startsWith('Bearer:'));
+}
+
+const getAccessTokenFromHeader = (req) => {
+
+    const authorization = req.headers.authorization;
+    const acces_token = authorization.split(" ")[1];
+    return acces_token;
+}
+
+module.exports = {
+    sendJwtToClient,
+    isTokenIncluded,
+    getAccessTokenFromHeader
+};

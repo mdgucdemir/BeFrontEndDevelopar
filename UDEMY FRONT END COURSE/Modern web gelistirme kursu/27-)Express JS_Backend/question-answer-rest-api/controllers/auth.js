@@ -2,7 +2,7 @@
 const User = require("../models/user");
 const CustomError = require("../helpers/error/CustomError");
 const asyncErrorWrapper = require("express-async-handler");
-const sendJwtToClient = require("../helpers/authorization/sendJwtToClient");
+const {sendJwtToClient } = require("../helpers/authorization/tokenHelpers");
 
 const register = asyncErrorWrapper(async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
@@ -30,21 +30,16 @@ const register = asyncErrorWrapper(async (req,res,next) => {
         
         
 });
-const errorTest = (req,res,next) => {
-    // some code
 
-    // Question Does not Exist
-    // return next(new TypeError("TypeError"));
-    return next(new SyntaxError("Syntaxt Error"));
-
-    // senkron bir code oldugu icin express bunu kendi icerisinde ki error-handling mekanizmasi sayesinde yakaliycak ve bize response umuzu donucek
-    
-    // some code
-    
-};
+const tokentest = (req,res,next) => {
+    res.json({
+        success: true,
+        message: "wellcome"
+    });
+}
 
 
 module.exports = {
     register,
-    errorTest
+    tokentest    
 }
