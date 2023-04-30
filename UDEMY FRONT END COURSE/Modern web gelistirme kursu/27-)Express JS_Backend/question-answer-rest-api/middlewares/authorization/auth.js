@@ -5,13 +5,14 @@ const {isTokenIncluded,getAccessTokenFromHelpers, getAccessTokenFromHeader} = re
 const getAccessToRoute = (req,res,next) => {
     
     // token control
+    // if no token, CustomError
 
     const {JWT_SECRET_KEY} = process.env;
 
     if(!isTokenIncluded(req)){
         // 401, 403 status
         // 401 unauthorized status (giris yapmadan bir sayfaya erismeye calismak gibi)
-        // 403 forbiden status (giris yaptiniz,user siniz, ama adminlerin giris yapmasi gereken yere giris yapmaya cilistiginiz icin 403 forbiden hatasi alirsiniz)
+        // 403 forbidden status (giris yaptiniz,user siniz, ama adminlerin giris yapmasi gereken yere giris yapmaya cilistiginiz icin 403 forbiden hatasi alirsiniz)
         
         return next(new CustomError("You are not authorized to access this route",401));        
     }
@@ -23,12 +24,12 @@ const getAccessToRoute = (req,res,next) => {
         if (err) {
             return next(new CustomError("You are not authorized to access this route",401));
         }
-        console.log(decoded);
+        req.user = {
+            id: decoded.id,
+            name: decoded.name
+        }        
         next();
     });
-
-
-    // if no token, CustomError
 
 }
 

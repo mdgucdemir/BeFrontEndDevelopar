@@ -14,7 +14,7 @@ const sendJwtToClient = (user,res) => {
     .status(200)
     .cookie("acces_token",token,{
         httpOnly : true,
-        expires : new Date(Date.now() + parseInt(JWT_COOKIE) * 1000),
+        expires : new Date(Date.now() + parseInt(JWT_COOKIE) * 1000 * 60),
         secure : NODE_ENV === "development" ? false : true // NODE_ENV "development" ise [false] degilse [true] kosullu yazimin YAZIM SEKLIDIR.
     })
     .json({
