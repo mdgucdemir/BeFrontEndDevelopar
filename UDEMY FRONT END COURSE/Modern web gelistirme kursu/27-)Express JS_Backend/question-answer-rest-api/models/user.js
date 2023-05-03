@@ -30,7 +30,7 @@ const UserSchema = new Schema({
         type: String,
         minlength: [6,"Please provide a password with min length: 6"],
         required: [true,"Please provide a password"],
-        select: false // herhangi bir bilgiyi cektigimiz zaman password alaninin gorulmemsi icin yazilan bir code
+        select: false // herhangi bir bilgiyi cektigimiz zaman password alaninin gorulmemesi icin yazilan bir code
     },
     createdAt: {
         // kullanicinin ne zaman kayit oldugu ile ilgili alan. Bu alan tarih icerir
@@ -89,7 +89,7 @@ UserSchema.pre("save",function(next){
         next();
     }
 
-    bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.genSalt(10, (err, salt) => { // bcrypt asenkron version i kullandik burada 
         if (err) next(err); // eger hata var ise customErrorHandler.js e gidicek
         bcrypt.hash(this.password, salt, (err, hash) => {
             if (err) next(err);
