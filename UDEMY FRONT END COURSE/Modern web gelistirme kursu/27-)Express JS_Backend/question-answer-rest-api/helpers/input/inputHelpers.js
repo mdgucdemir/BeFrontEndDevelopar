@@ -10,7 +10,10 @@ const comparePassword = (password,hashedPassword) => {
     return bcrypt.compareSync(password,hashedPassword);
     // yukaridaki yazimda [ password ile hashedPassword ] ayni ise true degilse false donucek
 }
+
+
 module.exports = {
     validateUserInput,
-    comparePassword
+    comparePassword,
+    
 }
