@@ -48,8 +48,9 @@ app.use(customErrorHandler);
 // ------- Error Handler End---------
 
 
-// ---- Static files
+// ---- Static files ----
 app.use(express.static(path.join(__dirname,"public")));
+
 
 app.listen(PORT,() => {
     console.log(`App Started on ${PORT}: ${process.env.NODE_ENV}`);

@@ -77,10 +77,20 @@ const getUser = (req,res,next) => {
     
 }
 
+const imageUpload = asyncErrorWrapper(async (req,res,next) => {
+
+    // image upload success
+    res.status(200)
+    .json({
+        success:true,
+        message: "image upload is ok"
+    });
+});
 
 module.exports = {
     register,
     login,
     logout,
-    getUser   
+    getUser,
+    imageUpload   
 }
