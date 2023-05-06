@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const bcrypt = require('bcryptjs');
 const Schema = mongoose.Schema;
 const jwt = require("jsonwebtoken");
+const crypto = require("crypto");
 
 
 const UserSchema = new Schema({
@@ -57,10 +58,16 @@ const UserSchema = new Schema({
     bloced: { // admin block lamis olabilir. Bunun icin Boolean bir deger alir (true,false)
         type: Boolean,
         default: false
+    },
+    resetPasswordToken: {
+        type: String
+    },
+    resetPasswordExpire: {
+        type: Date
     }
 });
 // UserSchema Methods
-UserSchema.methods.generateJwtFromUser= function(){
+UserSchema.methods.generateJwtFromUser = function(){
 
     /* 
     bize bir tane jwt [ secret_key ] ve [ expireIn (jwt nin ne zaman bitecegi time bilgisi gerekli) ] 
@@ -82,6 +89,20 @@ UserSchema.methods.generateJwtFromUser= function(){
     return token;
 }
 
+UserSchema.methods.getResetPasswordTokenFromUser = function() {
+
+    const randomHexString = crypto.randomBytes(15).toString("hex");
+    const {RESET_PASSWORD_EXPIRE} = process.env;
+
+    const resetPasswordToken = crypto
+    .createHash("SHA256")
+    .update(randomHexString)
+    .digest("hex");
+
+    this.resetPasswordToken = resetPasswordToken;
+    this.resetPasswordExpire = Date.now() + parseInt(RESET_PASSWORD_EXPIRE);
+
+}
 // Pre hooks
 UserSchema.pre("save",function(next){
     // Password Degismemis ise
