@@ -3,7 +3,7 @@ const User = require("../models/user");
 const CustomError = require("../helpers/error/CustomError");
 const asyncErrorWrapper = require("express-async-handler");
 const {sendJwtToClient } = require("../helpers/authorization/tokenHelpers");
-const {validateUserInput,comparePassword,compareEmail} = require("../helpers/input/inputHelpers");
+const {validateUserInput,comparePassword} = require("../helpers/input/inputHelpers");
 
 const register = asyncErrorWrapper(async (req,res,next) => {
     // Normal de Buraya POST DATA gelicek
