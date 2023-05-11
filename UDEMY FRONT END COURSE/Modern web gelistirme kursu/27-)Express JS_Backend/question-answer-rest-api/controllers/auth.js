@@ -156,11 +156,49 @@ const forgotPassword = asyncErrorWrapper(async (req,res,next) => {
    
 });
 
+const resetPassword = asyncErrorWrapper(async(req,res,next) => {
+
+    // token i query den alma
+    const {resetPasswordToken} = req.query;
+
+    // yeni password i req.body den alma
+    const {password} = req.body;
+
+    if(!resetPasswordToken) { // resetPasswordToken gonderilip gonderilmediginin konrolu
+        return next(new CustomError("Please provide a valid token"),400);
+    }
+
+    let user = await User.findOne({
+        resetPasswordToken : resetPasswordToken,
+        resetPasswordExpire : {$gt : Date.now()} // [ mongoDb ozelligi ] => $gt [ greater than ] demek. Bu da resetPasswordExpire Date.now dan buyukse getir demek oluyor
+    });
+
+    // Eger token gecerli degilse
+    if(!user) {
+        return next(new CustomError("Invalid Token or Session Expired",400));
+    }
+
+    user.password = password; // yeni password u guncelleme
+
+    user.resetPasswordToken = undefined;
+    user.resetPasswordExpire = undefined;
+
+    // User i guncellendi ve veri tabanina yazmamiz lazim
+    await user.save();
+
+    return res.status(200)
+    .json({
+        success: true,
+        message: "Reset password process successful"
+    });
+});
+
 module.exports = {
     register,
     login,
     logout,
     getUser,
     imageUpload,
-    forgotPassword   
+    forgotPassword,
+    resetPassword   
 }
