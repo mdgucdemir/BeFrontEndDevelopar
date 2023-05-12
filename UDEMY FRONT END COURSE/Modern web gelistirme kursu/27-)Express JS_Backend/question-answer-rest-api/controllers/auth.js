@@ -190,6 +190,7 @@ const resetPassword = asyncErrorWrapper(async(req,res,next) => {
     .json({
         success: true,
         message: "Reset password process successful"
+        
     });
 });
 
