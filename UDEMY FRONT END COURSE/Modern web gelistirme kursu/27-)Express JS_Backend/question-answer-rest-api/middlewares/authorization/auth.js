@@ -1,7 +1,11 @@
 
 const CustomError = require("../../helpers/error/CustomError");
 const jwt = require("jsonwebtoken");
-const {isTokenIncluded,getAccessTokenFromHelpers, getAccessTokenFromHeader} = require("../../helpers/authorization/tokenHelpers");
+const asyncErrorWrapper = require("express-async-handler");
+const User = require("../../models/user");
+const {isTokenIncluded, getAccessTokenFromHeader} = require("../../helpers/authorization/tokenHelpers");
+
+
 const getAccessToRoute = (req,res,next) => {
     
     // token control
@@ -33,6 +37,20 @@ const getAccessToRoute = (req,res,next) => {
 
 }
 
+const getAdminAccess = asyncErrorWrapper(async(req,res,next) => {
+    
+    const {id} = req.user;
+
+    const user = await User.findById(id);
+
+    if (user.role !== "admin"){
+        return next(new CustomError("Only Admins can access this route",403));
+    }
+    next();
+
+}); 
+
 module.exports = {
-    getAccessToRoute
+    getAccessToRoute,
+    getAdminAccess
 };
