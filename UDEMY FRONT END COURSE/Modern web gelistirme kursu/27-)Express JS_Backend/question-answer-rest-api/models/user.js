@@ -55,7 +55,7 @@ const UserSchema = new Schema({
         type: String,
         default: "default.jpg"
     },
-    bloced: { // admin block lamis olabilir. Bunun icin Boolean bir deger alir (true,false)
+    blocked: { // admin block lamis olabilir. Bunun icin Boolean bir deger alir (true,false)
         type: Boolean,
         default: false
     },

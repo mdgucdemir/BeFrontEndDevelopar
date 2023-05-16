@@ -95,6 +95,7 @@ const imageUpload = asyncErrorWrapper(async (req,res,next) => {
         new: true,
         runValidators: true
     })
+    
 
     res.status(200)
     .json({
