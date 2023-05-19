@@ -31,5 +31,6 @@ const QuestionSchema = new Schema({
         ref: "User"
 
     }
-
 });
+
+module.exports = mongoose.model("Question",QuestionSchema);
