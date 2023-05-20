@@ -17,7 +17,7 @@ const QuestionSchema = new Schema({
         minlength: [20,"Please provide a title at least 20 characters"]
     },
 
-    // Bu bir sorudur => bu-bir-sorudur (slug)
+    // Bu bir sorudur => bu-bir-sorudur (slug bu ise yarar)
     slug : String,
     
     createdAt: {
