@@ -22,7 +22,7 @@ const askNewQuestion = asyncErrorWrapper(async (req,res,next) => {
 
 const getAllQuestions = asyncErrorWrapper(async (req,res,next) => {
     
-    const questions = await Question.find();
+    const questions = await Question.find(); // all Questions 
     return res.status(200)
     .json({
         success: true,
