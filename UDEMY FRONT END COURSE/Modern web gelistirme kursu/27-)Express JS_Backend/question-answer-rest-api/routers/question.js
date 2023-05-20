@@ -1,10 +1,11 @@
 const express = require('express');
 // [api/question] yonlendirmesi buraya gelecek
-const {askNewQuestion} = require('../controllers/question');
+const {askNewQuestion,getAllQuestions} = require('../controllers/question');
 const {getAccessToRoute} = require("../middlewares/authorization/auth");
 const router = express.Router();
 
 router.post("/ask",getAccessToRoute,askNewQuestion);
+router.get("/",getAllQuestions);
 
 // router.get("/delete", (req,res) =>{
 //     res.send("Question Delete Page")

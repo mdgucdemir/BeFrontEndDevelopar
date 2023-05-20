@@ -39,7 +39,7 @@ QuestionSchema.pre("save", function(next){
     if(!this.isModified("title")) {
         next();
     } 
-    
+
     this.slug = this.makeSlug();
     next();
 });
