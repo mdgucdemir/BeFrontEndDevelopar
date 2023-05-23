@@ -24,7 +24,7 @@ const deleteUser = asyncErrorWrapper(async(req,res,next) => {
     const {id} = req.params;
     const user = await User.findById(id);
 
-    await user.remove(); // User Delete Process || Bu user i sildikten sonra ilgili questions lari da silmemiz gerekecek
+    await user.remove(); // ilgili question lar [ model => User => {UserSchema.post remove} da ] silindi
     
     return res.status(200).json({
         succuss: true,

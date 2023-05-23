@@ -4,7 +4,8 @@ const {
     askNewQuestion,
     getAllQuestions,
     getSingleQuestion,
-    editQuestion
+    editQuestion,
+    deleteQuestion
 } = require('../controllers/question');
 
 const {checkQuestionExist} = require("../middlewares/database/databaseErrorHelpers");
@@ -15,6 +16,7 @@ router.post("/ask",getAccessToRoute,askNewQuestion);
 router.get("/:id",checkQuestionExist,getSingleQuestion);
 router.get("/",getAllQuestions);
 router.put("/:id/edit",[getAccessToRoute,checkQuestionExist,getQuestionOwnerAccess],editQuestion);
+router.delete("/:id/delete",[getAccessToRoute,checkQuestionExist,getQuestionOwnerAccess],deleteQuestion);
 
 // router.get("/delete", (req,res) =>{
 //     res.send("Question Delete Page")
