@@ -73,10 +73,31 @@ const deleteQuestion = asyncErrorWrapper(async (req,res,next) => {
     })
 });
 
+const likeQuestion = asyncErrorWrapper(async (req,res,next) => {
+    
+    const {id} = req.params;
+    const question = await Question.findById(id);
+
+    // Giris yapmis kullanici buraya Like etmis ise bir daha like edemesin
+    if (question.likes.includes(req.user.id)) { // question daki like array indeki id giris yapan id ile esit ise
+        return next(new CustomError("You already liked this question",400));
+    }
+    // eger id , likes in icerisinde yoksa push ile eklememiz gerekiyor
+    question.likes.push(req.user.id);
+
+    await question.save();
+    return res.status(200)
+    .json({
+        success: true,
+        data: question
+    });
+});
+
 module.exports = {
     askNewQuestion,
     getAllQuestions,
     getSingleQuestion,
     editQuestion,
-    deleteQuestion
+    deleteQuestion,
+    likeQuestion
 }

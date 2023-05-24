@@ -5,13 +5,16 @@ const {
     getAllQuestions,
     getSingleQuestion,
     editQuestion,
-    deleteQuestion
+    deleteQuestion,
+    likeQuestion
 } = require('../controllers/question');
 
 const {checkQuestionExist} = require("../middlewares/database/databaseErrorHelpers");
 const {getAccessToRoute, getQuestionOwnerAccess} = require("../middlewares/authorization/auth");
+
 const router = express.Router();
 
+router.get("/:id/like",[getAccessToRoute,checkQuestionExist],likeQuestion);
 router.post("/ask",getAccessToRoute,askNewQuestion);
 router.get("/:id",checkQuestionExist,getSingleQuestion);
 router.get("/",getAllQuestions);

@@ -11,27 +11,31 @@ const QuestionSchema = new Schema({
         minlength: [10,"Please provide a title at least 10 characters"],
         unique: true,
     },
-
     content: {
         type: String,
         required: [true,"Please provide a content"],
         minlength: [20,"Please provide a title at least 20 characters"]
     },
-
     // Bu bir sorudur => bu-bir-sorudur (slug bu ise yarar)
-    slug : String,
-    
+    slug : String,    
     createdAt: {
         type: Date,
         default: Date.now
     },
-
     user: {
         type: mongoose.Schema.ObjectId,
         required: true,
         ref: "User"
 
-    }
+    },
+    likes: [
+        // bu soruya bir cok like geleceginden ve bu da bir cok id gelecegi anlamina geldigi icin bunu array olarak yapiyoruz. Bu array in her bir elemani objectId olucak
+        {
+            type: mongoose.Schema.ObjectId,
+            ref: "User"
+        }
+    ]
+
 });
 
 QuestionSchema.pre("save", function(next){
