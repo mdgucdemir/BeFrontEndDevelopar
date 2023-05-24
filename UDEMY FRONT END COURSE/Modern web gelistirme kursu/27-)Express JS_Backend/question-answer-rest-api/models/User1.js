@@ -127,8 +127,7 @@ UserSchema.post("remove",async function(){
     
     await Question.deleteMany({
         user : this._id
-    }); // birden fazla silme islemi
-    
+    }); // birden fazla silme islemi    
 });
 
 /*
