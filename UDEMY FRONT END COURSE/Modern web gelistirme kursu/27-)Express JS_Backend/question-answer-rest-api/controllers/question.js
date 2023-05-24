@@ -85,7 +85,29 @@ const likeQuestion = asyncErrorWrapper(async (req,res,next) => {
     // eger id , likes in icerisinde yoksa push ile eklememiz gerekiyor
     question.likes.push(req.user.id);
 
-    await question.save();
+    await question.save();    
+    return res.status(200)
+    .json({
+        success: true,
+        data: question
+    });
+});
+
+const undoLikeQuestion = asyncErrorWrapper(async (req,res,next) => {
+
+    const {id} = req.params;
+    const question = await Question.findById(id);
+
+    // User Like etmemis ise error message firlatma
+    if(!question.likes.includes(req.user.id)) {
+        return next(new CustomError("You can not undo like operation for this question"));
+    }
+
+    const index = question.likes.indexOf(req.user.id);
+    
+    question.likes.splice(index,1); // question likes ta o index e git 1 tane id yi sil
+
+    await question.save(); // guncellenmis question i yazma
     return res.status(200)
     .json({
         success: true,
@@ -99,5 +121,6 @@ module.exports = {
     getSingleQuestion,
     editQuestion,
     deleteQuestion,
-    likeQuestion
+    likeQuestion,
+    undoLikeQuestion
 }
