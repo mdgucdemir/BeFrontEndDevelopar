@@ -134,6 +134,6 @@ UserSchema.post("remove",async function(){
    bu yapimiz model i [mongoose] kaydetmemiz ve disari export etmemiz gerekiyor. 
    mongoose a (User) olarak kayit edelim ve bu User a karsilik gelen schema da olusturdugumuz (UserSchema) olsun 
 */
-module.exports = mongoose.model("User",UserSchema);
+module.exports = mongoose.model("User",UserSchema); 
 
 // biz bir tane User olusturursak database imizde (users) isminde bir collection olusacak
