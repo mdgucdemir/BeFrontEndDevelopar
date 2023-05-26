@@ -1,5 +1,7 @@
 const express = require('express');
-// [api/question] yonlendirmesi buraya gelecek
+
+const answer = require("./answer");
+
 const {
     askNewQuestion,
     getAllQuestions,
@@ -22,6 +24,8 @@ router.get("/:id",checkQuestionExist,getSingleQuestion);
 router.get("/",getAllQuestions);
 router.put("/:id/edit",[getAccessToRoute,checkQuestionExist,getQuestionOwnerAccess],editQuestion);
 router.delete("/:id/delete",[getAccessToRoute,checkQuestionExist,getQuestionOwnerAccess],deleteQuestion);
+
+router.use("/:question_id/answers",checkQuestionExist,answer);
 
 // router.get("/delete", (req,res) =>{
 //     res.send("Question Delete Page")

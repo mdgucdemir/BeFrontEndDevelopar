@@ -19,9 +19,9 @@ const checkUserExist = asyncErrorWrapper(async (req,res,next) => {
 
 const checkQuestionExist = asyncErrorWrapper(async (req,res,next) => {
 
-    // tek bir question bilgisi alma
-    const {id} = req.params;
-    const question = await Question.findById(id);
+    const question_id = req.params.id || req.params.question_id; 
+    
+    const question = await Question.findById(question_id);
 
     if (!question) {
         return next(new CustomError("There is no Oustion with that id",400));
