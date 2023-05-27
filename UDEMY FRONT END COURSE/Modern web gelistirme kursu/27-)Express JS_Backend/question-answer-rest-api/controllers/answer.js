@@ -27,6 +27,47 @@ const addNewAnswerToQuestion = asyncErrorWrapper(async (req,res,next) => {
 
 });
 
+const getAllAnswersByQuestion = asyncErrorWrapper(async (req,res,next) => {
+    
+    const {question_id} = req.params;
+    const question = await Question.findById(question_id).populate("answers"); // [populate] yontemi buradaki id si verilenin o id ye bagli tum bilgilerini vermemize yaradi
+    const answers = question.answers;
+
+    return res.status(200)
+    .json({
+        success: true,
+        count : answers.length, // answers array inin uzunlugunu olcmek icin, Yani kac tane cevap var onu bullmamiza yariyor
+        data: answers
+    });
+});
+
+const getSingleAnswer = asyncErrorWrapper (async (req,res,next) => {
+    
+    const {answer_id} = req.params;
+    const answer = await Answer
+    .findById(answer_id)
+    .populate(
+        {
+            path: "question", // nereyi populate edecek
+            select: "title"   // neyi secmek istiyoru
+        }
+    )
+    .populate(
+        {
+            path: "user",
+            select: "name profile_image"
+        }
+    ); // populate i bu sekilde ozellestire bilir. Istedigimizi seyi secip cikti olarak verebiliriz || Ayrica Default olarak id ler (question ve user icin) gelicek
+
+    return res.status(200)
+    .json({
+        success: true,
+        data: answer
+    })
+});
+
 module.exports = {
-    addNewAnswerToQuestion
+    addNewAnswerToQuestion,
+    getAllAnswersByQuestion,
+    getSingleAnswer
 }
