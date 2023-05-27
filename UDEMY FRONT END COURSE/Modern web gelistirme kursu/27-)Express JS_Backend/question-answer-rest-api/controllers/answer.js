@@ -66,8 +66,26 @@ const getSingleAnswer = asyncErrorWrapper (async (req,res,next) => {
     })
 });
 
+const editAnswer = asyncErrorWrapper (async (req,res,next) => {
+    
+    const {answer_id} = req.params;
+    const {content} = req.body;
+
+    let answer = await Answer.findById(answer_id);
+
+    answer.content = content;
+    await answer.save();
+
+    return res.status(200)
+    .json({
+        success: true,
+        date: answer
+    });
+});
+
 module.exports = {
     addNewAnswerToQuestion,
     getAllAnswersByQuestion,
-    getSingleAnswer
+    getSingleAnswer,
+    editAnswer
 }
