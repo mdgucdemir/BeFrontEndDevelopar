@@ -6,7 +6,8 @@ const {
     addNewAnswerToQuestion,
     getAllAnswersByQuestion,
     getSingleAnswer,
-    editAnswer
+    editAnswer,
+    deleteAnswer
 } = require("../controllers/answer");
 
 const {CheckQuestionAndAnswerExist} = require("../middlewares/database/databaseErrorHelpers");
@@ -20,5 +21,6 @@ router.post("/" ,getAccessToRoute,addNewAnswerToQuestion);
 router.get("/" ,getAllAnswersByQuestion);
 router.get("/:answer_id" ,CheckQuestionAndAnswerExist,getSingleAnswer);
 router.put("/:answer_id/edit" ,[CheckQuestionAndAnswerExist,getAccessToRoute,getAnswerOwnerAccess],editAnswer);
+router.delete("/:answer_id/delete" ,[CheckQuestionAndAnswerExist,getAccessToRoute,getAnswerOwnerAccess],deleteAnswer);
 
 module.exports = router;

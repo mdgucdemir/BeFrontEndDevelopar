@@ -124,10 +124,17 @@ UserSchema.pre("save",function(next){
 });
 
 UserSchema.post("remove",async function(){
+    try {
+        await Question.deleteMany({
+            user : this._id
+        }); // birden fazla silme islemi  
+        
+    } catch (err) {
+        return next(err);
+    } 
     
-    await Question.deleteMany({
-        user : this._id
-    }); // birden fazla silme islemi    
+    
+      
 });
 
 /*
