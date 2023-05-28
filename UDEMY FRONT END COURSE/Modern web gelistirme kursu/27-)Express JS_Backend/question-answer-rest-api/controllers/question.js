@@ -100,7 +100,7 @@ const undoLikeQuestion = asyncErrorWrapper(async (req,res,next) => {
 
     // User Like etmemis ise error message firlatma
     if(!question.likes.includes(req.user.id)) {
-        return next(new CustomError("You can not undo like operation for this question"));
+        return next(new CustomError("You can not undo like operation for this question",400));
     }
 
     const index = question.likes.indexOf(req.user.id);
@@ -108,6 +108,7 @@ const undoLikeQuestion = asyncErrorWrapper(async (req,res,next) => {
     question.likes.splice(index,1); // question likes ta o index e git 1 tane id yi sil
 
     await question.save(); // guncellenmis question i yazma
+    
     return res.status(200)
     .json({
         success: true,
