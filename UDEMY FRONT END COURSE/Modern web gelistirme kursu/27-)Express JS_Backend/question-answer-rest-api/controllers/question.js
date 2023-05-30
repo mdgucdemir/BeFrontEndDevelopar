@@ -22,7 +22,24 @@ const askNewQuestion = asyncErrorWrapper(async (req,res,next) => {
 
 const getAllQuestions = asyncErrorWrapper(async (req,res,next) => {
     
-    const questions = await Question.find(); // all Questions 
+    // console.log(req.query.search);
+
+    let query = Question.find();
+
+    if (req.query.search) {
+        // title a gore ornek regex yazimi yapacagiz
+
+        const searchObject = {};
+        // title searchValue
+
+        const regex = new RegExp(req.query.search,"i");
+        searchObject["title"] = regex;
+
+        query = query.where(searchObject);
+    }
+
+    const questions = await query;
+
     return res.status(200)
     .json({
         success: true,
