@@ -28,6 +28,10 @@ const QuestionSchema = new Schema({
         ref: "User"
 
     },
+    likeCount: {
+        type: Number,
+        default: 0
+    },
     likes: [
         // bu soruya bir cok like geleceginden ve bu da bir cok id gelecegi anlamina geldigi icin bunu array olarak yapiyoruz. Bu array in her bir elemani objectId olucak
         {
@@ -35,6 +39,10 @@ const QuestionSchema = new Schema({
             ref: "User"
         }
     ],
+    answerCount: {
+        type: Number,
+        default: 0
+    },
     answers: [
         {
             type: mongoose.Schema.ObjectId,

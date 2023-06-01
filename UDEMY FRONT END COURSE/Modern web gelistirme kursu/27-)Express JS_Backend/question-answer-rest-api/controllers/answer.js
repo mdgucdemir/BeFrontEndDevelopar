@@ -93,6 +93,7 @@ const deleteAnswer = asyncErrorWrapper (async (req,res,next) => {
     const question = await Question.findById(question_id);
 
     question.answers.splice(question.answers.indexOf(answer_id),1); // question.answers array var, answer_id nin bulundugu index e gore id yi kaldir
+    question.answerCount = question.answers.length;
 
     await question.save();
 
