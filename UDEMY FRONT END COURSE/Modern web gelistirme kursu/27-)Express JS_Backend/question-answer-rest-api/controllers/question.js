@@ -50,8 +50,8 @@ const getAllQuestions = asyncErrorWrapper(async (req,res,next) => {
     }
 
     // Pagination
-    const page = parseInt(req.query.page) || 1;
-    const limit = parseInt(req.query.limit) || 5;
+    const page = parseInt(req.query.page) || 1; // page verilmemis ise 1. sayfayi default olarak verdik
+    const limit = parseInt(req.query.limit) || 5; // limit user tarafindan verilmemis ise default olarak 5 verdik
 
     const startIndex = (page - 1) * limit;
     const endIndex = (page) * limit;
