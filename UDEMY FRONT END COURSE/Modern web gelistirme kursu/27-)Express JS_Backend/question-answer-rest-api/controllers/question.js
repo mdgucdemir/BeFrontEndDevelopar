@@ -54,10 +54,10 @@ const getAllQuestions = asyncErrorWrapper(async (req,res,next) => {
     const limit = parseInt(req.query.limit) || 5; // limit user tarafindan verilmemis ise default olarak 5 verdik
 
     const startIndex = (page - 1) * limit;
-    const endIndex = (page) * limit;
+    const endIndex = page * limit;
 
     const pagination = {};
-    const total = await Question.countDocuments();
+    const total = await Question.countDocuments(); // total de kac tane soru oldugunu bulmak icin
 
     if(startIndex > 0) {
         pagination.previous = {
