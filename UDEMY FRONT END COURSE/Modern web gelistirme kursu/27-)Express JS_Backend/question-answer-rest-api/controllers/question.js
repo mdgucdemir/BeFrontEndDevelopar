@@ -73,6 +73,20 @@ const getAllQuestions = asyncErrorWrapper(async (req,res,next) => {
         }
     }
 
+    // Sort Islemi [ (req.query.sortBy) most-answered || most-liked || hic bir sey verilmeyebilir]
+    const sortKey = req.query.sortBy;
+
+    if (sortKey === "most-answered") {
+        query = query.sort("-answerCount -createdAt"); // bu islem mongoose ozelligidir. anserCount kucukten buyuge siralar -answerCount ise buyukten kucuge
+    }
+    if (sortKey === "most-liked") {
+        query = query.sort("-likeCount -createdAt");
+    }
+    else {
+        query = query.sort("-createdAt"); // en guncel olani getirme
+    }
+
+
     query = query.skip(startIndex).limit(limit);
 
     const questions = await query;
