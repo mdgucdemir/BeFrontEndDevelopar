@@ -20,7 +20,9 @@ const questionQueryMiddleware = function(model,options) {
         query = questionSortHelper(query,req);
 
         // pagination
-        paginationResult = await paginationHelper(model,query,req);
+        const total = await model.countDocuments();
+        paginationResult = await paginationHelper(total,query,req);
+        
         query = paginationResult.query;
         const pagination = paginationResult.pagination;
 
