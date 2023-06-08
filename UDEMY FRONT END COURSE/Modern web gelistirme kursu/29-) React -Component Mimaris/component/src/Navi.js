@@ -8,6 +8,7 @@ export default class Navi extends Component {
       </div>
     )
   }
+  
   // bu yapiyi [rcc] yazip enter ladigimizda geliyor. React extension sayesinde
 }
 
