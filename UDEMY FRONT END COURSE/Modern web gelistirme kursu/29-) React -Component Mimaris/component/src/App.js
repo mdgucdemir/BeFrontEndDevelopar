@@ -4,6 +4,11 @@ import Navi from "./Navi";
 import ProductList from "./ProductList";
 
 function App() {
+
+  const categoryList = "This is Category List";
+  const productList = "This is Product List";
+  // yukaridaki gibi degisken atama yontemi ile de islemlerimiz gerceklestirilebilinir
+
   return (
     <div>
       {/* <h1>Hello react :D</h1> */}
@@ -16,10 +21,10 @@ function App() {
         </Row>
         <Row>
           <Col xs="3">
-            <CategoryList />
+            <CategoryList title = {categoryList} />
           </Col>
           <Col xs="9">
-            <ProductList />
+            <ProductList title = {productList} />
           </Col>
         </Row>
       </Container>
