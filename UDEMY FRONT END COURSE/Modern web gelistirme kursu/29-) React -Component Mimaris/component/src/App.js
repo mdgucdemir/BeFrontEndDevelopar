@@ -5,8 +5,9 @@ import ProductList from "./ProductList";
 
 function App() {
 
-  const categoryList = "This is Category List";
-  const productList = "This is Product List";
+  //  props ile encapsulation (kapsulleme)
+  const categoryInfo = {title : "This is Category List", something : "An other Something"}; // sadece burada degisiklik yapmamiz yeterli
+  const productInfo = {title : "This is Product List"};
   // yukaridaki gibi degisken atama yontemi ile de islemlerimiz gerceklestirilebilinir
 
   return (
@@ -21,10 +22,10 @@ function App() {
         </Row>
         <Row>
           <Col xs="3">
-            <CategoryList title = {categoryList} />
+            <CategoryList info = {categoryInfo} />
           </Col>
           <Col xs="9">
-            <ProductList title = {productList} />
+            <ProductList info = {productInfo} />
           </Col>
         </Row>
       </Container>
