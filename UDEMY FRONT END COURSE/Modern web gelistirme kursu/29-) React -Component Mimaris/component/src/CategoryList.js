@@ -14,15 +14,27 @@ export default class CategoryList extends Component {
   // props = bir companent ten digerine data tasima yontemidir
   // state = bir companent in data sidir. Bir companent e ozel bir veri tutmak istiyorsaniz bunu state ile yapabilirsiniz
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      categories: [
-        { categoryId: 1, categoryName: "Beverages" },
-        { categoryId: 2, categoryName: "Condiments" },
-      ],
-    };
-  }
+
+  // Klasik yazim
+
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     categories: [
+  //       { categoryId: 1, categoryName: "Beverages" },
+  //       { categoryId: 2, categoryName: "Condiments" },
+  //     ],
+  //   };
+  // }
+
+  // Sade yazim
+
+  state = {
+    categories: [
+      { categoryId: 1, categoryName: "Beverages" },
+      { categoryId: 2, categoryName: "Condiments" },
+    ],
+  };
 
   render() {
     return (
