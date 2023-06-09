@@ -15,7 +15,7 @@ export default class CategoryList extends Component {
   // state = bir companent in data sidir. Bir companent e ozel bir veri tutmak istiyorsaniz bunu state ile yapabilirsiniz
 
 
-  // Klasik yazim
+  // State Klasik yazim
 
   // constructor(props) {
   //   super(props);
@@ -27,7 +27,7 @@ export default class CategoryList extends Component {
   //   };
   // }
 
-  // Sade yazim
+  // State Sade yazim
 
   state = {
     categories: [
