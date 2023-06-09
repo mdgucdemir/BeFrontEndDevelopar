@@ -9,7 +9,7 @@ export default class CategoryList extends Component {
     // }
 
     // react props yontemi
-    // props = [properties]
+    // props = [properties] = probs ta bir companent den digerine bir degisken bir event tasinir.
     // react e yeni gelen guncellemeler ile birlik yukardaki gibi bir yazim olmadan da assagidaki {this.props.title} ornegini yapabiliriz
 
   render() {
