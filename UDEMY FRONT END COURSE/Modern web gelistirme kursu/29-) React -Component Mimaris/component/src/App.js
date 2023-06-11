@@ -6,6 +6,7 @@ import ProductList from "./ProductList";
 import React, { Component } from "react";
 
 export default class App extends Component {
+  // category deki datayi product a tasimak icin, category datasini ilk basta app{bir class olusturarak function degil} e sonra producta tasiyoruz.
   // component ler arasi veri transferini ancak bu sekilde yapabiliyoruz ne yazik ki 
 
   state = {currentCategory: ""}
