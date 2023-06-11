@@ -6,6 +6,7 @@ import ProductList from "./ProductList";
 import React, { Component } from "react";
 
 export default class App extends Component {
+  // component ler arasi veri transferini ancak bu sekilde yapabiliyoruz ne yazik ki 
 
   state = {currentCategory: ""}
 
@@ -40,17 +41,12 @@ export default class App extends Component {
             </Col>
           </Row>
         </Container>
-
-      </div>
-      
+      </div>      
     );
   }
 }
 
 // function App() {
-
-  
-
   
 // }
 
