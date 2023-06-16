@@ -10,7 +10,7 @@ export default class App extends Component {
   // category deki datayi product a tasimak icin, category datasini ilk basta app{bir class olusturarak function degil} e sonra producta tasiyoruz.
   // component ler arasi veri transferini ancak bu sekilde yapabiliyoruz ne yazik ki
 
-  state = { currentCategory: "", products: [] };
+  state = { currentCategory: "", products: [], cart: [] };
 
   changeCategory = (category) => {
     this.setState({ currentCategory: category.categoryName });
@@ -22,8 +22,7 @@ export default class App extends Component {
     this.getProducts();
   }
 
-  getProducts = categoryId => {
-
+  getProducts = (categoryId) => {
     let url = "http://localhost:3000/products";
 
     if (categoryId) {
@@ -33,6 +32,20 @@ export default class App extends Component {
     fetch(url)
       .then((response) => response.json())
       .then((data) => this.setState({ products: data }));
+  };
+
+  addToCart = (product) => {
+    let newCart = this.state.cart;
+    var addedItem = newCart.find(
+      (cartItem) => cartItem.product.id === product.id
+    );
+
+    if (addedItem) {
+      addedItem.quantity += 1;
+    } else {
+      newCart.push({ product: product, quantity: 1 });
+    }
+    this.setState({ cart: newCart });
   };
 
   render() {
@@ -46,15 +59,8 @@ export default class App extends Component {
 
     return (
       <div>
-        {/* <h1>Hello react :D</h1> */},
-        {/* <Navi></Navi> bu yapiyi asagida sade bir bicim de yazilmis hali mevcuttur */}
-        ;
-        {/*[npm install bootsrap] ve [npm install reactstrap] yapmalisin. ikisinide yuklemelisin yoksa calismaz*/}
-        ,
         <Container>
-          <Row>
-            <Navi />
-          </Row>
+          <Navi cart={this.state.cart} />
           <Row>
             <Col xs="3">
               <CategoryList
@@ -66,6 +72,7 @@ export default class App extends Component {
             <Col xs="9">
               <ProductList
                 products={this.state.products}
+                addToCart={this.addToCart}
                 currentCategory={this.state.currentCategory}
                 info={productInfo}
               />
