@@ -30,10 +30,10 @@ export default class Navi extends React.Component {
   render(){
     return (
       <div>
-        <Navbar color='light' light expand='md'>
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar color="light" light expand='md'>
+          <NavbarBrand href="/">My App</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
+          <Collapse isOpen={this.state.isOpen} navbar className='justify-content-end'>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink href="/components/">Components</NavLink>
