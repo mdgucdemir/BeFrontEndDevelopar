@@ -3,6 +3,7 @@ import CategoryList from "./CategoryList";
 import Navi from "./Navi";
 import ProductList from "./ProductList";
 import React, { Component } from "react";
+import alertify from 'alertifyjs';
 
 // [ json-server --watch db.json ] json api icin terminale yazilmasi gerekiyor
 
@@ -46,11 +47,13 @@ export default class App extends Component {
       newCart.push({ product: product, quantity: 1 });
     }
     this.setState({ cart: newCart });
+    alertify.success(product.productName + " added to cart!",2);
   };
 
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter(AcartItem => AcartItem.product.id !== product.id)
-    this.setState({cart:newCart})
+    this.setState({cart:newCart});
+    alertify.error(product.productName + " deleted to cart!",2);
   }
 
   render() {
