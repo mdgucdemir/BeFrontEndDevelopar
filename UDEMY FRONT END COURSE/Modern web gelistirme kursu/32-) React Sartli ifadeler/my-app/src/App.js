@@ -49,12 +49,12 @@ export default class App extends Component {
   };
 
   removeFromCart = (product) => {
-    let newCart = this.state.cart.filter(cartItem => cartItem.product.id !== product.id)
+    let newCart = this.state.cart.filter(AcartItem => AcartItem.product.id !== product.id)
     this.setState({cart:newCart})
   }
 
   render() {
-    
+
     //  props ile encapsulation (kapsulleme)
     let categoryInfo = {
       title: "This is Category List",
