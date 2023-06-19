@@ -54,6 +54,7 @@ export default class App extends Component {
   }
 
   render() {
+    
     //  props ile encapsulation (kapsulleme)
     let categoryInfo = {
       title: "This is Category List",
