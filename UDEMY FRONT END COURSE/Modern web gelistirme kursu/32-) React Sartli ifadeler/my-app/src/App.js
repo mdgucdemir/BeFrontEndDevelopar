@@ -47,13 +47,13 @@ export default class App extends Component {
       newCart.push({ product: product, quantity: 1 });
     }
     this.setState({ cart: newCart });
-    alertify.success(product.productName + " added to cart!",2);
+    alertify.success(product.productName + " added to cart!",2); // burada ki 2; 2 sn calisicagini gosteriyor
   };
 
   removeFromCart = (product) => {
     let newCart = this.state.cart.filter(AcartItem => AcartItem.product.id !== product.id)
     this.setState({cart:newCart});
-    alertify.error(product.productName + " deleted to cart!",2);
+    alertify.error(product.productName + " deleted to cart!",2); // 2 sn calisacak
   }
 
   render() {
