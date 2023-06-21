@@ -90,7 +90,7 @@ export default class App extends Component {
                   path="/"
                   Component={(props) => (
                     <ProductList
-                      {...props}
+                      {...props} // props kopyasini al kopyasini gonder
                       products={this.state.products}
                       addToCart={this.addToCart}
                       currentCategory={this.state.currentCategory}
