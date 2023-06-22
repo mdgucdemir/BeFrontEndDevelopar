@@ -98,7 +98,17 @@ export default class App extends Component {
                     />
                   )}
                 />
-                <Route exact path="/cart" element={<CartList />} />
+                <Route
+                  exact
+                  path="/cart"
+                  Component={(props) => (
+                    <CartList
+                      {...props} // props kopyasini al kopyasini gonder
+                      cart={this.state.cart}
+                      removeFromCart={this.removeFromCart}
+                    />
+                  )}
+                />
                 <Route path="/*" element={<NotFound />} />
               </Routes>
             </Col>
