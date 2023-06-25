@@ -45,6 +45,7 @@ export default class CartSummery extends Component {
     return (
       <div>
         {this.props.cart.length > 0 ? this.renderSummary() : this.renderEmptyCart()}        
+        
       </div>
     );
   }
