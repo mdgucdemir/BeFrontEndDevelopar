@@ -9,6 +9,7 @@ import {
   NavLink  
 } from "reactstrap";
 import CartSummery from "./CartSummery";
+import { Link } from "react-router-dom";
 
 
 export default class Navi extends React.Component {
@@ -39,7 +40,7 @@ export default class Navi extends React.Component {
           >
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <Link to="/form1" title="Form Demo 1">Form Demo 1</Link>
               </NavItem>
               <NavItem>
                 <NavLink
