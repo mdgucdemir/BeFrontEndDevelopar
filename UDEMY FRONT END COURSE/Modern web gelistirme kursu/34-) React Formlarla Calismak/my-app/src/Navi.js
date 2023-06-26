@@ -6,11 +6,10 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink  
+  NavLink,
 } from "reactstrap";
 import CartSummery from "./CartSummery";
 import { Link } from "react-router-dom";
-
 
 export default class Navi extends React.Component {
   constructor(props) {
@@ -40,7 +39,11 @@ export default class Navi extends React.Component {
           >
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <Link to="/form1" title="Form Demo 1">Form Demo 1</Link>
+                <NavLink>
+                  <Link to="/form1" title="Form Demo 1">
+                    Form Demo 1
+                  </Link>
+                </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -50,7 +53,10 @@ export default class Navi extends React.Component {
                   GitHub
                 </NavLink>
               </NavItem>
-              <CartSummery removeFromCart={this.props.removeFromCart} cart={this.props.cart}/>   
+              <CartSummery
+                removeFromCart={this.props.removeFromCart}
+                cart={this.props.cart}
+              />
             </Nav>
           </Collapse>
         </Navbar>
