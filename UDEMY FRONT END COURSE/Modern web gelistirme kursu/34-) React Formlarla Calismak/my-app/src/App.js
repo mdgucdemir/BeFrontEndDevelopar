@@ -9,6 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import NotFound from "./NotFound";
 import CartList from "./CartList";
 import FormDemo1 from "./FormDemo1";
+import FormDemo2 from "./FormDemo2";
 
 // [ json-server --watch db.json ] json api icin terminale yazilmasi gerekiyor
 
@@ -111,6 +112,7 @@ export default class App extends Component {
                   )}
                 />
                 <Route path="form1" Component={FormDemo1}/>
+                <Route path="form2" Component={FormDemo2}/>
                 <Route path="/*" element={<NotFound />} />
               </Routes>
             </Col>

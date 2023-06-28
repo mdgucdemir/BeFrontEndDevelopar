@@ -46,6 +46,13 @@ export default class Navi extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink>
+                  <Link to="/form2" title="Form Demo 2">
+                    Form Demo 2
+                  </Link>
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <NavLink
                   href="https://github.com/reactstrap/reactstrap"
                   target="_blank"
