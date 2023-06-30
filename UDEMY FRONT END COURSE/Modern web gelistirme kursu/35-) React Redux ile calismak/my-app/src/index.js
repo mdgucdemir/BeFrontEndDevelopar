@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import bigstore from "./redux/reducers/configureStore"; // configureStore i index e bagla
+import configureStore from "./redux/reducers/configureStore"; // configureStore i index e bagla
 import { Provider } from 'react-redux';
 
-const store = bigstore;
+const store = configureStore;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
