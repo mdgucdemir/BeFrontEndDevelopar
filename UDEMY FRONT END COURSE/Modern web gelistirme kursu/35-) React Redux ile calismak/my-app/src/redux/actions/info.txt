@@ -1,0 +1,4 @@
+// actions folder da kullanicagimiz butun action lari burada tutucaz
+// ekle, cikar, topla, ect. butun action gerektiren islemleri burada tutucaz
+// action redux ile ilk iletisimi kurdugumuz nokta. Tabi ki operation lar icin
+// yani ilk actions folder a giriyoruz

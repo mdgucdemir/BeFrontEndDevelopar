@@ -1,0 +1,2 @@
+-action larimiz " reducer " dedimiz bir yapi vasitasi ile kontrol altina aliniyor.
+-aslinda reducer ilgili action i icerip icermedigine bakiyor.

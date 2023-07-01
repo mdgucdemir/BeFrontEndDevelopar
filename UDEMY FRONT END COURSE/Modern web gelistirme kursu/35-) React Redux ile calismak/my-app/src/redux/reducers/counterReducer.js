@@ -1,6 +1,9 @@
 import * as actionTypes from "../actions/actionTypes";
 
 const counterReducer = (state = 0, action) => {
+  // Iki adet parametremiz var
+  // 1-) state
+  // 2-) action = butun reducer lar action icerip icermedigine bakicak
   let newState;
 
   switch (action.type) {
@@ -18,3 +21,6 @@ const counterReducer = (state = 0, action) => {
 };
 
 export default counterReducer;
+
+// reducer in icersinde bir api ye bir veritabanina baglanilmaz
+// reducer in icerisinde tamamen basit bir [ state ] yonetimi isleri yapilir
