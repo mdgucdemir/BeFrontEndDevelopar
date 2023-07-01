@@ -6,10 +6,15 @@ import IncreaseByTwoCounter from "./components/IncreaseByTwoCounter"
 import IncreaseCounter from "./components/IncreaseCounter"
 
 
+
 function App() {
   return (
    
-    <div  >
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center"
+    }} >
       <Counter />
       <IncreaseCounter />
       <DecreaseCounter />
