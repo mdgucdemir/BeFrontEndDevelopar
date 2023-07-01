@@ -1,11 +1,20 @@
 
-import './App.css';
+import React from "react";
+import Counter from "./components/Counter"
+import DecreaseCounter from "./components/DecreaseCounter"
+import IncreaseByTwoCounter from "./components/IncreaseByTwoCounter"
+import IncreaseCounter from "./components/IncreaseCounter"
+
 
 function App() {
   return (
    
-    <div>
-      <h3>Hello from react!!!</h3>
+    <div  >
+      <Counter />
+      <IncreaseCounter />
+      <DecreaseCounter />
+      <IncreaseByTwoCounter />
+      
     </div>
   );
 }

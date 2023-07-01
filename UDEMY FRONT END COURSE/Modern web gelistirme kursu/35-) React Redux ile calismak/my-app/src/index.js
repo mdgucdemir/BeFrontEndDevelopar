@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import configureStore from "./redux/reducers/configureStore"; // configureStore i index e bagla
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux'; //
 
-const store = configureStore;
+const store = configureStore(); // congigureStore dan gelen degerleri copy bir degiskene tanimla ve onu <Provider> icerisine yerlestir <Provider store={store}> diye
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

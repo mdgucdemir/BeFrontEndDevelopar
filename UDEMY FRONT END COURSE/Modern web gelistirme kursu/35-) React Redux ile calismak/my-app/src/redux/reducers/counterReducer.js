@@ -1,3 +1,6 @@
+
+// reducer da 1. asama "state ve action control" islemi
+
 import * as actionTypes from "../actions/actionTypes";
 
 const counterReducer = (state = 0, action) => {
@@ -24,3 +27,5 @@ export default counterReducer;
 
 // reducer in icersinde bir api ye bir veritabanina baglanilmaz
 // reducer in icerisinde tamamen basit bir [ state ] yonetimi isleri yapilir
+
+// javascript immutability (javascript te (kopyasini alip) yeni bir referans uzerinden islem yapma) arastir

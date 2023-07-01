@@ -1,2 +1,12 @@
--action larimiz " reducer " dedimiz bir yapi vasitasi ile kontrol altina aliniyor.
--aslinda reducer ilgili action i icerip icermedigine bakiyor.
+- reducer in AMACI " state " bilgisini dondurmek !!
+- action larimiz " reducer " dedimiz bir yapi vasitasi ile kontrol altina aliniyor.
+- aslinda reducer ilgili action i icerip icermedigine bakiyor.
+
+1-) action lari al ve islemli, tanimlanmis bir reducer || reducers olustur
+2-) reducer lari "combine" et
+3-) combine edilmis reducer lari bir store da topla
+
+
+a-) uygulamanin "index.js" sine store umuzu dahil et
+b-) uygulamanin "index.js" "react-redux" tan "Provider" i dahil et
+b-) uygulamanin "index.js" store umuzun copy degiskene tinimla ve "Provider" in icerisine copy store u tanimla [ <Provider store={store}> ]
