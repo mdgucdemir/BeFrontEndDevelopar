@@ -1,13 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './components/root/App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css'; // reactstrap in kullanilmasi icin gerekli code. [ https://reactstrap.github.io ] adresinden ulasabilirsiniz
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./components/root/App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css"; // reactstrap in kullanilmasi icin gerekli code. [ https://reactstrap.github.io ] adresinden ulasabilirsiniz
+import { Provider } from "react-redux";
+import configureStore from "./redux/reducers/configureStore";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const store = configureStore();
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>
 );
 
