@@ -1,8 +1,9 @@
 // store dur. Actions ve Reducers tutulur
 
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import rootReducer from "./index";
+import thunk from "redux-thunk";
 
 export default function configureStore(){
-    return createStore(rootReducer);
+    return createStore(rootReducer,applyMiddleware(thunk));
 }
