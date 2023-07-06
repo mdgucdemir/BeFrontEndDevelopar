@@ -22,6 +22,7 @@ class CategoryList extends Component {
       </div>
     );
   }
+  
 }
 
 function mapStateToProps(state) {
