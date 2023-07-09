@@ -22,7 +22,7 @@ function Example(args) {
   return (
     <div>
       <Navbar {...args} color='light' expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">NORTHWIND-REDUX APP</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="md-auto" navbar>
