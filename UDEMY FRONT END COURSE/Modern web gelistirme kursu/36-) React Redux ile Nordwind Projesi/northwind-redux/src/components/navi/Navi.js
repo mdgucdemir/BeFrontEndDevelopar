@@ -11,7 +11,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
+  
 } from 'reactstrap';
 
 function Example(args) {
@@ -46,7 +46,7 @@ function Example(args) {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          
         </Collapse>
       </Navbar>
     </div>

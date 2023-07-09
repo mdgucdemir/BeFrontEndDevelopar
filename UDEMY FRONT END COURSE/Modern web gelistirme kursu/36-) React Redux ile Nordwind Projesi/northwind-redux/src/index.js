@@ -5,6 +5,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css"; // reactstrap in kullanilmasi icin gerekli code. [ https://reactstrap.github.io ] adresinden ulasabilirsiniz
 import { Provider } from "react-redux";
 import configureStore from "./redux/reducers/configureStore";
+import "alertifyjs/build/css/alertify.min.css"; // alertify ekleme
 
 const store = configureStore();
 
