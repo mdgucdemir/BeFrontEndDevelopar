@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import * as cartActions from "../../redux/actions/cartActions";
+import { Link } from "react-router-dom";
+import alertify from "alertifyjs";
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -14,6 +16,12 @@ import {
 
 class CartSummery extends Component {
   // sustainable coding [ surdurulebilir codlama ] ornegidir asagidaki yazim sekli
+
+  removeFromCart (product) {
+    this.props.actions.removeFromCart(product)
+    alertify.error(product.productName + " deleted from cart");
+    
+}
 
   renderEmpty() {
     return (
@@ -33,11 +41,11 @@ class CartSummery extends Component {
         <DropdownMenu end>
           {this.props.cart.map((cartItem) => (
             <DropdownItem key={cartItem.product.id}>
-
               <Badge
                 color="danger"
                 onClick={() =>
-                  this.props.actions.removeFromCart(cartItem.product)
+                  this.removeFromCart(cartItem.product)
+                  
                 }
               >
                 X
@@ -46,11 +54,12 @@ class CartSummery extends Component {
               {cartItem.product.productName}
 
               <Badge color="success">{cartItem.quantity}</Badge>
-
             </DropdownItem>
           ))}
           <DropdownItem divider />
-          <DropdownItem>Go To Cart</DropdownItem>
+          <DropdownItem>
+            <Link to={"/cart"}>Go To Cart</Link>
+          </DropdownItem>
         </DropdownMenu>
       </UncontrolledDropdown>
     );
