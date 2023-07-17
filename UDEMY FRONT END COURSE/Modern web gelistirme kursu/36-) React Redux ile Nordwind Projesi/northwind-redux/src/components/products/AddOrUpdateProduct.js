@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
-import { saveProduct } from "../../redux/actions/productActions";
+import { handleError, saveProduct } from "../../redux/actions/productActions";
+import ProductDetail from "./ProductDetail";
+
 
 // useState ==> [ setState ] in yerine kullanicaz
 // useEffect ==> [ componentDidMount ] un yerine kullanicaz
@@ -47,8 +49,14 @@ function AddorUpdateProduct({
 
   return (
     // uygulama icerisindeki kullanicagimiz sayfa yazimi
-    <div></div>
-  )
+    <ProductDetail
+      product={product}
+      categories={categories}
+      onChange={handleChange}
+      onSave={handleSave}
+      error="Hata"
+    />
+  );
 }
 
 export function getProductById(products, productId) {
@@ -57,17 +65,17 @@ export function getProductById(products, productId) {
 }
 
 function mapStateToProps(state, ownProps) {
-  const productId = ownProps.match.pramas.productId;
+  const productId = ownProps.match.params.productId;
   const product =
-    productId && state.productReducer.length > 0
-      ? getProductById(state.productReducer, productId)
-      : {}; // eger bir product var ve product guncelleniyorsa o id ye uygu product ti ver  o yoksa yeni bir product ekliyor  product ti bos bir object ile dondur 
+    productId && state.productListReducer.length > 0
+      ? getProductById(state.productListReducer, productId)
+      : {}; // eger bir product var ve product guncelleniyorsa o id ye uygu product ti ver  o yoksa yeni bir product ekliyor  product ti bos bir object ile dondur
 
   return {
     // olusturmak istedigimiz state ler
     product,
-    products: state.productReducer,
-    categories: state.categoryReducer,
+    products: state.productListReducer,
+    categories: state.categoryListReducer,
   };
 }
 
