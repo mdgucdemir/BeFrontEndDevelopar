@@ -26,8 +26,8 @@ function AddorUpdateProduct({
     }
     setProduct({ ...props.product });
     // useEffect life cycle da ki butun herseyi yonetmeye calisiyor. ve Sonsuz bir donguye giriyor
-    // sonsuz donguden kurtulmak icin " }.[sonsuz donguden kurtarmak icin gerekli olan parametre] "
-    // bizim ornegimiz de " }.[props.product] "
+    // sonsuz donguden kurtulmak icin " },[sonsuz donguden kurtarmak icin gerekli olan parametre] "
+    // bizim ornegimiz de " },[props.product] "
     // anlami ise " props.product i izle, o DOM a yelestigi zaman artik setProduct islemini bitirebilirsin"
   }, [props.product]);
 
@@ -54,17 +54,17 @@ function AddorUpdateProduct({
       categories={categories}
       onChange={handleChange}
       onSave={handleSave}
-      error="Hata"
+      error="Error"
     />
   );
 }
 
-export function getProductById(products, productId) {
+export function getProductById(products, productId) {  
   let product = products.find((product) => product.id === productId) || null;
   return product;
 }
 
-function mapStateToProps(state, ownProps) {
+function mapStateToProps(state, ownProps) {  
   const productId = ownProps.match.params.productId;
   const product =
     productId && state.productListReducer.length > 0
