@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
-import { handleError, saveProduct } from "../../redux/actions/productActions";
+import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
+
 
 
 // useState ==> [ setState ] in yerine kullanicaz
@@ -29,7 +30,7 @@ function AddorUpdateProduct({
     // sonsuz donguden kurtulmak icin " },[sonsuz donguden kurtarmak icin gerekli olan parametre] "
     // bizim ornegimiz de " },[props.product] "
     // anlami ise " props.product i izle, o DOM a yelestigi zaman artik setProduct islemini bitirebilirsin"
-  }, [props.product]);
+  }, [categories.length, getCategories, props.product]);
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -39,6 +40,7 @@ function AddorUpdateProduct({
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
   }
+  
 
   function handleSave(event) {
     event.preventDefault();
@@ -59,13 +61,14 @@ function AddorUpdateProduct({
   );
 }
 
-export function getProductById(products, productId) {  
+export function getProductById(products, productId) {    
   let product = products.find((product) => product.id === productId) || null;
   return product;
 }
 
-function mapStateToProps(state, ownProps) {  
-  const productId = ownProps.match.params.productId;
+function mapStateToProps(state, ownProps) {    
+  const productId = ownProps.productId;
+  
   const product =
     productId && state.productListReducer.length > 0
       ? getProductById(state.productListReducer, productId)

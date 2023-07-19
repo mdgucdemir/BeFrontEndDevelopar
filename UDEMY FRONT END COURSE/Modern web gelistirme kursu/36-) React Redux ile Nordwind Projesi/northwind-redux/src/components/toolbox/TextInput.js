@@ -2,7 +2,7 @@ import React from "react";
 
 // bu ornek te reactstrap degilde bootstrap kullanilmistir
 
-const TextInput = ({ name, label, onchange, placeHolder, value, error }) => {
+const TextInput = ({ name, label, onChange, placeHolder, value, error }) => {
   let wrapperClass = "form-group"; // bootstrap ile alakali
   if (error && error.length > 0) {
     wrapperClass += " has-error"; // bootstrap ile alakali
@@ -18,7 +18,7 @@ const TextInput = ({ name, label, onchange, placeHolder, value, error }) => {
           className="form-control"
           placeholder={placeHolder}
           value={value}
-          onchange={onchange}
+          onChange={onChange}
         />
         {error && <div className="alert alert-danger">{error}</div>}
       </div>
