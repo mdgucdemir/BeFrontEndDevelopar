@@ -4,8 +4,6 @@ import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
 
-
-
 // useState ==> [ setState ] in yerine kullanicaz
 // useEffect ==> [ componentDidMount ] un yerine kullanicaz
 

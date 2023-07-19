@@ -15,9 +15,9 @@ const ProductDetail = ({categories, product, onSave, onChange,}) => {
       />
       <SelectInput
         name="categoryId"
-        label="category"
+        label="Category"
         value={product.categoryId || ""}
-        defaultOption="Seciniz"
+        defaultOption="Please choose an option"
         options={categories.map((category) => ({
           value: category.id,
           text: category.categoryName,
@@ -25,7 +25,7 @@ const ProductDetail = ({categories, product, onSave, onChange,}) => {
         onChange={onChange}
         error="error"
       />
-      <button type="submit" className="btn btn-succes">
+      <button type="submit" className="btn btn-success">
         Save
       </button>
     </form>
