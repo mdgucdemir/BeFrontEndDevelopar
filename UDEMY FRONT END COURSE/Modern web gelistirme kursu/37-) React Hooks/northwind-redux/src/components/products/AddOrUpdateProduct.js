@@ -1,8 +1,11 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
+import { useParams } from "react-router-dom";
 
 // useState ==> [ setState ] in yerine kullanicaz
 // useEffect ==> [ componentDidMount ] un yerine kullanicaz
@@ -38,7 +41,6 @@ function AddorUpdateProduct({
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
   }
-  
 
   function handleSave(event) {
     event.preventDefault();
@@ -59,14 +61,16 @@ function AddorUpdateProduct({
   );
 }
 
-export function getProductById(products, productId) {    
-  let product = products.find((product) => product.id === productId) || null;
+export function getProductById(products, productId) {
+  let product = products.find((product) => product.id == productId) || null;
   return product;
 }
 
-function mapStateToProps(state, ownProps) {    
-  const productId = ownProps.productId;
-  
+function mapStateToProps(state) {  
+  const params = useParams()
+  const productId = params.productId;  
+  console.log(productId);
+
   const product =
     productId && state.productListReducer.length > 0
       ? getProductById(state.productListReducer, productId)
