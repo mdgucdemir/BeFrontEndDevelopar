@@ -66,10 +66,12 @@ export function getProductById(products, productId) {
   return product;
 }
 
-function mapStateToProps(state) {  
-  const params = useParams()
+function mapStateToProps(state) { 
+
+  const params = useParams();
+
   const productId = params.productId;  
-  console.log(productId);
+  //console.log(productId);
 
   const product =
     productId && state.productListReducer.length > 0

@@ -27,16 +27,16 @@ const ProductDetail = ({ categories, product, onSave, onChange }) => {
         error="error"
       />
       <TextInput
-        name="quantityPerUnit"
-        label="Quantity Per Unit"
-        value={product.quantityPerUnit}
-        onChange={onChange}
-        error="error"
-      />
-      <TextInput
         name="unitPrice"
         label="Unit Price"
         value={product.unitPrice}
+        onChange={onChange}
+        error="error"
+        />
+        <TextInput
+        name="quantityPerUnit"
+        label="Quantity Per Unit"
+        value={product.quantityPerUnit}
         onChange={onChange}
         error="error"
       />
