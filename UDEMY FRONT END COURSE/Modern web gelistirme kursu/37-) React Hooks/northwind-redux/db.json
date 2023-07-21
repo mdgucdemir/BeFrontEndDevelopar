@@ -6,7 +6,8 @@
       "productName": "Chai",
       "quantityPerUnit": "48 - 6 oz jars",
       "unitPrice": "24",
-      "unitsInStock": 53
+      "unitsInStock": 53,
+      "[object HTMLInputElement]": "2"
     },
     {
       "id": 2,
@@ -45,7 +46,7 @@
       "categoryId": 7,
       "productName": "Uncle Bob's Organic Dried Pears",
       "quantityPerUnit": "12 - 1 lb pkgs.",
-      "unitPrice": 30,
+      "unitPrice": "30",
       "unitsInStock": 15
     },
     {

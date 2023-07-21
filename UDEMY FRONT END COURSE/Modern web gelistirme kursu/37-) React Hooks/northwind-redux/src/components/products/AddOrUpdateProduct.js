@@ -36,13 +36,14 @@ function AddorUpdateProduct({
   }, [categories.length, getCategories, props.product]);
 
   function handleChange(event) {
-    const { name, value } = event.target;
-
+    const { name, value } = event.target;    
+    
     setProduct((previousProduct) => ({
       ...previousProduct,
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
   }
+
   const navigate = useNavigate(); 
 
   function handleSave(event) {       
@@ -70,7 +71,6 @@ export function getProductById(products, productId) {
 }
 
 function mapStateToProps(state) { 
-
   const params = useParams();
 
   const productId = params.productId;  

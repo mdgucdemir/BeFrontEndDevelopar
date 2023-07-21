@@ -23,7 +23,7 @@ function Example(args) {
         <Collapse isOpen={isOpen} navbar className='justify-content-end'>
           <Nav className="md-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="/saveproduct">Create New Product</NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="https://github.com/reactstrap/reactstrap">

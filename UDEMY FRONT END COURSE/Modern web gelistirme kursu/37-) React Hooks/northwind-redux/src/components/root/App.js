@@ -16,11 +16,11 @@ function App() {
       <Navi />
       <Routes>
         <Route path="/" exact Component={DashBoard} />
-        <Route path="/product" exact Component={DashBoard} />
-        <Route path="/saveproduct/:productId" exact Component={AddOrUpdateProduct} />        
-        <Route path="/saveproduct" exact Component={AddOrUpdateProduct} />        
-        <Route path="/cart" exact Component={CartDetail} />
-        <Route path="*" exact Component={NotFound} />
+        <Route path="/product" Component={DashBoard} />
+        <Route path="/saveproduct/:productId" Component={AddOrUpdateProduct} />        
+        <Route path="/saveproduct" Component={AddOrUpdateProduct} />        
+        <Route path="/cart" Component={CartDetail} />
+        <Route path="*" Component={NotFound} />
       </Routes>
     </Container>
   );
