@@ -5,7 +5,9 @@ import { connect } from "react-redux";
 import { getCategories } from "../../redux/actions/categoryActions";
 import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+
+
 
 // useState ==> [ setState ] in yerine kullanicaz
 // useEffect ==> [ componentDidMount ] un yerine kullanicaz
@@ -41,11 +43,12 @@ function AddorUpdateProduct({
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
   }
+  const navigate = useNavigate(); 
 
-  function handleSave(event) {
+  function handleSave(event) {       
     event.preventDefault();
     saveProduct(product).then(() => {
-      history.push("/");
+     navigate("/");
     });
   }
 
