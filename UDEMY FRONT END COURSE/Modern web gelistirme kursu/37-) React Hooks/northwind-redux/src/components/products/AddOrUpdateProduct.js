@@ -33,10 +33,11 @@ function AddorUpdateProduct({
     // sonsuz donguden kurtulmak icin " },[sonsuz donguden kurtarmak icin gerekli olan parametre] "
     // bizim ornegimiz de " },[props.product] "
     // anlami ise " props.product i izle, o DOM a yelestigi zaman artik setProduct islemini bitirebilirsin"
-  }, [categories.length, getCategories, props.product]);
+  }, [props.product]);
 
-  function handleChange(event) {
-    const { name, value } = event.target;    
+  function handleChange(event) {    
+
+    const { name, value }  = event.target;    
     
     setProduct((previousProduct) => ({
       ...previousProduct,
@@ -73,8 +74,7 @@ export function getProductById(products, productId) {
 function mapStateToProps(state) { 
   const params = useParams();
 
-  const productId = params.productId;  
-  //console.log(productId);
+  const productId = params.productId;   
 
   const product =
     productId && state.productListReducer.length > 0
