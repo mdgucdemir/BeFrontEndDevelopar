@@ -7,8 +7,6 @@ import { saveProduct } from "../../redux/actions/productActions";
 import ProductDetail from "./ProductDetail";
 import { useParams, useNavigate } from "react-router-dom";
 
-
-
 // useState ==> [ setState ] in yerine kullanicaz
 // useEffect ==> [ componentDidMount ] un yerine kullanicaz
 
@@ -23,6 +21,7 @@ function AddorUpdateProduct({
 }) {
   const [product, setProduct] = useState({ ...props.product });
   // product state ini setProduct funtion ile set edebilirim demektir yukaridaki yazim. Bu yazima js de distracting deniliyor.
+  const [errors, setErrors] = useState({});
 
   useEffect(() => {
     if (categories.length === 0) {
@@ -35,22 +34,63 @@ function AddorUpdateProduct({
     // anlami ise " props.product i izle, o DOM a yelestigi zaman artik setProduct islemini bitirebilirsin"
   }, [props.product]);
 
-  function handleChange(event) {    
+  function handleChange(event) {
+    const { name, value } = event.target;
 
-    const { name, value }  = event.target;    
-    
     setProduct((previousProduct) => ({
       ...previousProduct,
       [name]: name === "categoryId" ? parseInt(value, 10) : value,
     }));
+
+    validate(value, name);
   }
 
-  const navigate = useNavigate(); 
+  function validate(value, name) {
+    if (value === "" && name === "productName") {
+      setErrors((previousErrors) => ({
+        ...previousErrors,
+        productName: "It must be a Product Name",
+      }));
+    } else if (value === "" && name === "unitPrice") {
+      setErrors((previousErrors) => ({
+        ...previousErrors,
+        unitPrice: "It must be a Unit Price",
+      }));
+    } else if (value === "" && name === "quantityPerUnit") {
+      setErrors((previousErrors) => ({
+        ...previousErrors,
+        quantityPerUnit: "It must be a Quantity Per Unit",
+      }));
+    } else if (value === "" && name === "unitsInStock") {
+      setErrors((previousErrors) => ({
+        ...previousErrors,
+        unitsInStock: "It must be a Units In Stock",
+      }));
+    } else {
+      if (name === "productName") {
+        setErrors((previousErrors) => ({ ...previousErrors, productName: "" }));
+      } else if (name === "unitPrice") {
+        setErrors((previousErrors) => ({ ...previousErrors, unitPrice: "" }));
+      } else if (name === "quantityPerUnit") {
+        setErrors((previousErrors) => ({
+          ...previousErrors,
+          quantityPerUnit: "",
+        }));
+      } else if (name === "unitsInStock") {
+        setErrors((previousErrors) => ({
+          ...previousErrors,
+          unitsInStock: "",
+        }));
+      }
+    }
+  }
 
-  function handleSave(event) {       
+  const navigate = useNavigate();
+
+  function handleSave(event) {
     event.preventDefault();
     saveProduct(product).then(() => {
-     navigate("/");
+      navigate("/"); // history.push("/") yerine kullaniliyor.
     });
   }
 
@@ -61,7 +101,7 @@ function AddorUpdateProduct({
       categories={categories}
       onChange={handleChange}
       onSave={handleSave}
-      error="Error"
+      errors={errors}
     />
   );
 }
@@ -71,10 +111,10 @@ export function getProductById(products, productId) {
   return product;
 }
 
-function mapStateToProps(state) { 
+function mapStateToProps(state) {
   const params = useParams();
 
-  const productId = params.productId;   
+  const productId = params.productId;
 
   const product =
     productId && state.productListReducer.length > 0
