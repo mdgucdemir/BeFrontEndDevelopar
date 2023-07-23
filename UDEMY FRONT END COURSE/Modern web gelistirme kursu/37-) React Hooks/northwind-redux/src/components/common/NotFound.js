@@ -6,6 +6,10 @@ const conversation = 'Finn exclaims to Jake, "Algebraic!"';
 const goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
 const myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
 
+const anAdjective = "awesome!";
+let ourStr = "freeCodeCamp is ";
+ourStr += anAdjective;
+
 export default class NotFound extends Component {
 
   render() {
@@ -18,7 +22,7 @@ export default class NotFound extends Component {
         <div>{conversation}</div>
         <div>{goodStr}</div>
         <div>{myStr}</div>
-        
+        <div>{ourStr += anAdjective}</div>
 
 
       </div>
