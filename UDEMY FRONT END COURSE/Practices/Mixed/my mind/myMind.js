@@ -21,3 +21,12 @@
 // console.log(a,b,c)
 
 // ----------------------------------------------
+
+const a = 11;
+const b = 9;
+const c = 3;
+
+a -= 6;
+b -= 15;
+c -= 1;
+console.log(a,b,c)
