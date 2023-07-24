@@ -22,7 +22,7 @@ export default class NotFound extends Component {
         <div>{conversation}</div>
         <div>{goodStr}</div>
         <div>{myStr}</div>
-        <div>{ourStr += anAdjective}</div>
+        {/* <div>{ourStr += anAdjective}</div> */}
 
 
       </div>
