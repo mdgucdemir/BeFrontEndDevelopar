@@ -33,9 +33,48 @@
 
 // ---------------------------------------------
 
-function myFun() {
-    console.log("Hello");
-    return "World";
-    console.log("byebye");
-  }
-  myFun();
+// function myFun() {
+//     console.log("Hello");
+//     return "World";
+//     console.log("byebye");
+//   }
+//   myFun();
+
+// ---------------
+
+// const myObject = {
+//   "name": 'micky',
+//   "tail": 4,
+//   "friends": 'pupy'
+// }
+
+// console.log(myObject);
+
+// ----------------------------------
+
+// const dogs = {
+//   Fido: "Mutt",
+//   Hunter: "Doberman",
+//   Snoopie: "Beagle"
+// };
+
+// const myDog = "Hunter";
+// const myBreed = dogs[myDog];
+// console.log(myBreed);
+
+//------------------------------
+
+// const myDog = {
+//   "name": "Happy Coder",
+//   "legs": 4,
+//   "tails": 1,
+//   "friends": ["freeCodeCamp Campers"]
+// };
+
+// myDog['bark'] = 'woof';
+// // myDog.bark = 'woof';
+
+
+// console.log(myDog)
+
+// ----------------------------
