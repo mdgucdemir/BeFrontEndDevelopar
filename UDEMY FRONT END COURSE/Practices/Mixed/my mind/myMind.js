@@ -169,3 +169,7 @@
 //   console.log(randomWholeNum());
 
 // ------------------------------------
+
+let y = Math.floor(1.6);
+let x  = Math.round(1.6);
+console.log(x,y);
