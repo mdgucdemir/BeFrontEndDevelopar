@@ -247,3 +247,37 @@
 // console.log(united);
 
 // --------------------------------
+
+// const arr = [2,34,56,7];
+// const maximum = Math.max(...arr);
+// const minimum = Math.min(...arr);
+
+// console.log(maximum,minimum);
+
+// ----------- ES6 script-type -------------------
+
+// const user = {name: 'faso', age: 34, city: 'Austin'}
+// const {name,age} = user;
+
+// console.log(user.name);
+// console.log(age,name);
+
+// ---------------------------------
+
+// ----------- ES6 -------------------
+
+// const user = { name: 'Fasik Faso', age : 34 };
+// const {name: userName, age: userAge} = user;
+
+// console.log(userName,userAge);
+
+// ----------------------------------
+
+// const [a, b,,,, c] = [1, 2, 3, 4, 5, 6];
+// console.log(a, b, c);
+
+// -----------------------
+
+// const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
+// console.log(a, b);
+// console.log(arr);
