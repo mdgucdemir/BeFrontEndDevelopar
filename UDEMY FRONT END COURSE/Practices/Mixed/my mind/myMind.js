@@ -194,9 +194,27 @@
 
   // ----------------------
 
-  function countdown (n) {
-    return n < 1 ? [] : [n].concat(countdown(n-1));
-  }
-  console.log(countdown(4))
+  // function countdown (n) {
+  //   return n < 1 ? [] : [n].concat(countdown(n-1));
+  // }
+  // console.log(countdown(4))
 
-  
+  // --------------------------
+
+  // let obj = {
+  //   name:"FreeCodeCamp",
+  //   review:"Awesome"
+  // };
+  // Object.freeze(obj); // Object.freeze() bir object in degistirilmez hale getirir. Mevcut ogeleri degistirmek ve de yeni oge eklenmesini engeller
+  // obj.review = "bad";
+  // obj.newProp = "Test";
+  // console.log(obj); 
+
+// -----------------------------  
+
+// const greeting = (name = "Anonymous") => "Hello " + name;
+
+// // gonderilen deger default degeri ezer isimli ornegi icra ettik
+// console.log(greeting("John"));
+// console.log(greeting());
+
