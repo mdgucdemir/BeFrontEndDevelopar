@@ -218,3 +218,32 @@
 // console.log(greeting("John"));
 // console.log(greeting());
 
+// --------------------------------
+
+// ------------ Rest Parameter -----------------
+
+// function howMany(...args) {
+//   return "You have passed " + args.length + " arguments.";
+// }
+// console.log(howMany(0, 1, 2));
+// console.log(howMany("string", null, [1, 2, 3], { }));
+
+// ----------------------------------------
+
+// const sayilar = [1,2,3,4,5];
+
+// for(sayi of sayilar) { 
+//   console.log(sayi);
+// }
+
+// ------------------------------------
+
+// -------- spread oparator ---------
+
+// const arr1 = [1,2,3,4];
+// const arr2 = [5,6,7,8];
+
+// const united = [...arr1,...arr2];
+// console.log(united);
+
+// --------------------------------
