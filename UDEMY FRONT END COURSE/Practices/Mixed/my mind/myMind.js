@@ -1,4 +1,3 @@
-
 // ----------------------------------------------
 
 // const FCC = "freeCodeCamp"; // Change this line
@@ -74,7 +73,6 @@
 // myDog['bark'] = 'woof';
 // // myDog.bark = 'woof';
 
-
 // console.log(myDog)
 
 // ----------------------------
@@ -107,7 +105,7 @@
 // const arr = [
 //     [1, 2], [3, 4], [5, 6]
 //   ];
-  
+
 //   for (let i = 0; i < arr.length; i++) {
 //       for (let j = 0; j < arr[i].length; j++) {
 //           console.log(arr[i][j]);
@@ -143,29 +141,29 @@
 //       likes: ["JavaScript", "Gaming", "Foxes"],
 //     },
 //   ];
-  
+
 //   function lookUpProfile(name, prop) {
 //     // Only change code below this line
-  
+
 //     for (let i = 0; i < contacts.length; i++) {
 //       if (contacts[i].firstName === name) {
 //         return contacts[i][prop] || "No such contact"
 //       }
 //     }
-  
+
 //     // Only change code above this line
 //   }
-  
+
 //   let data = lookUpProfile("Akira", "likes");
-  
+
 //   console.log(data);
 
-  // ------------------------------------------
+// ------------------------------------------
 
 //   function randomWholeNum() {
 //     return Math.floor(Math.random() * 20);
 //   }
-  
+
 //   console.log(randomWholeNum());
 
 // ------------------------------------
@@ -192,25 +190,25 @@
 //   }
 //   console.log(countup(10));
 
-  // ----------------------
+// ----------------------
 
-  // function countdown (n) {
-  //   return n < 1 ? [] : [n].concat(countdown(n-1));
-  // }
-  // console.log(countdown(4))
+// function countdown (n) {
+//   return n < 1 ? [] : [n].concat(countdown(n-1));
+// }
+// console.log(countdown(4))
 
-  // --------------------------
+// --------------------------
 
-  // let obj = {
-  //   name:"FreeCodeCamp",
-  //   review:"Awesome"
-  // };
-  // Object.freeze(obj); // Object.freeze() bir object in degistirilmez hale getirir. Mevcut ogeleri degistirmek ve de yeni oge eklenmesini engeller
-  // obj.review = "bad";
-  // obj.newProp = "Test";
-  // console.log(obj); 
+// let obj = {
+//   name:"FreeCodeCamp",
+//   review:"Awesome"
+// };
+// Object.freeze(obj); // Object.freeze() bir object in degistirilmez hale getirir. Mevcut ogeleri degistirmek ve de yeni oge eklenmesini engeller
+// obj.review = "bad";
+// obj.newProp = "Test";
+// console.log(obj);
 
-// -----------------------------  
+// -----------------------------
 
 // const greeting = (name = "Anonymous") => "Hello " + name;
 
@@ -232,7 +230,7 @@
 
 // const sayilar = [1,2,3,4,5];
 
-// for(sayi of sayilar) { 
+// for(sayi of sayilar) {
 //   console.log(sayi);
 // }
 
@@ -281,3 +279,30 @@
 // const [a, b, ...arr] = [1, 2, 3, 4, 5, 7];
 // console.log(a, b);
 // console.log(arr);
+
+// --------------------
+
+// -------- Template Literal ---------------
+
+// const person = {
+//   name: "Zodiac Hasbro",
+//   age: 56
+// };
+
+// const greeting = `Hello, my name is ${person.name}!
+// I am ${person.age} years old.`;
+
+// console.log(greeting);
+
+// ----------------------------
+
+// const person = {
+//   name: "Taylor",
+//   barzo() {
+//     return "this is ES6 function in an object";
+//   },
+// };
+// console.log(person.barzo())
+
+// ------------------------
+
