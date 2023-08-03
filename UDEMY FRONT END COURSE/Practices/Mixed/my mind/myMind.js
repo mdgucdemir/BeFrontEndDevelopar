@@ -328,7 +328,7 @@
 
 // ---------- Regular Expressions - regex --------------
 
-let testStr = 'freeCodeCamp';
-let testRegex = /Code/
-testRegex.test(testStr)
+// let testStr = 'freeCodeCamp';
+// let testRegex = /Code/
+// testRegex.test(testStr)
 //console.log(testRegex.test(testStr));
