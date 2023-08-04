@@ -332,3 +332,10 @@
 // let testRegex = /Code/
 // testRegex.test(testStr)
 //console.log(testRegex.test(testStr));
+
+// -----------------------------------
+
+"Hello, World!".match(/Hello/);
+let ourStr = "Regular expressions";
+let ourRegex = /expressions/;
+console.log(ourStr.match(ourRegex));
