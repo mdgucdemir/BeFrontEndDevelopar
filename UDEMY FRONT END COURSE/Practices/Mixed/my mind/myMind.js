@@ -335,7 +335,52 @@
 
 // -----------------------------------
 
-"Hello, World!".match(/Hello/);
-let ourStr = "Regular expressions";
-let ourRegex = /expressions/;
-console.log(ourStr.match(ourRegex));
+// "Hello, World!".match(/Hello/);
+// let ourStr = "Regular expressions";
+// let ourRegex = /expressions/;
+// console.log(ourStr.match(ourRegex));
+
+// ----------------------------------------
+
+// const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+// const regex = /[A-Z]/g;
+// const found = paragraph.match(regex);
+
+// console.log(found);
+
+// ------------------------------------------
+
+// let twinkleStar = "Twinkle, twinkle, little star";
+// let starRegex = /Twinkle/gi; // ( g - global match) and ( i - case-insensitive ) multiple use to regex
+// let result = twinkleStar.match(starRegex); 
+
+// console.log(result);
+
+
+// ---------------------------
+
+// let bigStr = "big";
+// let bagStr = "bag";
+// let bugStr = "bug";
+// let bogStr = "bog";
+// let bgRegex = /b[aiu]g/;
+// console.log(bigStr.match(bgRegex));
+// console.log(bagStr.match(bgRegex));
+// console.log(bugStr.match(bgRegex));
+// console.log(bogStr.match(bgRegex));
+
+// ----------------------------------
+
+// let catStr = "cat";
+// let batStr = "bat";
+// let matStr = "mat";
+// let bgRegex = /[a-e]at/;
+// console.log(catStr.match(bgRegex));
+// console.log(batStr.match(bgRegex));
+// console.log(matStr.match(bgRegex));
+
+// -----------------------------------
+
+let jennyStr = "Jenny8675309";
+let myRegex = /[a-z0-9]/ig;
+console.log(jennyStr.match(myRegex));
