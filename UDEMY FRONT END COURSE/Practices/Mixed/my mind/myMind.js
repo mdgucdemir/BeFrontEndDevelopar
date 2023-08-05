@@ -460,3 +460,11 @@
 // console.log(result,result1);
 
 // -----------------------------------------------------
+
+// ---------- Match Whitespace --------------------
+
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+let result = whiteSpace.match(spaceRegex);
+
+console.log(result);
