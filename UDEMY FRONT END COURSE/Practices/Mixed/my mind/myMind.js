@@ -416,3 +416,47 @@
 // console.log(result)
 
 // -----------------------------------------
+
+// ----------- Match All Letters and Numbers --------
+
+// let longHand = /[A-Za-z0-9_]+/;
+// let shortHand = /\w+/;
+// let numbers = "42";
+// let varNames = "important_var";
+// console.log(longHand.test(numbers));
+// console.log(shortHand.test(numbers));
+// console.log(longHand.test(varNames));
+// console.log(shortHand.test(varNames));
+
+// ---------------------------------------------
+
+// -------- Match Everything But Letters and Numbers -------
+
+// let quoteSample = "The five boxing wizards jump quickly.";
+// let nonAlphabetRegex = /\W/g; // Change this line
+// let result = quoteSample.match(nonAlphabetRegex);
+
+// console.log(result);
+
+// -----------------------------------------------------
+
+// ----------- Match All Numbers -------------------
+
+// let movieName = "2001: A Space Odyssey";
+// let numRegex = /\d/g; // Change this line
+// let result = movieName.match(numRegex);
+
+// console.log(result);
+
+// -----------------------------------------------------
+
+// ----------- Match All Non-Numbers -------------------
+
+// let movieName = "2001: A Space Odyssey";
+// let noNumRegex = /\D/g; // Change this line
+// let result = movieName.match(noNumRegex);
+// let result1 = movieName.match(noNumRegex).length;
+
+// console.log(result,result1);
+
+// -----------------------------------------------------
