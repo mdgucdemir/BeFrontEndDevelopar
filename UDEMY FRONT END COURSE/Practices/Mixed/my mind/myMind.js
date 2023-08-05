@@ -387,10 +387,32 @@
 
 // ------------------------------------
 
-let soccerWord = "gooooooooal!";
-let gPhrase = "gut feeling";
-let oPhrase = "over the moon";
-let goRegex = /go*/;
-//console.log(soccerWord.match(goRegex));
-console.log(gPhrase.match(goRegex));
-//console.log(oPhrase.match(goRegex));
+// let soccerWord = "gooooooooal!";
+// let gPhrase = "gut feeling";
+// let oPhrase = "over the moon";
+// let goRegex = /go*/;
+// //console.log(soccerWord.match(goRegex));
+// console.log(gPhrase.match(goRegex));
+// //console.log(oPhrase.match(goRegex));
+
+// ---------------------------------------
+
+// ------ Match Beginning String Patterns ---------
+
+// let rickyAndCal = "Cal and Ricky both like racing.";
+// let calRegex = /^Cal/; // Change this line
+// let result = calRegex.test(rickyAndCal);
+
+// console.log(result)
+
+// ---------------------------------------
+
+// --------- Match Ending String Patterns ---
+
+// let caboose = "The last car on a train is the caboose";
+// let lastRegex = /caboose$/; // Change this line
+// let result = lastRegex.test(caboose);
+
+// console.log(result)
+
+// -----------------------------------------
