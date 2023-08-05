@@ -381,6 +381,16 @@
 
 // -----------------------------------
 
-let jennyStr = "Jenny8675309";
-let myRegex = /[a-z0-9]/ig;
-console.log(jennyStr.match(myRegex));
+// let jennyStr = "Jenny8675309";
+// let myRegex = /[a-z0-9]/ig;
+// console.log(jennyStr.match(myRegex));
+
+// ------------------------------------
+
+let soccerWord = "gooooooooal!";
+let gPhrase = "gut feeling";
+let oPhrase = "over the moon";
+let goRegex = /go*/;
+//console.log(soccerWord.match(goRegex));
+console.log(gPhrase.match(goRegex));
+//console.log(oPhrase.match(goRegex));
