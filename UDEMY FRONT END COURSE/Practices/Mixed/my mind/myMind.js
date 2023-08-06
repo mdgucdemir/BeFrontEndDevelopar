@@ -526,10 +526,87 @@ For example, to match only the letter a appearing between 3 and 5 times in the s
 
 // ---------------------------------------------
 
-let favWord = "favorite";
-let favRegex = /favou?rite/; // Change this line
-let result = favRegex.test(favWord);
+// let favWord = "favorite";
+// let favRegex = /favou?rite/; // Change this line
+// let result = favRegex.test(favWord);
 
-let resulty = favWord.match(favRegex)
+// let resulty = favWord.match(favRegex)
 
-console.log(result,resulty)
+// console.log(result,resulty)
+
+// ------------------------------------------------
+
+// ------- Positive and Negative Lookahead ---------
+
+// let quit = "qu";
+// let noquit = "qt";
+// let quRegex= /q(?=u)/;
+// let qRegex = /q(?!u)/;
+
+// let result = quit.match(quRegex);
+// let result1 = noquit.match(qRegex);
+
+// //console.log(result,result1);
+// console.log([quRegex.test(quit),qRegex.test(qRegex)]);
+
+// ---------------------------------
+
+// let sampleWord = "astronaut";
+// let pwRegex = /(?=\w{6})(?=\w*\d{2})/; // Change this line
+// let result = pwRegex.test(sampleWord);
+
+// console.log(result)
+
+// ------------------------------
+
+
+
+// ---------- Check For Mixed Grouping of Characters -------------
+
+/*
+Sometimes we want to check for groups of characters using a Regular Expression and to achieve that we use parentheses ().
+If you want to find either Penguin or Pumpkin in a string, you can use the following Regular Expression: /P(engu|umpk)in/g
+Then check whether the desired string groups are in the test string by using the test() method.
+*/
+
+// let testStr = "Pumpkin";
+// let testRegex = /P(engu|umpk)in/;
+// let result = testRegex.test(testStr);
+// console.log(result);
+
+// --------------------------------------------------
+
+// let myString = "Eleanor Roosevelt";
+// let myRegex = /(Franklin|Eleanor) (([A-Z]\.?|[A-Z][a-z]+) )?Roosevelt/; // Change this line
+// let result = myRegex.test(myString); // Change this line
+// // After passing the challenge experiment with myString and see how the grouping works
+
+// console.log(result);
+
+// --------- Reuse Patterns Using Capture Groups -----------------
+
+// let repeatStr = "row row row your boat";
+// let repeatRegex = /(\w+) \1 \1/;
+// let result = repeatRegex.test(repeatStr); // Returns true
+// let resulty = repeatStr.match(repeatRegex); // Returns ["row row row", "row"]
+
+// console.log(result,resulty);
+
+// --------------------------------------------
+
+// ------------ Use Capture Groups to Search and Replace --------------
+
+// let wrongText = "The sky is silver.";
+// let silverRegex = /silver/;
+// let result = wrongText.replace(silverRegex, "blue");
+
+// console.log(result);
+
+
+
+/* 
+You can also access capture groups in the replacement string with dollar signs ($).
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1'); 
+*/
+
+// --------------------------------------------
