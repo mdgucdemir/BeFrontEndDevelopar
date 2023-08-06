@@ -469,4 +469,67 @@
 
 // console.log(result);
 
-// ------------------------------------
+// ------------ Specify Upper and Lower Number of Matches ----------------
+
+/* Recall that you use the plus sign + to look for one or more characters and the asterisk * to look for zero or more characters. 
+These are convenient but sometimes you want to match a certain range of patterns.
+
+You can specify the lower and upper number of patterns with quantity specifiers. 
+Quantity specifiers are used with curly brackets ({ and }). You put two numbers between the curly brackets - for the lower and upper number of patterns.
+
+For example, to match only the letter a appearing between 3 and 5 times in the string ah, your regex would be /a{3,5}h/. */
+
+// let A4 = "aaaah";
+// let A2 = "aah";
+// let multipleA = /a{3,5}h/;
+// console.log(A4.match(multipleA));
+// console.log(A2.match(multipleA));
+
+// ----------------------------------
+
+// -------- 3 and more characters --------
+
+// let A4 = "haaaah";
+// let A2 = "haah";
+// let A100 = "h" + "a".repeat(100) + "h";
+// let multipleA = /ha{3,}h/;
+
+// let result1 = A4.match(multipleA);
+// let result2 = A2.match(multipleA);
+// let result3 = A100.match(multipleA);
+
+// console.log([result1,result2,result3]);
+
+// ---------------------------------------
+
+
+// --------- Specify Exact Number of Matches ----
+
+// the example allow just 4 characters
+
+// let timStr = "Timmmmber";
+// let timRegex = /Tim{4}ber/; // Change this line
+// let result = timRegex.test(timStr);
+
+// let resulty = timStr.match(timRegex);
+
+// console.log([result,resulty]);
+
+// ------------- Check for All or None -------------------
+
+// let american = "color";
+// let british = "colour";
+// let rainbowRegex= /colou?r/;
+
+// console.log([rainbowRegex.test(american),american.match(rainbowRegex)]);
+// console.log([rainbowRegex.test(british),british.match(rainbowRegex)]);
+
+// ---------------------------------------------
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result = favRegex.test(favWord);
+
+let resulty = favWord.match(favRegex)
+
+console.log(result,resulty)
