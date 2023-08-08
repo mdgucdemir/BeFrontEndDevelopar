@@ -54,9 +54,47 @@
 
 //////////////////////////
 
-let greetings = ['whats up?', 'hello', 'see ya!'];
+// let greetings = ['whats up?', 'hello', 'see ya!'];
 
-greetings.pop();  // sondaki elemani siler  -- { push } un zittidir
-greetings.shift(); // bastaki elemani siler -- { unshift } in zittidir
+// greetings.pop();  // sondaki elemani siler  -- { push } un zittidir
+// greetings.shift(); // bastaki elemani siler -- { unshift } in zittidir
 
-console.log(greetings);
+// console.log(greetings);
+
+////////////// splice(a,b) //////////////////
+
+// let array = ['today', 'was', 'not', 'so', 'great'];
+
+// array.splice(2, 2);
+// console.log(array);
+
+// Array ler sifirdan baslar [0,1,2,3,4] gibi
+// splice(a,b) a = arrayin kacinci elemanini sececeksin b= a. dan itibaren kac eleman sileceksin
+
+/////////////// splice(a,b,c,d) ///////////////////
+
+// const numbers = [10, 11, 12, 12, 15];
+// const startIndex = 3;
+// const amountToDelete = 1;
+
+// numbers.splice(startIndex, amountToDelete, 13, 14); // 3. elemana gidildi. 1 elemen silindi. 13 ve 14 ereye eklendi
+// console.log(numbers); // [10,11,12,13,14,15]
+
+////////////// slice() ///////////////
+
+// let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear'];
+
+// let todaysWeather = weatherConditions.slice(1, 3); // [0,1,2,3,4,5] -- 1 den basla 3 e kadar ama 3 u alma cikti = (1 ve 2)
+
+// console.log(todaysWeather);
+
+////// more example ///////
+
+// function forecast(arr) {
+//   // Only change code below this line
+
+//   return arr.slice(2,4);
+// }
+
+// // Only change code above this line
+// console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
