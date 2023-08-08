@@ -24,14 +24,39 @@
 
 ///////////////////////////////
 
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
-let len = alphabet.length;
-for (let i = 0; i <= len; i++) {
-  console.log(alphabet[i]);
-}
-for (let j = 1; j < len; j++) {
-  console.log(alphabet[j]);
-}
-for (let k = 0; k < len; k++) {
-  console.log(alphabet[k]);
-}
+// let alphabet = "abcdefghijklmnopqrstuvwxyz";
+// let len = alphabet.length;
+// for (let i = 0; i <= len; i++) {
+//   console.log(alphabet[i]);
+// }
+// for (let j = 1; j < len; j++) {
+//   console.log(alphabet[j]);
+// }
+// for (let k = 0; k < len; k++) {
+//   console.log(alphabet[k]);
+// }
+
+/////////////////////////////////////////
+
+// let simpleArray = ['one', 2, 'three', true, false, undefined, null];
+// console.log(simpleArray.length); // 7 
+
+/////////////////////////////////////
+
+// let twentyThree = 'XXIII';
+// let romanNumerals = ['XXI', 'XXII'];
+
+// romanNumerals.unshift('XIX', 'XX');
+// romanNumerals.push(twentyThree);
+
+// console.log(romanNumerals);
+// //console.log(twentyThree);
+
+//////////////////////////
+
+let greetings = ['whats up?', 'hello', 'see ya!'];
+
+greetings.pop();  // sondaki elemani siler  -- { push } un zittidir
+greetings.shift(); // bastaki elemani siler -- { unshift } in zittidir
+
+console.log(greetings);
