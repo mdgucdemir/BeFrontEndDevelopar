@@ -117,3 +117,42 @@
 //   console.log(copyMachine([true, false, true], 2));
 
   /////////////////////////////////////////////////
+
+
+
+  //// Combine Arrays with the Spread Operator ////
+
+//   function spreadOut() {
+//     let fragment = ['to', 'code'];
+//     let sentence = ['learning', ...fragment, 'is', 'fun'];
+//     return sentence;
+//   }
+  
+//   console.log(spreadOut());
+
+/////////////////////////////
+
+//////// indexOf() ////////////////
+
+// bu metod array de aramak istedimiz elemanin olup olmadigini gosterir. Elemam var ise (1,2,3 ...{yani pozitif sayilar ile gosterim yapar} ), yok ise (-1) sonucunu verir
+
+// let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+
+// console.log(fruits.indexOf('apples'));
+// console.log(fruits.indexOf('oranges'));
+// console.log(fruits.indexOf('pears'));
+// console.log(fruits.indexOf('peaches'));
+
+///// an other example
+
+// function quickCheck(arr, elem) {
+//     // Only change code below this line
+//   return arr.indexOf(elem) >= 0 ? true : false;
+//     // Only change code above this line
+//   }
+  
+//   console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
+
+/////////////////////////////////////////////////
+
+
