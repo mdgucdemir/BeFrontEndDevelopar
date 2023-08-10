@@ -364,3 +364,19 @@
 // console.log(countOnline(users));
 
 //////////////////////////////////////////
+
+
+///// Object.keys() metodu ///////
+
+// const myObject = {
+//   name: 'John',
+//   age: 30,
+//   location: 'New York'
+// };
+
+// const key = Object.keys(myObject);
+// console.log(key);
+
+// Tum object i degil sadece keys leri dondurur. (name, age, location) gibi
+
+////////////////////////////////
