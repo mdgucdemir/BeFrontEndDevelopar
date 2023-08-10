@@ -266,3 +266,101 @@
 // console.log(checkInventory("apples"));
 
 ////////////////////////////////////////
+
+/////// Use the delete Keyword to Remove Object Properties //////
+
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
+
+// // Only change code below this line
+// delete foods.oranges;
+// delete foods.plums;
+// delete foods.strawberries
+// // Only change code above this line
+
+// console.log(foods);
+
+
+///////////////////////////////////////
+
+
+////// Check if an object has a Property //////
+// hasOwnProperty
+
+// let users = {
+//   Alan: {
+//     age: 27,
+//     online: true
+//   },
+//   Jeff: {
+//     age: 32,
+//     online: true
+//   },
+//   Sarah: {
+//     age: 48,
+//     online: true
+//   },
+//   Ryan: {
+//     age: 19,
+//     online: true
+//   }
+// };
+
+// function isEveryoneHere(userObj) {
+//   // Only change code below this line
+//   return ['Alan','Jeff','Sarah','Ryan'].every(name => userObj.hasOwnProperty(name))
+//   // Only change code above this line
+// }
+
+// console.log(isEveryoneHere(users));
+
+
+///////////////////////////////////////////////////////
+
+// const refrigerator = {
+//   'milk': 1,
+//   'eggs': 12,
+// };
+
+// for (const food in refrigerator) {
+//   console.log(food,refrigerator[food]);
+// }
+
+///////////////////////////////////////
+
+//////// for ... in Statement ////////////
+
+// const users = {
+//   Alan: {
+//     online: false
+//   },
+//   Jeff: {
+//     online: true
+//   },
+//   Sarah: {
+//     online: true
+//   }
+// }
+
+// function countOnline(allUsers) {
+//   // Only change code below this line
+// let result = 0;
+// for(let user in allUsers) {
+//   if(allUsers[user].online === true) {
+//     result++;
+//   }
+// }
+
+// return result;
+//   // Only change code above this line
+// }
+
+// console.log(countOnline(users));
+
+//////////////////////////////////////////
