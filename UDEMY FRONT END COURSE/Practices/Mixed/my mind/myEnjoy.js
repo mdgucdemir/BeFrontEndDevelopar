@@ -155,4 +155,114 @@
 
 /////////////////////////////////////////////////
 
+// function greaterThanTen(arr) {
+//     let newArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > 10) {
+//         newArr.push(arr[i]);
+//       }
+//     }
+//     return newArr;
+//   }
+  
+//   console.log(greaterThanTen([2, 12, 8, 14, 80, 0, 1]));
 
+
+//////////////// Add Key-Value Pairs to JavaScript Objects /////////////////////////
+
+// const tekkenCharacter = {
+//   player: 'Hwoarang',
+//   fightingStyle: 'Tae Kwon Doe',
+//   human: true
+// };
+
+// tekkenCharacter.origin = 'United States';
+// tekkenCharacter['hair color'] = 'Yellow';
+
+// const eyes = 'eye color';
+// tekkenCharacter[eyes] = 'blue';
+
+// console.log(tekkenCharacter);
+
+
+////////
+
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28
+// };
+
+// // Only change code below this line
+// foods.bananas = 13;
+// foods['grapes'] = 35
+
+// const fosik = 'strawberries';
+// foods[fosik] = 27;
+// // Only change code above this line
+
+// console.log(foods);
+
+/////////////////////////////
+
+/////////// Modify an Object Nested Within an Object //////////////////
+
+// let nestedObject = {
+//   id: 28802695164,
+//   date: 'December 31, 2016',
+//   data: {
+//     totalUsers: 99,
+//     online: 80,
+//     onlineStatus: {
+//       active: 67,
+//       away: 13,
+//       busy: 8
+//     }
+//   }
+// };
+
+// nestedObject.data.onlineStatus.busy = 10;
+
+// console.log(nestedObject);
+
+
+//// An other Example
+
+// let userActivity = {
+//   id: 23894201352,
+//   date: 'January 1, 2017',
+//   data: {
+//     totalUsers: 51,
+//     online: 42
+//   }
+// };
+
+// // Only change code below this line
+// userActivity.data.online = 45
+// // Only change code above this line
+
+// console.log(userActivity);
+
+
+/////////////////////////////////////////
+
+///// Access Property Names with Bracket Notation /////
+
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
+
+// function checkInventory(scannedItem) {
+//   // Only change code below this line
+// return foods[scannedItem]
+//   // Only change code above this line
+// }
+
+// console.log(checkInventory("apples"));
+
+////////////////////////////////////////
