@@ -414,12 +414,14 @@
 
 
 
-/// find the logest word in a string ///
+////// find the logest word in a string //////
 
-function findLongestWordLength (str){
-  return Math.max(...str.split(' ').map(word => word.length));
-}
+// function findLongestWordLength (str){
+//   return Math.max(...str.split(' ').map(word => word.length));
+// }
 
 
-let result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
-console.log(result)
+// let result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
+// console.log(result);
+
+///////////////////////////////////////////
