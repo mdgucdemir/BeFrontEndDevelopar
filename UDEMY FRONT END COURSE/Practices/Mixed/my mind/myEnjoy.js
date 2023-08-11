@@ -379,4 +379,47 @@
 
 // Tum object i degil sadece keys leri dondurur. (name, age, location) gibi
 
-////////////////////////////////
+///////////// Reverse a String ///////////////////
+
+// function reverseString(str) {
+//   return str.split('').reverse().join('');
+// }
+
+// console.log(reverseString("hello"));
+
+///////////////////////////////
+
+///// Factorialize a Number /////
+
+// function faktoriel(num) {
+//   if (num <= 0) {
+//     return 1;
+//   }
+//   return num * faktoriel(num -1);
+// }
+
+// console.log(faktoriel(5));
+
+// ya da 
+
+// function factorialize(num) {
+//   let result = 1;
+//   for(let i = 1; i <= num; i++) {
+//     result *= i;
+//   }
+//   return result;
+// }
+
+// console.log(factorialize(5));
+
+
+
+/// find the logest word in a string ///
+
+function findLongestWordLength (str){
+  return Math.max(...str.split(' ').map(word => word.length));
+}
+
+
+let result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
+console.log(result)
