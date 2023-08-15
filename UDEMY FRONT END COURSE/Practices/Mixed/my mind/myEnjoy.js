@@ -424,13 +424,59 @@
 // let result = findLongestWordLength("The quick brown fox jumped over the lazy dog");
 // console.log(result);
 
-///////////////////////////////////////////
+//////////////// Title Case a Sentence /////////////////////////
 
-function titleCase(str) {
-  return str
-  .toLowerCase()
-  .replace(/(^|\s)\S/g, word => word.toUpperCase());
-}
+// function titleCase(str) {
+//   return str
+//   .toLowerCase()
+//   .replace(/(^|\s)\S/g, word => word.toUpperCase());
+// }
 
-let result = titleCase("I'm a little tea pot");
-console.log(result);
+// let result = titleCase("I'm a little tea pot");
+// console.log(result);
+
+/////////////////////////////////////
+
+/// slice ///
+
+// function frankenSplice(arr1, arr2, n) {
+//   return [...arr2.slice(0,n), ...arr1, ...arr2.slice(n)];
+// }
+
+// let re = frankenSplice(["claw", "tentacle"], ["head", "shoulders", "knees", "toes"], 2);
+// console.log(re);
+
+/////////////////////////
+
+
+
+//// Falsy Bouncer ///
+
+// /*
+// Remove all falsy values from an array. Return a new array; do not mutate the original array.
+// Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
+// Hint: Try converting each value to a Boolean.
+// */
+
+// function bouncer(arr) {
+//   return arr.filter(Boolean);
+// }
+
+// let result = bouncer([7, "ate", "", false, 9]);
+// console.log(result);
+
+////////////////////////
+
+
+//// find the short number in array ///
+
+// function getIndexToIns(arr, num) {
+
+//   // find the big ones and filter them. you have shorts
+//   return arr.filter(val => num > val).length;
+// }
+
+// let re = getIndexToIns([40, 60], 50);
+// console.log(re);
+
+/////////////////////////////////
