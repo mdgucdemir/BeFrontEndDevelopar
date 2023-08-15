@@ -480,3 +480,15 @@
 // console.log(re);
 
 /////////////////////////////////
+
+//// regular expresion array example ///
+
+function mutation([elem1,elem2]) {
+  const reg = new RegExp(`[^${elem1}]`,'i'); // elem1 deki karakterleri icermeyen demektir
+  return !reg.test(elem2); // tersini alirsak istedigimiz sonuca variriz
+}
+
+let result = mutation(["hello", "hes"]);
+console.log(result);
+
+/////////////////////
