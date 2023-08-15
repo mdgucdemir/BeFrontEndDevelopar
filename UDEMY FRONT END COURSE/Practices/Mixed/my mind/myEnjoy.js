@@ -425,3 +425,12 @@
 // console.log(result);
 
 ///////////////////////////////////////////
+
+function titleCase(str) {
+  return str
+  .toLowerCase()
+  .replace(/(^|\s)\S/g, word => word.toUpperCase());
+}
+
+let result = titleCase("I'm a little tea pot");
+console.log(result);
