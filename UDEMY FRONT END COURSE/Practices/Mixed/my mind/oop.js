@@ -1,4 +1,6 @@
 
+// Object oriented programing
+
 /////////////
 
 // let duck = {
@@ -28,3 +30,28 @@
 //   }
 
 ///////////////
+
+// function Bird() {
+//     this.name = "Albert";
+//     this.color  = "blue";
+//     this.numLegs = 2;
+//   }
+  
+//   let blueBird = new Bird();
+
+//   console.log(blueBird);
+//   console.log(blueBird.name);
+
+////////////////////////////
+
+///// object's constructor with intanceof /////
+
+// let Bird = function(name, color) {
+//     this.name = name;
+//     this.color = color;
+//     this.numLegs = 2;
+//   }
+  
+//   let crow = new Bird("Alexis", "black");
+  
+//   console.log(crow instanceof Bird);
