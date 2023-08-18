@@ -123,3 +123,57 @@
 //   console.log(prototypeProps);
 
 //////////////////////////////////
+
+// function Bird(name) {
+//     this.name = name;
+//   }
+  
+// typeof Bird.prototype;
+
+///////////////////////////
+
+
+
+///////  Inherit Behaviors from a Supertype  /////
+
+// function Animal() { }
+
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat: function() {
+//     console.log("nom nom nom");
+//   }
+// };
+
+// // Only change code below this line
+
+// let duck = Object.create(Animal.prototype); // Change this line
+// let beagle = Object.create(Animal.prototype); // Change this line
+
+// duck.eat();     // return "num num num"
+// beagle.eat();   // return "num num num"
+
+/////////////////////////////
+
+/// An other inherits example
+
+// function Animal() { }
+
+// Animal.prototype = {
+//   constructor: Animal,
+//   eat: function() {
+//     console.log("nom nom nom");
+//   }
+// };
+
+// function Dog() { }
+
+// // Only change code below this line
+// Dog.prototype = Object.create(Animal.prototype)
+
+
+// let beagle = new Dog();
+
+// beagle.eat()
+
+//////////////////////////////////
