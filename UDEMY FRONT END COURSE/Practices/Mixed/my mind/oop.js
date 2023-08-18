@@ -182,19 +182,129 @@
 
 ///// Add Methods After Inheritance /////
 
-function Animal() { }
-Animal.prototype.eat = function() { console.log("nom nom nom"); };
+// function Animal() { }
+// Animal.prototype.eat = function() { console.log("nom nom nom"); };
 
-function Dog() { }
+// function Dog() { }
 
-// Only change code below this line
-Dog.prototype = Object.create(Animal.prototype);
-Dog.prototype.constructor = Dog;
-Dog.prototype.bark = function () {
-  console.log('Woof!');
-}
-// Only change code above this line
+// // Only change code below this line
+// Dog.prototype = Object.create(Animal.prototype);
+// Dog.prototype.constructor = Dog;
+// Dog.prototype.bark = function () {
+//   console.log('Woof!');
+// }
+// // Only change code above this line
 
-let beagle = new Dog();
-beagle.eat();   // nom nom nom
-beagle.bark();  // Woof!
+// let beagle = new Dog();
+// beagle.eat();   // nom nom nom
+// beagle.bark();  // Woof!
+
+//////////////////////////////
+
+
+//// Override Inherited Methods ////////
+
+// function Bird() { }
+
+// Bird.prototype.fly = function() { return "I am flying!"; };
+
+// function Penguin() { }
+// Penguin.prototype = Object.create(Bird.prototype);
+// Penguin.prototype.constructor = Penguin;
+
+// // Only change code below this line
+
+// Penguin.prototype.fly = function () {
+//   return "Alas, this is a flightless bird."
+// }
+
+// // Only change code above this line
+
+// let penguin = new Penguin();
+// console.log(penguin.fly());
+
+////////////////////////
+
+///////////////////////////
+
+// let flyMixin = function(obj) {
+//   obj.fly = function() {
+//     console.log("Flying, wooosh!");
+//   }
+// };
+
+// let bird = {
+//   name: "Donald",
+//   numLegs: 2
+// };
+
+// let plane = {
+//   model: "777",
+//   numPassengers: 524
+// };
+
+// flyMixin(bird);
+// flyMixin(plane);
+
+// bird.fly();
+// plane.fly();
+
+
+
+/////////////////////////////
+
+
+/// Closure ///
+
+// function Bird() {
+//   let hatchedEgg = 10;
+
+//   this.getHatchedEggCount = function() { 
+//     return hatchedEgg; // this is example of closure.
+//   };
+// }
+// let ducky = new Bird();
+// ducky.getHatchedEggCount();
+
+
+///////////////////////
+
+
+/// Immediately Invoked Function Expression (IIFE)  //////
+// bu fonksiyonda iki adet parantez var 
+// ilk parantez fonksiyonu tamamen icerir
+// ikinci parantez ise hemem sonuna eklenir 
+// ikinci parantezin anlami sudur: immediately executed or invoked (acilen son erdi veya cagirildi)
+
+
+// (function () {
+//   console.log("Chirp, chirp!");
+// })();
+
+//// an other one example
+
+// (function() {
+//   console.log("A cozy nest is ready");
+// })();
+
+///////////////////////////////////////
+
+
+///// Use an IIFE to Create a Module /////
+
+// let motionModule = (function () {
+//   return {
+//     glideMixin: function(obj) {
+//       obj.glide = function() {
+//         console.log("Gliding on the water");
+//       };
+//     },
+//     flyMixin: function(obj) {
+//       obj.fly = function() {
+//         console.log("Flying, wooosh!");
+//       };
+//     }
+//   }
+// })();
+
+//////////////////////////////////////////
