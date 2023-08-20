@@ -337,3 +337,73 @@ Functional programming is about:
 // console.log(usersObj);
 
 //////////////////////////
+
+//////////// sort()  /////////
+/// .sort((a,b) => a - b) sayilari artan bir sekilde siralar
+/// .sort((a,b) => b - a) sayilari azalan bir sekilde siralar
+
+ 
+
+// 
+// const arr = [3,2,1,4,5]
+// arr.sort();
+
+// console.log(arr); // cikti = [1,2,3,4,5]  sayilari artan bir sekilde siraladi.
+
+/////
+
+ 
+// const arr = [10,2,21,7]
+// arr.sort()
+// console.log(arr) // cikti = [10,2,21,7]  sayilari artan bir sekilde siralamadi.
+
+/// yukarida ki gibi bir ornekte sayilari dogru siralamak icin; bir karsilastirma function i kullanmak gerekir
+/// .sort((a,b) => a - b) karsilastirma function
+
+// const arr = [10,2,21,7];
+// arr.sort((a,b) => a - b);
+// console.log(arr);  // cikti = [2,7,10,21] sayilari artan bir sekilde siraladi.
+
+// const arr = [3,2,1,4,5];
+// arr.sort((a,b) => b - a);
+// console.log(arr);
+
+////////////
+
+// function alphabeticalOrder(arr) {
+
+//     // Only change code below this line
+//     return arr.sort(function (a, b) {
+//       return a === b ? 0 : a < b ? -1 : 1;
+//     })
+//     // Only change code above this line
+// }
+  
+// let result = alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+// console.log(result);
+
+//////////////////////////////
+
+// const str = "Hello World";
+// const bySpace = str.split(" ");
+
+// const otherString = "How9are7you2today";
+// const byDigits = otherString.split(/\d/);
+// console.log(byDigits);
+
+////////////////////////////\
+
+// Only change code below this line
+// function urlSlug(title) {
+//     return title
+//     .toLowerCase()
+//     .trim()
+//     .split(/\s+/)
+//     .join('-');
+    
+//     }
+//     // Only change code above this line
+//     let result = urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
+//     console.log(result);
+
+///////////////////////////
