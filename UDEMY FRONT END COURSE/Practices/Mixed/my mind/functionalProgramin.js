@@ -407,3 +407,57 @@ Functional programming is about:
 //     console.log(result);
 
 ///////////////////////////
+
+
+///////// every() /////////
+
+/*
+The every method works with arrays to check if every element passes a particular test. 
+It returns a Boolean value - true if all values meet the criteria, false if not.
+*/
+
+
+// function checkPositive(arr) {
+//     // Only change code below this line
+  
+//   return arr.every((number) => number > 0)
+  
+//     // Only change code above this line
+// }
+  
+// let result = checkPositive([1, 2, 3, -4, 5]);
+// console.log(result); // outpput = false
+
+///////////////////////////////
+
+
+////////// some() /////////
+
+/*
+The some method works with arrays to check if any element passes a particular test.
+It returns a Boolean value - true if any of the values meet the criteria, false if not.
+*/
+
+// function checkPositive(arr) {
+//     // Only change code below this line
+//   return arr.some((currentValue) => currentValue > 0)
+  
+//     // Only change code above this line
+// }
+  
+// let result1 = checkPositive([1, 2, 3, -4, 5]);
+// let result2 = checkPositive([-1, -2, -3, -4, -5]);
+// console.log(result1);  // output true
+// console.log(result2);  // output false
+
+////////////////////////////////\\
+
+function add(x) {
+    // Only change code below this line
+  
+  return y => z => x + y + z;
+    // Only change code above this line
+}
+  
+let result = add(10)(20)(30);
+console.log(result);
