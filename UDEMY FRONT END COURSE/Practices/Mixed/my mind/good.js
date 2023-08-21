@@ -34,3 +34,27 @@
 // console.log(result);
 
 /////////////////////////////
+
+// function destroyer(arr, ...other) {
+//     return arr.filter(item => !other.includes(item));
+//   }
+  
+//   let result = destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+//   console.log(result);
+
+//////////////////////////////////
+
+// function whatIsInAName(collection, source) {
+//     let sourceKeys = Object.keys(source);
+  
+//     return collection
+//     .filter(obj => sourceKeys.every(key => obj[key] === source[key])); 
+  
+//   }
+  
+//   let r = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
+  
+//   console.log(r);
+
+////////////////////////////////////////
+
