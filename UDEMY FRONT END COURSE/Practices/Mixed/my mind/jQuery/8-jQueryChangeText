@@ -1,8 +1,7 @@
 <script>
   $(document).ready(function () {
-    $("button").addClass("animated bounce");
-    $(".well").addClass("animated shake");
-    $("#target3").addClass("animated fadeOut");
+    $("#target1").css("color", "red");
+    $("#target4").html("<em>#target4</em>");
   });
 </script>
 
@@ -20,7 +19,7 @@
       </div>
     </div>
     <div class="col-xs-6">
-      <h4>#right-well</h4>`
+      <h4>#right-well</h4>
       <div class="well" id="right-well">
         <button class="btn btn-default target" id="target4">#target4</button>
         <button class="btn btn-default target" id="target5">#target5</button>
