@@ -1,0 +1,9 @@
+
+NODEMON 
+
+Nodemon Ne Ise yarar:
+
+Nodemon; sizin paketlerini siz kayit ettiginiz zaman paketlerinizi izliyor.
+Ornegin; bir js dosyanizda bir degisiklik oldugunda, paketi aninda izliyor ve eger calistirilmasi gerekiyor ise onu calistiriyor.
+
+Kisacasi siz dosyanizi kaydet dediginiz zaman, kaydedip calistiracaktir.
