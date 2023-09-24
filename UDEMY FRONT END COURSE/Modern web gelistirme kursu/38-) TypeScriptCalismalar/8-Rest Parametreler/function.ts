@@ -4,7 +4,7 @@
 
 // // Ayni tipte alacaginiz parametre sayisi ya da eleman sayisi belirli degilse [Rest Parametre] lerinden yararlaniyoruz
 
-function davetEt(ilkDavetli:string, ...digerleri:string[]) {
+function davetEt(ilkDavetli:string, ...digerleri:string[]):string {
     return ilkDavetli + ' ' + digerleri.join(' ');
     // ilkdavetli yi biliyoruz ama ondan sonra kactane davetli olacagini bilmiyoruz. iste burada [rest parametre] kullandik
 }
