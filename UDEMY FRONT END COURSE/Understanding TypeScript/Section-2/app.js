@@ -1,19 +1,8 @@
-// // -- Type Aliases(baska adlar || takma adlar) / Custom Types
-function combine(input1, input2, resultConversion
-// Above this, type Aliases or Custom type
-) {
-    var result;
-    if ((typeof input1 === "number" && typeof input2 === "number") ||
-        resultConversion === "as-number") {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
+// // Function Types & Callback
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
 }
-var combinedAges = combine(30, 26, 'as-number');
-console.log(combinedAges);
-var combinedStringAges = combine("30", "26", 'as-number');
-var combinedNames = combine("Max", "Anna", 'as-text');
-console.log(combinedNames);
+addAndHandle(10, 23, function (result) {
+    console.log(result);
+});
