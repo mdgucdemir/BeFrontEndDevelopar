@@ -1,71 +1,184 @@
 
-// // Code goes here
+// // -- Creating a First Class --
 
-// // const - let - any  (differences)
+// class Department {
+//     name: string;
+//     employees: string[] = [];
 
+//     constructor(n:string) {
+//         this.name = n;
+//     }
 
+//     // describe() {
+//     //     console.log('Department is: ' + this.name)
+//     // }
 
-// // -- function -- 
+//     describe(this: Department) {
+//         console.log('Department is: ' + this.name)
+//     }
 
-// // const add = (a: number, b: number) => {
-// //     return a + b;
-// // }
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//     }
 
-// const add = (a: number, b: number) => a + b; // one output
-
-// // const printOutput = (output: number | string) => {
-// //     console.log(output)
-// // }
-
-// const printOutput: (a: number | string) => void = output => console.log(output);
-
-
-// const button = document.querySelector("button");
-
-// if(button) {
-//     button.addEventListener('click', event => console.log(event))
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
 // }
 
+// const accounting = new Department('Accounting');
+// // console.log(accounting);
+// accounting.describe();
+
+// const accountingCopy = { describe: accounting.describe };
+// const accountingCopy = { name: 'Barzo', describe: accounting.describe };
+// accountingCopy.describe();
 
 
 
-// // -- Spread Operator
 
-const hobbies = ['sport', 'cooking'];
-const activeHobbies = ['hiking'];
-activeHobbies.push(...hobbies); // spread operator for array
+// // -- "private" and "public" Access Modifiers --
 
-const person = {
-    firstName: 'M.Deniz',
-    age: 33
+// class Department {
+//     public name: string;
+//     private employees: string[] = [];
+
+//     constructor(n:string) {
+//         this.name = n;
+//     }
+
+//     // describe() {
+//     //     console.log('Department is: ' + this.name)
+//     // }
+
+//     describe(this: Department) {
+//         console.log('Department is: ' + this.name)
+//     }
+
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//     }
+
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
+// }
+
+// const accounting = new Department('Accounting');
+// accounting.addEmployee('Max');
+// accounting.addEmployee('Caroline');
+
+// // accounting.employees[2] = 'Chestnut';
+
+// accounting.describe();
+// accounting.printEmployeeInformation();
+
+
+
+
+// // -- Shorthand Initialization --
+
+// class Department {
+    
+//     private employees: string[] = [];
+
+//     constructor(private readonly id: string ,public name:string) {
+//         // this.name = n;
+//     }
+
+//     describe(this: Department) {
+//         console.log(`Department id: ${this.id} and Department Name: ${this.name}`)
+//     }
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//         // this.id = 'id_2'; // // can not assign to id, because id is readonly.
+//     }
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
+// }
+
+// const accounting = new Department('id_1','Accounting');
+// accounting.addEmployee('Max');
+// accounting.addEmployee('Caroline');
+
+// accounting.describe();
+// accounting.printEmployeeInformation();
+
+
+
+// // -- Inheritance --
+
+class Department {
+    // public name: string
+    // private employees: string[] = [];
+    protected employees: string[] = [];
+
+    constructor(private readonly id: string ,public name:string) {
+        // this.name = n;
+    }
+
+    describe(this: Department) {
+        console.log(`Department id: ${this.id} and Department Name: ${this.name}`)
+    }
+    addEmployee(employee: string) {
+        this.employees.push(employee);
+        // this.id = 'id_2'; // // can not assign to id, because id is readonly.
+    }
+    printEmployeeInformation() {
+        console.log(this.employees.length);
+        console.log(this.employees);
+    }
 }
-const copiedPerson = {...person} // spread operator for object
 
+class ITDepartment extends Department {
+    admins: string[];
+    constructor(id: string, adminS: string[]) {
+        super(id,'IT');
+        this.admins = adminS;
+    }  
 
-
-
-// // -- Rest Parameters
-
-const add = (...numbers: number[]) => { // this is the rest parameters. It looks like spread operator but not it is Rest parameters
-    return numbers.reduce((curResult, curValue) => {
-        return curResult + curValue;
-    });
 }
 
-const addedNumbers = add(5,2,10,3.7);
-console.log(addedNumbers);
+class AccountingDepartment extends Department {
+    constructor(id: string, private reportS: string[]) {
+        super(id,'Accounting Department');
+    }
 
+    addReport(text: string) {
+        this.reportS.push(text);
+    }
 
+    showReports() {
+        console.log(this.reportS);
+    }
 
+    addEmployee(employee: string): void {
+        if(employee === 'Max') {
+            return;
+        }
+        this.employees.push(employee);
+    }
 
-// // --- Array & Object Destructuring ---
-// // Destructuring doesn't change original Array and Object.
+}
+const department = new Department('id_1','Main Department');
+const it = new ITDepartment('id_2',['Caroline']);
+it.addEmployee('Max');
+it.addEmployee('Caroline');
 
-// // - Array Destructuring -
-const [hobby1,hobby2, ...remainingHobbies] = hobbies; // this is destructuring  // (hobbies[0] = hobby1) and (hobbies[1] = hobby2) and (hobbies[remaining] = remainingHobbies)
-console.log(hobbies, hobby1, hobby2);
+it.describe();
+it.name = 'IT Department';
+it.printEmployeeInformation();
+console.log(it);
 
-// // - Object Destructuring -
-const {firstName: username,age} = person;
-console.log(username,age);
-console.log(username,age, person);
+const accounting = new AccountingDepartment('id_3' , []);
+accounting.addReport('Everything is good ;)');
+console.log(accounting);
+accounting.showReports();
+
+accounting.addEmployee('Max'); // Max not added, cause we declarate a condition
+accounting.addEmployee('Hun');
+accounting.printEmployeeInformation();

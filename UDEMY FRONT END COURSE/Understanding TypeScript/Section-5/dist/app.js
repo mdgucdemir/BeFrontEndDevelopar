@@ -1,42 +1,139 @@
 "use strict";
-// // Code goes here
-// // const - let - any  (differences)
-// // -- function -- 
-// // const add = (a: number, b: number) => {
-// //     return a + b;
-// // }
-// const add = (a: number, b: number) => a + b; // one output
-// // const printOutput = (output: number | string) => {
-// //     console.log(output)
-// // }
-// const printOutput: (a: number | string) => void = output => console.log(output);
-// const button = document.querySelector("button");
-// if(button) {
-//     button.addEventListener('click', event => console.log(event))
+// // -- Creating a First Class --
+// class Department {
+//     name: string;
+//     employees: string[] = [];
+//     constructor(n:string) {
+//         this.name = n;
+//     }
+//     // describe() {
+//     //     console.log('Department is: ' + this.name)
+//     // }
+//     describe(this: Department) {
+//         console.log('Department is: ' + this.name)
+//     }
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//     }
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
 // }
-// // -- Spread Operator
-const hobbies = ['sport', 'cooking'];
-const activeHobbies = ['hiking'];
-activeHobbies.push(...hobbies); // spread operator for array
-const person = {
-    firstName: 'M.Deniz',
-    age: 33
-};
-const copiedPerson = Object.assign({}, person); // spread operator for object
-// // -- Rest Parameters
-const add = (...numbers) => {
-    return numbers.reduce((curResult, curValue) => {
-        return curResult + curValue;
-    });
-};
-const addedNumbers = add(5, 2, 10, 3.7);
-console.log(addedNumbers);
-// // --- Array & Object Destructuring ---
-// // Destructuring doesn't change original Array and Object.
-// // - Array Destructuring -
-const [hobby1, hobby2, ...remainingHobbies] = hobbies; // this is destructuring  // (hobbies[0] = hobby1) and (hobbies[1] = hobby2) and (hobbies[remaining] = remainingHobbies)
-console.log(hobbies, hobby1, hobby2);
-// // - Object Destructuring -
-const { firstName: username, age } = person;
-console.log(username, age);
-console.log(username, age, person);
+// const accounting = new Department('Accounting');
+// // console.log(accounting);
+// accounting.describe();
+// const accountingCopy = { describe: accounting.describe };
+// const accountingCopy = { name: 'Barzo', describe: accounting.describe };
+// accountingCopy.describe();
+// // -- "private" and "public" Access Modifiers --
+// class Department {
+//     public name: string;
+//     private employees: string[] = [];
+//     constructor(n:string) {
+//         this.name = n;
+//     }
+//     // describe() {
+//     //     console.log('Department is: ' + this.name)
+//     // }
+//     describe(this: Department) {
+//         console.log('Department is: ' + this.name)
+//     }
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//     }
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
+// }
+// const accounting = new Department('Accounting');
+// accounting.addEmployee('Max');
+// accounting.addEmployee('Caroline');
+// // accounting.employees[2] = 'Chestnut';
+// accounting.describe();
+// accounting.printEmployeeInformation();
+// // -- Shorthand Initialization --
+// class Department {
+//     private employees: string[] = [];
+//     constructor(private readonly id: string ,public name:string) {
+//         // this.name = n;
+//     }
+//     describe(this: Department) {
+//         console.log(`Department id: ${this.id} and Department Name: ${this.name}`)
+//     }
+//     addEmployee(employee: string) {
+//         this.employees.push(employee);
+//         // this.id = 'id_2'; // // can not assign to id, because id is readonly.
+//     }
+//     printEmployeeInformation() {
+//         console.log(this.employees.length);
+//         console.log(this.employees);
+//     }
+// }
+// const accounting = new Department('id_1','Accounting');
+// accounting.addEmployee('Max');
+// accounting.addEmployee('Caroline');
+// accounting.describe();
+// accounting.printEmployeeInformation();
+// // -- Inheritance --
+class Department {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+        // public name: string
+        // private employees: string[] = [];
+        this.employees = [];
+        // this.name = n;
+    }
+    describe() {
+        console.log(`Department id: ${this.id} and Department Name: ${this.name}`);
+    }
+    addEmployee(employee) {
+        this.employees.push(employee);
+        // this.id = 'id_2'; // // can not assign to id, because id is readonly.
+    }
+    printEmployeeInformation() {
+        console.log(this.employees.length);
+        console.log(this.employees);
+    }
+}
+class ITDepartment extends Department {
+    constructor(id, adminS) {
+        super(id, 'IT');
+        this.admins = adminS;
+    }
+}
+class AccountingDepartment extends Department {
+    constructor(id, reportS) {
+        super(id, 'Accounting Department');
+        this.reportS = reportS;
+    }
+    addReport(text) {
+        this.reportS.push(text);
+    }
+    showReports() {
+        console.log(this.reportS);
+    }
+    addEmployee(employee) {
+        if (employee === 'Max') {
+            return;
+        }
+        this.employees.push(employee);
+    }
+}
+const department = new Department('id_1', 'Main Department');
+const it = new ITDepartment('id_2', ['Caroline']);
+it.addEmployee('Max');
+it.addEmployee('Caroline');
+it.describe();
+it.name = 'IT Department';
+it.printEmployeeInformation();
+console.log(it);
+const accounting = new AccountingDepartment('id_3', []);
+accounting.addReport('Everything is good ;)');
+console.log(accounting);
+accounting.showReports();
+accounting.addEmployee('Max'); // Max not added, cause we declarate a condition
+accounting.addEmployee('Hun');
+accounting.printEmployeeInformation();
