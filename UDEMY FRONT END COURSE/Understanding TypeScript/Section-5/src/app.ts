@@ -144,12 +144,32 @@ class ITDepartment extends Department {
 }
 
 class AccountingDepartment extends Department {
+    private lastReport: string;
+
+    get mostRecentReport() { // get method for read
+        if(this.lastReport) {
+
+            return this.lastReport;   // getter method must return something.
+        }
+        throw new Error('No report found.');
+    }
+
+    set mostRecentReport(value: string) {
+        // setter method needs take an argument
+        if(!value) {
+            throw new Error('Please pass in a valid value!');
+        }
+        this.addReport(value);
+    }
+
     constructor(id: string, private reportS: string[]) {
         super(id,'Accounting Department');
+        this.lastReport = reportS[0];
     }
 
     addReport(text: string) {
         this.reportS.push(text);
+        this.lastReport = text;
     }
 
     showReports() {
@@ -175,7 +195,11 @@ it.printEmployeeInformation();
 console.log(it);
 
 const accounting = new AccountingDepartment('id_3' , []);
-accounting.addReport('Everything is good ;)');
+
+accounting.mostRecentReport = 'year end report'; // setter method trigger like this. You don't need any parenthesis [accounting.mostRecentReport() = '' || you can't use like this.]
+accounting.addReport('Something went wrong...');
+console.log(accounting.mostRecentReport); // for getter method you don't need any parenthesis.
+
 console.log(accounting);
 accounting.showReports();
 
