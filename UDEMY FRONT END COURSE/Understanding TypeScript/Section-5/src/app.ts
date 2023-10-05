@@ -478,21 +478,97 @@
 
 // // --- First Interface ---
 
-interface Person {
-  name: string;
-  age: number;
+// interface Person {
+//   name: string;
+//   age: number;
+
+//   greet(phrase: string): void;
+// }
+
+// let user1: Person;
+
+// user1 = {
+//   name: 'Deniz',
+//   age: 33,
+//   greet(phrase: string) {
+//     console.log(phrase + ' ' + this.name);
+//   }
+// }
+
+// user1.greet('Hi I`m');
+
+
+
+
+// // --- Using Interfaces with Classes
+
+// interface Greetable {
+//   readonly name: string;
+  
+
+//   greet(phrase: string): void;
+// }
+
+// class Person implements Greetable {
+//   name: string;
+//   age = 33;
+
+//   constructor(n: string) {
+//     this.name = n;    
+//   }
+
+//   greet(phrase: string): void {
+//       console.log(phrase + ' ' + this.name + ' ' + 'and I am ' + this.age + ' ' + 'years old');
+//   }
+// }
+
+// let user1: Greetable;
+// user1 = new Person('Deniz');
+// user1.greet('Hi I`m');
+// console.log(user1);
+// user1.name = 'babus'; // name'i readonly yaptigimiz icin sonradan boyle bir atama yapilamaz
+
+
+
+// // --- Extending Interfaces ---
+
+interface Named {  
+  readonly name: string;
+}
+
+interface Greetable extends Named { 
 
   greet(phrase: string): void;
 }
 
-let user1: Person;
+class Person implements Greetable {
+  name: string;
+  age = 33;
+  address?: string; // this is optional property 
 
-user1 = {
-  name: 'Deniz',
-  age: 33,
-  greet(phrase: string) {
-    console.log(phrase + ' ' + this.name);
+  constructor(n: string, location?: string) { // // location is optional parameter
+    this.name = n;   
+    this.address = location; // // optinal and there is no error 
+  }
+
+  greet(phrase: string): void {
+      console.log(phrase + ' ' + this.name + ' ' + 'and I am ' + this.age + ' ' + 'years old');
   }
 }
 
+let user1: Greetable;
+user1 = new Person('Deniz');
 user1.greet('Hi I`m');
+console.log(user1);
+
+
+// // -- Interfaces as Function Types --- 
+
+interface AddFn {
+  (a: number, b: number): number;
+}
+
+let add:AddFn;
+add = (n1: number,n2:number) => {
+  return n1 + n2;
+}
