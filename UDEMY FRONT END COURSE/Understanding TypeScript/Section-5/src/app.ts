@@ -423,26 +423,76 @@
 
 // // --- Abstract Classes ---
 
-abstract class Animal {
-    constructor(protected name: string) {}
+// abstract class Animal {
+//     constructor(protected name: string) {}
 
-    abstract makeSound(): void; // Soyut yontem (abstract method)
+//     abstract makeSound(): void; // Soyut yontem (abstract method)
+// }
+
+// class Dog extends Animal {
+//     makeSound(): void {
+//         console.log(`${this.name} barks.`);
+//     }
+// }
+
+// class Cat extends Animal {
+//     makeSound(): void {
+//         console.log(`${this.name} meows.`);
+//     }
+// }
+
+// const myDog = new Dog('Dog');
+// const myCat = new Cat('Cat');
+
+// myDog.makeSound();  // Output = Dog barks.
+// myCat.makeSound(); // Output = Cat meows.
+
+
+
+
+// // --- Singleton() & private Constructor ---
+// class Singleton {
+//     private static instance: Singleton | null = null;
+  
+//     private constructor() {}
+  
+//     public static getInstance(): Singleton {
+//       if (Singleton.instance === null) {
+//         Singleton.instance = new Singleton();
+//       }
+//       return Singleton.instance;
+//     }
+  
+//     public doSomething() {
+//       console.log("Singleton is doing something.");
+//     }
+//   }
+  
+//   const instance1 = Singleton.getInstance();
+//   const instance2 = Singleton.getInstance();
+  
+// console.log(instance1 === instance2); // true, aynı nesne
+  
+
+
+
+// // --- First Interface ---
+
+interface Person {
+  name: string;
+  age: number;
+
+  greet(phrase: string): void;
 }
 
-class Dog extends Animal {
-    makeSound(): void {
-        console.log(`${this.name} barks.`);
-    }
+let user1: Person;
+
+user1 = {
+  name: 'Deniz',
+  age: 33,
+  greet(phrase: string) {
+    console.log(phrase + ' ' + this.name);
+  }
 }
 
-class Cat extends Animal {
-    makeSound(): void {
-        console.log(`${this.name} meows.`);
-    }
-}
-
-const myDog = new Dog('Dog');
-const myCat = new Cat('Cat');
-
-myDog.makeSound();  // Output = Dog barks.
-myCat.makeSound(); // Output = Cat meows.
+user1.greet('Hi I`m');
