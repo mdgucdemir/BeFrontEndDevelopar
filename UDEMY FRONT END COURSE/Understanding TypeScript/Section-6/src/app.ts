@@ -93,4 +93,79 @@ function moveAnimal(animal: Animal) {
 moveAnimal({type:'bird', flyingSpeed:10});
 
 
+
+
 // // --- Type Casting ---
+const paragraph = document.getElementById('message-output')! as HTMLParagraphElement;  // [as HTMLParagraphElement] bu tur yazim style ini ( react ve jsx ) te kullanabilirsin
+const userInputElement = document.getElementById('user-input')! as HTMLInputElement; // unlem isareti (exclamation mark) asla null olmadigini gosterir
+const goodParagraph = <HTMLParagraphElement>document.getElementById('good')!;
+const notBadParagraph = document.getElementById('not-bad');
+
+userInputElement.value = 'Hi there!';
+paragraph.textContent = 'this is result paragraph';
+
+if (notBadParagraph) {
+    (notBadParagraph as HTMLParagraphElement).textContent = 'This is not bad.';
+}
+
+
+
+
+// // --- Index Properties ---
+interface ErrorContainer { // {email: 'not a valid email', username: 'must start with a charcter'}    
+    [prop: string]: string; // butun property ler string olmak zorunda demek istedik.
+} 
+const errorBag: ErrorContainer = {
+    email: 'not a valid email!',
+    1: 'not a valid email', 
+    username: 'Must start with a capital character!'
+}
+
+
+
+// // --- Function Overloads ---
+// bu ornekte typeScript a ve b nin ve hatta function sonuclarinin string veya number oldugunu bilmiyor. Ona biz soyluyoruz. Bunun icin bu islem.
+type Combinablely = number | string;
+type Numericly = number | boolean;
+type Universally = Combinablely & Numericly;
+
+function addly(a: number, b: number): number; // these methods are function overloads
+function addly(a: string , b: string): string; // burada tum combinasyonlari yaziyoruz
+function addly(a: string , b: number): string;
+function addly(a: number , b: number): string; // this function is information 
+
+function addly(a: Combinablely, b: Combinablely) { // this function is declaration
+    if(typeof a === 'string' || typeof b === 'string') {
+        return a.toString() + b.toString();
+    }
+    return a + b;
+}
+const resulty = addly('Max', 'Caroline'); // mouse un imlecini (addly) nin uzerine getirisen (3+ overloads) var
+resulty.split(' ');
+
+
+
+
+// // --- Optional Chaining --- 
+// eger optional chaining i kullanmaz isek console da (error) aliriz
+// ama optional chaining i kullanir isek console da ( undefined ) ile karsilasiriz.  
+const fetchedUserData = {
+    id: 'u1',
+    name: 'Deniz',
+    job: {title: 'CEO', description: 'My own company'}
+}
+console.log(fetchedUserData?.job?.title);
+
+
+
+
+
+// // --- Nullish Coalescing ---
+// // sadece null ve undefined durumlarinda kullanilir ve cift soru isereti ( ?? ) ile yapilir.
+
+// const userInput = null;  
+// const userInput = undefined;
+const userInput = '';
+// const storedData = userInput || "FOSIK";  // userInput [ null - undefined - empty string ] oldugunda FOSIK i dondurur
+const storedData = userInput ?? "FOSIK";    // bu method un adi is [ Nullish Coalescing ] tir, [ null - undefined ] oldugunda FOSIK i dondurur. Fark budur.
+console.log(storedData);
