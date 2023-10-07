@@ -37,3 +37,43 @@ function extractAndCover(obj, key) {
     return obj[key];
 }
 extractAndCover({ name: 'Max' }, "name");
+// // --- Generic Classes ---
+// // working with primitive type, that is the good idea. Reference type to delete something (name, age, etc) not easy. cause that's the Javascript.
+class DataStorage {
+    constructor() {
+        this.data = [];
+    }
+    addItem(item) {
+        this.data.push(item);
+    }
+    removeItem(item) {
+        this.data.splice(this.data.indexOf(item), 1);
+    }
+    getItems() {
+        return [...this.data];
+    }
+}
+const textStorage = new DataStorage();
+textStorage.addItem('Max');
+textStorage.addItem('Caroline');
+textStorage.removeItem('Max');
+console.log(textStorage.getItems());
+const numberStorage = new DataStorage();
+numberStorage.addItem(33);
+numberStorage.addItem(54);
+numberStorage.addItem(4080);
+numberStorage.removeItem(54);
+console.log(numberStorage.getItems());
+function createCourseGoal(title, description, date) {
+    let courseGoal = {};
+    courseGoal.title = title;
+    courseGoal.description = description;
+    courseGoal.completeUntil = date;
+    return courseGoal;
+}
+// // --- Readonly ---
+const names2 = ['Max', 'Anna'];
+// names2.push('Manu');
+// names2.pop();
+// // --- Generic Types vs Union Types ---
+// Konu hakkinda section 7 deki --Generic Types vs Union Types-- isimli video yu izleyebilir ve de chatgpt den yararlanabilirsin
