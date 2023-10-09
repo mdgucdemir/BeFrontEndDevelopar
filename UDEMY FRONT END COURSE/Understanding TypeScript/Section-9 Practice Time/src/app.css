@@ -1,0 +1,10 @@
+html {
+    background-color: black;
+    color: greenyellow;
+}
+
+form > input {
+    background-color: white;
+    color: black;
+    
+}
