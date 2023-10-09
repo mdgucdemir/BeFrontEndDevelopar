@@ -16,7 +16,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 // }
 // // --- Working with Decorator Factories ---
 function Logger(logString) {
-    console.log('This is `Logger Console`.');
+    console.log("This is `Logger Console`.");
     return function (constructor) {
         console.log(logString);
         console.log(constructor);
@@ -24,51 +24,56 @@ function Logger(logString) {
 }
 // // --- Building Most Useful Decorators ---
 function WithTemplate(tamplate, hookId) {
-    console.log('This is `With Template Console`.');
+    console.log("This is `With Template Console`.");
     // return function(_:Function) {
-    return function (constructor) {
-        console.log('Faso Fosik');
-        const hookEl = document.getElementById(hookId);
-        const p = new constructor();
-        if (hookEl) {
-            hookEl.innerHTML = tamplate;
-            hookEl.querySelector('h1').textContent = p.name;
-        }
+    return function (originalConstructor) {
+        return class extends originalConstructor {
+            constructor(..._) {
+                super();
+                console.log("Faso Fosik");
+                const hookEl = document.getElementById(hookId);
+                // const p = new originalConstructor();
+                if (hookEl) {
+                    hookEl.innerHTML = tamplate;
+                    hookEl.querySelector("h1").textContent = this.name;
+                }
+            }
+        };
     };
 }
 let Person = class Person {
     constructor() {
         this.name = "Deniz";
-        console.log('Creating Person Object...');
+        console.log("Creating Person Object...");
     }
 };
 Person = __decorate([
-    Logger('LOGGING-PERSON') // this is decorator. If you want make decorator you must use this symbol ' @ '.
+    Logger("LOGGING-PERSON") // this is decorator. If you want make decorator you must use this symbol ' @ '.
     ,
-    WithTemplate('<h1>My Person Object</h1>', 'app')
+    WithTemplate("<h1>My Person Object</h1>", "app")
 ], Person);
 const pers = new Person();
 console.log(pers);
 // // --- Diving into Property Decorators ---
 function Log(target, propertyName) {
-    console.log('Property decorator!');
+    console.log("Property decorator!");
     console.log(target, propertyName);
 }
 // // --- Accesor & Parameter Decorators ---
 function Log2(target, name, descriptor) {
-    console.log('Accessor decorator!');
+    console.log("Accessor decorator!");
     console.log(target);
     console.log(name);
     console.log(descriptor);
 }
 function Log3(target, name, descriptor) {
-    console.log('Method decorator!');
+    console.log("Method decorator!");
     console.log(target);
     console.log(name);
     console.log(descriptor);
 }
 function Log4(target, name, position) {
-    console.log('Parameter decorator!');
+    console.log("Parameter decorator!");
     console.log(target);
     console.log(name);
     console.log(position);
@@ -79,7 +84,7 @@ class Product {
             this._price = val;
         }
         else {
-            throw new Error('Invalid price - should be positive!');
+            throw new Error("Invalid price - should be positive!");
         }
     }
     constructor(t, p) {
