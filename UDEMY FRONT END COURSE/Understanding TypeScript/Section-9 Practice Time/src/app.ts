@@ -43,7 +43,41 @@ function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
     return adjDescriptor;
 }
 
-// ProjetInput Class ---DOM Element Selection & OOP Rendering ---
+// ProjectList Class
+class ProjectList {
+    templateElement: HTMLTemplateElement;
+    hostElement: HTMLDivElement;
+    element: HTMLElement;
+
+    constructor(private type: 'active' | 'finished') {
+        this.templateElement = document.getElementById(
+            "project-list"
+        )! as HTMLTemplateElement;
+        this.hostElement = <HTMLDivElement>document.getElementById("app")!;
+
+        const importedNode = document.importNode(
+            this.templateElement.content,
+            true
+        );
+        this.element = importedNode.firstElementChild as HTMLElement;
+        this.element.id = `${this.type}-projects`;
+        this.attach();
+        this.renderContent();
+    }
+
+    renderContent() {
+        const listId = `${this.type}-projects-list`;
+        this.element.querySelector('ul')!.id = listId;
+        this.element.querySelector('h2')!.textContent = this.type.toUpperCase() + ' PROJECTS';
+    }
+
+    private attach() {
+        this.hostElement.insertAdjacentElement("beforeend", this.element);
+    }
+}
+
+
+// ProjetInput Class
 class ProjectInput {
     templateElement: HTMLTemplateElement;
     hostElement: HTMLDivElement;
@@ -92,7 +126,7 @@ class ProjectInput {
             value: enteredDescription,
             required: true,
             minLength: 5
-        };
+        }; 
         const peopleValidatable: Validatable = {
             value: +enteredPeople,
             required: true,
@@ -139,4 +173,7 @@ class ProjectInput {
     }
 }
 
+// Render olmasi icin bunlari burada bu sekilde atama yapmalisin yoksa render olmuyorlar
 const prjInput = new ProjectInput();
+const activePrjList = new ProjectList('active');
+const finishedPrjList = new ProjectList('finished');
