@@ -15,7 +15,10 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.14.0",
     "lodash": "^4.17.21",
+    "reflect-metadata": "^0.1.13",
     "ts-loader": "^9.5.0",
     "typescript": "^5.2.2",
     "webpack": "^5.89.0",
