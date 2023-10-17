@@ -11,10 +11,12 @@
   "author": "Mehmet Deniz Gucdemir",
   "license": "ISC",
   "devDependencies": {
+    "@types/google.maps": "^3.54.3",
     "@types/lodash": "^4.14.199",
     "lite-server": "^2.6.1"
   },
   "dependencies": {
+    "axios": "^1.5.1",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.0",
     "lodash": "^4.17.21",
