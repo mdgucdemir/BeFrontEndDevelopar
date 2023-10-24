@@ -1,0 +1,62 @@
+
+/* icons */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* icons end */
+
+
+/* universal secletor start*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/* universal secletor end*/
+body {
+    font-family: sans-serif;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar {
+    position: sticky;
+    background-color: rgb(20, 20, 20);
+    width: auto;
+    height: auto;
+    min-height: 70px;  
+    display: flex;   
+    align-items: center;
+    justify-content: space-between;  
+    padding: 0 4%;   
+    
+}
+.navbar-metflix {
+    color: red !important;
+    font-size: 2rem;
+    font-family: 'Questrial', sans-serif;
+}
+.navbar-icons{
+    display: flex;
+    column-gap: 20px;
+    list-style: none;
+    color: white;
+    align-items: center;
+}
+.navbar-list {
+    display: flex;
+    list-style: none;
+    column-gap: 20px;
+}
+.profile-pic {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;    
+}
+.bi-search {
+    font-size: 2rem;
+}
+.bi-bell {
+    font-size: 1.5rem;
+}
