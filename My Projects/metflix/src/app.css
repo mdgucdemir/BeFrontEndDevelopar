@@ -163,6 +163,8 @@ a:hover {
     display: flex;
     column-gap: 30px;
     align-items: center;
+    transform: translateX(0);   
+    transition: 1s all ease-in-out; 
 }
 .movie-item-img {
     width: 270px;
