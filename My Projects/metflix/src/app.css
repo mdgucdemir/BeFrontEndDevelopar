@@ -12,25 +12,45 @@
     padding: 0;
 }
 /* universal secletor end*/
+
 body {
     font-family: sans-serif;
+    height: 200vh;
+    
 }
+.container {
+    background-color: rgb(20, 20, 20);
+    color: white;
+}
+
+/* navbar css start */
 a {
     color: white;
     text-decoration: none;
 }
-
-.navbar {
-    position: sticky;
+a:hover {
+    opacity: .5;
+}
+.navbar {    
     background-color: rgb(20, 20, 20);
-    width: auto;
-    height: auto;
-    min-height: 70px;  
-    display: flex;   
-    align-items: center;
-    justify-content: space-between;  
-    padding: 0 4%;   
+    width: 100%;
+    height: 70px;   
+    position: fixed;
+    top: 0;
+    z-index: 1;
     
+    /* display: flex;    */
+    /* align-items: center; */
+    /* justify-content: space-between;   */
+    /* padding: 0 4%;    */
+    
+}
+.navbar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
 }
 .navbar-metflix {
     color: red !important;
@@ -59,4 +79,148 @@ a {
 }
 .bi-bell {
     font-size: 1.5rem;
+}
+/* navbar css end */
+
+/* featured start */
+.featured-content {
+    background: url("img/13-spiderman.jpg");
+    padding: 50px;
+    height: calc(100vh - 170px);
+    background-size: 100% 100%;
+}
+.eatured-title {
+    width: 400px;    
+}
+.featured-description {
+    width: 500px;
+    background-color: rgba(255, 225, 225, 0.5);
+    padding: 10px;
+    margin: 30px 0;
+}
+.featured-buttons {
+    display: flex;
+    column-gap: 20px;
+}
+.featured-buttons button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    column-gap: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 2s all ease;
+}
+.featured-buttons .info-button {
+    background-color: rgba(142, 142, 142, 0.5);
+    color: white;
+}
+.featured-buttons button:hover {
+    background-color: rgb(18, 130, 235);
+    color: white;
+}
+/* featured end */
+
+/* filter start */
+.movie-list-filter {
+    margin: 20px 0 20px 50px;
+    padding: 20px 0;
+}
+.movie-list-filter select{
+    background-color: rgb(20, 20, 20);
+    color: white;
+    padding: 5px 5px;
+    width: 130px;
+}
+/* filter end */
+
+/* movie list start */
+.movie-list-item {
+    position: relative;
+}
+.movie-list-item:hover .movie-item-title,
+.movie-list-item:hover .movie-item-buttons{
+    opacity: 1;    
+}
+.movie-list-item:hover .movie-item-img:hover {
+    transform: scale(1.3);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+.movie-list-container {
+    margin: 50px;
+}
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.movie-list {
+    list-style: none;
+    height: 300px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+}
+.movie-item-img {
+    width: 270px;
+    height: 200px;
+    object-fit: fill;    
+    transition: 1s all ease;
+}
+
+.movie-item-title {
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 40px;    
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.movie-item-buttons {
+    background-color: rgba(40, 40, 40, 0.4);
+    padding: 10px;    
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 40px;  
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+.movie-item-buttons i{
+   cursor: pointer;
+   opacity: .7;
+   font-size: 20px;
+   transition: 0.5s all ease;
+}
+.movie-item-buttons i:hover{
+    opacity: 1;
+ }
+/* movie list end */
+
+.arrow {
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    opacity: .5;
+    transition: .5s all ease;
+    cursor: pointer;
+}
+.arrow:hover {    
+    opacity: 1;
+}
+.bi-chevron-left {
+    left: 0;
+}
+.bi-chevron-right {
+    right: 0;
 }
