@@ -54,7 +54,7 @@ body {
   border: none;
   font-size: 1rem;
   transition: all 0.3s ease;
-  line-height: 1.1;
+  line-height: 1.1;  
 }
 
 .btn:hover {

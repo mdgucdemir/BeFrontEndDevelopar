@@ -14,7 +14,7 @@ const Header = () => {
               <Link to={'/watched'}>Watched Lists</Link>
             </li>
             <li>
-              <Link to={"/add"}>
+              <Link to={"/add"} className='btn'>
               <i className='fas fa-plus'></i>
               </Link>              
             </li>
