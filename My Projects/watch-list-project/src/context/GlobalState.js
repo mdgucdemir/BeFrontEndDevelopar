@@ -2,7 +2,7 @@ import { createContext, useEffect, useReducer } from "react";
 import AppReducer from "./AppReducer";
 
 // create context
-export const GlobalContext = createContext(); // react in bir ozelligi. Redux ile de yapilabilir ama bu uygulamayi Global Context ile yapacagiz
+export const GlobalContext = createContext(); // react in bir ozelligi. Redux ile de yapilabilir ama bu uygulamayi createContext ile yapacagiz
 
 const initialState = {
   watchlist: localStorage.getItem("watchlist")
@@ -17,7 +17,7 @@ const initialState = {
 export const GlobalProvider = (props) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  useEffect(() => {
+  useEffect(() => {// localStorage a kayit edilenleri sayfa yenilendiginde kayitlar gitmesin diye yaptik
     localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
     localStorage.setItem("watched", JSON.stringify(state.watched));
   }, [state]);
