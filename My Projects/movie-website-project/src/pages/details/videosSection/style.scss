@@ -3,9 +3,11 @@
     position: relative;
     margin-bottom: 50px;
     .sectionHeading {
-        font-size: 24px;
+        font-size: 30px;
         color: white;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: start;
     }
     .videos {
         display: flex;
