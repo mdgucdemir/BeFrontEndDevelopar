@@ -53,7 +53,7 @@ const Header = () => {
           {
             headerNav.map((e, i) => (
               <li key={i} className={`${i === active ? 'active' : ''}`}>
-                <Link>{e.display}</Link>
+                <Link to={e.path}>{e.display}</Link>
               </li>
             ))
           }

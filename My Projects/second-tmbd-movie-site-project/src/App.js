@@ -18,7 +18,7 @@ function App() {
   
   return (
     <BrowserRouter >
-      <Header />
+      <Header/>
       <Routes>
         <Route path='/:category/search/:keyword' element={<Catalog />} />
         <Route path='/:category/:id' element={<Detail />} />
