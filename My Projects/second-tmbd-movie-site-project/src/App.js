@@ -4,6 +4,7 @@ import "./App.scss";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
@@ -14,6 +15,7 @@ import NotFound from './pages/NotFound';
 
 
 function App() {
+  
   return (
     <BrowserRouter >
       <Header />
