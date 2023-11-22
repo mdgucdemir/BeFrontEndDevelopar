@@ -61,22 +61,25 @@ const HeroSlide = () => {
 
 const HeroSlideItem = (props) => {
   let navigate = useNavigate();
+
   const item = props.item;
   const background = apiConfig.originalImage(
     item.backdrop_path ? item.backdrop_path : item.poster_path
   );
 
+  
   const setModalActive = async () => {
     const modal = document.querySelector(`#modal_${item.id}`);
     const videos = await tmdbApi.getVideos(category.movie, item.id);
+    
 
-    if (videos.results.lenght > 0) {
+    if (videos.results.length > 0) {
       const videoSrc = "https://www.youtube.com/embed/" + videos.results[0].key;
       modal
         .querySelector(".modal_content > iframe")
         .setAttribute('src', videoSrc);
     } else {
-      modal.querySelector(".modal_content").innerHTML = "No Trailer";
+      modal.querySelector("modal_content_close");      
     }
     modal.classList.toggle("active");
   };
@@ -92,12 +95,12 @@ const HeroSlideItem = (props) => {
           <div className="overview">{item.overview}</div>
           <div className="btns">
             <Button
-            // onClick={navigate(`/movie/${item.id}`)} // active olunca resimler gidiyor
+              onClick={setModalActive}            
             >
-              Watch Now
+              Watch Trailer
             </Button>
-            <OutlineButton onClick={setModalActive}>
-              Watch trailer
+            <OutlineButton onClick={() => navigate(`/movie/${item.id}`)}>
+              Get Info Movie             
             </OutlineButton>
           </div>
         </div>
