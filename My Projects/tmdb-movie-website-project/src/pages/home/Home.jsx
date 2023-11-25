@@ -1,18 +1,11 @@
 import React from 'react'
-import './style.scss'
+import Banner from '../../components/banner/Banner'
 
-import Banner from './banner/Banner';
-import Popular from './popular/Popular';
-import TopRated from './topRated/TopRated';
-import Trending from './trending/Trending';
 
 const Home = () => {
   return (
-    <div className='home'>
+    <div>
       <Banner />
-      <Trending />
-      <Popular />
-      <TopRated />
     </div>
   )
 }

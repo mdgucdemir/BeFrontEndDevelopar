@@ -1,10 +1,9 @@
 import React from 'react'
-import './style.scss'
 
-const Explore = () => {
+const Discover = () => {
   return (
-    <div>Explore</div>
+    <div>Discover</div>
   )
 }
 
-export default Explore
+export default Discover
