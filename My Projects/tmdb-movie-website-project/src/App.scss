@@ -1,6 +1,6 @@
-@use './sass/' as *;
+@use "./sass/" as *;
 
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@100;300;400&family=Montserrat:wght@300;400;500;600;700;900&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Inter:wght@100;300;400&family=Montserrat:wght@300;400;500;600;700;900&family=Roboto+Condensed&family=Roboto+Mono&family=Roboto:wght@100&display=swap");
 
 * {
     padding: 0;
@@ -11,7 +11,6 @@
 
 html {
     font-size: 100%;
-
 
     @include tablet {
         font-size: 80%;
@@ -26,10 +25,9 @@ body {
     font-family: $font-family;
     font-weight: 400;
     line-height: 1.5;
-    
+
     background-color: $body-color;
-    // color: $white;
-    
+    // color: unset;
 
     @include mobile {
         margin-bottom: 3rem;

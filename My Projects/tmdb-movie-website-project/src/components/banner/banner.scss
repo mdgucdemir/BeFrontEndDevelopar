@@ -1,5 +1,4 @@
-
-@use '../../sass/' as *;
+@use "../../sass/" as *;
 
 .banner-slide {
     margin-bottom: 3rem;
@@ -8,34 +7,33 @@
 .hero-slide-item {
     padding: 8rem 0;
     width: 100%;
-    
+
     position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        
     }
 
-    &::after{
-        content: '';
+    &::after {
+        content: "";
         position: absolute;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(to top, $body-color, rgba($black, 0));
+        // background-image: linear-gradient(to top, $body-color, rgba($black, 0));
     }
 
     .hero-slide-item-content {
-        @include flex(center,center);
+        @include flex(center, center);
         position: relative;
 
         .hero-slide-item-content-info {
@@ -55,7 +53,6 @@
                 font-size: 5rem;
                 font-weight: 700;
                 line-height: 1;
-                
 
                 @include tablet {
                     font-size: 4rem;
@@ -71,14 +68,12 @@
         .hero-slide-item-content-poster {
             flex: 1;
             position: relative;
-            @include flex(center,flex-start);
+            @include flex(center, flex-start);
 
             img {
                 width: 400px;
                 border-radius: $border-radius;
                 box-shadow: $box-shadow;
-
-                
             }
         }
     }

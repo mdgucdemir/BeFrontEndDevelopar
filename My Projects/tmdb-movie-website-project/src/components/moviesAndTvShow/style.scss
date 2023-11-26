@@ -1,0 +1,15 @@
+@use "../../sass/view" as *;
+
+.movie-list {
+    .swiper-slide {
+        width: 15%;
+        color: white;
+    }
+    // @include mobile {
+    //     width: 40%;
+    // }
+
+    // @include tablet {
+    //     width: 30%;
+    // }
+}
