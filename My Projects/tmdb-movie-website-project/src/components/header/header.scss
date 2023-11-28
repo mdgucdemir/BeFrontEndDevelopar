@@ -6,17 +6,13 @@
     position: fixed;
     top: 0;
     z-index: 99;
-    background-color: transparent;
+    background: rgba($color: $black, $alpha: 0.5);
 
     .header-wrapper {
         @include flex(center, space-between);
         height: 100%;
         margin: 0 auto;
         padding: 0 4rem;
-
-        // @include mobile {
-        //     justify-content: center;
-        // }
 
         .header-logo {
             font-size: 2.5rem;
@@ -51,14 +47,13 @@
             svg {
                 font-size: 1.2rem;
                 color: $white;
-                
+
                 cursor: pointer;
                 :hover {
                     color: $pink;
-                    
                 }
                 @include mobile {
-                    font-size: 1.7rem
+                    font-size: 1.7rem;
                 }
             }
 
@@ -67,7 +62,6 @@
                 & > * ~ * {
                     margin-left: 2rem;
                 }
-                
 
                 @include mobile {
                     @include flex(center, space-between);
@@ -79,7 +73,7 @@
                 .header-nav-item {
                     font-size: 1.5rem;
                     font-weight: 600;
-                    color: $white;                    
+                    color: $white;
 
                     :hover {
                         color: $pink;

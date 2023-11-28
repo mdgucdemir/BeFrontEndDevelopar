@@ -1,15 +1,50 @@
-@use "../../sass/view" as *;
+@use "../../sass/" as *;
 
 .movie-list {
+    margin-top: 3rem;
+    padding: 0 4rem;
+    .movie-list-top {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        font-weight: 600;
+        color: $white;
+        @include flex(center, space-between);
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
     .swiper-slide {
         width: 15%;
-        color: white;
-    }
-    // @include mobile {
-    //     width: 40%;
-    // }
+        color: $white;
 
-    // @include tablet {
-    //     width: 30%;
-    // }
+        @include mobile {
+            width: 40%;
+        }
+
+        @include tablet {
+            width: 30%;
+        }
+
+        .title {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+    }
+
+    .movie-list-top-more {
+        border: 2px solid $white;
+        padding: 0.5rem 1.8rem;
+        border-radius: 50px;
+        cursor: pointer;
+        background-color: transparent;
+
+        @include mobile {
+            display: none;
+        }
+    }
+    .movie-list-top-more:hover {
+        background: $orange-gradient;
+        border: 2px solid orange;
+    }
 }

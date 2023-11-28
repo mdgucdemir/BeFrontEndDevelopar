@@ -24,3 +24,27 @@ export const fetchApi = (media, mediaType) => {
       })
   );
 };
+
+export const searchFetchApi = async (query, pageNum) => {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1Y2MwZjA5MGI1NTc2MWIxMmU2ZGViZmNiYTE5NGUzYyIsInN1YiI6IjY1M2JlYjQ5YmMyY2IzMDEyYzMwYTYzYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.k7xUd3UEeRVHZdDi0M5hrnx5nXvEtSX_MYCEIggmmGs",
+    },
+  };
+
+  return fetch(
+    `https://api.themoviedb.org/3/search/multi?query=${query}&language=en-US&page=${pageNum}`,
+    options
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err);
+      return [];
+    });
+};

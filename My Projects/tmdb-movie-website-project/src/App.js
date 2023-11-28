@@ -1,14 +1,12 @@
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './App.scss';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-import Header from './components/header/Header';
-import Footer from './components/footer/Footer';
-import Home from './pages/home/Home';
-import Details from './pages/details/Details';
-import Discover from './pages/discover/Discover';
-
-
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+import Home from "./pages/home/Home";
+import Details from "./pages/details/Details";
+import Discover from "./pages/discover/Discover";
+import SearchResult from "./pages/searchResult/SearchResult";
 
 function App() {
   return (
@@ -16,9 +14,10 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/details' element={<Details />} />
-          <Route path='/discover' element={<Discover />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/details" element={<Details />} />
+          <Route path="/discover" element={<Discover />} />
+          <Route path="/search/:query" element={<SearchResult />} />
         </Routes>
         <Footer />
       </BrowserRouter>

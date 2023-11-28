@@ -1,22 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./header.scss";
 
 import logo from "../../assets/tmovie.png";
 import { BsSearch } from "react-icons/bs";
 import { VscChromeClose } from "react-icons/vsc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [searchShow, setSearchShow] = useState("");
-  const [mobileView, setMobileView] = useState(false);
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
+
+  const searchQueryHandler = (event) => {
+    if (event.key === "Enter" && query.length > 0) {
+      navigate(`/search/${query}`);
+      setSearchShow(false);
+    }
+  };
 
   const openSearch = () => {
     setSearchShow(true);
-    setMobileView(false);
   };
 
   return (
-    <header className={`header ${mobileView ? "mobileView" : ""}`}>
+    <header className="header">
       <div className="header-wrapper">
         <div className="header-logo">
           <img src={logo} alt="logo" />
@@ -43,7 +50,12 @@ const Header = () => {
         <div className="searchBar">
           <div className="searchBar-wrapper">
             <div className="searchInput">
-              <input type="text" placeholder="Search Movie or Tv Show..." />
+              <input
+                type="text"
+                placeholder="Search Movie or Tv Show..."
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyUp={searchQueryHandler}
+              />
               <VscChromeClose onClick={() => setSearchShow(false)} />
             </div>
           </div>
