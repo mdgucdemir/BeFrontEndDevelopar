@@ -1,7 +1,7 @@
 @use "../../sass/" as *;
 
 .header {
-    height: 8rem;
+    height: 5rem;
     width: 100%;
     position: fixed;
     top: 0;
@@ -101,7 +101,7 @@
         height: 60px;
         background-color: $white;
         position: absolute;
-        top: 8rem;
+        top: 5rem;
         animation: searchBarMenu 0.7s ease;
 
         .searchBar-wrapper {

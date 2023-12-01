@@ -8,16 +8,17 @@ import "./searchResult.scss";
 const SearchResult = () => {
   const [pageNum, setPageNum] = useState(1);
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const { query } = useParams();
+  const notHave = " Not Found";
 
   const fetchInitialData = () => {
-    setLoading(true);
+    // setLoading(true);
     searchFetchApi(query, pageNum).then((res) => {
       setData(res);
       console.log(res);
       setPageNum((prev) => prev + 1);
-      setLoading(false);
+      // setLoading(false);
     });
   };
 
@@ -29,16 +30,26 @@ const SearchResult = () => {
   return (
     <div className="searchResultsPage">
       <div className="content-wrapper">
-        <div className="page-title">{query}</div>
-        <InfiniteScroll
-          className="content"
-          dataLength={data?.results?.length || []}
-          hasMore={pageNum <= data?.total_pages}
-        >
-          {data?.results.map((item, i) => (
-            <MovieCard key={i} item={item} />
-          ))}
-        </InfiniteScroll>
+        {data?.results.length > 0 ? (
+          <>
+            <div className="page-title">{query}</div>
+            <InfiniteScroll
+              className="content"
+              dataLength={data?.results?.length || []}
+              next={fetchInitialData}
+              hasMore={pageNum <= data?.total_pages}
+            >
+              {data?.results.map((item, i) => (
+                <MovieCard key={i} item={item} mediaType={item.media_type} />
+              ))}
+            </InfiniteScroll>
+          </>
+        ) : (
+          <span className="no-result">
+            {query}
+            {notHave}
+          </span>
+        )}
       </div>
     </div>
   );

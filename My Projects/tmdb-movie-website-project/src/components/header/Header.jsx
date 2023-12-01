@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import "./header.scss";
 
 import logo from "../../assets/tmovie.png";
@@ -35,13 +35,13 @@ const Header = () => {
           </div>
           <ul className="header-nav">
             <li className="header-nav-item">
-              <Link to="/my-list">My List</Link>
+              <Link to="/">Home</Link>
             </li>
             <li className="header-nav-item">
-              <Link to="/movies">Movies</Link>
+              <Link to="/discover/movie/top_rated">Movies</Link>
             </li>
             <li className="header-nav-item">
-              <Link to="/tv">Tv Shows</Link>
+              <Link to="/discover/tv/top_rated">Tv Shows</Link>
             </li>
           </ul>
         </div>

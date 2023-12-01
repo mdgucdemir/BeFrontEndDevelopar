@@ -1,0 +1,41 @@
+@use "../../sass/" as *;
+
+.discover {
+    // min-height: 700px;
+    margin: 0 2.5rem;
+    padding-top: 8rem;
+    color: white;
+}
+.discover-wraper {
+    // width: 100%;
+    // max-width: 1200px;
+    // margin: 0 auto;
+    // padding: 0 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+
+    @include tablet {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include mobile {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid-item {
+    width: 100%;
+    height: auto;
+}
+
+.discover-header {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 0.1rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}

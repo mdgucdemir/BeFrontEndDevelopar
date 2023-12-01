@@ -1,0 +1,141 @@
+@use "../../sass/" as *;
+
+.detail-page {
+    color: White;
+}
+
+.banner {
+    height: 50vh;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include overlay();
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-image: linear-gradient(to top, $body-color, rgba($black, 0));
+    }
+}
+
+.movie-content {
+    @include flex(flex-start, flex-start);
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding: 0 2rem;
+
+    &_poster {
+        flex: 1;
+        @include mobile {
+            display: none;
+        }
+        &_img {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: $border-radius;
+            padding-top: 165%;
+        }
+    }
+
+    .overview {
+        font-size: 1.4rem;
+    }
+
+    &_info {
+        width: 70%;
+        padding-left: 2rem;
+        position: relative;
+
+        @include mobile {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        & > * {
+            margin-bottom: 2rem;
+        }
+
+        .title {
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+        .genres {
+            & > * ~ * {
+                margin-left: 0.5rem;
+            }
+            &_item {
+                padding: 0.5rem 1.5rem;
+                border: 2px solid $white;
+                border-radius: $border-radius;
+                font-size: 0.8rem;
+                font-weight: 600;
+                background-color: $body-color;
+            }
+        }
+    }
+}
+
+.casts {
+    .swiper-slide {
+        width: 25%;
+
+        @include tablet {
+            width: 40%;
+        }
+
+        @include mobile {
+            width: 50%;
+        }
+    }
+
+    &_item {
+        &_img {
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 0.5rem;
+            height: 300px;
+        }
+
+        &_name {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.add-my-list {
+    border: 4px solid transparent;
+    background-color: $body-color;
+    color: $white;
+    border-radius: $border-radius;
+    padding: 0.5rem 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: 3px solid $white;
+    transition: box-shadow 0.3 ease;
+    position: relative;
+    cursor: pointer;
+}
+.add-my-list:hover {
+    box-shadow: unset;
+    color: $body-color;
+    background-color: $white;
+}

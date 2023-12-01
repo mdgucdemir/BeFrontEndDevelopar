@@ -5,6 +5,18 @@
     padding-top: 8rem;
     color: white;
 
+    .no-result {
+        font-size: 5rem;
+        font-weight: 600;
+        padding-top: 6rem;
+        opacity: 0.7;
+        @include flex(center, center);
+
+        @include mobile {
+            font-size: 3rem;
+        }
+    }
+
     .content-wrapper {
         width: 100%;
         max-width: 1200px;
