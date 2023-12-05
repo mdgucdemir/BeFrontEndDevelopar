@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 export const storeSlice = createSlice({
   name: "mainStore",
@@ -11,7 +10,7 @@ export const storeSlice = createSlice({
     addWatchList: (state, action) => {
       state.watch.push(action.payload);
     },
-    addWatchedList: (state, action) => {      
+    addWatchedList: (state, action) => {
       state.watch = state.watch.filter(
         (movie) => movie.id !== action.payload.id
       );

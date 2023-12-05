@@ -76,7 +76,7 @@ input:focus {
 
 /* Header Styles */
 header {
-  background-color: var(--primary);  
+  background-color: var(--primary);    
 }
 
 
@@ -110,6 +110,7 @@ header .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
+
 }
 
 header .nav-links li {
@@ -126,7 +127,7 @@ header .nav-links li:last-child {
 }
 
 /* Add Page */
-.add-content {
+.add-content {  
   padding: 50px 0;
   margin: 0 auto;
   height: 300px;
@@ -134,7 +135,7 @@ header .nav-links li:last-child {
 }
 
 .add-content>img {
-  position: absolute;
+  position: absolute;    
   top: 0;
   left: 0;
   width: 1140px;
