@@ -1,37 +1,39 @@
-<h3 *ngIf="products; else noProduct">{{ title }}</h3>
+<div class="product-component">
+  <h3 *ngIf="products; else noProduct" style="padding: 0 1rem">{{ title }}</h3>
 
-<div class="mb-3">
-  <input
-    class="form-control"
-    id="productName"
-    placeholder="Search Product"
-    [(ngModel)]="filterText"
-  />
-  <div *ngIf="filterText" class="form-text">
-    You looking right now <strong>{{ filterText }}</strong>
+  <div class="mb-3" style="padding: 0 1rem">
+    <input
+      class="form-control"
+      id="productName"
+      placeholder="Search Product"
+      [(ngModel)]="filterText"
+    />
+    <div *ngIf="filterText" class="form-text">
+      You looking right now <strong>{{ filterText }}</strong>
+    </div>
   </div>
-</div>
 
-<div class="row">
-  <ng-template #noProduct>
-    <div class="alert-alert-primary" role="alert">No Product</div>
-  </ng-template>
+  <div class="row" style="padding: 0 5rem">
+    <ng-template #noProduct>
+      <div class="alert-alert-primary" role="alert">No Product</div>
+    </ng-template>
 
-  <div
-    *ngFor="let product of products | productFilter : filterText"
-    class="card"
-    style="width: 18rem"
-  >
-    <img [src]="product.imageUrl" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h5 class="card-title">{{ product.name | uppercase }}</h5>
-      <p class="card-text">
-        {{ product.description }}
-      </p>
-      <p class="card-text">
-        {{ product.price | currency : "USD" : true : "1.1-1" }}
-      </p>
-      <a (click)="addToCart(product)" class="btn btn-primary">Add to Cart</a>
+    <div
+      *ngFor="let product of products | productFilter : filterText"
+      class="card"
+    >
+      <img [src]="product.imageUrl" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ product.name | uppercase }}</h5>
+        <p class="card-text">
+          {{ product.description }}
+        </p>
+        <p class="card-text-price">
+          <span class="price">Price:</span>
+          {{ product.price | currency : "USD" : true : "1.1-1" }}
+        </p>
+        <a (click)="addToCart(product)" class="btn btn-primary">Add to Cart</a>
+      </div>
     </div>
   </div>
 </div>

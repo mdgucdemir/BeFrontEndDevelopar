@@ -1,0 +1,35 @@
+.card {
+    width: 18rem;
+    height: 35rem;
+    margin: 1rem;
+    position: relative;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 16rem;
+    object-fit: contain;
+    margin: 15px 0;
+}
+
+.card-text-price {
+    position: absolute;
+    bottom: 4rem;
+}
+
+.btn {
+    position: absolute;
+    bottom: 1rem;
+    align-items: center;
+}
+
+.price {
+    font-size: large;
+    font-weight: 500;
+}
