@@ -1,10 +1,16 @@
 <div>
-  <div class="nav-scroller py-1 mb-3 border-bottom">
+  <div class="nav-scroller py-1 border-bottom">
     <nav class="nav nav-underline justify-content-around">
+      <a
+        class="nav-item nav-link link-body-emphasis"
+        routerLink="/products"
+        href="#"
+        >All Products</a
+      >
       <a
         *ngFor="let category of categories"
         class="nav-item nav-link link-body-emphasis"
-        routerLink="products/category/{{ category.id }}"
+        routerLink="/products/category/{{ category.id }}"
         href="#"
         >{{ category.name }}</a
       >

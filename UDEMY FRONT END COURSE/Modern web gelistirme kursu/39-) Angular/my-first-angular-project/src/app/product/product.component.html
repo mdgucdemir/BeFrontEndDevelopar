@@ -1,5 +1,7 @@
 <div class="product-component">
-  <h3 *ngIf="products; else noProduct" style="padding: 0 1rem">{{ title }}</h3>
+  <h3 *ngIf="products; else noProduct" style="padding: 0 1rem; margin: 1rem 0">
+    {{ title }}
+  </h3>
 
   <div class="mb-3" style="padding: 0 1rem">
     <input
@@ -13,7 +15,7 @@
     </div>
   </div>
 
-  <div class="row" style="padding: 0 5rem">
+  <div class="row" style="padding: 0 1rem">
     <ng-template #noProduct>
       <div class="alert-alert-primary" role="alert">No Product</div>
     </ng-template>
