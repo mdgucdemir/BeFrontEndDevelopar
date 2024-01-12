@@ -11,6 +11,10 @@ import { CategoryComponent } from './category/category.component';
 import { ProductFilterPipe } from './product/product-filter.pipe';
 import { ProductAddForms1Component } from './product/product-add-forms1/product-add-forms1.component';
 import { ProductAddForms2Component } from './product/product-add-forms2/product-add-forms2.component';
+import { LoginComponent } from './login/login.component';
+import { AccountService } from './services/account.service';
+import { AlertifyService } from './services/alertify.service';
+import { LoginGuard } from './login/login.guard';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,7 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
     ProductFilterPipe,
     ProductAddForms1Component,
     ProductAddForms2Component,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,7 @@ import { ProductAddForms2Component } from './product/product-add-forms2/product-
     HttpClientModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [AlertifyService, AccountService, LoginGuard], // Merkezi bir noktadan (Global service) yonetilen service ler
   bootstrap: [AppComponent],
 })
 export class AppModule {}

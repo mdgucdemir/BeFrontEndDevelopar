@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 
 declare let alertify: any;
 
-@Injectable({
-  providedIn: 'root', // bu bir global service tir
-})
+@Injectable()
 export class AlertifyService {
   constructor() {}
 
