@@ -1,0 +1,109 @@
+<div class="container">
+  <h3>Bill</h3>
+
+  <!-- _-_ -->
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Name</label>
+        <input
+          class="form-control"
+          type="text"
+          (input)="onNameChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Name</b> </label>
+      <div>
+        <!-- Title Case Pipe -->
+        {{ name | titlecase }}
+      </div>
+    </div>
+  </div>
+  <!-- _-_ -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Payment Date</label>
+        <input
+          class="form-control"
+          type="date"
+          (input)="onDateChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Payment Date</b> </label>
+      <div>
+        <!-- Date Pipe -->
+        {{ date | date : "MMMM d,y" }}
+      </div>
+    </div>
+  </div>
+  <!-- _-_ -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Price</label>
+        <input
+          class="form-control"
+          type="number"
+          (input)="onMoneyChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Price</b> </label>
+      <div>
+        <!-- Currency Pipe -->
+        {{ money | currency : "USD" }}
+      </div>
+    </div>
+  </div>
+  <!-- _-_ -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Height</label>
+        <input
+          class="form-control"
+          type="number"
+          (input)="onHeightChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Height</b> </label>
+      <div>
+        <!-- Decimal Pipe -->
+        {{ heigth | number : "2.1-4" }}
+      </div>
+    </div>
+  </div>
+  <!-- _-_ -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Mile</label>
+        <input
+          class="form-control"
+          type="number"
+          (input)="onMilesChange($event)"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for=""><b>Km</b> </label>
+      <div>
+        <!-- Custom Pipe -->
+        {{ miles | convert : "km" }}
+      </div>
+    </div>
+  </div>
+  <!-- _-_ -->
+</div>
