@@ -1,0 +1,21 @@
+.mainArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: blueviolet;
+}
+
+.pending {
+    color: gray;
+}
+
+.currect {
+    color: rgb(16, 167, 16);
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
