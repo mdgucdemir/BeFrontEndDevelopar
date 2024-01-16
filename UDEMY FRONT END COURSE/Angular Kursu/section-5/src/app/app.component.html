@@ -29,7 +29,16 @@
   </nav>
 
   <div class="mainImg">
-    <h4 style="color: white">{{ images[currentPage].title }}</h4>
+    <h4 appFirst [backgroundColor]="'blue'" style="color: white">
+      {{ images[currentPage].title }}
+    </h4>
     <img class="Img" [src]="images[currentPage].url" />
   </div>
+
+  <!-- <div [ngSwitch]="currentPage">
+    <div *ngSwitchCase="0">ilk sayfadasin</div>
+    <div *ngSwitchCase="1">ikinci sayfadasin</div>
+    <div *ngSwitchCase="2">Ucuncu sayfadasin</div>
+    <div *ngSwitchDefault>ilk, ikinci veya ucuncu sayfada degilsin</div>
+  </div> -->
 </div>
