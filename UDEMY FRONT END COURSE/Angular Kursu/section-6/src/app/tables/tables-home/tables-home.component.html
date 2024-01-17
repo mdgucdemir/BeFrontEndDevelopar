@@ -1,0 +1,30 @@
+<app-divider> Satisfaction Survey </app-divider>
+
+<app-table></app-table>
+
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <!-- routerLink= "./" current page demek  -->
+      <a
+        routerLink="./"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="item"
+      >
+        Certificates
+      </a>
+      <a routerLink="./languages" routerLinkActive="active" class="item">
+        Languages
+      </a>
+      <a routerLink="./educations" routerLinkActive="active" class="item">
+        Educations
+      </a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="ui container">
+  <div class="ui secondary pointing menu">
+    <a routerLinkActive="active" class="item" routerLink="/placeholders"
+      >Placeholder</a
+    >
+    <a routerLinkActive="active" class="item" routerLink="/tables">Table</a>
+  </div>
+  <div class="ui segment">
+    <p>
+      <router-outlet></router-outlet>
+    </p>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> olmaz ise, yaptigin routingleri goremezsin -->
