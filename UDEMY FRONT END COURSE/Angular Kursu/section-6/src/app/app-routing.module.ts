@@ -9,13 +9,19 @@ const routes: Routes = [
     loadChildren: () =>
       import('./placeholders/placeholders.module').then(
         (m) => m.PlaceholdersModule
-      ) /* this is lazyLoading Process */,
+      ) /* loadChildren is lazyLoading Process */,
   },
   {
     path: 'tables',
     loadChildren: () =>
       import('./tables/tables.module').then((m) => m.TablesModule),
-    /* this is lazyLoading Process */
+    /* loadChildren is lazyLoading Process */
+  },
+  {
+    path: 'lists',
+    loadChildren: () =>
+      import('./lists/lists.module').then((m) => m.ListsModule),
+    /* loadChildren is lazyLoading Process */
   },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent },
