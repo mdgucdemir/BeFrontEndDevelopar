@@ -1,0 +1,45 @@
+<div style="display: flex">
+  <div style="margin-right: 20px">
+    <img src="assets/kredi.jpg" alt="" />
+  </div>
+
+  <div class="container">
+    <form [formGroup]="cardForm" (ngSubmit)="onSubmit()">
+      <app-input
+        label="First Name & Last Name"
+        [control]="$any(cardForm).get('name')"
+      ></app-input>
+      <app-input
+        label="Card Number"
+        [control]="$any(cardForm).get('cardNumber')"
+      ></app-input>
+      <div class="columns">
+        <div class="column">
+          <app-input
+            label="Expiration"
+            [control]="$any(cardForm).get('expiration')"
+          ></app-input>
+        </div>
+        <div class="column">
+          <app-input
+            label="Security Code"
+            [control]="$any(cardForm).get('securityCode')"
+          ></app-input>
+        </div>
+      </div>
+
+      <div class="buttons" style="display: flex; justify-content: flex-end">
+        <button (click)="resetForm()" class="button is-warning" type="button">
+          Delete
+        </button>
+        <button
+          [disabled]="cardForm.invalid"
+          class="button is-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
