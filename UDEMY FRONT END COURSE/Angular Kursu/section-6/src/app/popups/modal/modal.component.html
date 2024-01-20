@@ -1,0 +1,18 @@
+<div (click)="onCloseClick()" class="ui dimmer visible active">
+  <div (click)="$event.stopPropagation()" class="ui modal visible active">
+    <!-- $event.stopPropagation() ilgili div icerisinden bir yere tiklandiginda yazilan event gecerli olmayacak -->
+    <i (click)="onCloseClick()" class="close icon"></i>
+    <div class="header">modal</div>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="actions">
+      <button style="color: red" (click)="onCloseClick()" class="ui button">
+        No
+      </button>
+      <button style="color: green" (click)="onCloseClick()" class="ui button">
+        Yes
+      </button>
+    </div>
+  </div>
+</div>

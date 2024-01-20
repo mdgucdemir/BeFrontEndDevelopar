@@ -1,0 +1,6 @@
+:host:not(:first-of-type) {
+    /* divider a komle css vermek icin :host {} u kullanirirz */
+    /* :host:not(:first-of-type) ilk olarak vermedigimize ver anlaminda  */
+    display: block;
+    margin-top: 20px;
+}

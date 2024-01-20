@@ -23,6 +23,12 @@ const routes: Routes = [
       import('./lists/lists.module').then((m) => m.ListsModule),
     /* loadChildren is lazyLoading Process */
   },
+  {
+    path: 'popups',
+    loadChildren: () =>
+      import('./popups/popups.module').then((m) => m.PopupsModule),
+    /* loadChildren is lazyLoading Process */
+  },
   { path: '', component: HomeComponent },
   { path: '**', component: NotFoundComponent },
 ];

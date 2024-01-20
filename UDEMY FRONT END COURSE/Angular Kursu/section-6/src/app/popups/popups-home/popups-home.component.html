@@ -1,0 +1,4 @@
+<app-divider>Popup</app-divider>
+
+<button (click)="onClick()">User Confirm</button>
+<app-modal (close)="onClick()" *ngIf="modalOpen"></app-modal>
