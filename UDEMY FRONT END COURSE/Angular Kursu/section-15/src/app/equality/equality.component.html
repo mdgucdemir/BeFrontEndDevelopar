@@ -1,1 +1,12 @@
-<p>equality works!</p>
+<div class="header">
+  <h1 class="description">How many seconds did you find the correct answer?</h1>
+</div>
+
+<form class="form" [formGroup]="mathForm">
+  {{ firstNumber }} + {{ secondNumber }} =
+  <input class="input" type="text" formControlName="answer" />
+</form>
+
+<div class="correct-answer">
+  {{ seconds | number : "1.1-3" }}
+</div>
