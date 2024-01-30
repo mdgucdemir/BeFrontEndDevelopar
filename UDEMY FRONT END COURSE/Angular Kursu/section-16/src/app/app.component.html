@@ -188,7 +188,7 @@
 <!-- Angular Material --( Progress Spinner )-- End -->
 
 <!-- Angular Material --( Progress Barr )-- Start -->
-<div class="ProgressBar" style="margin-top: 50px">
+<!-- <div class="ProgressBar" style="margin-top: 50px">
   <div>
     <mat-progress-bar mode="determinate"></mat-progress-bar>
     <mat-progress-bar mode="buffer" style="margin-top: 25px"></mat-progress-bar>
@@ -213,5 +213,33 @@
       Get Data
     </button>
   </div>
-</div>
+</div> -->
 <!-- Angular Material --( Progress Barr )-- End -->
+
+<!-- Angular Material --( ToolBar )-- Start -->
+<!-- <div class="ToolBar">
+  <mat-toolbar color="primary" class="title">
+    <div>MDG</div>
+    <div>
+      <span>Home</span>
+      <span>About</span>
+      <span>Courses</span>
+    </div>
+  </mat-toolbar>
+</div> -->
+<!-- Angular Material --( ToolBar )-- End -->
+
+<!-- Angular Material --( Sidenav )-- start -->
+
+<mat-drawer-container>
+  <mat-drawer #sidenav mode="side" [(opened)]="open">SideNav</mat-drawer>
+  <mat-drawer-content
+    >Main
+    <button mat-raised-button (click)="openSide()">Toogle</button>
+    <button mat-raised-button (click)="sidenav.open()">Open</button>
+    <button mat-raised-button (click)="sidenav.close()">Close</button>
+    <button mat-raised-button (click)="sidenav.toggle()">Toogle Library</button>
+  </mat-drawer-content>
+</mat-drawer-container>
+
+<!-- Angular Material --( Sidenav )-- End -->

@@ -1,3 +1,25 @@
-button {
+/* button {
     margin-right: 50px;
+}
+
+.title {
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 25px;
+} */
+
+mat-drawer-container {
+    height: 100%;
+}
+
+mat-drawer {
+    width: 250px;
+    background-color: antiquewhite;
+}
+
+mat-drawer,
+mat-drawer-container {
+    padding: 20px;
 }

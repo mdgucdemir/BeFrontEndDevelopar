@@ -10,11 +10,16 @@ export class AppComponent {
   news = 10;
   progress_value = 65;
   show = false;
+  open = false;
 
   getData() {
     this.show = true;
     setTimeout(() => {
       this.show = false;
     }, 3000);
+  }
+
+  openSide() {
+    this.open = !this.open;
   }
 }
