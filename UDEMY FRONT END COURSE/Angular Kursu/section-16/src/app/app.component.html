@@ -231,7 +231,7 @@
 
 <!-- Angular Material --( Sidenav )-- start -->
 
-<mat-drawer-container>
+<!-- <mat-drawer-container>
   <mat-drawer #sidenav mode="side" [(opened)]="open">SideNav</mat-drawer>
   <mat-drawer-content
     >Main
@@ -240,6 +240,62 @@
     <button mat-raised-button (click)="sidenav.close()">Close</button>
     <button mat-raised-button (click)="sidenav.toggle()">Toogle Library</button>
   </mat-drawer-content>
-</mat-drawer-container>
+</mat-drawer-container> -->
 
 <!-- Angular Material --( Sidenav )-- End -->
+
+<!-- Angular Material --( Menu )-- Start -->
+<div style="margin: 150px">
+  <button mat-raised-button [matMenuTriggerFor]="appMenu">Menu</button>
+  <mat-menu #appMenu="matMenu" xPosition="after" yPosition="below">
+    <button mat-menu-item [matMenuTriggerFor]="frontend">Frontend</button>
+    <button mat-menu-item [matMenuTriggerFor]="backend">Backend</button>
+  </mat-menu>
+
+  <mat-menu #frontend="matMenu">
+    <button mat-menu-item>HTML</button>
+    <button mat-menu-item [matMenuTriggerFor]="Css">Style Sheets</button>
+    <button mat-menu-item>JavaScript</button>
+    <button mat-menu-item>TypeScript</button>
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Angular</button>
+  </mat-menu>
+
+  <mat-menu #backend="matMenu">
+    <button mat-menu-item>C#</button>
+    <button mat-menu-item>Python</button>
+    <button mat-menu-item>Node Js</button>
+  </mat-menu>
+
+  <mat-menu #Css="matMenu">
+    <button mat-menu-item>Css</button>
+    <button mat-menu-item>Sass</button>
+    <button mat-menu-item>Scss</button>
+    <button mat-menu-item>Less</button>
+  </mat-menu>
+
+  <button
+    mat-raised-button
+    [matMenuTriggerFor]="dataMenu"
+    [matMenuTriggerData]="{ name: 'Mehmet' }"
+    style="margin-left: 5px"
+  >
+    Mehmet
+  </button>
+  <button
+    mat-raised-button
+    [matMenuTriggerFor]="dataMenu"
+    [matMenuTriggerData]="{ name: 'Deniz' }"
+    style="margin-left: 5px"
+  >
+    Deniz
+  </button>
+
+  <mat-menu #dataMenu="matMenu">
+    <ng-template matMenuContent let-name="name">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Log out {{ name }}</button>
+    </ng-template>
+  </mat-menu>
+</div>
+<!-- Angular Material --( Menu )-- End -->
