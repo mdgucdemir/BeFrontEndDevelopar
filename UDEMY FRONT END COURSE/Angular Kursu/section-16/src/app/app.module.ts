@@ -15,6 +15,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
 
 @NgModule({
   declarations: [AppComponent],
@@ -32,6 +36,10 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatMenuModule,
     MatListModule,
+    MatGridListModule,
+    MatExpansionModule,
+    MatCardModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

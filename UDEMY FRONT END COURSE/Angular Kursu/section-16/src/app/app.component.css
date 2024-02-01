@@ -10,7 +10,7 @@ span {
     padding-right: 25px;
 } */
 
-mat-drawer-container {
+/* mat-drawer-container {
     height: 100%;
 }
 
@@ -22,4 +22,47 @@ mat-drawer {
 mat-drawer,
 mat-drawer-container {
     padding: 20px;
+}
+
+mat-grid-tile {
+    background: #ddbdf1;
+} */
+
+/* .example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+} */
+/* 
+.example-card {
+    max-width: 400px;
+    margin: 50px;
+}
+
+.example-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+} */
+
+.example-small-box,
+.example-large-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.example-small-box {
+    height: 100px;
+    width: 100px;
+}
+
+.example-large-box {
+    height: 300px;
+    width: 300px;
 }
