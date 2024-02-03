@@ -697,5 +697,76 @@
 <!-- Angular Material --( DatePicker )-- End -->
 
 <!-- Angular Material --( Tooltip )-- Start -->
-<div></div>
+<!-- <div>
+  <button
+    style="margin: 200px"
+    mat-raised-button
+    matTooltip="this is a button"
+    matTooltipPosition="below"
+    matTooltipShowDelay="2000"
+    matTooltipHideDelay="2000"
+  >
+    Button
+  </button>
+</div> -->
 <!-- Angular Material --( Tooltip )-- End -->
+
+<!-- Angular Material --( Snackbar )-- Start -->
+<!-- <div style="margin: 200px">
+  <button mat-raised-button (click)="openSnackBar('Deleted', 'Close')">
+    Delete
+  </button>
+</div> -->
+<!-- Angular Material --( Snackbar )-- End -->
+
+<!-- Angular Material --( Dialog )-- Start -->
+<!-- <div style="margin: 200px">
+  <button mat-raised-button (click)="openDialog()">Open Dialog</button>
+</div> -->
+<!-- Angular Material --( Dialog )-- End -->
+
+<!-- Angular Material --( Table )-- Start -->
+<div style="margin: 20px" class="mat-elevation-z8">
+  <mat-form-field>
+    <input matInput placeholder="Filter" (keyup)="myFilter($event)" />
+  </mat-form-field>
+
+  <table mat-table matSort [dataSource]="tableData">
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>No.</th>
+      <td mat-cell *matCellDef="let element">{{ element.position }}</td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Name</th>
+      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="weight">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Weight</th>
+      <td mat-cell *matCellDef="let element">{{ element.weight }}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Symbol</th>
+      <td mat-cell *matCellDef="let element">{{ element.symbol }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      (click)="showRowData(row)"
+      *matRowDef="let row; columns: displayedColumns"
+    ></tr>
+  </table>
+
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25]"
+    showFirstLastButtons
+  ></mat-paginator>
+</div>
+<!-- Angular Material --( Table )-- End -->
