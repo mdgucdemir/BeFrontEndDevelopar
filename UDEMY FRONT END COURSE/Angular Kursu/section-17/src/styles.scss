@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-card-header {
+    justify-content: center;
+}
+
+mat-card-title {
+    color: #f44337;
+}
+h3 {
+    color: #69f0ae;
+}
+p {
+    color: #f44337;
+}
+
+@media (max-width: 767px) {
+    mat-card {
+        margin-top: 1rem;
+    }
+}

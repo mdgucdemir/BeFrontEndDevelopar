@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ titleChild }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="imageUrlChild" />
+  <mat-card-content>
+    <h3>{{ usernameChild }}</h3>
+    <p>
+      {{ contentChild }}
+    </p>
+  </mat-card-content>
+  <mat-card-actions align="end">
+    <button mat-button color="accent">LIKE</button>
+    <button mat-button color="warn">SHARE</button>
+  </mat-card-actions>
+</mat-card>
