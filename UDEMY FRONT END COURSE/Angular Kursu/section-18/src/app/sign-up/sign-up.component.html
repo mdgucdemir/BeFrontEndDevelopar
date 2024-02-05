@@ -1,0 +1,122 @@
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 80vh"
+>
+  <mat-card style="min-width: 30%">
+    <mat-card-header class="mb-4">
+      <mat-card-title>Sign Up</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="d-flex flex-column" [formGroup]="createUserForm">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input
+            matInput
+            placeholder="Your First Name"
+            formControlName="firstName"
+          />
+          <mat-error
+            *ngIf="createUserForm.get('firstName')?.hasError('required')"
+          >
+            First Name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input
+            matInput
+            placeholder="Your First Name"
+            formControlName="lastName"
+          />
+          <mat-error
+            *ngIf="createUserForm.get('lastName')?.hasError('required')"
+          >
+            Last Name is required
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Email address</mat-label>
+          <input matInput placeholder="Email address" formControlName="email" />
+          <mat-error *ngIf="createUserForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="createUserForm.get('email')?.hasError('email')">
+            Please enter your email in the currect format
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            type="password"
+            formControlName="password"
+          />
+          <mat-error
+            *ngIf="createUserForm.get('password')?.hasError('required')"
+          >
+            Password is required
+          </mat-error>
+          <mat-error
+            *ngIf="createUserForm.get('password')?.hasError('minlength')"
+          >
+            Please enter minumm 8 character
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            placeholder="Confirm Password"
+            type="password"
+            formControlName="repassword"
+          />
+          <mat-error
+            *ngIf="createUserForm.get('repassword')?.hasError('required')"
+          >
+            Confirm Password is required
+          </mat-error>
+          <mat-error
+            *ngIf="createUserForm.get('repassword')?.hasError('minlength')"
+          >
+            Please enter minumm 8 character
+          </mat-error>
+          <mat-error
+            *ngIf="createUserForm.get('repassword')?.hasError('not_set_same')"
+          >
+            Your password is not matching
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <textarea
+            matInput
+            placeholder="Your First Name"
+            formControlName="address"
+          ></textarea>
+          <mat-error
+            *ngIf="createUserForm.get('address')?.hasError('required')"
+          >
+            Address is required
+          </mat-error>
+        </mat-form-field>
+
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="signUp" routerLink="/login">Login</a>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="createUserForm.invalid"
+          >
+            Sign Up
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

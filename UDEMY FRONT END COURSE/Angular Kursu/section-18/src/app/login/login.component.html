@@ -1,0 +1,49 @@
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 80vh"
+>
+  <mat-card style="min-width: 30%">
+    <mat-card-header class="mb-4">
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="d-flex flex-column" [formGroup]="loginForm">
+        <mat-form-field>
+          <mat-label>Email address</mat-label>
+          <input matInput placeholder="Email address" formControlName="email" />
+          <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+            Email is required
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+            Please enter your email in the currect format
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            matInput
+            placeholder="Password"
+            type="password"
+            formControlName="password"
+          />
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+            Password is required
+          </mat-error>
+          <mat-error *ngIf="loginForm.get('password')?.hasError('minlength')">
+            Please enter minumm 8 character
+          </mat-error>
+        </mat-form-field>
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="signUp" routerLink="/sign-up">Sign Up</a>
+          <button
+            mat-raised-button
+            color="primary"
+            [disabled]="loginForm.invalid"
+          >
+            Log in
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
