@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-3 col-md-4 col-sm-6 mt-5" *ngFor="let post of blogData">
+      <mat-card class="example-card">
+        <mat-card-header class="cardHeader">
+          <mat-card-title class="cardTitle">{{ post.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="assets/images/image{{ post.imageId }}.jpg" />
+        <mat-card-content class="cardContent">
+          <p>
+            {{ post.body }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" style="margin-right: 8px">
+            Goruntule
+          </button>
+          <button mat-raised-button color="accent">Duzenle</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

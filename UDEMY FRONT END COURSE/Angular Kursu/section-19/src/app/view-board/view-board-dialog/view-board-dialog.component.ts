@@ -38,7 +38,10 @@ export class ViewBoardDialogComponent implements OnInit {
     }
   }
 
-  deleteTask(i: number) {}
+  deleteTask(i: number) {
+    this.tasks.splice(i, 1);
+    this.tasksLoop.splice(i, 1);
+  }
 
   addTask() {
     this.tasks.push('');
@@ -46,7 +49,11 @@ export class ViewBoardDialogComponent implements OnInit {
   }
 
   close() {
-    this.dialogRef.close();
+    if (this.tasks.some((element: string) => element === '')) {
+      this._snacBar.open('Lutfen Tum Tasklari Doldurunuz', 'Ok');
+    } else {
+      this.dialogRef.close();
+    }
   }
   create() {
     if (this.tasks.some((element: string) => element === '')) {
