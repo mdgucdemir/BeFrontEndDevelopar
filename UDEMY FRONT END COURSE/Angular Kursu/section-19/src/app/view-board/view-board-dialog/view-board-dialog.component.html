@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>{{ data.editMode ? "Karti Guncelle" : "Yeni Kart" }}</h2>
+
+<mat-dialog-content>
+  <mat-form-field class="w-100">
+    <mat-label>Baslik</mat-label>
+    <input matInput [(ngModel)]="title" />
+  </mat-form-field>
+
+  <div *ngFor="let task of tasksLoop; let i = index">
+    <mat-form-field style="width: 90%">
+      <mat-label>Task-{{ i + 1 }}</mat-label>
+      <input matInput [(ngModel)]="tasks[i]" />
+    </mat-form-field>
+    <button mat-icon-button style="width: 10%" (click)="deleteTask(i)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions style="padding: 28px">
+  <button mat-raised-button color="warn" (click)="addTask()">
+    Yeni Task Ekle
+  </button>
+  <button mat-raised-button color="accent" (click)="close()">Iptal Et</button>
+  <button mat-raised-button color="primary" (click)="create()">
+    {{ data.editMode ? "Guncelle" : "Ekle" }}
+  </button>
+</mat-dialog-actions>

@@ -3,3 +3,18 @@
     Yeni Board Ekle
   </button>
 </div>
+
+<div
+  *ngFor="let board of boardService.boards; let i = index"
+  [routerLink]="'/view-board/' + (i + 1)"
+  class="d-flex justify-content-between align-items-center boardSyle"
+>
+  <div>
+    {{ board.title }}
+  </div>
+  <div>
+    <button mat-icon-button (click)="deleteBoard(i)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+</div>
