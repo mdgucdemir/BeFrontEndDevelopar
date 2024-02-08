@@ -14,6 +14,6 @@ export class BlogService extends BaseService {
   }
 
   public updatePosts(id: any, data: any) {
-    return this.base.putReq('/posts/ ' + id, data);
+    return this.base.putReq('/posts/' + id, data);
   }
 }

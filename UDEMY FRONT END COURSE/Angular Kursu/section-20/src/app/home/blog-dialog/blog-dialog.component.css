@@ -1,0 +1,15 @@
+::ng-deep .mat-mdc-dialog-container {
+    height: auto;
+}
+
+.comments {
+    background-color: lightgrey;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.user-profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}

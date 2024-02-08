@@ -3,8 +3,7 @@
     <div
       class="col-xl-3 col-md-4 col-sm-6 mt-5"
       *ngFor="
-        let post of blogData | slice : (page - 1) * pageSize : page * pageSize;
-        track: item
+        let post of blogData | slice : (page - 1) * pageSize : page * pageSize
       "
     >
       <mat-card class="example-card">

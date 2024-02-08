@@ -11,12 +11,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 //
 import { BaseService } from './services/base.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BlogDialogComponent } from './home/blog-dialog/blog-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, BlogDialogComponent],
@@ -30,6 +33,10 @@ import { BlogDialogComponent } from './home/blog-dialog/blog-dialog.component';
     NgbModule,
     MatDialogModule,
     MatDividerModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [BaseService],
   bootstrap: [AppComponent],
