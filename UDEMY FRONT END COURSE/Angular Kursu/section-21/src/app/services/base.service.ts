@@ -1,11 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  HttpClient,
-  HttpParams,
-  HttpHeaders,
-  HttpResponse,
-  HttpErrorResponse,
-} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
@@ -17,30 +11,15 @@ export class BaseService {
   constructor(public http: HttpClient) {}
 
   postReq(url: any, data: any) {
-    return this.http.post<any>(this.baseUrlUpdate(url), data, {
-      headers: new HttpHeaders({
-        'Contetn-Type': 'application/json; charset=utf-8',
-        'Access-Control-Allow-Origin': this.baseUrlUpdate(url),
-      }),
-    });
+    return this.http.post<any>(this.baseUrlUpdate(url), data);
   }
 
   getReg(url: any) {
-    return this.http.get<any>(this.baseUrlUpdate(url), {
-      headers: new HttpHeaders({
-        'Contetn-Type': 'application/json; charset=utf-8',
-        'Access-Control-Allow-Origin': this.baseUrlUpdate(url),
-      }),
-    });
+    return this.http.get<any>(this.baseUrlUpdate(url));
   }
 
   putReq(url: any, data: any) {
-    return this.http.put<any>(this.baseUrlUpdate(url), data, {
-      headers: new HttpHeaders({
-        'Contetn-Type': 'application/json; charset=utf-8',
-        'Access-Control-Allow-Origin': this.baseUrlUpdate(url),
-      }),
-    });
+    return this.http.put<any>(this.baseUrlUpdate(url), data);
   }
 
   protected baseUrlUpdate(url: string): string {

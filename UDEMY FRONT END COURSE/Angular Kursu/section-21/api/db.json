@@ -1,4 +1,23 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "b642",
+      "username": "ma",
+      "email": "ma@gmail.com",
+      "password": "12345678"
+    },
+    {
+      "id": "c682",
+      "username": "memo",
+      "email": "memo@gmail.com",
+      "password": "87654321"
+    },
+    {
+      "id": "520b",
+      "username": "Deno",
+      "email": "deno@gmail.com",
+      "password": "123789456"
+    }
+  ],
   "questions": []
 }
