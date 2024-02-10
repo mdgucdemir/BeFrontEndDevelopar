@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="form-container">
+    <div class="title">Login</div>
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error>
+          <span *ngIf="f['email'].errors && f['email'].errors['required']">
+            Email is required
+          </span>
+          <span *ngIf="f['email'].errors && f['email'].errors['email']">
+            You must use email type
+          </span>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" />
+        <mat-error>
+          <span
+            *ngIf="f['password'].errors && f['password'].errors['required']"
+          >
+            Password is required
+          </span>
+          <span
+            *ngIf="f['password'].errors && f['password'].errors['minlength']"
+          >
+            We allow at least 8 characters
+          </span>
+        </mat-error>
+      </mat-form-field>
+    </form>
+
+    <div class="buttons-container">
+      <button
+        [disabled]="loginForm.invalid"
+        mat-raised-button
+        class="login-button"
+      >
+        Login
+      </button>
+      <p>or</p>
+      <button mat-button routerLink="/create-user">Create A Account</button>
+    </div>
+    {{ loginForm.value | json }}
+  </div>
+</div>
