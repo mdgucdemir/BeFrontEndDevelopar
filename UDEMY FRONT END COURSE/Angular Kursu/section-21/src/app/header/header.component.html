@@ -1,6 +1,8 @@
 <mat-toolbar color="primary" class="justify-content-between">
   <div>Strackoverflow :)</div>
   <div>
-    <button mat-button>Log Out</button>
+    <button *ngIf="userService.user != undefined" mat-button (click)="logout()">
+      Log Out
+    </button>
   </div>
 </mat-toolbar>

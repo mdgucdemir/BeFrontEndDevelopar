@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 
 //
 import { HeaderComponent } from './header/header.component';
@@ -18,6 +21,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BaseService } from './services/base.service';
+import { HomeComponent } from './home/home.component';
+import { SolutionsComponent } from './solutions/solutions.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,8 @@ import { BaseService } from './services/base.service';
     HeaderComponent,
     LoginComponent,
     CreateUserComponent,
+    HomeComponent,
+    SolutionsComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +44,9 @@ import { BaseService } from './services/base.service';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MatSnackBarModule,
+    MatCardModule,
+    MatIconModule,
   ],
   providers: [BaseService],
   bootstrap: [AppComponent],

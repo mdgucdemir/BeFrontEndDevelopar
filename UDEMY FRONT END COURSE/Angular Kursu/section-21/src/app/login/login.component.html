@@ -35,6 +35,7 @@
 
     <div class="buttons-container">
       <button
+        (click)="login()"
         [disabled]="loginForm.invalid"
         mat-raised-button
         class="login-button"
@@ -44,6 +45,6 @@
       <p>or</p>
       <button mat-button routerLink="/create-user">Create A Account</button>
     </div>
-    {{ loginForm.value | json }}
+    <!-- {{ loginForm.value | json }} -->
   </div>
 </div>
