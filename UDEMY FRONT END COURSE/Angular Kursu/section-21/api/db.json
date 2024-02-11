@@ -29,6 +29,14 @@
           "userName": "ma",
           "solution": "asdfasdf",
           "plus": [],
+          "minus": [
+            1
+          ]
+        },
+        {
+          "userName": "ma",
+          "solution": "test",
+          "plus": [],
           "minus": []
         }
       ]

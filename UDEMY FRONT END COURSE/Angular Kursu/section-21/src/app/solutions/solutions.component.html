@@ -1,18 +1,37 @@
 <div class="container">
   <div class="content-wrapper" *ngIf="questionObj != undefined">
-    <div class="title-container">Answer the question</div>
+    <div class="title-container">
+      <h1>answer the question</h1>
+      <h2>{{ questionObj.question }}</h2>
+    </div>
     <mat-card
       class="question-card"
-      *ngFor="let solution of questionObj.solutions"
+      *ngFor="let solution of questionObj.solutions; let i = index"
     >
       <mat-card-content>
         <div class="solution-container">
           <div class="arrows-container">
-            <button mat-icon-button><mat-icon>expand_less</mat-icon></button>
+            <button
+              (click)="vote(i, 1)"
+              mat-icon-button
+              [class.colored-icon]="
+                solution.plus.indexOf(userService.user.id) >= 0
+              "
+            >
+              <mat-icon>expand_less</mat-icon>
+            </button>
             <span class="increasedecrease">
               {{ solution.plus.length - solution.minus.length }}
             </span>
-            <button mat-icon-button><mat-icon>expand_more</mat-icon></button>
+            <button
+              (click)="vote(i, -1)"
+              mat-icon-button
+              [class.colored-icon]="
+                solution.minus.indexOf(userService.user.id) >= 0
+              "
+            >
+              <mat-icon>expand_more</mat-icon>
+            </button>
           </div>
           <div class="data-container">
             <p class="username">{{ solution.userName }}</p>
@@ -31,7 +50,7 @@
         placeholder="Write Your Answer"
       ></textarea>
     </mat-form-field>
-    {{ solutionText }}
+    <!-- {{ solutionText }} -->
     <div class="new-post-actions-container">
       <button
         (click)="returnBack()"

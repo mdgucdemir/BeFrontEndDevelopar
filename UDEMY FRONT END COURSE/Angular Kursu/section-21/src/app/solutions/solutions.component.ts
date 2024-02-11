@@ -38,7 +38,7 @@ export class SolutionsComponent implements OnInit {
 
     this.questionObj.solutions.push(solutionObj);
     this.questionService.updateQuestion(this.questionObj).subscribe((res) => {
-      console.log(res);
+      // console.log(res);
       this.solutionText = '';
     });
   }
@@ -47,5 +47,56 @@ export class SolutionsComponent implements OnInit {
     // asagida iki sekilde calisma pratigi yapimistir. 2 side ayni islevi yapar
     this.router.navigateByUrl('/home');
     // this.router.navigate(['/home']);
+  }
+
+  vote(index: number, point: number) {
+    if (point == 1) {
+      if (
+        !(
+          this.questionObj.solutions[index].plus.indexOf(
+            this.userService.user.id
+          ) >= 0
+        )
+      ) {
+        this.questionObj.solutions[index].plus.push(this.userService.user.id);
+      }
+      for (
+        let i = 0;
+        i < this.questionObj.solutions[index].minus.length;
+        index++
+      ) {
+        if (
+          this.questionObj.solutions[index].minus[i] == this.userService.user.id
+        ) {
+          this.questionObj.solutions[index].minus.splice(i, 1);
+        }
+      }
+    } else {
+      if (
+        !(
+          this.questionObj.solutions[index].minus.indexOf(
+            this.userService.user.id
+          ) >= 0
+        )
+      ) {
+        this.questionObj.solutions[index].minus.push(this.userService.user.id);
+      }
+      for (
+        let i = 0;
+        i < this.questionObj.solutions[index].plus.length;
+        index++
+      ) {
+        if (
+          this.questionObj.solutions[index].plus[i] == this.userService.user.id
+        ) {
+          this.questionObj.solutions[index].plus.splice(i, 1);
+        }
+      }
+
+      this.questionService.updateQuestion(this.questionObj).subscribe((res) => {
+        // console.log(res);
+        // this.solutionText = '';
+      });
+    }
   }
 }
