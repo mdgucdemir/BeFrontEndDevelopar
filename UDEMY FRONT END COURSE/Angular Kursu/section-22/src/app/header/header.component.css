@@ -1,0 +1,8 @@
+.goHome {
+  color: #fff;
+  text-decoration: none;
+}
+
+.goHome:hover {
+  opacity: 0.7;
+}

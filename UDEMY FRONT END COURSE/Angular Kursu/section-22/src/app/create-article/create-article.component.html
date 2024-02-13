@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="content-wrapper">
+    <mat-form-field>
+      <mat-label>User Name</mat-label>
+      <input [(ngModel)]="username" matInput />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Header</mat-label>
+      <input [(ngModel)]="title" matInput />
+    </mat-form-field>
+
+    <angular-editor
+      [(ngModel)]="content"
+      [config]="editorConfig"
+    ></angular-editor>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="button-class"
+      (click)="post()"
+    >
+      Save
+    </button>
+  </div>
+</div>

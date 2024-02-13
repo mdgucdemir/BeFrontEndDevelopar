@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="content-wrapper">
+    <button class="create-button" routerLink="/create" mat-button>
+      create new article
+    </button>
+
+    <div
+      class="card"
+      *ngFor="let article of articlesData; let i = index"
+      [routerLink]="'/view/' + i"
+    >
+      <div class="title">Title: {{ article.title }}</div>
+      <div class="author">Author: {{ article.author }}</div>
+      <div class="content">Content: {{ article.content }}</div>
+    </div>
+  </div>
+</div>

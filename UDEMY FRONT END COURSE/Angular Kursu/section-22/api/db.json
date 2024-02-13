@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "b39d",
+      "author": "David",
+      "title": "Nice ",
+      "content": "Nice nice very nice",
+      "comments": []
+    },
+    {
+      "id": "4b4b",
+      "author": "Mehmet Deniz Gucdemir",
+      "title": "Angular",
+      "content": "I like Angular and Angular so good",
+      "comments": []
+    },
+    {
+      "id": "cd24",
+      "author": "Jessie",
+      "title": "Fish&Chips",
+      "content": "It's very very delicious",
+      "comments": []
+    }
+  ]
+}
