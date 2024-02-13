@@ -5,14 +5,32 @@
       "author": "David",
       "title": "Nice ",
       "content": "Nice nice very nice",
-      "comments": []
+      "comments": [
+        {
+          "username": "memo",
+          "comment": "ksadfklds"
+        },
+        {
+          "username": "memo",
+          "comment": "askldjfkl"
+        },
+        {
+          "username": "Mehmet ",
+          "comment": "I like it"
+        }
+      ]
     },
     {
       "id": "4b4b",
       "author": "Mehmet Deniz Gucdemir",
       "title": "Angular",
       "content": "I like Angular and Angular so good",
-      "comments": []
+      "comments": [
+        {
+          "username": "Jessie",
+          "comment": "it's very helpfull"
+        }
+      ]
     },
     {
       "id": "cd24",

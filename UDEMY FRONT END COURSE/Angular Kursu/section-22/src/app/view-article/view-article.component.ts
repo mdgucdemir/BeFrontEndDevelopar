@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewArticleComponent implements OnInit {
   selfArticleData: Array<any> = [];
   articleIndex: any;
+  userName: string = '';
+  comment: string = '';
 
   constructor(
     private articleService: ArticleService,
@@ -24,5 +26,20 @@ export class ViewArticleComponent implements OnInit {
       // debugger;
       this.selfArticleData = res;
     });
+  }
+
+  addComment() {
+    let obj = {
+      username: this.userName,
+      comment: this.comment,
+    };
+    this.selfArticleData[this.articleIndex].comments.push(obj);
+    this.articleService
+      .updateArticle(this.selfArticleData[this.articleIndex])
+      .subscribe((res) => {
+        // debugger;
+        this.userName = '';
+        this.comment = '';
+      });
   }
 }

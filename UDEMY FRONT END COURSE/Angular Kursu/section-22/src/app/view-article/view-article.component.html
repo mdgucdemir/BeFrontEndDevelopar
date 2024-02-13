@@ -1,13 +1,39 @@
 <div class="container">
   <div class="content-wrapper">
-    <div class="title">{{ selfArticleData[articleIndex].title }}</div>
-    <div class="content">{{ selfArticleData[articleIndex].content }}</div>
-    <div class="author">{{ selfArticleData[articleIndex].author }}</div>
+    <div class="title">{{ selfArticleData[articleIndex]?.title }}</div>
+    <div class="content">
+      {{ selfArticleData[articleIndex]?.content }}
+    </div>
+    <div class="author">
+      Author: {{ selfArticleData[articleIndex]?.author }}
+    </div>
+
     <div class="comments">
-      <span class="comment">
-        <span class="user-name">user-name</span>
-        <span class="comment">comment</span>
+      <h3>Comments</h3>
+
+      <span
+        class="comment"
+        *ngFor="
+          let comment of this.selfArticleData[this.articleIndex]?.comments
+        "
+      >
+        <span class="user-name">{{ comment.username }}:</span>
+        <span class="comment">{{ comment.comment }}</span>
       </span>
     </div>
+
+    <mat-form-field>
+      <mat-label>User Name</mat-label>
+      <input matInput [(ngModel)]="userName" />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Comment</mat-label>
+      <input matInput [(ngModel)]="comment" />
+    </mat-form-field>
+
+    <button (click)="addComment()" mat-raised-button color="primary">
+      Comment
+    </button>
   </div>
 </div>

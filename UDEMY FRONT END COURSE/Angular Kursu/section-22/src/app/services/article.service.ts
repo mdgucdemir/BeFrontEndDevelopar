@@ -16,4 +16,8 @@ export class ArticleService extends BaseService {
   public getArticle() {
     return this.base.getReg('/articles');
   }
+
+  public updateArticle(articleData: any) {
+    return this.base.putReq('/articles/' + articleData.id, articleData);
+  }
 }
