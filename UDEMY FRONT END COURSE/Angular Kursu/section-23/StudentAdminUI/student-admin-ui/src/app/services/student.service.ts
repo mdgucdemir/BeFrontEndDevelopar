@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class StudentService {
-  private baseApiUrl = 'https://localhost:44381';
+  private baseApiUrl = 'http://localhost:3000';
 
   constructor(private httpClient: HttpClient) {}
 
   getStudents(): Observable<any> {
-    return this.httpClient.get<any>(this.baseApiUrl + '/Students');
+    return this.httpClient.get(this.baseApiUrl + '/students');
   }
 }

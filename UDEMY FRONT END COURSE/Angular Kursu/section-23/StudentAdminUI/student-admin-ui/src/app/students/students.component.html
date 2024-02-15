@@ -1,1 +1,75 @@
-<p>students works!</p>
+<div class="page-header">
+  <div class="container">
+    <h1>Student Lists</h1>
+  </div>
+</div>
+
+<div class="container mt-1">
+  <div class="row end-xs">
+    <div class="col-xs-12">
+      <input
+        type="text"
+        class="search-input"
+        placeholder="Search"
+        [(ngModel)]="filterString"
+        (keyup)="filterStudents()"
+      />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="mt-1 mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!-- firstName Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>First Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.FirstName }}</td>
+      </ng-container>
+
+      <!-- lastName Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Last Name</th>
+        <td mat-cell *matCellDef="let element">{{ element.LastName }}</td>
+      </ng-container>
+
+      <!-- dataOfBirth Column -->
+      <ng-container matColumnDef="dateOfBirth">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Of Birth</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.DateOfBirth }}
+        </td>
+      </ng-container>
+
+      <!-- email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Email</th>
+        <td mat-cell *matCellDef="let element">{{ element.Email }}</td>
+      </ng-container>
+
+      <!-- mobile Column -->
+      <ng-container matColumnDef="mobile">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Mobile</th>
+        <td mat-cell *matCellDef="let element">{{ element.Mobile }}</td>
+      </ng-container>
+
+      <!-- gender Column -->
+      <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Gender</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.gender }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
+  </div>
+</div>

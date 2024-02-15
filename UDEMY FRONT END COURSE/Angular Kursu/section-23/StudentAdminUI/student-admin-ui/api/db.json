@@ -1,24 +1,235 @@
 {
   "students": [
     {
-      "Id": "5fc32d8d-0001",
+      "Id": "0001",
       "FirstName": "Debra",
       "LastName": "Burks",
       "DateOfBirth": "1989-05-16",
       "Email": "Debra.Burks@gmaill.com",
       "Mobile": 91254684566,
       "ProfileImageUrl": "NULL",
-      "Gender": "Famele"
+      "gender": "Female",
+      "address": "USA, Texas"
     },
     {
-      "Id": "5fc32d8d-0002",
+      "Id": "0002",
       "FirstName": "Debra",
       "LastName": "Stephens",
       "DateOfBirth": "1985-05-16",
       "Email": "debra@gmaill.com",
       "Mobile": 91254684567,
       "ProfileImageUrl": "NULL",
-      "Gender": "Famele"
+      "gender": "Female",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0003",
+      "FirstName": "Alex",
+      "LastName": "Souza",
+      "DateOfBirth": "1990-08-10",
+      "Email": "alexS@gmaill.com",
+      "Mobile": 91254698566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0004",
+      "FirstName": "Daniel",
+      "LastName": "Clark",
+      "DateOfBirth": "1789-01-20",
+      "Email": "dc@gmaill.com",
+      "Mobile": 91254684541,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0005",
+      "FirstName": "George",
+      "LastName": "Burkley",
+      "DateOfBirth": "1985-05-16",
+      "Email": "burkley@gmaill.com",
+      "Mobile": 91254683566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0006",
+      "FirstName": "Alex",
+      "LastName": "Zetra",
+      "DateOfBirth": "1989-05-26",
+      "Email": "AZ@gmaill.com",
+      "Mobile": 91254684566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0007",
+      "FirstName": "Abdul",
+      "LastName": "Jawad",
+      "DateOfBirth": "1979-05-16",
+      "Email": "jawad@gmaill.com",
+      "Mobile": 91254684512,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0008",
+      "FirstName": "Jasmine",
+      "LastName": "Burks",
+      "DateOfBirth": "1998-02-06",
+      "Email": "JB@gmaill.com",
+      "Mobile": 91254714566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0009",
+      "FirstName": "De",
+      "LastName": "Kuntis",
+      "DateOfBirth": "1949-12-16",
+      "Email": "De.knts@gmaill.com",
+      "Mobile": 91254684566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0010",
+      "FirstName": "Des",
+      "LastName": "Pasito",
+      "DateOfBirth": "1998-02-26",
+      "Email": "DeS@gmaill.com",
+      "Mobile": 91254684536,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0011",
+      "FirstName": "Sophie",
+      "LastName": "Lee",
+      "DateOfBirth": "2002-07-11",
+      "Email": "De.knts@gmaill.com",
+      "Mobile": 91284684566,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0012",
+      "FirstName": "Lee",
+      "LastName": "Young",
+      "DateOfBirth": "1990-04-08",
+      "Email": "Lee@gmaill.com",
+      "Mobile": 91254684266,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0013",
+      "FirstName": "Deniz",
+      "LastName": "Forest",
+      "DateOfBirth": "1964-07-22",
+      "Email": "Deniz@gmaill.com",
+      "Mobile": 912546845628,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0014",
+      "FirstName": "Michelle",
+      "LastName": "Robbit",
+      "DateOfBirth": "2000-12-16",
+      "Email": "michelle@gmaill.com",
+      "Mobile": 91254684576,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0015",
+      "FirstName": "Iowa",
+      "LastName": "Travisse",
+      "DateOfBirth": "1995-05-05",
+      "Email": "It@gmaill.com",
+      "Mobile": 91254684555,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0016",
+      "FirstName": "Kun",
+      "LastName": "Fuu",
+      "DateOfBirth": "1977-10-18",
+      "Email": "KunFuuu@gmaill.com",
+      "Mobile": 91254684522,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0017",
+      "FirstName": "Kurtis",
+      "LastName": "Foxon",
+      "DateOfBirth": "1978-01-01",
+      "Email": "k_fox@gmaill.com",
+      "Mobile": 91254687877,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0018",
+      "FirstName": "Denniel",
+      "LastName": "Jo",
+      "DateOfBirth": "1979-12-16",
+      "Email": "Den.Jo@gmaill.com",
+      "Mobile": 91254684536,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, New York"
+    },
+    {
+      "Id": "0019",
+      "FirstName": "Nani",
+      "LastName": "Funny",
+      "DateOfBirth": "2001-08-06",
+      "Email": "funnyN@gmaill.com",
+      "Mobile": 91254684561,
+      "ProfileImageUrl": "NULL",
+      "gender": "Male",
+      "address": "USA, Texas"
+    },
+    {
+      "Id": "0020",
+      "FirstName": "Jennifer",
+      "LastName": "Chick",
+      "DateOfBirth": "1995-09-16",
+      "Email": "jenny_C_@gmaill.com",
+      "Mobile": 91254684996,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, California"
+    },
+    {
+      "Id": "0021",
+      "FirstName": "Jennifer",
+      "LastName": "Perfect",
+      "DateOfBirth": "1997-09-16",
+      "Email": "jenny_C_@gmaill.com",
+      "Mobile": 91254621366,
+      "ProfileImageUrl": "NULL",
+      "gender": "Female",
+      "address": "USA, New York"
     }
   ]
 }
