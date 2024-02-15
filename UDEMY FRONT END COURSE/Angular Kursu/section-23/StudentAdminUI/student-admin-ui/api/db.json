@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "Id": "5fc32d8d-0001",
+      "FirstName": "Debra",
+      "LastName": "Burks",
+      "DateOfBirth": "1989-05-16",
+      "Email": "Debra.Burks@gmaill.com",
+      "Mobile": 91254684566,
+      "ProfileImageUrl": "NULL",
+      "Gender": "Famele"
+    },
+    {
+      "Id": "5fc32d8d-0002",
+      "FirstName": "Debra",
+      "LastName": "Stephens",
+      "DateOfBirth": "1985-05-16",
+      "Email": "debra@gmaill.com",
+      "Mobile": 91254684567,
+      "ProfileImageUrl": "NULL",
+      "Gender": "Famele"
+    }
+  ]
+}
