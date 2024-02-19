@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "Id": "0001",
+      "id": "0001",
       "FirstName": "Debra",
       "LastName": "Burks",
       "DateOfBirth": "1989-05-16",
@@ -12,7 +12,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0002",
+      "id": "0002",
       "FirstName": "Debra",
       "LastName": "Stephens",
       "DateOfBirth": "1985-05-16",
@@ -23,7 +23,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0003",
+      "id": "0003",
       "FirstName": "Alex",
       "LastName": "Souza",
       "DateOfBirth": "1990-08-10",
@@ -34,7 +34,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0004",
+      "id": "0004",
       "FirstName": "Daniel",
       "LastName": "Clark",
       "DateOfBirth": "1789-01-20",
@@ -45,7 +45,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0005",
+      "id": "0005",
       "FirstName": "George",
       "LastName": "Burkley",
       "DateOfBirth": "1985-05-16",
@@ -56,7 +56,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0006",
+      "id": "0006",
       "FirstName": "Alex",
       "LastName": "Zetra",
       "DateOfBirth": "1989-05-26",
@@ -67,7 +67,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0007",
+      "id": "0007",
       "FirstName": "Abdul",
       "LastName": "Jawad",
       "DateOfBirth": "1979-05-16",
@@ -78,7 +78,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0008",
+      "id": "0008",
       "FirstName": "Jasmine",
       "LastName": "Burks",
       "DateOfBirth": "1998-02-06",
@@ -89,7 +89,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0009",
+      "id": "0009",
       "FirstName": "De",
       "LastName": "Kuntis",
       "DateOfBirth": "1949-12-16",
@@ -100,7 +100,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0010",
+      "id": "0010",
       "FirstName": "Des",
       "LastName": "Pasito",
       "DateOfBirth": "1998-02-26",
@@ -111,7 +111,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0011",
+      "id": "0011",
       "FirstName": "Sophie",
       "LastName": "Lee",
       "DateOfBirth": "2002-07-11",
@@ -122,7 +122,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0012",
+      "id": "0012",
       "FirstName": "Lee",
       "LastName": "Young",
       "DateOfBirth": "1990-04-08",
@@ -133,7 +133,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0013",
+      "id": "0013",
       "FirstName": "Deniz",
       "LastName": "Forest",
       "DateOfBirth": "1964-07-22",
@@ -144,7 +144,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0014",
+      "id": "0014",
       "FirstName": "Michelle",
       "LastName": "Robbit",
       "DateOfBirth": "2000-12-16",
@@ -155,7 +155,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0015",
+      "id": "0015",
       "FirstName": "Iowa",
       "LastName": "Travisse",
       "DateOfBirth": "1995-05-05",
@@ -166,7 +166,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0016",
+      "id": "0016",
       "FirstName": "Kun",
       "LastName": "Fuu",
       "DateOfBirth": "1977-10-18",
@@ -177,7 +177,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0017",
+      "id": "0017",
       "FirstName": "Kurtis",
       "LastName": "Foxon",
       "DateOfBirth": "1978-01-01",
@@ -188,7 +188,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0018",
+      "id": "0018",
       "FirstName": "Denniel",
       "LastName": "Jo",
       "DateOfBirth": "1979-12-16",
@@ -199,7 +199,7 @@
       "address": "USA, New York"
     },
     {
-      "Id": "0019",
+      "id": "0019",
       "FirstName": "Nani",
       "LastName": "Funny",
       "DateOfBirth": "2001-08-06",
@@ -210,7 +210,7 @@
       "address": "USA, Texas"
     },
     {
-      "Id": "0020",
+      "id": "0020",
       "FirstName": "Jennifer",
       "LastName": "Chick",
       "DateOfBirth": "1995-09-16",
@@ -221,7 +221,7 @@
       "address": "USA, California"
     },
     {
-      "Id": "0021",
+      "id": "0021",
       "FirstName": "Jennifer",
       "LastName": "Perfect",
       "DateOfBirth": "1997-09-16",
