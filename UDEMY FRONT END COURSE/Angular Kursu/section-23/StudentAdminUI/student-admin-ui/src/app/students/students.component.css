@@ -11,3 +11,7 @@
 .search-input:focus {
   border: 1px solid #aaa;
 }
+
+.add-button {
+  margin-right: 15px;
+}
