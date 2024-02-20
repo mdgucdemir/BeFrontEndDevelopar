@@ -1,6 +1,6 @@
 <div class="page-header">
   <div class="container">
-    <h1>Student View</h1>
+    <h1>{{ header }}</h1>
   </div>
 </div>
 
@@ -25,13 +25,21 @@
                 matInput
                 [(ngModel)]="student.FirstName"
                 name="FirstName"
+                required
               />
+              <mat-error>First Name is required</mat-error>
             </mat-form-field>
           </div>
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Last Name</mat-label>
-              <input matInput [(ngModel)]="student.LastName" name="LastName" />
+              <input
+                matInput
+                [(ngModel)]="student.LastName"
+                name="LastName"
+                required
+              />
+              <mat-error>Last Name is required</mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -44,6 +52,7 @@
                 [matDatepicker]="picker"
                 [(ngModel)]="student.DateOfBirth"
                 name="DateOfBirth"
+                required
               />
 
               <mat-datepicker-toggle
@@ -51,6 +60,7 @@
                 [for]="picker"
               ></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
+              <mat-error>Date Of Birth is required</mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -58,13 +68,25 @@
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Email</mat-label>
-              <input matInput [(ngModel)]="student.Email" name="Email" />
+              <input
+                matInput
+                [(ngModel)]="student.Email"
+                name="Email"
+                required
+              />
+              <mat-error>Email is required</mat-error>
             </mat-form-field>
           </div>
           <div class="col-xs-6">
             <mat-form-field appearance="outline">
               <mat-label>Phone Number</mat-label>
-              <input matInput [(ngModel)]="student.Mobile" name="Mobile" />
+              <input
+                matInput
+                [(ngModel)]="student.Mobile"
+                name="Mobile"
+                required
+              />
+              <mat-error>Phone Number is required</mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -72,10 +94,11 @@
           <div class="col-xs-12">
             <mat-form-field appearance="outline">
               <mat-label>Gender</mat-label>
-              <mat-select [(ngModel)]="student.gender" name="gender">
+              <mat-select [(ngModel)]="student.gender" name="gender" required>
                 <mat-option value="Male">Male</mat-option>
                 <mat-option value="Female">Female</mat-option>
               </mat-select>
+              <mat-error>Gender is required</mat-error>
             </mat-form-field>
           </div>
         </div>
@@ -87,24 +110,65 @@
                 matInput
                 [(ngModel)]="student.address"
                 name="address"
+                required
               ></textarea>
+              <mat-error>Address is required</mat-error>
             </mat-form-field>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <div class="row between-xs">
-              <button mat-raised-button color="primary" (click)="onUpdate()">
+            <div class="row between-xs" *ngIf="!isNewStudent">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="onUpdate()"
+                [disabled]="studentDetailsForm.invalid"
+              >
                 Update
               </button>
               <button mat-raised-button color="warn" (click)="onDelete()">
                 Delete
               </button>
             </div>
+
+            <div class="row between-xs" *ngIf="isNewStudent">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="onAdd()"
+                [disabled]="studentDetailsForm.invalid"
+              >
+                Add Student
+              </button>
+            </div>
           </div>
         </div>
       </form>
     </div>
-    <div class="col-xs-6">Profile info</div>
+    <div class="col-xs-6">
+      <div class="row center-xs">
+        <div class="image-container">
+          <img [src]="displayProfileImageUrl" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 center-xs mt-1">
+          <input
+            hidden
+            type="file"
+            #imageUpload
+            (change)="uploadImage($event)"
+          />
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="imageUpload.click()"
+          >
+            Select Profile Image
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

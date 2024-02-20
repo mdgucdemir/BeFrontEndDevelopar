@@ -22,6 +22,9 @@ export class ViewStudentComponent implements OnInit {
     gender: '',
     address: '',
   };
+  isNewStudent: boolean = false;
+  header: string = '';
+  displayProfileImageUrl = '';
 
   constructor(
     private readonly studentService: StudentService,
@@ -32,23 +35,37 @@ export class ViewStudentComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
+      //
       this.studentId = params.get('id');
-      this.studentService.getStudent(this.studentId).subscribe(
-        (success) => {
-          this.student = success;
-        },
-        (error) => {
-          console.error(error);
-        }
-      );
+
+      if (this.studentId === 'add') {
+        // studentId == add ise add e gore
+        this.isNewStudent = true;
+        this.header = 'Add New Student';
+        this.setImage();
+      } else {
+        // studentId != add ise update e gore
+        this.isNewStudent = false;
+        this.header = 'Update Student';
+        this.studentService.getStudent(this.studentId).subscribe(
+          (success) => {
+            this.student = success;
+            this.setImage();
+          },
+          (error) => {
+            console.error(error);
+            this.setImage();
+          }
+        );
+      }
     });
   }
 
   onUpdate() {
-    // debugger;
+    //
     this.studentService.updateStudent(this.studentId, this.student).subscribe(
       (succes) => {
-        // debugger;
+        //
         this.snackbar.open('Students updated successfully.', undefined, {
           duration: 2000,
         });
@@ -79,5 +96,56 @@ export class ViewStudentComponent implements OnInit {
         });
       }
     );
+  }
+
+  onAdd() {
+    //
+    this.studentService.addStudent(this.student).subscribe(
+      (succes) => {
+        this.snackbar.open('Student added successfully.', undefined, {
+          duration: 2000,
+        });
+
+        setTimeout(() => {
+          this.router.navigateByUrl('');
+        }, 2000);
+      },
+      (error) => {
+        this.snackbar.open("Student didn't add!!!", undefined, {
+          duration: 2000,
+        });
+      }
+    );
+  }
+
+  setImage() {
+    if (this.student.ProfileImageUrl) {
+      this.displayProfileImageUrl = this.student.ProfileImageUrl;
+    } else {
+      debugger;
+      this.displayProfileImageUrl = '/assets/user.png';
+    }
+  }
+
+  uploadImage(event: any) {
+    //
+    if (this.studentId) {
+      const file: any = event.target.files[0];
+      this.studentService.uploadImage(this.studentId, file).subscribe(
+        (success) => {
+          this.student.ProfileImageUrl;
+          this.setImage();
+
+          this.snackbar.open('Profile Image added successfully.', undefined, {
+            duration: 2000,
+          });
+        },
+        (error) => {
+          this.snackbar.open("Profile Image didn't add!!!", undefined, {
+            duration: 2000,
+          });
+        }
+      );
+    }
   }
 }

@@ -44,7 +44,7 @@
       <ng-container matColumnDef="dateOfBirth">
         <th mat-header-cell *matHeaderCellDef mat-sort-header>Data Of Birth</th>
         <td mat-cell *matCellDef="let element">
-          {{ element.DateOfBirth }}
+          {{ element.DateOfBirth | date : "YYYY MMM, dd" }}
         </td>
       </ng-container>
 

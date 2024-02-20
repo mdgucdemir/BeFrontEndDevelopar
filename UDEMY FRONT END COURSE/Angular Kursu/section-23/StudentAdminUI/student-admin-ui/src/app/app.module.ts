@@ -50,7 +50,12 @@ import { FormsModule } from '@angular/forms';
 import { ViewStudentComponent } from './students/view-student/view-student.component';
 
 @NgModule({
-  declarations: [AppComponent, TopNavComponent, StudentsComponent, ViewStudentComponent],
+  declarations: [
+    AppComponent,
+    TopNavComponent,
+    StudentsComponent,
+    ViewStudentComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
