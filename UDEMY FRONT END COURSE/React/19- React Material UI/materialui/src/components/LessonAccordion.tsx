@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Accordion,
   AccordionSummary,
@@ -10,6 +10,13 @@ import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 const LessonAccordion = () => {
+  const [expanded, setExpanded] = useState<string | false>(false);
+
+  const handleChange =
+    (panel: string) => (event: React.SyntheticEvent, isExpanded: boolean) => {
+      setExpanded(isExpanded ? panel : false);
+    };
+
   return (
     <Stack alignItems="center">
       <Typography variant="h4" component="div" mb={3}>
@@ -44,7 +51,11 @@ const LessonAccordion = () => {
         Biri acilirken digeri kapanan Accordion
       </Typography>
       <Stack mt={6}>
-        <Accordion sx={{ width: 550 }}>
+        <Accordion
+          sx={{ width: 550 }}
+          expanded={expanded === "panel1"}
+          onChange={handleChange("panel1")}
+        >
           <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
             <Typography>Accordion 1</Typography>
           </AccordionSummary>
@@ -56,7 +67,11 @@ const LessonAccordion = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ width: 550 }}>
+        <Accordion
+          sx={{ width: 550 }}
+          expanded={expanded === "panel2"}
+          onChange={handleChange("panel2")}
+        >
           <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
             <Typography>Accordion 2</Typography>
           </AccordionSummary>
@@ -68,7 +83,11 @@ const LessonAccordion = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ width: 550 }}>
+        <Accordion
+          sx={{ width: 550 }}
+          expanded={expanded === "panel3"}
+          onChange={handleChange("panel3")}
+        >
           <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
             <Typography>Accordion 3</Typography>
           </AccordionSummary>
@@ -80,7 +99,11 @@ const LessonAccordion = () => {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ width: 550 }}>
+        <Accordion
+          sx={{ width: 550 }}
+          expanded={expanded === "panel4"}
+          onChange={handleChange("panel4")}
+        >
           <AccordionSummary expandIcon={<ArrowDownwardIcon />}>
             <Typography>Accordion 4</Typography>
           </AccordionSummary>
