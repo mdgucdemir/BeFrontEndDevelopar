@@ -1,0 +1,13 @@
+.cart {
+  text-align: center;
+}
+
+.clearButton {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: blue;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
+}

@@ -1,0 +1,33 @@
+.cartItem {
+  display: flex;
+  margin: 50px 150px;
+  justify-content: space-between;
+}
+
+.cartInfo {
+  text-align: right;
+}
+
+.cartImg {
+  width: 750px;
+}
+
+.cartQuantityButton {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cartQuantity {
+  margin-right: 8px;
+}
+
+.cartDeleteButton {
+  padding: 10px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+}

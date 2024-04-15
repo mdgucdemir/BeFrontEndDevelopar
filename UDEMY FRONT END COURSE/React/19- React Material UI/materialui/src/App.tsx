@@ -41,6 +41,7 @@ import RadioExample from "./components/RadioExample";
 import Typography from "./components/Typography";
 
 import { createTheme, colors, ThemeProvider } from "@mui/material";
+import Footer from "./components/Footer/Footer";
 
 const customTheme = createTheme({
   palette: {
@@ -93,7 +94,13 @@ function App() {
       {/* <LessonTimeLine /> */}
       <ThemeProvider theme={customTheme}>
         <LessonCustomize />
+        <LessonCustomize />
+        <LessonCustomize />
+        <LessonCustomize />
+        <LessonCustomize />
+        <LessonCustomize />
       </ThemeProvider>
+      <Footer />
     </div>
   );
 }

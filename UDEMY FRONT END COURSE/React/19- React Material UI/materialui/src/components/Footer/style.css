@@ -1,0 +1,12 @@
+footer {
+  width: 100%; /* Footer genişliğini sayfanın tamamına yay */
+  text-align: center; /* Metinleri ortalar */
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0; /* Kenar boşluklarını sıfırla */
+  font-size: 16px; /* Font boyutu */
+  color: black; /* Metin rengi */
+  font-family: Arial, sans-serif; /* Font ailesi */
+}
