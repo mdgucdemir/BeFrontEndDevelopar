@@ -30,7 +30,7 @@ const CourseForm = () => {
 
   return (
     <div className="courseForm panel">
-      <h4 className="subtitle is-3">Kurs Ekle</h4>
+      <h4 className="subtitle is-3">Birseyler Ekle</h4>
       <form onSubmit={handleSubmit}>
         <div className="field-group">
           <div className="field">
@@ -45,7 +45,7 @@ const CourseForm = () => {
             />
           </div>
           <div className="field">
-            <label className="label">Description</label>
+            <label className="label">Aciklama</label>
             <textarea
               className="input is-expanded"
               onChange={(event) => {

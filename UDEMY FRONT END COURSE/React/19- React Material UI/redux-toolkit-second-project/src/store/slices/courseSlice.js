@@ -15,9 +15,20 @@ const courseSlice = createSlice({
         id: nanoid(),
       });
     },
+    changeSearchTerm(state, action) {
+      // debugger;
+      state.searchTerm = action.payload;
+    },
+    removeCourse(state, action) {
+      const updatedCourses = state.data.filter((course) => {
+        return course.id !== action.payload;
+      });
+      state.data = updatedCourses;
+    },
   },
 });
 
-export const { addCourse } = courseSlice.actions;
+export const { addCourse, removeCourse, changeSearchTerm } =
+  courseSlice.actions;
 
 export const courseReducer = courseSlice.reducer;
