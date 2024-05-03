@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
   title: {
     textTransform: "capitalize",
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "bold",
     marginLeft: 15,
     marginBottom: 5,
