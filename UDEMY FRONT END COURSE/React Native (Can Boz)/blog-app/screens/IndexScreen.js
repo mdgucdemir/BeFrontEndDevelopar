@@ -1,21 +1,56 @@
-import { StyleSheet, Text, View, FlatList, Button } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Button,
+  TouchableOpacity,
+} from "react-native";
 import React, { useContext } from "react";
 import { Context } from "../context/BlogContext";
+import { AntDesign } from "@expo/vector-icons";
 
-export default function IndexScreen() {
-  const { state, addBlogPost } = useContext(Context);
+export default function IndexScreen({ navigation }) {
+  const { state, addBlogPost, deleteBlogPost } = useContext(Context);
   return (
     <View>
-      <Button title="EKle" onPress={addBlogPost} />
+      <Button title="Ekle" onPress={addBlogPost} />
       <FlatList
         data={state}
+        keyExtractor={(blogPost) => blogPost.id}
         renderItem={({ item }) => {
-          return <Text>{item.title}</Text>;
+          return (
+            <View style={styles.border}>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Show", { id: item.id })}
+              >
+                <View style={styles.row}>
+                  <Text style={styles.title}>{item.title}</Text>
+                  <TouchableOpacity onPress={() => deleteBlogPost(item.id)}>
+                    <AntDesign name="delete" size={24} color="black" />
+                  </TouchableOpacity>
+                </View>
+              </TouchableOpacity>
+            </View>
+          );
         }}
-        keyExtractor={(m) => m.title}
       />
     </View>
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  border: {
+    borderColor: "gray",
+    borderBottomWidth: 1,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+  },
+  title: {
+    fontSize: 18,
+  },
+});
