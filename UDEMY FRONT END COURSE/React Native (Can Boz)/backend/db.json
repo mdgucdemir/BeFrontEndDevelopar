@@ -1,0 +1,24 @@
+{
+  "blogposts": [
+    {
+      "id": 1,
+      "title": "React Js",
+      "content": "Redux"
+    },
+    {
+      "id": 3,
+      "title": "React Native",
+      "content": "mobile app"
+    },
+    {
+      "title": "JavaScript",
+      "content": "javascript",
+      "id": "cd9a"
+    },
+    {
+      "title": "Vue js",
+      "content": "vue js skdfl",
+      "id": "4ac6"
+    }
+  ]
+}
