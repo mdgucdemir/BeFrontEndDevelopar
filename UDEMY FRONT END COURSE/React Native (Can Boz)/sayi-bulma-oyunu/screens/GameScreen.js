@@ -14,10 +14,10 @@ export default function GameScreen({ userNumber, onGameOver }) {
   const [currentGuess, setCurrentGuess] = useState(initialGuess);
   const [guessCounts, setGuessCounts] = useState([initialGuess]);
 
-  // useEffect(() => {
-  //   let minNumber = 1;
-  //   let maxNumber = 100;
-  // }, []);
+  useEffect(() => {
+    let minNumber = 1;
+    let maxNumber = 100;
+  }, []);
 
   useEffect(() => {
     if (currentGuess === userNumber) {
