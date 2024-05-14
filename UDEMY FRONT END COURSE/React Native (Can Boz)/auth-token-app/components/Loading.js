@@ -1,11 +1,11 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ActivityIndicator } from "react-native";
 import React from "react";
 
-export default function HomeScreen() {
+export default function Loading({ message }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Wellcome to my app</Text>
-      <Text>You login successfuly</Text>
+      <Text style={styles.text}>{message}</Text>
+      <ActivityIndicator size="large" />
     </View>
   );
 }
@@ -16,9 +16,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
+  text: {
+    fontSize: 16,
     marginBottom: 10,
   },
 });
