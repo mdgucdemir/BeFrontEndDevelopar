@@ -9,6 +9,9 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import FavoritesScreen from "./screens/FavoritesScreen";
 import { FontAwesome } from "@expo/vector-icons";
 import { AntDesign } from "@expo/vector-icons";
+import FavoritesContextProvider from "./store/favoritesContext";
+import { Provider } from "react-redux";
+import { store } from "./store/redux/store";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -46,24 +49,28 @@ function DrawerNavigator() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: "#2196f3" },
-          headerTintColor: "white",
-          contentStyle: { backgroundColor: "#e3f2fd" },
-        }}
-      >
-        <Stack.Screen
-          name="Drawer"
-          component={DrawerNavigator}
-          options={{
-            headerShown: false,
+      <FavoritesContextProvider>
+        {/* <Provider store={store}> */}
+        <Stack.Navigator
+          screenOptions={{
+            headerStyle: { backgroundColor: "#2196f3" },
+            headerTintColor: "white",
+            contentStyle: { backgroundColor: "#e3f2fd" },
           }}
-        />
+        >
+          <Stack.Screen
+            name="Drawer"
+            component={DrawerNavigator}
+            options={{
+              headerShown: false,
+            }}
+          />
 
-        <Stack.Screen name="FoodOverView" component={FoodOverViewScreen} />
-        <Stack.Screen name="FoodDetail" component={FoodDetailScreen} />
-      </Stack.Navigator>
+          <Stack.Screen name="FoodOverView" component={FoodOverViewScreen} />
+          <Stack.Screen name="FoodDetail" component={FoodDetailScreen} />
+        </Stack.Navigator>
+        {/* </Provider> */}
+      </FavoritesContextProvider>
     </NavigationContainer>
   );
 }
