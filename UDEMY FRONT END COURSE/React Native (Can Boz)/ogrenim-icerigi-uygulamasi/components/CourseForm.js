@@ -10,27 +10,50 @@ export default function CourseForm({
   defaultValues,
 }) {
   const [inputs, setInputs] = useState({
-    amount: defaultValues ? defaultValues.amount.toString() : "",
-    date: defaultValues ? getFormatedDate(defaultValues.date) : "",
-    description: defaultValues ? defaultValues.description : "",
+    amount: {
+      value: defaultValues ? defaultValues.amount.toString() : "",
+      isValid: true,
+    },
+    date: {
+      value: defaultValues ? getFormatedDate(defaultValues.date) : "",
+      isValid: true,
+    },
+    description: {
+      value: defaultValues ? defaultValues.description : "",
+      isValid: true,
+    },
   });
 
   function addOrUpdateHandler() {
     const courseData = {
-      amount: Number(inputs.amount),
-      date: new Date(inputs.date),
-      description: inputs.description,
+      amount: Number(inputs.amount.value),
+      date: new Date(inputs.date.value),
+      description: inputs.description.value.trim(),
     };
 
-    const amountIsValid = !isNaN(courseData.amount) && courseData.amount > 0;
+    // console.log(courseData);
+
+    const amountIsValid = courseData.amount > 0;
     const dateIsValid = courseData.date.toString() !== "Invalid Date";
     const descriptionIsValid = courseData.description.trim().length > 0;
 
     if (!amountIsValid || !dateIsValid || !descriptionIsValid) {
-      Alert.alert(
-        "Hatali Giris",
-        "Lutfen tum alanlari dogru format ta giriniz"
-      );
+      setInputs((currentInputs) => {
+        return {
+          amount: {
+            value: Number(currentInputs.amount.value),
+            isValid: amountIsValid,
+          },
+          date: {
+            value: currentInputs.date.value,
+            isValid: dateIsValid,
+          },
+          description: {
+            value: currentInputs.description.value,
+            isValid: descriptionIsValid,
+          },
+        };
+      });
       return; // herhangi bir hata var ise burada durur ve altta ki onSubmit islemi gerceklesmes
     }
 
@@ -43,7 +66,7 @@ export default function CourseForm({
     setInputs((currentInput) => {
       return {
         ...currentInput,
-        [inputIdentifier]: enteredValue,
+        [inputIdentifier]: { value: enteredValue, isValid: true },
       };
     });
   }
@@ -55,33 +78,53 @@ export default function CourseForm({
         <Input
           style={styles.flexAll}
           label="Tutar"
+          invalid={!inputs.amount.isValid}
           textInputConfig={{
             keyboardType: "decimal-pad",
             onChangeText: inputChange.bind(this, "amount"),
-            value: inputs.amount,
+            value: inputs.amount.value.toString(),
           }}
         />
         <Input
           style={styles.flexAll}
           label="Tarih"
+          invalid={!inputs.date.isValid}
           textInputConfig={{
             keyboardType: "decimal-pad",
             placeholder: "YYYY-MM-DD",
-            maxLength: 14,
+            maxLength: 10,
             onChangeText: inputChange.bind(this, "date"),
-            value: inputs.date,
+            value: inputs.date.value,
           }}
         />
       </View>
 
       <Input
         label="Baslik"
+        invalid={!inputs.description.isValid}
         textInputConfig={{
           multiline: true,
           onChangeText: inputChange.bind(this, "description"),
-          value: inputs.description,
+          value: inputs.description.value,
         }}
       />
+      <View style={styles.error}>
+        {!inputs.amount.isValid && (
+          <Text style={styles.errorText}>
+            Lutfen tutari dogru formatta giriniz
+          </Text>
+        )}
+        {!inputs.date.isValid && (
+          <Text style={styles.errorText}>
+            Lutfen tarihi dogru formatta giriniz
+          </Text>
+        )}
+        {!inputs.description.isValid && (
+          <Text style={styles.errorText}>
+            Lutfen basligi dogru formatta giriniz
+          </Text>
+        )}
+      </View>
       <View style={styles.buttons}>
         <Pressable onPress={cancelHandler}>
           <View style={styles.cancel}>
@@ -136,5 +179,12 @@ const styles = StyleSheet.create({
     marginRight: 10,
     padding: 8,
     alignItems: "center",
+  },
+  error: {
+    alignItems: "center",
+    marginTop: 5,
+  },
+  errorText: {
+    color: "#e91e63",
   },
 });

@@ -1,5 +1,5 @@
 export function getFormatedDate(date) {
-  return `${date.getFullYear()} - ${date.getMonth() + 1} - ${date.getDate()}`;
+  return `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
 }
 
 export function getLastWeek(date, days) {

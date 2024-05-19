@@ -9,6 +9,7 @@ function renderCourseItem(itemData) {
 export default function CoursesList({ courses }) {
   return (
     <FlatList
+      style={styles.coursesList}
       data={courses}
       keyExtractor={(item) => item.id}
       renderItem={renderCourseItem}
@@ -16,4 +17,8 @@ export default function CoursesList({ courses }) {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  coursesList: {
+    marginTop: 10,
+  },
+});
