@@ -9,6 +9,11 @@ export default function ManageCourse({ route, navigation }) {
   const courseId = route.params?.courseId;
   let isEditing = false;
 
+  const selectedCourse = coursesContext.courses.find(
+    (course) => course.id === courseId
+  );
+  // console.log(selectedCourse);
+
   if (courseId) {
     isEditing = true;
   }
@@ -28,40 +33,23 @@ export default function ManageCourse({ route, navigation }) {
     navigation.goBack();
   }
 
-  function addOrUpdateHandler() {
+  function addOrUpdateHandler(courseData) {
     if (isEditing) {
-      coursesContext.updateCourse(courseId, {
-        description: "Güncellenen Kurs",
-        amount: 169,
-        date: new Date(),
-      });
+      coursesContext.updateCourse(courseId, courseData);
     } else {
-      coursesContext.addCourse({
-        description: "Eklenen Kurs",
-        amount: 169,
-        date: new Date(),
-      });
+      coursesContext.addCourse(courseData);
     }
     navigation.goBack();
   }
 
   return (
     <View style={styles.container}>
-      <CourseForm />
-      <View style={styles.buttons}>
-        <Pressable onPress={cancelHandler}>
-          <View style={styles.cancel}>
-            <Text style={styles.buttonText}>Iptal Et</Text>
-          </View>
-        </Pressable>
-        <Pressable onPress={addOrUpdateHandler}>
-          <View style={styles.add}>
-            <Text style={styles.buttonText}>
-              {isEditing ? "Güncelle" : "Ekle"}
-            </Text>
-          </View>
-        </Pressable>
-      </View>
+      <CourseForm
+        cancelHandler={cancelHandler}
+        onSubmit={addOrUpdateHandler}
+        buttonLabel={isEditing ? "Güncelle" : "Ekle"}
+        defaultValues={selectedCourse}
+      />
 
       {isEditing && (
         <View style={styles.DeleteContainer}>
@@ -88,26 +76,5 @@ const styles = StyleSheet.create({
     borderTopColor: "#2196f3",
     paddingTop: 10,
     marginTop: 16,
-  },
-  buttons: {
-    flexDirection: "row",
-    justifyContent: "center",
-  },
-  cancel: {
-    backgroundColor: "#f50057",
-    minWidth: 120,
-    marginRight: 10,
-    padding: 8,
-    alignItems: "center",
-  },
-  buttonText: {
-    color: "white",
-  },
-  add: {
-    backgroundColor: "#1565c0",
-    minWidth: 120,
-    marginRight: 10,
-    padding: 8,
-    alignItems: "center",
   },
 });
