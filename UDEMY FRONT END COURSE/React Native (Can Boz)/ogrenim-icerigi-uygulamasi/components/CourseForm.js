@@ -126,7 +126,7 @@ export default function CourseForm({
         )}
       </View>
       <View style={styles.buttons}>
-        <Pressable onPress={cancelHandler}>
+        <Pressable android_ripple={{ color: "dddddd" }} onPress={cancelHandler}>
           <View style={styles.cancel}>
             <Text style={styles.buttonText}>Iptal Et</Text>
           </View>
