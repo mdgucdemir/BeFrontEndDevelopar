@@ -12,9 +12,9 @@ import {
   useRoute,
   useIsFocused,
 } from "@react-navigation/native";
-import { getMapPreview } from "../../util/location";
+import { getAddress, getMapPreview } from "../../util/location";
 
-export default function LocationPicker() {
+export default function LocationPicker({ onPickLocation }) {
   //
   const isFocused = useIsFocused();
   const navigation = useNavigation();
@@ -34,6 +34,19 @@ export default function LocationPicker() {
       // console.log(pickedLocation);
     }
   }, [route, isFocused]);
+
+  useEffect(() => {
+    async function handleLocation() {
+      if (pickedLocation) {
+        const address = await getAddress(
+          pickedLocation.lat,
+          pickedLocation.lng
+        );
+        onPickLocation({ ...pickedLocation, address: address });
+      }
+    }
+    handleLocation();
+  }, [pickedLocation, onPickLocation]);
 
   async function verifyPermissions() {
     if (
