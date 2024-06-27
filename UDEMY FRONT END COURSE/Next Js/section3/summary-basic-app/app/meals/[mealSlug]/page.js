@@ -1,9 +1,18 @@
 import Image from "next/image";
-import classes from "./page.module.css";
+import { notFound } from "next/navigation";
+
 import { getMeal } from "@/lib/meals";
+import classes from "./page.module.css";
 
 export default function MealDetailsPage({ params }) {
   const meal = getMeal(params.mealSlug);
+
+  if (!meal) {
+    notFound();
+    // bu function calistiginda en yakin not-found.js veya error.js sayfasina aticak.
+    // bu ornek te en yakin dosya error.js oldugundan error.js isleme alinacak
+  }
+
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
   return (
     <>
