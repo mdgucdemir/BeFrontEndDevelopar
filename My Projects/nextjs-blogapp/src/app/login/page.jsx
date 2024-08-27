@@ -11,7 +11,7 @@ const page = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
 
-  // console.log(data, status);
+  console.log(data, status);
 
   if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;
@@ -19,6 +19,7 @@ const page = () => {
   if (status === "authenticated") {
     router.push("/");
   }
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
