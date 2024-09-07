@@ -1,0 +1,17 @@
+.container {
+  margin-top: 80vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 60vh;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .container {
+    margin-top: 50vh;
+  }
+}

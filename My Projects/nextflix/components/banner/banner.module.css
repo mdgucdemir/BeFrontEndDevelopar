@@ -1,0 +1,28 @@
+.bennerSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -99;
+}
+
+.item {
+  position: relative;
+  height: 80vh;
+}
+
+.image {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .item {
+    height: 50vh;
+  }
+}

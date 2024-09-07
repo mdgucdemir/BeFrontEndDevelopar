@@ -1,3 +1,6 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
 :root {
   --background: #ffffff;
   --foreground: #1d1c1c;
@@ -7,6 +10,7 @@
   :root {
     --background: #272626;
     --foreground: #ededed;
+    --linkHover: #ce2222;
   }
 }
 
