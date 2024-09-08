@@ -8,11 +8,11 @@ import Slider from "react-slick";
 
 import Image from "next/image";
 
-const Banner = () => {
+const Banner = ({ mediaType, type }) => {
   const [movieItems, setMovieItems] = useState([]);
 
   const getData = async () => {
-    const data = await fetchEndPoint("movie/upcoming").then((data) => {
+    const data = await fetchEndPoint(mediaType).then((data) => {
       setMovieItems(data?.results);
     });
 
@@ -27,7 +27,6 @@ const Banner = () => {
     dots: false,
     infinite: true,
     slidesToShow: 1,
-    slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 6000,
@@ -35,7 +34,11 @@ const Banner = () => {
   };
 
   return (
-    <div className={styles.bennerSlide}>
+    <div
+      className={`${type === "banner" ? styles.bennerSlide : ""} ${
+        type === "media" ? styles.banner : ""
+      }`}
+    >
       <Slider {...settings}>
         {movieItems.map((item, i) => (
           <div className={styles.item} key={i}>

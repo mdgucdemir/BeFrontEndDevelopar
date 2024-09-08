@@ -1,5 +1,5 @@
 .container {
-  width: 100%;
+  /* width: 100%; */
   height: 400px;
 }
 
@@ -10,14 +10,52 @@
 
 .slider {
   margin: 1rem 0;
-  width: 100%;
-  height: 400px;
-}
-
-.imageWrapper:hover {
-  scale: 1.2;
 }
 
 .image {
   object-fit: cover;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.image:hover {
+  transition: 1s ease-in;
+  scale: 1.2;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 350px;
+  }
+
+  .image {
+    width: 170px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .image {
+    width: 150px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    height: 300px;
+  }
+  .image {
+    width: 110px;
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .image {
+    width: 120px;
+    height: 200px;
+  }
 }

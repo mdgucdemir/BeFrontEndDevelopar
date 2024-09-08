@@ -106,14 +106,7 @@
 
 @media screen and (max-width: 640px) {
   .links {
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: none;
   }
   .navbar {
     height: 50px;

@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./mediaSwiper.module.css";
 import { useEffect, useState } from "react";
 import { apiImage, fetchEndPoint } from "@/api/connect";
@@ -17,7 +19,6 @@ const MediaSwiper = ({ title, mediaType }) => {
 
   useEffect(() => {
     getData();
-    console.log(movieItems);
   }, []);
 
   const settings = {
@@ -37,27 +38,12 @@ const MediaSwiper = ({ title, mediaType }) => {
           dots: true,
         },
       },
-      {
-        breakpoint: 1388,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 1160,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          initialSlide: 2,
-        },
-      },
+
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 5,
+          slidesToScroll: 5,
           initialSlide: 2,
         },
       },
@@ -72,8 +58,8 @@ const MediaSwiper = ({ title, mediaType }) => {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
         },
       },
     ],
@@ -85,12 +71,11 @@ const MediaSwiper = ({ title, mediaType }) => {
       <div className={styles.slider}>
         <Slider {...settings}>
           {movieItems.map((item, i) => (
-            <div className={styles.imageWrapper} key={i}>
-              <Image
+            <div key={i}>
+              <img
                 src={apiImage.w500Image(item.poster_path)}
                 alt={item.title}
-                width={200}
-                height={300}
+                className={styles.image}
               />
             </div>
           ))}
