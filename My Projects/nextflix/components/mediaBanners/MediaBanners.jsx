@@ -12,7 +12,7 @@ const MediaBanners = () => {
         <MediaSwiper title="upcoming movies" mediaType="movie/upcoming" />
       </div>
       <div>
-        <h2 className={styles.title}>trend tv shows</h2>
+        <h2 className={styles.title}>trending tv shows</h2>
         <div className={styles.banner}>
           <Banner mediaType="trending/tv/day?" type="media" />
         </div>

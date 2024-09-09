@@ -21,13 +21,13 @@ const Header = () => {
         </div>
         <div className={styles.linkContainer}>
           <div className={styles.links}>
-            <Link href="/" className={styles.link}>
+            <Link href="/movie" className={styles.link}>
               Movies
             </Link>
-            <Link href="/" className={styles.link}>
+            <Link href="/tv" className={styles.link}>
               Tv Shows
             </Link>
-            <Link href="/" className={styles.link}>
+            <Link href="/trends" className={styles.link}>
               Trends
             </Link>
           </div>

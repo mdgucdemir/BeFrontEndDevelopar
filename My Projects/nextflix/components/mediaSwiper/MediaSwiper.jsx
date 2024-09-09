@@ -3,8 +3,8 @@
 import styles from "./mediaSwiper.module.css";
 import { useEffect, useState } from "react";
 import { apiImage, fetchEndPoint } from "@/api/connect";
-import Image from "next/image";
 import Slider from "react-slick";
+import Link from "next/link";
 
 const MediaSwiper = ({ title, mediaType }) => {
   const [movieItems, setMovieItems] = useState([]);
@@ -71,7 +71,7 @@ const MediaSwiper = ({ title, mediaType }) => {
       <div className={styles.slider}>
         <Slider {...settings}>
           {movieItems.map((item, i) => (
-            <div key={i}>
+            <div className={styles.imageWrapper} key={i}>
               <img
                 src={apiImage.w500Image(item.poster_path)}
                 alt={item.title}

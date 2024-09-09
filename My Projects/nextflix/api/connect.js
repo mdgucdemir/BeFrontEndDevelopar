@@ -3,10 +3,8 @@ const accessToken = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
 
 // fetch api
 export const fetchEndPoint = async (mediaType, pageNum) => {
-  const page_Nummber = pageNum ? pageNum : 1;
-
   try {
-    const response = await fetch(`${baseUrl}${mediaType}?${page_Nummber}`, {
+    const response = await fetch(`${baseUrl}${mediaType}`, {
       method: "GET",
       headers: {
         accept: "application/json",
