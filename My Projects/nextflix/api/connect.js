@@ -2,7 +2,7 @@ const baseUrl = "https://api.themoviedb.org/3/";
 const accessToken = process.env.NEXT_PUBLIC_TMDBI_TOKEN;
 
 // fetch api
-export const fetchEndPoint = async (mediaType, pageNum) => {
+export const fetchEndPoint = async (mediaType) => {
   try {
     const response = await fetch(`${baseUrl}${mediaType}`, {
       method: "GET",

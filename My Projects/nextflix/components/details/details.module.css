@@ -1,0 +1,272 @@
+.container {
+  margin: 2rem;
+}
+
+.info {
+  display: flex;
+  padding: 1rem 5rem;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 750px;
+}
+
+.image img {
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.title h1 {
+  font-weight: 400;
+  font-size: 40px;
+  opacity: 0.7;
+}
+
+.overview {
+  margin-top: 2rem;
+}
+
+.overview p {
+  font-size: 20px;
+  opacity: 0.6;
+  line-height: 1.6;
+}
+
+.genres {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.genre {
+  padding: 10px;
+  background-color: black;
+  border-radius: 8px;
+}
+
+.genre p {
+  font-size: 13px;
+}
+
+.company {
+  margin: 2rem 0;
+}
+
+.createdBy {
+  display: flex;
+  gap: 10px;
+}
+
+.created {
+  opacity: 0.5;
+}
+
+.casts {
+  display: flex;
+  gap: 20px;
+  margin: 2rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.cast {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cast img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.personName {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.personChar {
+  opacity: 0.6;
+  text-align: center;
+}
+
+.recommendWrap {
+  margin: 3rem 1rem;
+}
+
+.recommendWrap h2 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.recommends {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.recommend {
+  width: 230px;
+  height: 330px;
+}
+.recommend img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    margin: 1rem;
+  }
+
+  .title h1 {
+    font-size: 35px;
+  }
+
+  .overview {
+    margin-top: 1rem;
+  }
+
+  .overview p {
+    font-size: 18px;
+  }
+  .cast img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .cast p {
+    font-size: 13px;
+  }
+
+  .recommend {
+    width: 200px;
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .info {
+    padding: 1rem 1rem;
+  }
+
+  .title h1 {
+    font-size: 20px;
+  }
+  .overview p {
+    font-size: 13px;
+  }
+  .genre {
+    padding: 8px;
+  }
+
+  .genre p {
+    font-size: 12px;
+  }
+
+  .company {
+    margin: 1rem 0;
+  }
+  .cast img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .cast p {
+    font-size: 8px;
+  }
+  .recommend {
+    width: 160px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image {
+    display: none;
+  }
+
+  .recommendWrap h2 {
+    font-size: 16px;
+  }
+  .recommend {
+    height: 150px;
+  }
+  .recommend img {
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .info {
+    padding: 1rem 0.5rem;
+  }
+
+  .title h1 {
+    font-size: 18px;
+  }
+  .overview p {
+    font-size: 13px;
+  }
+  .genre {
+    padding: 5px;
+  }
+
+  .genre p {
+    font-size: 10px;
+  }
+
+  .company {
+    margin: 1rem 0;
+  }
+  .createdBy p {
+    font-size: 10px;
+  }
+
+  .cast img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .cast p {
+    font-size: 5px;
+  }
+
+  .recommends {
+    flex-direction: column;
+  }
+  .recommend {
+    width: 100%;
+    height: 250px;
+  }
+  .recommend img {
+    object-fit: contain;
+  }
+}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { apiImage, fetchEndPoint } from "@/api/connect";
+import Link from "next/link";
 
 const page = () => {
   const [selectedMediaType, setSelectedMediaType] = useState("movie");
@@ -71,12 +72,20 @@ const page = () => {
 
       <div className={styles.mediaContainer}>
         {mediaData.map((item, i) => (
-          <div className={styles.mediaItem} key={i}>
-            <img
-              src={apiImage.w500Image(item.backdrop_path)}
-              alt={item.title}
-            />
-          </div>
+          <Link
+            href={
+              selectedMediaType === "movie"
+                ? `movie/${item.id}`
+                : `tv/${item.id}`
+            }
+          >
+            <div className={styles.mediaItem} key={i}>
+              <img
+                src={apiImage.w500Image(item.backdrop_path)}
+                alt={item.title}
+              />
+            </div>
+          </Link>
         ))}
       </div>
 

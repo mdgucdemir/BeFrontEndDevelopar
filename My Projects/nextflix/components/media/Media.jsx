@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import styles from "./media.module.css";
 import { apiImage, fetchEndPoint } from "@/api/connect";
+import Link from "next/link";
 
 // tv ilk eleman id = 10759
 // movie ilk eleman id = 28
@@ -80,12 +81,14 @@ const Media = ({ media }) => {
 
       <div className={styles.mediaContainer}>
         {mediaData.map((item, i) => (
-          <div className={styles.mediaItem} key={i}>
-            <img
-              src={apiImage.w500Image(item.backdrop_path)}
-              alt={item.title}
-            />
-          </div>
+          <Link href={media === "movie" ? `movie/${item.id}` : `tv/${item.id}`}>
+            <div className={styles.mediaItem} key={i}>
+              <img
+                src={apiImage.w500Image(item.backdrop_path)}
+                alt={item.title}
+              />
+            </div>
+          </Link>
         ))}
       </div>
 

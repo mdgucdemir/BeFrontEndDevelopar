@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: -99;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -14,10 +14,18 @@
 .item {
   position: relative;
   height: 80vh;
+  /* background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.9) 30%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(255, 255, 255, 0) 100%
+  ); */
 }
 
 .image {
   object-fit: cover;
+  /* z-index: -2; */
 }
 
 @media screen and (max-width: 768px) {
