@@ -88,9 +88,7 @@ const DetailFetch = ({ seriesId, mediaType }) => {
           videos={videos}
         />
       ) : (
-        <div className={styles.loading}>
-          <Loading />
-        </div>
+        <Loading />
       )}
     </div>
   );

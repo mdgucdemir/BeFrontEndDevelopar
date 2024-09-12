@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import styles from "./media.module.css";
 import { apiImage, fetchEndPoint } from "@/api/connect";
 import Link from "next/link";
+import Loading from "../loading/Loading";
 
 // tv ilk eleman id = 10759
 // movie ilk eleman id = 28
@@ -15,6 +16,7 @@ const Media = ({ media }) => {
   const [genreNum, setGenreNum] = useState(0);
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   if (media === "tv" && genreNum === 0) {
     setGenreNum(10759);
@@ -55,49 +57,59 @@ const Media = ({ media }) => {
   };
 
   useEffect(() => {
+    setLoading(true);
     mediaGenre();
     mediaFetch();
+    setLoading(false);
   }, [genreNum, pageNum]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.genre}>
-        <select
-          name="genre"
-          id="genre"
-          onChange={genreChange}
-          className={styles.genreLists}
-        >
-          <option value="">
-            Select {media === "movie" ? "Movie" : "Tv Series"} Category
-          </option>
-          {genre.map((item, i) => (
-            <option value={item.id} key={i}>
-              {item.name}
-            </option>
-          ))}
-        </select>
-      </div>
+    <>
+      {mediaData.length > 0 ? (
+        <div className={styles.container}>
+          <div className={styles.genre}>
+            <select
+              name="genre"
+              id="genre"
+              onChange={genreChange}
+              className={styles.genreLists}
+            >
+              <option value="">
+                Select {media === "movie" ? "Movie" : "Tv Series"} Category
+              </option>
+              {genre.map((item, i) => (
+                <option value={item.id} key={i}>
+                  {item.name}
+                </option>
+              ))}
+            </select>
+          </div>
 
-      <div className={styles.mediaContainer}>
-        {mediaData.map((item, i) => (
-          <Link href={media === "movie" ? `movie/${item.id}` : `tv/${item.id}`}>
-            <div className={styles.mediaItem} key={i}>
-              <img
-                src={apiImage.w500Image(item.backdrop_path)}
-                alt={item.title}
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
+          <div className={styles.mediaContainer}>
+            {mediaData.map((item, i) => (
+              <Link
+                href={media === "movie" ? `movie/${item.id}` : `tv/${item.id}`}
+              >
+                <div className={styles.mediaItem} key={i}>
+                  <img
+                    src={apiImage.w500Image(item.backdrop_path)}
+                    alt={item.title}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
 
-      <div className={styles.loadMore}>
-        <button onClick={loadMore} className={styles.loadMoreButton}>
-          Load Moare
-        </button>
-      </div>
-    </div>
+          <div className={styles.loadMore}>
+            <button onClick={loadMore} className={styles.loadMoreButton}>
+              Load Moare
+            </button>
+          </div>
+        </div>
+      ) : (
+        <Loading />
+      )}
+    </>
   );
 };
 

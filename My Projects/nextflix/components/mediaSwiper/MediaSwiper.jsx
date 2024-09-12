@@ -6,7 +6,7 @@ import { apiImage, fetchEndPoint } from "@/api/connect";
 import Slider from "react-slick";
 import Link from "next/link";
 
-const MediaSwiper = ({ title, mediaType }) => {
+const MediaSwiper = ({ title, mediaType, type }) => {
   const [movieItems, setMovieItems] = useState([]);
 
   const getData = async () => {
@@ -72,11 +72,13 @@ const MediaSwiper = ({ title, mediaType }) => {
         <Slider {...settings}>
           {movieItems.map((item, i) => (
             <div className={styles.imageWrapper} key={i}>
-              <img
-                src={apiImage.w500Image(item.poster_path)}
-                alt={item.title}
-                className={styles.image}
-              />
+              <Link href={`${type}/${item.id}`}>
+                <img
+                  src={apiImage.w500Image(item.poster_path)}
+                  alt={item.title}
+                  className={styles.image}
+                />
+              </Link>
             </div>
           ))}
         </Slider>

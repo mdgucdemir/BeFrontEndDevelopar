@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import styles from "./page.module.css";
 import { apiImage, fetchEndPoint } from "@/api/connect";
 import Link from "next/link";
+import Loading from "@/components/loading/Loading";
 
 const page = () => {
   const [selectedMediaType, setSelectedMediaType] = useState("movie");
   const [selectedMediaTime, setSelectedMediaTime] = useState("week");
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   let mediaType = `trending/${selectedMediaType}/${selectedMediaTime}?page=${pageNum}`;
 
@@ -28,9 +30,11 @@ const page = () => {
   };
 
   const mediaFetch = async () => {
+    setLoading(true);
     const data = await fetchEndPoint(mediaType);
-    console.log(data);
+    // console.log(data);
     setMediaData((prevData) => [...prevData, ...data?.results]);
+    setLoading(false);
   };
 
   const loadMore = () => {
@@ -42,59 +46,65 @@ const page = () => {
   }, [selectedMediaType, selectedMediaTime, pageNum]);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.title}>
-        <h1>Trend Movies and Tv Shows</h1>
-      </div>
-      <div className={styles.selector}>
-        <select
-          name="media"
-          id="media"
-          className={styles.mediaSelect}
-          onChange={mediaChange}
-        >
-          <option value="">Select Media Type</option>
-          <option value="movie">Movies</option>
-          <option value="tv">Tv Shows</option>
-        </select>
+    <>
+      {mediaData.length > 0 ? (
+        <div className={styles.container}>
+          <div className={styles.title}>
+            <h1>Trend Movies and Tv Shows</h1>
+          </div>
+          <div className={styles.selector}>
+            <select
+              name="media"
+              id="media"
+              className={styles.mediaSelect}
+              onChange={mediaChange}
+            >
+              <option value="">Select Media Type</option>
+              <option value="movie">Movies</option>
+              <option value="tv">Tv Shows</option>
+            </select>
 
-        <select
-          name="time"
-          id="time"
-          className={styles.mediaSelect}
-          onChange={timeChange}
-        >
-          <option value="">Select Media Time</option>
-          <option value="day">Day</option>
-          <option value="week">Week</option>
-        </select>
-      </div>
+            <select
+              name="time"
+              id="time"
+              className={styles.mediaSelect}
+              onChange={timeChange}
+            >
+              <option value="">Select Media Time</option>
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+            </select>
+          </div>
 
-      <div className={styles.mediaContainer}>
-        {mediaData.map((item, i) => (
-          <Link
-            href={
-              selectedMediaType === "movie"
-                ? `movie/${item.id}`
-                : `tv/${item.id}`
-            }
-          >
-            <div className={styles.mediaItem} key={i}>
-              <img
-                src={apiImage.w500Image(item.backdrop_path)}
-                alt={item.title}
-              />
-            </div>
-          </Link>
-        ))}
-      </div>
+          <div className={styles.mediaContainer}>
+            {mediaData.map((item, i) => (
+              <Link
+                href={
+                  selectedMediaType === "movie"
+                    ? `movie/${item.id}`
+                    : `tv/${item.id}`
+                }
+              >
+                <div className={styles.mediaItem} key={i}>
+                  <img
+                    src={apiImage.w500Image(item.backdrop_path)}
+                    alt={item.title}
+                  />
+                </div>
+              </Link>
+            ))}
+          </div>
 
-      <div className={styles.loadMore}>
-        <button onClick={loadMore} className={styles.loadMoreButton}>
-          Load Moare
-        </button>
-      </div>
-    </div>
+          <div className={styles.loadMore}>
+            <button onClick={loadMore} className={styles.loadMoreButton}>
+              Load Moare
+            </button>
+          </div>
+        </div>
+      ) : (
+        <Loading />
+      )}
+    </>
   );
 };
 

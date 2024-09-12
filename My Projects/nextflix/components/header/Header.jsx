@@ -1,16 +1,31 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
 import { FaSearch, FaUserCircle, FaBars } from "react-icons/fa";
 import { VscChromeClose } from "react-icons/vsc";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [query, setQuery] = useState("");
 
-  const open = () => {
+  const router = useRouter();
+
+  const openNclose = () => {
     setIsOpen(!isOpen);
+  };
+
+  const HandleChange = (event) => {
+    setQuery(event.target.value);
+  };
+
+  const searchQueryHandler = (event) => {
+    if (event.key === "Enter" && query.length > 0) {
+      router.push(`search/?query=${query}`);
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -32,7 +47,7 @@ const Header = () => {
             </Link>
           </div>
           <div className={styles.icons}>
-            <FaSearch className={styles.icon} onClick={open} />
+            <FaSearch className={styles.icon} onClick={openNclose} />
             <FaBars className={styles.barIcon} />
             <FaUserCircle className={styles.icon} />
           </div>
@@ -44,10 +59,12 @@ const Header = () => {
           <div className={styles.searchWrapper}>
             <input
               type="text"
-              placeholder="Search"
+              placeholder="Search Movies"
               className={styles.searchInput}
+              onChange={HandleChange}
+              onKeyUp={searchQueryHandler}
             />
-            <VscChromeClose className={styles.closeIcon} onClick={open} />
+            <VscChromeClose className={styles.closeIcon} onClick={openNclose} />
           </div>
         </div>
       )}

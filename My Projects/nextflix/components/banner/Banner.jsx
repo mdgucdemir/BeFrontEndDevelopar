@@ -7,6 +7,7 @@ import { apiImage, fetchEndPoint } from "@/api/connect";
 import Slider from "react-slick";
 
 import Image from "next/image";
+import Loading from "../loading/Loading";
 
 const Banner = ({ mediaType, type }) => {
   const [movieItems, setMovieItems] = useState([]);
@@ -34,26 +35,32 @@ const Banner = ({ mediaType, type }) => {
   };
 
   return (
-    <div
-      className={`${type === "banner" ? styles.bennerSlide : ""} ${
-        type === "media" ? styles.banner : ""
-      }`}
-    >
-      <Slider {...settings}>
-        {movieItems.map((item, i) => (
-          <div className={styles.item} key={i}>
-            <Image
-              src={apiImage.originalImage(
-                item.backdrop_path ? item.backdrop_path : item.poster_path
-              )}
-              alt={item.title}
-              fill
-              className={styles.image}
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <>
+      {movieItems.length > 0 ? (
+        <div
+          className={`${type === "banner" ? styles.bennerSlide : ""} ${
+            type === "media" ? styles.banner : ""
+          }`}
+        >
+          <Slider {...settings}>
+            {movieItems.map((item, i) => (
+              <div className={styles.item} key={i}>
+                <Image
+                  src={apiImage.originalImage(
+                    item.backdrop_path ? item.backdrop_path : item.poster_path
+                  )}
+                  alt={item.title}
+                  fill
+                  className={styles.image}
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
+      ) : (
+        <Loading />
+      )}
+    </>
   );
 };
 

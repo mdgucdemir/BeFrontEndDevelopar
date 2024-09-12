@@ -1,0 +1,85 @@
+.container {
+  margin: 2rem 5rem;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.title h1 {
+  text-transform: capitalize;
+  font-size: 55px;
+  opacity: 0.6;
+  font-weight: 500;
+}
+
+.mediaContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: auto;
+  gap: 20px;
+}
+
+.mediaItem {
+  text-align: center;
+}
+
+.mediaItem img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.mediaItem img:hover {
+  transform: scale(1.2);
+}
+
+.loadMore {
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loadMoreButton {
+  padding: 1rem 2rem;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.loadMoreButton:hover {
+  background-color: var(--linkHover);
+  transition: 1s ease;
+}
+
+.noData {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noData h1 {
+  font-size: 55px;
+  opacity: 0.6;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 1024px) {
+  .noData h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .noData h1 {
+    font-size: 10px;
+  }
+}
