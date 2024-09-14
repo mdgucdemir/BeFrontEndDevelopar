@@ -32,6 +32,8 @@
 
 .mediaItem {
   text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .mediaItem img {
@@ -39,11 +41,9 @@
   height: 100%;
   border-radius: 8px;
   object-fit: contain;
-  transition: transform 0.3s ease;
-  cursor: pointer;
 }
 
-.mediaItem img:hover {
+.mediaItem:hover {
   transform: scale(1.2);
 }
 

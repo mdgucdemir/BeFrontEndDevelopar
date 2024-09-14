@@ -15,6 +15,7 @@ const Banner = ({ mediaType, type }) => {
   const getData = async () => {
     const data = await fetchEndPoint(mediaType).then((data) => {
       setMovieItems(data?.results);
+      // console.log(data?.results);
     });
 
     return data;
@@ -49,7 +50,7 @@ const Banner = ({ mediaType, type }) => {
                   src={apiImage.originalImage(
                     item.backdrop_path ? item.backdrop_path : item.poster_path
                   )}
-                  alt={item.title}
+                  alt={item.original_name}
                   fill
                   className={styles.image}
                 />

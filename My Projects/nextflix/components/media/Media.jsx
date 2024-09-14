@@ -87,16 +87,18 @@ const Media = ({ media }) => {
 
           <div className={styles.mediaContainer}>
             {mediaData.map((item, i) => (
-              <Link
-                href={media === "movie" ? `movie/${item.id}` : `tv/${item.id}`}
-              >
-                <div className={styles.mediaItem} key={i}>
+              <div className={styles.mediaItem} key={i}>
+                <Link
+                  href={
+                    media === "movie" ? `movie/${item.id}` : `tv/${item.id}`
+                  }
+                >
                   <img
                     src={apiImage.w500Image(item.backdrop_path)}
-                    alt={item.title}
+                    alt={item.original_name}
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
 

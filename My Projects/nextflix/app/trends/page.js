@@ -46,65 +46,61 @@ const page = () => {
   }, [selectedMediaType, selectedMediaTime, pageNum]);
 
   return (
-    <>
-      {mediaData.length > 0 ? (
-        <div className={styles.container}>
-          <div className={styles.title}>
-            <h1>Trend Movies and Tv Shows</h1>
-          </div>
-          <div className={styles.selector}>
-            <select
-              name="media"
-              id="media"
-              className={styles.mediaSelect}
-              onChange={mediaChange}
+    <div className={styles.container}>
+      <div className={styles.title}>
+        <h1>Trend Movies and Tv Shows</h1>
+      </div>
+      <div className={styles.selector}>
+        <select
+          name="media"
+          id="media"
+          className={styles.mediaSelect}
+          onChange={mediaChange}
+        >
+          <option value="">Select Media Type</option>
+          <option value="movie">Movies</option>
+          <option value="tv">Tv Shows</option>
+        </select>
+
+        <select
+          name="time"
+          id="time"
+          className={styles.mediaSelect}
+          onChange={timeChange}
+        >
+          <option value="">Select Media Time</option>
+          <option value="day">Day</option>
+          <option value="week">Week</option>
+        </select>
+      </div>
+
+      <div className={styles.mediaContainer}>
+        {mediaData.map((item, i) => (
+          <div key={i}>
+            <Link
+              href={
+                selectedMediaType === "movie"
+                  ? `movie/${item.id}`
+                  : `tv/${item.id}`
+              }
             >
-              <option value="">Select Media Type</option>
-              <option value="movie">Movies</option>
-              <option value="tv">Tv Shows</option>
-            </select>
-
-            <select
-              name="time"
-              id="time"
-              className={styles.mediaSelect}
-              onChange={timeChange}
-            >
-              <option value="">Select Media Time</option>
-              <option value="day">Day</option>
-              <option value="week">Week</option>
-            </select>
+              <div className={styles.mediaItem} key={i}>
+                <img
+                  src={apiImage.w500Image(item.backdrop_path)}
+                  alt={item.title}
+                />
+              </div>
+            </Link>
           </div>
+        ))}
+      </div>
 
-          <div className={styles.mediaContainer}>
-            {mediaData.map((item, i) => (
-              <Link
-                href={
-                  selectedMediaType === "movie"
-                    ? `movie/${item.id}`
-                    : `tv/${item.id}`
-                }
-              >
-                <div className={styles.mediaItem} key={i}>
-                  <img
-                    src={apiImage.w500Image(item.backdrop_path)}
-                    alt={item.title}
-                  />
-                </div>
-              </Link>
-            ))}
-          </div>
-
-          <div className={styles.loadMore}>
-            <button onClick={loadMore} className={styles.loadMoreButton}>
-              Load Moare
-            </button>
-          </div>
-        </div>
-      ) : (
-        <Loading />
-      )}
-    </>
+      <div className={styles.loadMore}>
+        <button onClick={loadMore} className={styles.loadMoreButton}>
+          Load Moare
+        </button>
+      </div>
+    </div>
   );
 };
 

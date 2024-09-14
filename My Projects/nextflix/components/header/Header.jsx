@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
-import { FaSearch, FaUserCircle, FaBars } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 import { VscChromeClose } from "react-icons/vsc";
 import { useRouter } from "next/navigation";
 
@@ -48,8 +48,6 @@ const Header = () => {
           </div>
           <div className={styles.icons}>
             <FaSearch className={styles.icon} onClick={openNclose} />
-            <FaBars className={styles.barIcon} />
-            <FaUserCircle className={styles.icon} />
           </div>
         </div>
       </div>

@@ -75,7 +75,7 @@ const MediaSwiper = ({ title, mediaType, type }) => {
               <Link href={`${type}/${item.id}`}>
                 <img
                   src={apiImage.w500Image(item.poster_path)}
-                  alt={item.title}
+                  alt={item.original_title}
                   className={styles.image}
                 />
               </Link>

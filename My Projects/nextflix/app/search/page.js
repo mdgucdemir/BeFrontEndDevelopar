@@ -46,14 +46,14 @@ const page = () => {
           </div>
           <div className={styles.mediaContainer}>
             {mediaData.map((item, i) => (
-              <Link href={`movie/${item.id}`}>
-                <div className={styles.mediaItem} key={i}>
+              <div className={styles.mediaItem} key={i}>
+                <Link href={`movie/${item.id}`}>
                   <img
                     src={apiImage.w500Image(item.backdrop_path)}
                     alt={item.title}
                   />
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
 

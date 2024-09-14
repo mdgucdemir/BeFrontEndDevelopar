@@ -1,16 +1,20 @@
-import Image from "next/image";
 import styles from "./details.module.css";
 import { apiImage } from "@/api/connect";
 
 const Details = ({ details, casts, recommend, similar, videos }) => {
-  console.log(videos);
+  // console.log(similar);
   return (
     <div className={styles.container}>
       {/* information */}
       <div className={styles.info}>
-        <div className={styles.image}>
-          <img src={apiImage.w500Image(details.poster_path)} />
-        </div>
+        {details.poster_path && (
+          <div className={styles.image}>
+            <img
+              src={apiImage.w500Image(details.poster_path)}
+              alt={details.original_name}
+            />
+          </div>
+        )}
         <div className={styles.desc}>
           <div className={styles.title}>
             <h1>{details.title || details.original_name}</h1>
@@ -79,33 +83,37 @@ const Details = ({ details, casts, recommend, similar, videos }) => {
         ))}
       </div>
       {/* recommend */}
-      <div className={styles.recommendWrap}>
-        <h2>Recommends</h2>
-        <div className={styles.recommends}>
-          {recommend.slice(0, 7).map((item, i) => (
-            <div className={styles.recommend} key={i}>
-              <img
-                src={apiImage.w500Image(item.poster_path)}
-                alt={item.original_name}
-              />
-            </div>
-          ))}
+      {recommend && (
+        <div className={styles.recommendWrap}>
+          <h2>Recommends</h2>
+          <div className={styles.recommends}>
+            {recommend.slice(0, 7).map((item, i) => (
+              <div className={styles.recommend} key={i}>
+                <img
+                  src={apiImage.w500Image(item.poster_path)}
+                  alt={item.original_title}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
       {/* similar */}
-      <div className={styles.recommendWrap}>
-        <h2>similar</h2>
-        <div className={styles.recommends}>
-          {similar.slice(0, 7).map((item, i) => (
-            <div className={styles.recommend} key={i}>
-              <img
-                src={apiImage.w500Image(item.poster_path)}
-                alt={item.original_name}
-              />
-            </div>
-          ))}
+      {similar && (
+        <div className={styles.recommendWrap}>
+          <h2>similar</h2>
+          <div className={styles.recommends}>
+            {similar.slice(0, 7).map((item, i) => (
+              <div className={styles.recommend} key={i}>
+                <img
+                  src={apiImage.w500Image(item.poster_path)}
+                  alt={item.original_title}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
