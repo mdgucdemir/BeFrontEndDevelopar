@@ -1,5 +1,6 @@
 import Header from "@/components/header/Header";
 import "./globals.css";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "nextWatch",
@@ -10,8 +11,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        {children}
+        <Suspense>
+          <Header />
+          {children}
+        </Suspense>
       </body>
     </html>
   );

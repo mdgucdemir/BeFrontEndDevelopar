@@ -1,18 +1,20 @@
 "use client";
 
-import { apiImage, fetchEndPoint } from "@/api/connect";
 import styles from "./page.module.css";
-
+import { apiImage, fetchEndPoint } from "@/api/connect";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+
 import Link from "next/link";
 
 const page = () => {
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  // const [loading, setLoading] = useState(true);
 
   const searchParams = useSearchParams();
-  const query = searchParams.get("query").toLowerCase();
+
+  const query = searchParams.get("query");
 
   const movieSearchUrl = `/search/movie?query=${query}&page=${pageNum}`;
 
@@ -22,7 +24,7 @@ const page = () => {
 
   const mediaFetch = async () => {
     const data = await fetchEndPoint(movieSearchUrl);
-    // console.log(data);
+    console.log(data);
     setMediaData((prevData) =>
       pageNum === 1 ? data?.results : [...prevData, ...data?.results]
     );
@@ -34,7 +36,9 @@ const page = () => {
   }, [query]);
 
   useEffect(() => {
-    mediaFetch();
+    if (query) {
+      mediaFetch();
+    }
   }, [query, pageNum]);
 
   return (

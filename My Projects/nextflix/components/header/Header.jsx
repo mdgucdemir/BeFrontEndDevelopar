@@ -59,6 +59,7 @@ const Header = () => {
               type="text"
               placeholder="Search Movies"
               className={styles.searchInput}
+              value={query}
               onChange={HandleChange}
               onKeyUp={searchQueryHandler}
             />
