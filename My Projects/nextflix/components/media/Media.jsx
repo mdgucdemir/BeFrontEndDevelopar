@@ -16,6 +16,7 @@ const Media = ({ media }) => {
   const [genreNum, setGenreNum] = useState(0);
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
 
   if (media === "tv" && genreNum === 0) {
@@ -49,6 +50,7 @@ const Media = ({ media }) => {
   const mediaFetch = async () => {
     const data = await fetchEndPoint(mediaType);
     // console.log(data);
+    setTotalPages(data.total_pages);
     setMediaData((prevData) => [...prevData, ...data?.results]);
   };
 
@@ -103,7 +105,14 @@ const Media = ({ media }) => {
           </div>
 
           <div className={styles.loadMore}>
-            <button onClick={loadMore} className={styles.loadMoreButton}>
+            <button
+              onClick={loadMore}
+              className={styles.loadMoreButton}
+              disabled={pageNum >= totalPages}
+              style={{
+                cursor: pageNum >= totalPages ? "not-allowed" : "pointer",
+              }}
+            >
               Load Moare
             </button>
           </div>

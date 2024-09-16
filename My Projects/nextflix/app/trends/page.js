@@ -11,6 +11,7 @@ const page = () => {
   const [selectedMediaTime, setSelectedMediaTime] = useState("week");
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(true);
 
   let mediaType = `trending/${selectedMediaType}/${selectedMediaTime}?page=${pageNum}`;
@@ -32,7 +33,8 @@ const page = () => {
   const mediaFetch = async () => {
     setLoading(true);
     const data = await fetchEndPoint(mediaType);
-    // console.log(data);
+    console.log(data);
+    setTotalPages(data.total_pages);
     setMediaData((prevData) => [...prevData, ...data?.results]);
     setLoading(false);
   };
@@ -96,7 +98,12 @@ const page = () => {
       </div>
 
       <div className={styles.loadMore}>
-        <button onClick={loadMore} className={styles.loadMoreButton}>
+        <button
+          onClick={loadMore}
+          className={styles.loadMoreButton}
+          disabled={pageNum >= totalPages}
+          style={{ cursor: pageNum >= totalPages ? "not-allowed" : "pointer" }}
+        >
           Load Moare
         </button>
       </div>

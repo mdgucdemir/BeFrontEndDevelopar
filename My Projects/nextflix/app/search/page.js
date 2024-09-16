@@ -11,6 +11,7 @@ import Loading from "@/components/loading/Loading";
 const page = () => {
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
+  const [totalPages, setTotalPages] = useState(0);
   const [loading, setLoading] = useState(false);
 
   const searchParams = useSearchParams();
@@ -26,10 +27,11 @@ const page = () => {
   const mediaFetch = async () => {
     setLoading(true);
     const data = await fetchEndPoint(movieSearchUrl);
-    console.log(data);
+    // console.log(data);
     setMediaData((prevData) =>
       pageNum === 1 ? data?.results : [...prevData, ...data?.results]
     );
+    setTotalPages(data.total_pages);
     setLoading(false);
   };
 
@@ -65,8 +67,15 @@ const page = () => {
           </div>
 
           <div className={styles.loadMore}>
-            <button onClick={loadMore} className={styles.loadMoreButton}>
-              Load Moare
+            <button
+              onClick={loadMore}
+              className={styles.loadMoreButton}
+              disabled={pageNum >= totalPages}
+              style={{
+                cursor: pageNum >= totalPages ? "not-allowed" : "pointer",
+              }}
+            >
+              Load More
             </button>
           </div>
         </>
