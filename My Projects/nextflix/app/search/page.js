@@ -6,11 +6,12 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
+import Loading from "@/components/loading/Loading";
 
 const page = () => {
   const [mediaData, setMediaData] = useState([]);
   const [pageNum, setPageNum] = useState(1);
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const searchParams = useSearchParams();
 
@@ -23,11 +24,13 @@ const page = () => {
   };
 
   const mediaFetch = async () => {
+    setLoading(true);
     const data = await fetchEndPoint(movieSearchUrl);
     console.log(data);
     setMediaData((prevData) =>
       pageNum === 1 ? data?.results : [...prevData, ...data?.results]
     );
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -69,7 +72,11 @@ const page = () => {
         </>
       ) : (
         <div className={styles.noData}>
-          <h1>No movie {query} just like that</h1>
+          {loading ? (
+            <h1>Loading...</h1>
+          ) : (
+            <h1>No movie {query} just like that</h1>
+          )}
         </div>
       )}
     </div>
