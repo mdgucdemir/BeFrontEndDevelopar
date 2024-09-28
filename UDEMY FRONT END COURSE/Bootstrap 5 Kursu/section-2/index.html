@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Web Site</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <style>
+      .nav-link.active {
+        color: red !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Can Boz</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav fw-bold">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Courses</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#courseDetails">Course Details</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- home -->
+    <section
+      class="min-vh-100 d-flex flex-column justify-content-end align-items-center"
+      id="home"
+      style="
+        background-image: url('image/canbozfoto.png');
+        background-size: cover;
+      "
+    >
+      <div class="text-center">
+        <p class="display-3 mb-3 fw-bolder">Can Boz</p>
+        <h6 class="text-capitalize fs-3 text-secondary mb-4">
+          Fullstack .net Core Developer -consultant
+        </h6>
+      </div>
+      <a class="btn btn-danger rounded-pill mb-2" href="#about">About Me</a>
+    </section>
+
+    <!-- about me -->
+    <section class="container py-5" id="about">
+      <div class="text-center py-5">
+        <h2 class="text-uppercase fw-bolder">about me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam,
+          voluptates!
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="image/canboz.png" class="img-fluid" />
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+          <p class="lh-lg">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit
+            alias similique dolorem in, perspiciatis enim? Distinctio alias,
+            facere sed quisquam commodi numquam ipsam enim officia maiores
+            excepturi eius, rerum facilis consequuntur. Assumenda maxime
+            accusantium repudiandae cumque eligendi quidem cupiditate optio
+            obcaecati.
+          </p>
+          <h3 class="fw-bold fs-4 text-uppercase">skills</h3>
+          <p class="text-uppercase mb-0">html:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-success"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">css:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-info"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">js:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-warning"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">bootstrap 5:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-danger"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">angular:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-dark"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">react:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-gradient"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">vue js:</p>
+          <div class="progress mb-3">
+            <div
+              class="progress-bar progress-bar-striped bg-secondary"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+          <p class="text-uppercase mb-0">.net core</p>
+          <div class="progress">
+            <div
+              class="progress-bar progress-bar-striped bg-warning"
+              style="width: 99%"
+            >
+              99%
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- courses -->
+    <section id="courses" class="bg-dark py-5">
+      <div class="container">
+        <div class="text-white text-center py-5">
+          <h2 class="text-uppercase fw-bolder">courses</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+            ducimus quasi dolores numquam alias explicabo cumque repellat vel a
+            iste!
+          </p>
+        </div>
+
+        <div class="row pb-5">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img1.jpg" class="img-fluid img-thumbnail" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img2.png" class="img-fluid img-thumbnail" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img3.png" class="img-fluid img-thumbnail" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img4.png" class="img-fluid img-thumbnail" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img5.jpg" class="img-fluid img-thumbnail" />
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <img src="image/img6.png" class="img-fluid img-thumbnail" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- courseDetails -->
+    <section id="courseDetails" class="py-5">
+      <div class="container">
+        <div class="text-center py-5">
+          <h2 class="text-uppercase fw-bolder">Course Details</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+            ducimus quasi dolores numquam alias explicabo cumque repellat vel a
+            iste!
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="image/img7.png" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center py-2">
+                  Lorem ipsum dolor sit amet.
+                </h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis aut, optio at assumenda quas doloremque animi
+                  saepe vitae tempora obcaecati! Ut nam culpa voluptates nisi
+                  sequi! Reiciendis autem asperiores sequi!
+                </p>
+                <a href="" class="btn btn-light">Read More...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="image/img6.png" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center py-2">
+                  Lorem ipsum dolor sit amet.
+                </h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis aut, optio at assumenda quas doloremque animi
+                  saepe vitae tempora obcaecati! Ut nam culpa voluptates nisi
+                  sequi! Reiciendis autem asperiores sequi!
+                </p>
+                <a href="" class="btn btn-light">Read More...</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card">
+              <img src="image/img8.jpg" class="card-img-top" />
+              <div class="card-body">
+                <h5 class="card-title text-center py-2">
+                  Lorem ipsum dolor sit amet.
+                </h5>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Perferendis aut, optio at assumenda quas doloremque animi
+                  saepe vitae tempora obcaecati! Ut nam culpa voluptates nisi
+                  sequi! Reiciendis autem asperiores sequi!
+                </p>
+                <a href="" class="btn btn-light">Read More...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="bg-dark py-5">
+      <div class="container">
+        <div class="text-white text-center py-5">
+          <h2 class="text-uppercase fw-bolder">contact</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga,
+            ducimus quasi dolores numquam alias explicabo cumque repellat vel a
+            iste!
+          </p>
+        </div>
+
+        <div
+          class="col-xxl-6 col-xl-7 col-lg-8 col-md-9 col-sm-10 col-11 mx-auto"
+        >
+          <form class="text-white">
+            <div class="mb-3">
+              <label class="form-label text-capitalize">name surname</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-capitalize">email</label>
+              <input type="email" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-capitalize">topic</label>
+              <input type="text" class="form-control" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label text-capitalize">message</label>
+              <textarea class="form-control" rows="10"></textarea>
+            </div>
+            <button class="btn btn-danger btn-lg text-capitalize">send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-light">
+      <div class="text-center text-capitalize">
+        <p class="fs-5 py-3 mb-0">
+          &copy; all rights reserved |
+          <a
+            href="https://www.canboz.com/"
+            class="text-danger fst-italic"
+            target="_blank"
+            >can boz</a
+          >
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
