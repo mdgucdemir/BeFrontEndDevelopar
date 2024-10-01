@@ -1,0 +1,13 @@
+.dots {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1400px) and (min-width: 1070px) {
+  .fontsizeArrangement {
+    font-size: 26px;
+  }
+}
