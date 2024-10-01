@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2ce1731240.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- nav -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">E Ticaret Paneli</a>
+        <!--  -->
+        <div class="btn-slide navbar-toggler me-auto">
+          <svg
+            class="open"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 15.707a1 1 0 010-1.414L14.586 10l-4.293-4.293a1 1 0 111.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M4.293 15.707a1 1 0 010-1.414L8.586 10 4.293 5.707a1 1 0 011.414-1.414l5 5a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="close d-none"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </div>
+        <!--  -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Anasayfa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hakkımda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ayarlar</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control mx-lg-2"
+              type="search"
+              placeholder="Ara"
+            />
+            <button class="btn btn-outline-success" type="submit">Ara</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <div class="sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link disabled">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-dashboard"></i> Anasayfa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+            ><i class="fas fa-calendar-check"></i> Rezervasyonlar</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-area-chart"></i> Grafikler</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-table"></i> Tablolar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-wrench"></i> Ayarlar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-file"></i> Sayfalar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"><i class="fa fa-link"></i> Bağlantılar</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mainArea">
+      <!-- breadcrumb -->
+      <div class="container-fluid">
+        <div class="pt-4">
+          <div class="mt-5 py-3 ps-5 shadow-sm">
+            <nav style="--bs-breadcrumb-divider: '>'" aria-label="breadcrumb">
+              <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Istatistikler
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+
+        <!-- info cards -->
+        <div class="row">
+          <!-- card-1 -->
+          <div class="col-lg-3 col-md-6 py-3">
+            <div class="rounded-3 shadow-sm d-flex justify-content-between p-4">
+              <div>
+                <p class="small">Musteri</p>
+                <p class="fs-3 fw-bold">38 000</p>
+                <p>
+                  <span class="text-danger"
+                    ><i class="fas fa-arrow-down"></i> 5.78% </span
+                  >Gecen Aya Gore
+                </p>
+              </div>
+              <i class="fas fa-user-check fa-2x iconColor"></i>
+            </div>
+          </div>
+
+          <!-- card-2 -->
+          <div class="col-lg-3 col-md-6 py-3">
+            <div class="rounded-3 shadow-sm d-flex justify-content-between p-4">
+              <div>
+                <p class="small">Sparis</p>
+                <p class="fs-3 fw-bold">5800</p>
+                <p>
+                  <span class="text-success"
+                    ><i class="fas fa-arrow-up"></i> 49.66% </span
+                  >Gecen Aya Gore
+                </p>
+              </div>
+              <i class="fas fa-cart-plus fa-2x iconColor"></i>
+            </div>
+          </div>
+
+          <!-- card-3 -->
+          <div class="col-lg-3 col-md-6 py-3">
+            <div class="rounded-3 shadow-sm d-flex justify-content-between p-4">
+              <div>
+                <p class="small">Toplam Kazanc</p>
+                <p class="fs-3 fw-bold">3,800$</p>
+                <p>
+                  <span class="text-success"
+                    ><i class="fas fa-arrow-up"></i> 13% </span
+                  >Gecen Aya Gore
+                </p>
+              </div>
+              <i class="fas fa-dollar-sign fa-2x iconColor"></i>
+            </div>
+          </div>
+
+          <!-- card-4 -->
+          <div class="col-lg-3 col-md-6 py-3">
+            <div class="rounded-3 shadow-sm d-flex justify-content-between p-4">
+              <div>
+                <p class="small">Borsa Islem Hacmi</p>
+                <p class="fs-3 fw-bold">7.8%</p>
+                <p>
+                  <span class="text-success"
+                    ><i class="fas fa-arrow-up"></i> 43.23% </span
+                  >Gecen Aya Gore
+                </p>
+              </div>
+              <i class="fas fa-chart-bar fa-2x iconColor"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- info charts -->
+        <div class="row mb-5">
+          <!-- left chart -->
+          <div class="col-lg-7">
+            <div class="shadow-sm rounded-3 py-3">
+              <canvas id="myChart1" height="210px"></canvas>
+            </div>
+          </div>
+
+          <!-- right chart -->
+          <div class="col-lg-5">
+            <div class="shadow-sm rounded-3 py-3">
+              <canvas id="myChart2" height="200px"></canvas>
+            </div>
+          </div>
+
+          <!-- bottom chart -->
+          <div class="col-lg-12">
+            <div class="shadow-sm rounded-3 py-3">
+              <canvas id="myChart3" height="100px"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!--  -->
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
