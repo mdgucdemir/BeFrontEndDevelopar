@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E Ticaret</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script
+      src="https://kit.fontawesome.com/4bea204677.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- first navbar -->
+    <div class="container mt-2 text-muted">
+      <div
+        class="d-flex justify-content-md-between flex-column flex-md-row align-items-center"
+      >
+        <div class="d-flex flex-md-row flex-column align-items-center">
+          <div>
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="ms-1">555-555-55-55</div>
+          <div class="ms-5">Toplu alimlar icin iletisime geciniz</div>
+        </div>
+        <div class="d-flex">
+          <div class="dropdown">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+              Turkish
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">English</a></li>
+              <li><a class="dropdown-item" href="#">French</a></li>
+              <li><a class="dropdown-item" href="#">German</a></li>
+            </ul>
+          </div>
+          <div class="dropdown ms-1">
+            <button class="btn dropdown-toggle" data-bs-toggle="dropdown">
+              TL
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">USD</a></li>
+              <li><a class="dropdown-item" href="#">EURO</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- second navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/CBkeskinson.png" height="25px" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav text-uppercase mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Anasayfa</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Hakkimizda</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Urunler
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#"
+                    >Sirketlere Ozel Egitimler</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">Ozel Ders</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Video Egitimler</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- icons -->
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="me-3">
+              <button
+                type="button"
+                class="btn"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+              >
+                <i class="fas fa-search"></i>
+              </button>
+
+              <!-- Modal start -->
+              <div class="modal fade" id="exampleModal">
+                <div class="modal-dialog modal-fullscreen">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="container">
+                        <div class="row justify-content-center">
+                          <div class="col-md-8">
+                            <div class="input-group">
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Egitim Ara"
+                              />
+                              <button class="input-group-text">
+                                <i class="fas fa-search"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal end -->
+            </div>
+            <div class="me-3"><i class="fas fa-user"></i></div>
+            <div class="me-3">
+              <div class="btn-group dropstart">
+                <button class="btn" data-bs-toggle="dropdown">
+                  <i class="fas fa-shopping-basket"></i
+                  ><small
+                    class="position-absolute translate-middle bg-primary rounded-circle border border-light text-white px-2"
+                    >2</small
+                  >
+                </button>
+                <ul class="dropdown-menu courseCard">
+                  <li>
+                    <a class="dropdown-item">
+                      <div class="row text-center text-md-start">
+                        <div class="col-md-5">
+                          <img src="img/img1.jpg" class="img-fluid" />
+                        </div>
+                        <div class="col-md-7">
+                          <p class="small fw-bolder mb-0">Angular Egitimi</p>
+                          <p class="small text-muted mb-0">Adet: 1</p>
+                          <p class="small fw-bolder mb-0">69 TL</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item">
+                      <div class="row text-center text-md-start">
+                        <div class="col-md-5">
+                          <img src="img/img2.png" class="img-fluid" />
+                        </div>
+                        <div class="col-md-7">
+                          <p class="small fw-bolder mb-0">
+                            Bootstrap 5 Egitimi
+                          </p>
+                          <p class="small text-muted mb-0">Adet: 2</p>
+                          <p class="small fw-bolder mb-0">138 TL</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex justify-content-between flex-column flex-md-row align-items-center"
+                    >
+                      <p class="lead text-uppercase text-muted mb-0">
+                        Toplam Tutar
+                      </p>
+                      <p class="fw-bolder mb-0">207 TL</p>
+                    </a>
+                  </li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <div
+                      class="dropdown-item d-flex justify-content-between flex-column flex-md-row align-items-center"
+                    >
+                      <a class="fs-6 text-uppercase text-muted mb-3 mb-md-0">
+                        Sepete Git
+                      </a>
+                      <div>
+                        <a class="btn btn-outline-dark rounded-0 px-5"
+                          >Odemeyi Tamamla</a
+                        >
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- carousel -->
+    <section>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/img1.jpg" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/img2.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item">
+            <img src="img/img3.png" class="d-block w-100" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- urunler -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- 1. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img1.jpg" />
+            <div class="card-body">
+              <h5>Angular Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 2. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img2.png" />
+            <div class="card-body">
+              <h5>Bootstrap 5 Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img3.png" />
+            <div class="card-body">
+              <h5>C Programlama Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 4. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img4.png" />
+            <div class="card-body">
+              <h5>C# Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <!-- 1. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img5.jpg" />
+            <div class="card-body">
+              <h5>Komple Web Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 2. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img6.png" />
+            <div class="card-body">
+              <h5>Rx Js Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 3. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img7.png" />
+            <div class="card-body">
+              <h5>SQL Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+        <!-- 4. -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card shadow mb-3 mb-lg-0">
+            <img src="img/img8.jpg" />
+            <div class="card-body">
+              <h5>Vue Js Egitimi</h5>
+              <p class="card-text">69 TL</p>
+              <a href="" class="btn btn-success rounded-0 w-100">Satin Al</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Why Us -->
+    <section id="whyus" class="mt-5">
+      <div class="container text-center">
+        <div class="shadow-lg pt-5">
+          <div class="row p-4">
+            <!-- 1 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fas fa-cart-plus"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <!-- 2 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fab fa-shopify"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <!-- 3 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fab fa-cc-paypal"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+          <div class="row mt-0 mt-md-4 p-4">
+            <!-- 1 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fas fa-user-graduate"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <!-- 2 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fas fa-university"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+            <!-- 3 -->
+            <div class="col-md-4 mb-4 mb-md-0">
+              <span class="bg-white shadow p-4 rounded-circle">
+                <i class="text-danger fas fa-trophy"></i>
+              </span>
+              <h3 class="mt-5">Nicin Yazilim Ogrenmeliyim</h3>
+              <p class="text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

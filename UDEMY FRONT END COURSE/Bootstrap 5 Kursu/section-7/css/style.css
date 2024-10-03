@@ -1,0 +1,17 @@
+.btn:focus {
+  box-shadow: none !important;
+}
+
+.courseCard {
+  width: 400px;
+}
+
+#whyus {
+  background-color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+  .courseCard {
+    width: 75vw;
+  }
+}
