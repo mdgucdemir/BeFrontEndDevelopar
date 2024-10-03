@@ -420,6 +420,203 @@
       </div>
     </section>
 
+    <!-- kampanyalar -->
+    <section class="bg-secondary text-white text-center my-5">
+      <div class="container">
+        <div class="row align-items-center py-5">
+          <div class="col-md-6">
+            <h1 class="fs-1 fw-light">Angular Egitimi Alana</h1>
+            <h1 class="display-1 fw-bolder my-3">Diledigin Egitim Hediye</h1>
+            <small
+              >Istediginiz egitim icin Udemy uzerinden mesaj
+              gonderebilirsiniz</small
+            >
+            <br />
+            <a
+              href=""
+              class="btn btn-outline-light text-uppercase mt-5 px-5 my-2 rounded-0"
+              >satin al</a
+            >
+          </div>
+          <div class="col-md-6">
+            <img src="img/img1.jpg" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section>
+      <div class="container py-4">
+        <div class="text-center">
+          <h1 class="display-1 fw-bold">Benimle Iletisime Gecin</h1>
+        </div>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-4">
+            <label for="validationCustom01" class="form-label">Ad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please choose a name.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustom02" class="form-label">Soyad</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom02"
+              required
+            />
+            <div class="valid-feedback">Looks good!</div>
+            <div class="invalid-feedback">Please choose a last name.</div>
+          </div>
+          <div class="col-md-4">
+            <label for="validationCustomUsername" class="form-label"
+              >Kullanici Adi</label
+            >
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input
+                type="text"
+                class="form-control"
+                id="validationCustomUsername"
+                aria-describedby="inputGroupPrepend"
+                required
+              />
+              <div class="invalid-feedback">Please choose a username.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="validationCustom03" class="form-label">Adres</label>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom03"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid adress.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom04" class="form-label">Sehir</label>
+            <select class="form-select" id="validationCustom04" required>
+              <option selected disabled value="">Sehir Seciniz</option>
+              <option value="ank">ankara</option>
+              <option value="ist">istanbul</option>
+              <option value="izm">izmir</option>
+              <option value="bur">bursa</option>
+            </select>
+            <div class="invalid-feedback">Please select a valid city.</div>
+          </div>
+          <div class="col-md-3">
+            <label for="validationCustom05" class="form-label"
+              >Posta Kodu</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom05"
+              required
+            />
+            <div class="invalid-feedback">Please provide a valid zip.</div>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-success w-100 my-3" type="submit">
+              Gonder
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-light pt-5">
+      <div class="container">
+        <div class="row text-center text-md-start">
+          <div class="col-md-4">
+            <p class="fs-5">Lorem, ipsum dolor</p>
+            <small class="text-muted">Lorem, ipsum dolor</small>
+          </div>
+
+          <div class="col-md-4">
+            <p class="fs-5">Web Gelistirme Egitimleri</p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >Komple Web</a
+                >
+              </li>
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >Frontend</a
+                >
+              </li>
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >Angular</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <p class="fs-5">Programlama Egitimleri</p>
+            <ul class="list-unstyled">
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >C Programlama</a
+                >
+              </li>
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >C# Programlama</a
+                >
+              </li>
+              <li>
+                <a href="" class="text-decoration-none text-muted small"
+                  >Yazilimci Olma Kursu</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--  copyright  -->
+    <div class="bg-secondary text-center text-white py-3">
+      <p class="lead mb-0">Tum Haklari Saklidir | <span>Lorem Ipsum</span></p>
+    </div>
+
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script>
   </body>
 </html>
