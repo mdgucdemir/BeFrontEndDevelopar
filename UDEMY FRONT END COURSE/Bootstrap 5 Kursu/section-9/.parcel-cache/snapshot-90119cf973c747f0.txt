@@ -1,10 +1,10 @@
-6549
+6552
 143D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\runtime-js\lib\helpers\node\css-loader.js133727181895764875 0
 137D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\dist\esm\utils\getAltAxis.js133727182010172451 0
 135D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\entities\lib\generated\decode-data-xml.js133727181895164743 0
 154D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\lightningcss-win32-x64-msvc\lightningcss.win32-x64-msvc.node133727181898255438 0
 112D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\css-tree\cjs\utils133727181898345458 1
-96D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.html133728013664924341 0
+96D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.html133728127344299572 0
 121D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\lightningcss\node\index.mjs133727181895924918 0
 150D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@swc\helpers\esm\_class_static_private_field_spec_get.js133727181899345689 0
 150D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\030-config.md133727181897505268 0
@@ -56,7 +56,7 @@
 108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\csso\lib\clean133727181898055397 1
 142D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\caniuse-lite\data\features\permissions-policy.js133727181900715991 0
 120D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\bootstrap\js\src\button.js133727182009452293 0
-85D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist133728013664924341 1
+85D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist133728127347340257 1
 171D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\source-map\parcel_sourcemap_node\artifacts\index.linux-arm64-gnu.node133727181897445256 0
 107D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\nth-check\lib133727181896575058 1
 93D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules133727914509020877 1
@@ -73,7 +73,7 @@
 118D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\js-yaml\lib\type\bool.js133727181894784653 0
 117D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\node-addon-api\index.js133727181896194974 0
 133D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\transformer-babel\lib\config.js133727181895514824 0
-95D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\src\index.html133728013664784312 0
+95D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\src\index.html133728122618360907 0
 137D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\css-tree\cjs\syntax\scope\atrulePrelude.cjs133727181895504819 0
 116D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\detect-libc\.npmignore133727181894514592 0
 151D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\Doxyfile133727181895344782 0
@@ -98,7 +98,7 @@
 151D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\csso\node_modules\css-tree\lib\syntax\node\Parentheses.js133727181899015608 0
 148D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\css-select\node_modules\entities\lib\esm\escape.js.map133727181897265216 0
 108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\dom-serializer133727181895784881 1
-101D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\src\scss\custom.scss133728013301968938 0
+101D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\src\scss\custom.scss133728127325365293 0
 117D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\picocolors\package.json133727181894864673 0
 117D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\csso\cjs\clean\Rule.cjs133727181896835121 0
 117D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\semver\functions\lte.js133727181896445029 0
@@ -1103,7 +1103,7 @@
 117D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\core\src\public133727181898625521 1
 116D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\lmdb\dependencies\lmdb133727181894914693 1
 139D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\cosmiconfig\dist\canUseDynamicImport.d.ts.map133727181896174972 0
-111D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\section-9.59712999.js.map133728013341018782 0
+111D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\section-9.59712999.js.map133728115431899177 0
 123D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\lmdb\dependencies\lz4\lib\dll133727181898135409 1
 131D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\test\collection.test.js133727181895714866 0
 152D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\csso\node_modules\css-tree\lib\syntax\node\UnicodeRange.js133727181899205652 0
@@ -2383,7 +2383,7 @@
 130D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\css-tree\lib\syntax\node\Selector.js133727181899145641 0
 112D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\fill-range\LICENSE133727181894264539 0
 114D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\json5\lib\unicode.js133727181895694860 0
-104D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.044e704e.css133728013341228830 0
+104D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.044e704e.css133728127344479615 0
 142D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\dom-utils\getComputedStyle.js133727182009492297 0
 159D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\csso\node_modules\css-tree\lib\syntax\node\PseudoClassSelector.js133727181899065625 0
 131D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\css-tree\cjs\syntax\node\Function.cjs133727181897165194 0
@@ -4262,7 +4262,7 @@
 129D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\caniuse-lite\data\features\asmjs.js133727181896935143 0
 121D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\transformer-raw\lib133727181894524595 1
 133D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\caniuse-lite\data\features\atob-btoa.js133727181897045169 0
-103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img3.0b16e99d.png133728013341078797 0
+103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img3.0b16e99d.png133728127344259560 0
 138D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\caniuse-lite\data\features\css3-boxsizing.js133727181899205652 0
 113D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\bootstrap\README.md133727182010392502 0
 135D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\caniuse-lite\data\features\audiotracks.js133727181897135190 0
@@ -5248,7 +5248,7 @@
 132D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\popper-lite.js.flow133727182009092207 0
 124D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\popper.d.ts133727182009102211 0
 127D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\popper.js.flow133727182009112211 0
-104D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.58a7e6fb.css133728013341258839 0
+104D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.58a7e6fb.css133728127344529622 0
 159D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\clean\Declaration.js133727181896715090 0
 126D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\types.js.flow133727182009122213 0
 118D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@popperjs\core\lib\utils133727182010012416 1
@@ -5555,6 +5555,7 @@
 138D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@babel\highlight\node_modules\chalk\index.js133727181894544602 0
 119D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\src\blob.js133727181895434805 0
 121D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\src\config.js133727181895764875 0
+108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\footer-bg.6bd054ae.png133728127344249559 0
 125D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\src\countLines.js133727181895944916 0
 123D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\src\debounce.js133727181896004930 0
 125D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\utils\src\DefaultMap.js133727181896064949 0
@@ -6120,7 +6121,7 @@
 151D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\style.js133727181897695315 0
 147D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo133727181897935369 1
 150D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo.js133727181897845346 0
-110D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\CBkeskinson.efb3d5dc.png133728013340998778 0
+110D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\CBkeskinson.efb3d5dc.png133728127344259560 0
 154D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo\coa.js133727181896024938 0
 157D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo\config.js133727181896154963 0
 165D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\@parcel\optimizer-htmlnano\node_modules\svgo\lib\svgo\css-class-list.js133727181896525050 0
@@ -6542,9 +6543,11 @@
 105D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\.bin\semver133727181902356363 0
 109D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\.bin\semver.cmd133727181902356363 0
 107D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\node_modules\.bin\svgo.cmd133727181902356363 0
-103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img1.f05a4ee2.jpg133728013340998778 0
-103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img2.5908ea43.png133728013341008784 0
-107D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\section-9.59712999.js133728013341008784 0
-108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.044e704e.css.map133728013341248839 0
-108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.58a7e6fb.css.map133728013341268840 0
-105D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\canboz.08fdf0ae.png133728013343859431 0
+107D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\section-9.59712999.js133728115431889174 0
+103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img2.5908ea43.png133728127344269562 0
+103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\img1.f05a4ee2.jpg133728127344289566 0
+103D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.18dbc454.js133728127344299572 0
+107D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.18dbc454.js.map133728127344309571 0
+108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.044e704e.css.map133728127344489612 0
+108D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\index.58a7e6fb.css.map133728127344539626 0
+105D:\GitHub\BeFrontEndDevelopar\UDEMY FRONT END COURSE\Bootstrap 5 Kursu\section-9\dist\canboz.08fdf0ae.png133728127347320251 0

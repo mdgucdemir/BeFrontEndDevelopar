@@ -13334,4 +13334,42 @@ p {
   font-size: 28px;
   font-weight: 500;
 }
+
+footer {
+  color: #fff;
+  background: url("footer-bg.6bd054ae.png") 0 0 / cover no-repeat;
+  padding-top: 400px;
+}
+
+footer .footer-menu {
+  padding-top: 15px;
+  padding-left: 0;
+  list-style: none;
+}
+
+footer .footer-menu li {
+  padding: 5px 0;
+}
+
+footer .footer-menu a {
+  color: #fff;
+  padding-top: 5px;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+@media only screen and (width <= 576px) {
+  .numCourse {
+    margin-right: 6px;
+    font-weight: 400;
+  }
+
+  .numCourse-num {
+    font-size: 25px;
+  }
+
+  .numCourse-title {
+    font-size: 16px;
+  }
+}
 /*# sourceMappingURL=index.58a7e6fb.css.map */
