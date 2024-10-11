@@ -4,27 +4,149 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["ui-sans-serif", "system-ui"],
+            serif: ["Tapestry", "Georgia"],
+            mono: ["ui-monospace", "SFMono-Regular"],
+          },
+        },
+      };
+    </script>
     <title>Typography</title>
   </head>
   <body>
     <!-- Font Family -->
+    <div class="font-sans">Lorem, ipsum dolor.</div>
+    <div class="font-serif">Lorem, ipsum dolor.</div>
+    <div class="font-mono">Lorem, ipsum dolor.</div>
 
     <!-- Font Size -->
+    <div class="text-xs">Lorem, ipsum dolor.</div>
+    <div class="text-sm">Lorem, ipsum dolor.</div>
+    <div class="text-base">Lorem, ipsum dolor.</div>
+    <div class="text-lg">Lorem, ipsum dolor.</div>
+    <div class="text-xl">Lorem, ipsum dolor.</div>
+    <div class="text-2xl">Lorem, ipsum dolor.</div>
+    <div class="text-3xl">Lorem, ipsum dolor.</div>
+    <div class="text-9xl">Lorem, ipsum dolor.</div>
 
     <!-- Font Weight -->
+    <br />
+    <div class="font-thin">Lorem, ipsum dolor. 100</div>
+    <div class="font-extralight">Lorem, ipsum dolor. 200</div>
+    <div class="font-light">Lorem, ipsum dolor. 300</div>
+    <div class="font-normal">Lorem, ipsum dolor. 400</div>
+    <div class="font-medium">Lorem, ipsum dolor. 500</div>
+    <div class="font-semibold">Lorem, ipsum dolor. 600</div>
+    <div class="font-bold">Lorem, ipsum dolor. 700</div>
+    <div class="font-extrabold">Lorem, ipsum dolor. 800</div>
+    <div class="font-black">Lorem, ipsum dolor. 900</div>
 
     <!-- Letter Spacing -->
+    <br />
+    <div class="tracking-tighter mt-6">
+      tracking-tighter letter-spacing: -0.05em Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Iste libero ipsa perferendis temporibus
+      dolore vero fugit veniam quod cum voluptas rem, officiis fuga, laborum
+      atque voluptatibus ab pariatur vel sequi?
+    </div>
+    <div class="tracking-tight mt-6">
+      tracking-tight letter-spacing: -0.025em Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Iste libero ipsa perferendis temporibus
+      dolore vero fugit veniam quod cum voluptas rem, officiis fuga, laborum
+      atque voluptatibus ab pariatur vel sequi?
+    </div>
+    <div class="tracking-normal mt-6">
+      tracking-normal letter-spacing: 0em Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Iste libero ipsa perferendis temporibus
+      dolore vero fugit veniam quod cum voluptas rem, officiis fuga, laborum
+      atque voluptatibus ab pariatur vel sequi?
+    </div>
+    <div class="tracking-wide mt-6">
+      tracking-wide letter-spacing: 0.025em Lorem ipsum dolor sit amet,
+      consectetur adipisicing elit. Iste libero ipsa perferendis temporibus
+      dolore vero fugit veniam quod cum voluptas rem, officiis fuga, laborum
+      atque voluptatibus ab pariatur vel sequi?
+    </div>
+    <div class="tracking-wider mt-6">
+      tracking- letter-spacing: 0.05em Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Iste libero ipsa perferendis temporibus dolore vero
+      fugit veniam quod cum voluptas rem, officiis fuga, laborum atque
+      voluptatibus ab pariatur vel sequi?
+    </div>
+    <div class="tracking-widest mt-6">
+      tracking- letter-spacing: 0.1em Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Iste libero ipsa perferendis temporibus dolore vero
+      fugit veniam quod cum voluptas rem, officiis fuga, laborum atque
+      voluptatibus ab pariatur vel sequi?
+    </div>
 
     <!-- Text Alignment -->
+    <br />
+    <div class="text-left">Lorem, ipsum dolor.</div>
+    <div class="text-center">Lorem, ipsum dolor.</div>
+    <div class="text-right">Lorem, ipsum dolor.</div>
+    <div class="text-justify">Lorem ipsum dolor.</div>
+    <div class="text-start">Lorem, ipsum dolor.</div>
+    <div class="text-end">Lorem, ipsum dolor.</div>
 
     <!-- Text Decoration -->
+    <br />
+
+    <div class="underline">Lorem, ipsum dolor.</div>
+    <div class="overline">Lorem, ipsum dolor.</div>
+
+    <div class="line-through">Lorem, ipsum dolor.</div>
+
+    <div class="no-underline">Lorem, ipsum dolor.</div>
+
+    <br />
 
     <!-- Decoration Style -->
+    <br />
+    <div class="underline decoration-4 decoration-blue-400">
+      Lorem, ipsum dolor.
+    </div>
+    <div class="overline decoration-wavy decoration-blue-400">
+      Lorem, ipsum dolor.
+    </div>
+    <div class="line-through decoration-dashed decoration-red-400">
+      Lorem, ipsum dolor.
+    </div>
+    <div class="underline decoration-dotted decoration-sky-400">
+      Lorem, ipsum dolor.
+    </div>
+    <br />
 
     <!-- Decoration Offset -->
-
+    <br />
+    <div class="underline decoration-4 decoration-blue-400">
+      Lorem, ipsum dolor.
+    </div>
+    <div class="overline decoration-wavy decoration-blue-400">
+      Lorem, ipsum dolor.
+    </div>
+    <div class="underline decoration-4 underline-offset-8 decoration-sky-400">
+      Lorem, ipsum dolor.
+    </div>
+    <br />
     <!-- Text Transform -->
+    <br />
+    <p class="normal-case">Lorem, ipsum dolor. normal-case</p>
+    <p class="uppercase">Lorem, ipsum dolor. uppercase</p>
+    <p class="lowercase">Lorem, ipsum dolor. lowercase</p>
+    <p class="capitalize">Lorem, ipsum dolor. capitalize</p>
+    <br />
   </body>
 </html>
 
