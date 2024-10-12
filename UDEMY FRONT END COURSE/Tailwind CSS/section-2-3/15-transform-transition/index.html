@@ -5,6 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            transitionDuration: {
+              2000: "2000ms",
+            },
+          },
+        },
+      };
+    </script>
     <title>Transform & Transition</title>
   </head>
   <body>
@@ -12,12 +23,46 @@
     <button
       class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700"
     >
-      Click me
+      No Transition
     </button>
 
     <!-- Transition -->
+    <button
+      class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700 hover:opacity-20 transition-opacity duration-1000"
+    >
+      transition-opacity duration-1000
+    </button>
 
     <!-- Transition & Transform -->
+    <button
+      class="px-8 py-2 m-24 text-white bg-blue-500 rounded hover:bg-blue-700 hover:rotate-12 transition-transform duration-1000"
+    >
+      rotate-12
+    </button>
+    <img
+      src="../assets/img/img1.jpg"
+      class="w-48 hover:rotate-180 hover:scale-75 hover:skew-x-12 transition duration-2000"
+      alt=""
+    />
+
+    <div class="mt-3 hover:translate-x-4">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+        repellendus.
+      </p>
+    </div>
+
+    <img
+      src="../assets/img/img2.jpg"
+      class="w-48 hover:scale-x-110 hover:translate-x-14 transition duration-1000 my-5"
+      alt=""
+    />
+
+    <img
+      src="../assets/img/img2.jpg"
+      class="w-48 hover:scale-x-110 hover:translate-x-10 hover:rotate-6 transition duration-1000"
+      alt=""
+    />
 
     <!-- Transform & Transition -->
   </body>
