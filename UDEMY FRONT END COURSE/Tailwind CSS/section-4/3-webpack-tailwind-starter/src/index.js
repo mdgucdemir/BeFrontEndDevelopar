@@ -1,1 +1,1 @@
-console.log("hello memo");
+import "./style.css";
