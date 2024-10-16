@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 #cta {
-  background-image: url('../images/bg-boost-desktop.svg');
+  background-image: url("../images/bg-boost-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -26,7 +26,7 @@
 .hamburger-top,
 .hamburger-middle,
 .hamburger-bottom {
-  content: '';
+  content: "";
   position: absolute;
   width: 24px;
   height: 3px;
