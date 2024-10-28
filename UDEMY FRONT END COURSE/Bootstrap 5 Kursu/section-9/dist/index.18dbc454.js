@@ -584,6 +584,17 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"1SICI":[function(require,module,exports) {
+// select all links
+const navLink = document.querySelectorAll(".nav-link");
+// add click event all links
+navLink.forEach((link)=>{
+    link.addEventListener("click", function() {
+        // remove active link all links
+        navLink.forEach((navLink)=>navLink.classList.remove("active"));
+        // add active class to click link
+        this.classList.add("active");
+    });
+});
 
 },{}]},["j2YDk","1SICI"], "1SICI", "parcelRequire5e0c")
 
