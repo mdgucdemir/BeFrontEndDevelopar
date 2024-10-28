@@ -6,6 +6,17 @@
   text-overflow: ellipsis;
 }
 
+body {
+  padding-top: 60px;
+}
+#cstmr {
+  cursor: pointer;
+}
+#cstmr:hover {
+  scale: 1.2;
+  transition: 1s ease;
+}
+
 @media screen and (max-width: 1400px) and (min-width: 1070px) {
   .fontsizeArrangement {
     font-size: 26px;
