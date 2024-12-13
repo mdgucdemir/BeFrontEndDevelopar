@@ -1,5 +1,5 @@
 .container {
-  margin-top: 80vh;
+  margin-top: 90vh;
   margin-left: 5rem;
   margin-right: 5rem;
 }
@@ -22,7 +22,7 @@
 
 @media screen and (max-width: 768px) {
   .container {
-    margin-top: 60vh;
+    margin-top: 65vh;
   }
   .title {
     margin-left: 3rem;
@@ -34,13 +34,13 @@
 
 @media screen and (max-width: 640px) {
   .container {
-    margin-top: 50vh;
+    margin-top: 65vh;
   }
   .title {
     margin-left: 2rem;
   }
   .banner {
-    height: 50vh;
+    height: 55vh;
   }
 }
 

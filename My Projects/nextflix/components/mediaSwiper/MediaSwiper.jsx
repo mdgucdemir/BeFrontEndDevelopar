@@ -22,7 +22,7 @@ const MediaSwiper = ({ title, mediaType, type }) => {
   }, []);
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 8,
@@ -35,7 +35,7 @@ const MediaSwiper = ({ title, mediaType, type }) => {
           slidesToShow: 6,
           slidesToScroll: 6,
           infinite: true,
-          dots: true,
+          dots: false,
         },
       },
 

@@ -23,7 +23,7 @@ const Details = ({ details, casts, recommend, similar, videos }) => {
           <div className={styles.genres}>
             {details.genres.map((item, i) => (
               <div className={styles.genre} key={i}>
-                <p>{item.name}</p>
+                <p className="m-0">{item.name}</p>
               </div>
             ))}
           </div>
@@ -34,7 +34,7 @@ const Details = ({ details, casts, recommend, similar, videos }) => {
           <div className={`${styles.genres} ${styles.company}`}>
             {details.production_companies.map((item, i) => (
               <div className={styles.genre} key={i}>
-                <p>{item.name}</p>
+                <p className="m-0">{item.name}</p>
               </div>
             ))}
           </div>

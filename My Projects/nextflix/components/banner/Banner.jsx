@@ -15,7 +15,6 @@ const Banner = ({ mediaType, type }) => {
   const getData = async () => {
     const data = await fetchEndPoint(mediaType).then((data) => {
       setMovieItems(data?.results);
-      // console.log(data?.results);
     });
 
     return data;
